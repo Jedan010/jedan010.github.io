@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang="">
+<html class="theme-next mist use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -55,9 +55,21 @@
   
 
   
+    
+      
+    
+
+    
+  
 
   
 
+  
+    
+      
+    
+
+    
   
 
   
@@ -65,7 +77,7 @@
   
     
     
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Georgia,serif ,"Times New Roman", "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑";:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|KaiTi:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
   
 
 
@@ -99,8 +111,9 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="深度学习入门">
 <meta property="og:url" content="http://yoursite.com/2017/08/22/deep learning introduction/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="杰德的博客">
 <meta property="og:description" content="深度学习入门经过一段时间对深入学习的学习，写一些东西来记录一下自己的所学。 神经网络与深度学习深度学习是机器学习拉出的分支，它从经验中学习，并根据层次化的概念体系来理解世界，而每个概念则通过与某些相对简单的概念之间的关系来定义。 由于是从经验中学习，所以可以极大地避免由人类给计算机形式化指定它所需要学习的东西，这就能让机器自动学习，极大地促进了机器学习的发展。而层次化的概念则让机器可以通过构建简单">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://wiki.jikexueyuan.com/project/neural-networks-and-deep-learning-zh-cn/images/162.png">
 <meta property="og:image" content="http://www.saedsayad.com/images/ANN_Unit_step.png">
 <meta property="og:image" content="https://sebastianraschka.com/images/faq/logisticregr-neuralnet/sigmoid.png">
@@ -118,7 +131,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Muse',
+    scheme: 'Mist',
     version: '5.1.2',
     sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
@@ -126,7 +139,7 @@
     motion: true,
     duoshuo: {
       userId: '0',
-      author: 'Author'
+      author: '博主'
     },
     algolia: {
       applicationID: '',
@@ -146,7 +159,7 @@
 
 
 
-  <title>深度学习入门 | Hexo</title>
+  <title>深度学习入门 | 杰德的博客</title>
   
 
 
@@ -158,7 +171,7 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
   
@@ -176,7 +189,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Hexo</span>
+        <span class="site-title">杰德的博客</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -206,7 +219,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Home
+            首页
           </a>
         </li>
       
@@ -246,13 +259,13 @@
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/22/deep learning introduction/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
+      <meta itemprop="name" content="吴杰德">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://oeclakg19.bkt.clouddn.com/IMG_20160731_115131_1_1.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
+      <meta itemprop="name" content="杰德的博客">
     </span>
 
     
@@ -270,9 +283,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-08-22T11:43:44+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-22T11:43:44+08:00">
                 2017-08-22
               </time>
             
@@ -291,7 +304,7 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">In</span>
+                <span class="post-meta-item-text">分类于</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
@@ -460,10 +473,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Table of Contents
+            文章目录
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
-            Overview
+            站点概览
           </li>
         </ul>
       
@@ -471,9 +484,9 @@
       <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="/images/avatar.gif"
-               alt="John Doe" />
-          <p class="site-author-name" itemprop="name">John Doe</p>
+               src="http://oeclakg19.bkt.clouddn.com/IMG_20160731_115131_1_1.jpg"
+               alt="吴杰德" />
+          <p class="site-author-name" itemprop="name">吴杰德</p>
            
               <p class="site-description motion-element" itemprop="description"></p>
           
@@ -484,7 +497,7 @@
             <div class="site-state-item site-state-posts">
               <a href="/">
                 <span class="site-state-item-count">10</span>
-                <span class="site-state-item-name">posts</span>
+                <span class="site-state-item-name">日志</span>
               </a>
             </div>
           
@@ -495,7 +508,7 @@
             <div class="site-state-item site-state-categories">
               
                 <span class="site-state-item-count">3</span>
-                <span class="site-state-item-name">categories</span>
+                <span class="site-state-item-name">分类</span>
               
             </div>
           
@@ -506,7 +519,7 @@
             <div class="site-state-item site-state-tags">
               
                 <span class="site-state-item-count">20</span>
-                <span class="site-state-item-name">tags</span>
+                <span class="site-state-item-name">标签</span>
               
             </div>
           
@@ -516,6 +529,30 @@
         
 
         <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/jedan010" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                    
+                      GitHub
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="547054738@qq.com" target="_blank" title="E-Mail">
+                  
+                    <i class="fa fa-fw fa-envelope"></i>
+                  
+                    
+                      E-Mail
+                    
+                </a>
+              </span>
+            
           
         </div>
 
@@ -567,17 +604,17 @@
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">John Doe</span>
+  <span class="author" itemprop="copyrightHolder">吴杰德</span>
 
   
 </div>
 
 
-  <div class="powered-by">Powered by <a class="theme-link" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动</div>
 
   <span class="post-meta-divider">|</span>
 
-  <div class="theme-info">Theme &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.2</div>
+  <div class="theme-info">主题 &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.2</div>
 
 
         
@@ -620,6 +657,8 @@
   
 
 
+  
+
 
 
 
@@ -647,6 +686,9 @@
 
   
   <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
 
 
   
