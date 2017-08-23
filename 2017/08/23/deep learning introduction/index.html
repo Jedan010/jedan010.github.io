@@ -440,8 +440,8 @@ Error = \sum_i(y_i-y^{'}_i)^2</script><p>这样我们就可以把$Error$当成�
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/08/23/如何学习/学习/" rel="next" title="学习">
-                <i class="fa fa-chevron-left"></i> 学习
+              <a href="/2017/08/23/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
               </a>
             
           </div>
@@ -450,8 +450,8 @@ Error = \sum_i(y_i-y^{'}_i)^2</script><p>这样我们就可以把$Error$当成�
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/08/23/hello-world/" rel="prev" title="Hello World">
-                Hello World <i class="fa fa-chevron-right"></i>
+              <a href="/2017/08/23/通往财富自由之路/通往财富自由之路_3/" rel="prev" title="通往财富自由之路_3">
+                通往财富自由之路_3 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -482,43 +482,12 @@ Error = \sum_i(y_i-y^{'}_i)^2</script><p>这样我们就可以把$Error$当成�
           
   <div class="comments" id="comments">
     
-    <div onclick="showGitment()" id="gitment_title" class="gitment_title">显示 Gitment 评论</div>
-    <div id="container" style="display:none"></div>
-    <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
-    <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
-    <script>
-    const myTheme = {
-      render(state, instance) {
-        const container = document.createElement('div');
-        container.lang = "en-US";
-        container.className = 'gitment-container gitment-root-container';
-        container.appendChild(instance.renderHeader(state, instance));
-        container.appendChild(instance.renderEditor(state, instance));
-        container.appendChild(instance.renderComments(state, instance));
-        container.appendChild(instance.renderFooter(state, instance));
-        return container;
-      }
-    }
-    function showGitment() {
-      $("#gitment_title").attr("style", "display:none");
-      $("#container").attr("style", "").addClass("gitment_container");
-      var gitment = new Gitment({
-        id: window.location.pathname,
-        theme: myTheme,
-        owner: 'Jedan',
-        repo: 'xxxx',
-        oauth: {
-          client_id: 'ad70e4afe260d083b339',
-          client_secret: '0cc093f6f92b41446bb08b59b4b411cab22ce6f8'
-        }
-      });
-      gitment.render('container');
-    }
-    </script>
-
-
-  </div>
-
+       
+         <div id="gitment-container"></div>
+       
+      
+    </div>
+  
 
 
         </div>
