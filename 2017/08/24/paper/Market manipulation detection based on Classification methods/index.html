@@ -120,7 +120,7 @@
 <meta property="og:image" content="http://oeclakg19.bkt.clouddn.com/tick.png">
 <meta property="og:image" content="http://oeclakg19.bkt.clouddn.com/ROC_daily_colorless.png">
 <meta property="og:image" content="http://oeclakg19.bkt.clouddn.com/ROC_tick_colorless.png">
-<meta property="og:updated_time" content="2017-08-24T03:27:47.987Z">
+<meta property="og:updated_time" content="2017-08-24T03:38:49.793Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Market manipulation detection based on Classification methods">
 <meta name="twitter:description" content="Market manipulation detection based on Classification methodsAbstractIn this paper, we use supervised machine learning methods to detect the market manipulation in China based on the information relea">
@@ -366,7 +366,7 @@
       
 
       
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="Market-manipulation-detection-based-on-Classification-methods"><a href="#Market-manipulation-detection-based-on-Classification-methods" class="headerlink" title="Market manipulation detection based on Classification methods"></a>Market manipulation detection based on Classification methods</h1><h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>In this paper, we use supervised machine learning methods to detect the market manipulation in China based on the information released by China Securities Regulation Commission (CSRC). For the supervised machine learning, we mainly use classified method to detect the anomaly from the daily and tick trading data of manipulated stocks. As a result, we find that the supervised machine learning method are good at detecting market manipulation from daily trading data and have poor performance of tick data. The best used supervised machine learning models are K-nearest neighbor (KNN) and Decision Tree classifier (DTC) which have over 99\% of accuracy, sensitivity, specificity and area under the curve (AUC).</p>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="Market-manipulation-detection-based-on-Classification-methods"><a href="#Market-manipulation-detection-based-on-Classification-methods" class="headerlink" title="Market manipulation detection based on Classification methods"></a>Market manipulation detection based on Classification methods</h1><h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>In this paper, we use supervised machine learning methods to detect the market manipulation in China based on the information released by China Securities Regulation Commission (CSRC). For the supervised machine learning, we mainly use classified method to detect the anomaly from the daily and tick trading data of manipulated stocks. As a result, we find that the supervised machine learning method are good at detecting market manipulation from daily trading data and have poor performance of tick data. The best used supervised machine learning models are K-nearest neighbor (KNN) and Decision Tree classifier (DTC) which have over 99% of accuracy, sensitivity, specificity and area under the curve (AUC).</p>
 <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>arket manipulation is a deliberate attempt to intervene in  the free and fair operation of the market and create artificial, false or misleading appearances with respect to price of security <sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="T. C. Lin, The new market manipulation
 ">[1]</span></a></sup>. Market manipulation, broadly defined, has existed since the infancy of financial markets <sup id="fnref:2"><a href="#fn:2" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="J. W. Markham, Law enforcement and the history of financial market manipulation, ME Sharpe, 2013.
 ">[2]</span></a></sup>, which has become an import issue of emerging and developed market. Manipulated security market not only distorts the prices and transactions in the security market, but also undermines the function of security market. What’s more, many investors would lose significantly because of most manipulators making illegal profit.</p>
@@ -420,8 +420,8 @@ Advance Computing Conference (IACC), 2014 IEEE International, IEEE, 2014, pp. 54
 Measurement and Applications (ICSIMA), 2013 IEEE International Conference On, IEEE, 2013, pp. 1–5.
 ">[20]</span></a></sup>. Therefore, artificial neural network technique is selected as one of the best prediction method.</p>
 <h2 id="Empirical-Analysis"><a href="#Empirical-Analysis" class="headerlink" title="Empirical Analysis"></a>Empirical Analysis</h2><p>We used supervised machine learning models to detect the daily trading data and tick trading data of the manipulated stock to find out the manipulated time and evaluate the supervised machine learning model. The supervised machine learning models are suitable to daily trading data and have high accuracy to detect the manipulated data, while have poor performance of detecting the tick trading data.</p>
-<h3 id="Data-Description-and-Data-Preprocessing"><a href="#Data-Description-and-Data-Preprocessing" class="headerlink" title="Data Description and Data Preprocessing"></a>Data Description and Data Preprocessing</h3><p>In this paper, we use the market manipulation cases released by China Security Regulatory Commission(CSRC). Once CSRC officials discovered someone have manipulated the stock market, they would punish the manipulators and release this case on the website regularly. Based on that, we can download the daily trading data and tick trading data of these manipulated stocks. We select 64 manipulated stocks of daily trading data, which include daily open price, daily highest price, daily lowest price, daily close price and daily trading volume and tick trading data, which include tick price, tick price change volume, tick trading volume, tick trading amount and type released by CSRC from 2013 to 2016. For each stock’s analysis period is from the time that the first manipulation day $- 2<em>$the manipulation period to that the end manipulation day $+ 2</em>$the manipulation period (Table1), which make sure the rate of manipulated data about 20\%.</p>
-<p>We combine all of the daily trading data and tick trading data, and standardize them by zero-mean normalization. We get 4, 593 daily trading data and 8, 986, 466 tick trading data. We simple random sampling 1\% of the tick trading data as the aggregate of tick trading is too big to compute (Table2). And we transform the nonnumerical data into numerical data. Then, we label the data as 1 if it was manipulated at the time according to CSRC, and others as 0. So the input data for the supervised machine learning is the preprocessed daily trading data and tick trading data, while the output is binary, marked 0 and 1.</p>
+<h3 id="Data-Description-and-Data-Preprocessing"><a href="#Data-Description-and-Data-Preprocessing" class="headerlink" title="Data Description and Data Preprocessing"></a>Data Description and Data Preprocessing</h3><p>In this paper, we use the market manipulation cases released by China Security Regulatory Commission(CSRC). Once CSRC officials discovered someone have manipulated the stock market, they would punish the manipulators and release this case on the website regularly. Based on that, we can download the daily trading data and tick trading data of these manipulated stocks. We select 64 manipulated stocks of daily trading data, which include daily open price, daily highest price, daily lowest price, daily close price and daily trading volume and tick trading data, which include tick price, tick price change volume, tick trading volume, tick trading amount and type released by CSRC from 2013 to 2016. For each stock’s analysis period is from the time that the first manipulation day -2*the manipulation period to that the end manipulation day + 2* the manipulation period (Table1), which make sure the rate of manipulated data about 20%.</p>
+<p>We combine all of the daily trading data and tick trading data, and standardize them by zero-mean normalization. We get 4, 593 daily trading data and 8, 986, 466 tick trading data. We simple random sampling 1% of the tick trading data as the aggregate of tick trading is too big to compute (Table2). And we transform the nonnumerical data into numerical data. Then, we label the data as 1 if it was manipulated at the time according to CSRC, and others as 0. So the input data for the supervised machine learning is the preprocessed daily trading data and tick trading data, while the output is binary, marked 0 and 1.</p>
 <center>Table 1: Some manipulated stock cases</center>
 
 <div class="table-container">
@@ -521,7 +521,7 @@ Measurement and Applications (ICSIMA), 2013 IEEE International Conference On, IE
 <table>
 <thead>
 <tr>
-<th></th>
+<th style="text-align:center"></th>
 <th></th>
 <th>predicted class</th>
 <th></th>
@@ -529,18 +529,19 @@ Measurement and Applications (ICSIMA), 2013 IEEE International Conference On, IE
 </thead>
 <tbody>
 <tr>
-<td></td>
+<td style="text-align:center"></td>
 <td></td>
 <td>success</td>
 <td>failure</td>
 </tr>
 <tr>
-<td>Actual class</td>
+<td style="text-align:center">Actual class</td>
 <td>success</td>
 <td>TP</td>
 <td>FN</td>
 </tr>
 <tr>
+<td style="text-align:center"></td>
 <td>failure</td>
 <td>FP</td>
 <td>TN</td>
@@ -736,7 +737,7 @@ Decision Support Systems 47 (2009) 547–553.
 </tbody>
 </table>
 </div>
-<p>Fig 1 presents the result of different models of daily and tick training data based on above 4 evaluation index, accuracy, sensitivity, specificity and AUC. From the fig 1(a), most of models of daily training have a good accuracy, sensitivity and AUC which are over 90\%, and some of them even reach 100\%, while the result of specificity is not good as other index for some models of daily training data. It is worth noting that KNN and DTC perform excellent in the four indexes that all exceed 99\%.</p>
+<p>Fig 1 presents the result of different models of daily and tick training data based on above 4 evaluation index, accuracy, sensitivity, specificity and AUC. From the fig 1(a), most of models of daily training have a good accuracy, sensitivity and AUC which are over 90%, and some of them even reach 100%, while the result of specificity is not good as other index for some models of daily training data. It is worth noting that KNN and DTC perform excellent in the four indexes that all exceed 99%.</p>
 <center>Fig. 1:(a) daily training data</center>
 
 <p><img src="http://oeclakg19.bkt.clouddn.com/daily.png" alt="daily training data"></p>
@@ -744,14 +745,14 @@ Decision Support Systems 47 (2009) 547–553.
 
 <p><img src="http://oeclakg19.bkt.clouddn.com/tick.png" alt="tick training data"></p>
 <p>The result is not ideal for the supervised machine learning models to train tick training data according to the fig 1(b) showing all of the models have high score of sensitivity and rather low specificity. Our mainly aim is to accurately detect the manipulated data which pursue a high specificity.</p>
-<p>Fig 2 shows Receiver Operating Characteristic (ROC) and Area Under the Curve (AUC) for different models of daily and tick training data. The AUC of all the models of daily training data is greater than 90\% which means excellent estimate result, while the AUC of all the models of tick training data is nearly 50\% which is slightly better than random estimate result.</p>
+<p>Fig 2 shows Receiver Operating Characteristic (ROC) and Area Under the Curve (AUC) for different models of daily and tick training data. The AUC of all the models of daily training data is greater than 90% which means excellent estimate result, while the AUC of all the models of tick training data is nearly 50% which is slightly better than random estimate result.</p>
 <center>Fig. 2: (a) daily training data</center>
 
 <p><img src="http://oeclakg19.bkt.clouddn.com/ROC_daily_colorless.png" alt="ROC_daily_colorless"></p>
 <center>Fig. 2: (a) daily training data</center>
 
 <p><img src="http://oeclakg19.bkt.clouddn.com/ROC_tick_colorless.png" alt="ROC_tick_colorless"></p>
-<h2 id="Conclusion-and-Future-Work"><a href="#Conclusion-and-Future-Work" class="headerlink" title="Conclusion and Future Work"></a>Conclusion and Future Work</h2><p>This paper presents a comparative machine learning method for market manipulation detecting, especially for stock-price market manipulation. Based on manipulated information released by China Securities Regulation Commission (CSRC), we use supervised and unsupervised machine learning models to detect the anomaly from daily and tick trading data from the manipulated stocks. The supervised machine learning models, which are mainly classify machine learning models, have excellent performance for detecting the anomaly from the daily data, while having poor performance of tick data. Among the used classify machine learning models, KNN and DTC are the best, which exceed 99\% of all the indexes, including accuracy, sensitivity, specificity and AUC.</p>
+<h2 id="Conclusion-and-Future-Work"><a href="#Conclusion-and-Future-Work" class="headerlink" title="Conclusion and Future Work"></a>Conclusion and Future Work</h2><p>This paper presents a comparative machine learning method for market manipulation detecting, especially for stock-price market manipulation. Based on manipulated information released by China Securities Regulation Commission (CSRC), we use supervised and unsupervised machine learning models to detect the anomaly from daily and tick trading data from the manipulated stocks. The supervised machine learning models, which are mainly classify machine learning models, have excellent performance for detecting the anomaly from the daily data, while having poor performance of tick data. Among the used classify machine learning models, KNN and DTC are the best, which exceed 99% of all the indexes, including accuracy, sensitivity, specificity and AUC.</p>
 <p>For the supervised machine learning models to detecting the anomaly from the tick trading data, one of the reason for its poor performance is hard to exactly label the tick trading data as normal or abnormal, because it is almost impossible to know exact which specific time or specific tick trading data was manipulated. As the same, the evaluation of clustering tick trading data are inaccurate as the difficulty of deciding accurate anomalies. So a more suitable way to process the tick trading data is worth to be further studied.</p>
 <h2 id="Acknowledgement"><a href="#Acknowledgement" class="headerlink" title="Acknowledgement"></a>Acknowledgement</h2><p>This paper is partly supported by the National Natural Science Foundation (71401188), Beijing Social Science Foundation (15SHB017) and Supported by Program for Innovation Research in Central University of Finance and Economics.</p>
 <div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">T. C. Lin, The new market manipulation<a href="#fnref:1" rev="footnote"> ↩</a></span></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">2.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">J. W. Markham, Law enforcement and the history of financial market manipulation, ME Sharpe, 2013.<a href="#fnref:2" rev="footnote"> ↩</a></span></li><li id="fn:3"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">3.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">F. Allen, D. Gale, Stock-price manipulation, The Review of Financial Studies (1992) 503–529<a href="#fnref:3" rev="footnote"> ↩</a></span></li><li id="fn:4"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">4.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">R. A. Jarrow, Market manipulation, bubbles, corners, and short squeezes, Journal of financial and Quantitative Analysis 27 (3) (1992)
