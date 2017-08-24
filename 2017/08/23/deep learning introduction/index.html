@@ -121,7 +121,7 @@
 <meta property="og:image" content="https://sebastianraschka.com/images/faq/logisticregr-neuralnet/sigmoid.png">
 <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/ArtificialNeuronModel_english.png/600px-ArtificialNeuronModel_english.png">
 <meta property="og:image" content="https://sebastianraschka.com/images/faq/closed-form-vs-gd/ball.png">
-<meta property="og:updated_time" content="2017-08-23T01:05:21.705Z">
+<meta property="og:updated_time" content="2017-08-24T01:48:08.758Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="深度学习入门">
 <meta name="twitter:description" content="深度学习入门经过一段时间对深入学习的学习，写一些东西来记录一下自己的所学。 神经网络与深度学习深度学习是机器学习拉出的分支，它从经验中学习，并根据层次化的概念体系来理解世界，而每个概念则通过与某些相对简单的概念之间的关系来定义。 由于是从经验中学习，所以可以极大地避免由人类给计算机形式化指定它所需要学习的东西，这就能让机器自动学习，极大地促进了机器学习的发展。而层次化的概念则让机器可以通过构建简单">
@@ -397,7 +397,7 @@ softmax(z)&=&\frac{e^{z_i}}{\sum_je^{z_j}}
 <p>而$softmax(z)$函数可以看做$sigmoid(z)$函数的推广，$sigmoid(z)$函数一般做两类的分类，而$softmax(z)$可以做多个类别的分类。$relu(z)$和$hanh(x)$之后会在卷积神经网络和循环神经网络中介绍。</p>
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/ArtificialNeuronModel_english.png/600px-ArtificialNeuronModel_english.png" alt=""></p>
 <p>我们现在已经了解了神经网络中神经元的工作方式，他们将上一层所有神经元的值加权求和再加上一定偏置，然后用激活函数作用得到新的输出，作为下一层神经元的输入，直到最后一层，即输出层，输入结果$y^{‘}$。</p>
-<p>现在我们用公式来表现我们刚刚提到的联系。首先，我们定义$a<em>j^l$，为第$l$层的第$j$个激活函数，$w^l</em>{jk}$表示第$l-1$层的第$k$个神经元到第$l$层的第$j$个神经元的权重，$b^l_j$表示第$l$层的第$j$个神经元。则第$l$层的第$j$个神经元与第$l-1$层就通过$a^l_j$联系在一起：</p>
+<p>现在我们用公式来表现我们刚刚提到的联系。首先，我们定义 $a_j^l$，为第 $l$层的第 $j$个激活函数， $w^l_{jk}$表示第 $l-1$层的第 $k$个神经元到第 $l$层的第 $j$个神经元的权重， $b^l_j$表示第 $l$层的第 $j$个神经元。则第 $l$层的第 $j$个神经元与第 $l-1$层就通过 $a^l_j$联系在一起：</p>
 <script type="math/tex; mode=display">a^l_j=\sigma(\sum_kw^l_{jk}a^{l-1}_k + b^l_j)</script><p>我们还可以把它们都向量化，用矩阵会大大提高运算速度。$a^l$表示第$l$层的所有激活函数值。同样的，$W^l$和$b^l$分别表示第$l$层的所有神经元的权重和偏置。之前你可能会奇怪为什么$w^l_{jk}$要这样写，$jk$反过来似乎更符合直觉，这是为了之后矩阵运算方便。<br>用矩阵则可简洁地表示为：</p>
 <script type="math/tex; mode=display">a^l=\sigma(W^la^{l-1} + b^l)</script><h3 id="梯度下降"><a href="#梯度下降" class="headerlink" title="梯度下降"></a>梯度下降</h3><p>当我们对于每一个输入的$x$得到输出的结果$y^{‘}$的时候，我们如何判断我们我们的结果怎么样呢？换句话说，我们如何判断$y^{‘}$与$y$有多相同呢？</p>
 <p>一个直观的想法就是对于每一个结果计算他们之间的均方误差：</p>
@@ -440,18 +440,14 @@ Error = \sum_i(y_i-y^{'}_i)^2</script><p>这样我们就可以把$Error$当成�
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/08/23/如何学习/组块/" rel="next" title="组块">
-                <i class="fa fa-chevron-left"></i> 组块
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/08/23/如何学习/学习/" rel="prev" title="学习">
-                学习 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/08/23/如何学习/组块/" rel="prev" title="组块">
+                组块 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
