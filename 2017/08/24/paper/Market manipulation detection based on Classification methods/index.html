@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Georgia,serif ,"Times New Roman", "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑";:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|KaiTi:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Market manipulation,Classification methods,Anomaly detection," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="杰德的博客" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="Market manipulation detection based on Classification methodsAbstractIn this paper, we use supervised machine learning methods to detect the market manipulation in China based on the information relea">
+<meta name="keywords" content="Market manipulation,Classification methods,Anomaly detection">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Market manipulation detection based on Classification methods">
+<meta property="og:url" content="http://yoursite.com/2017/08/24/paper/Market manipulation detection based on Classification methods/index.html">
+<meta property="og:site_name" content="杰德的博客">
+<meta property="og:description" content="Market manipulation detection based on Classification methodsAbstractIn this paper, we use supervised machine learning methods to detect the market manipulation in China based on the information relea">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://oeclakg19.bkt.clouddn.com/daily.png">
+<meta property="og:image" content="http://oeclakg19.bkt.clouddn.com/tick.png">
+<meta property="og:image" content="http://oeclakg19.bkt.clouddn.com/ROC_daily_colorless.png">
+<meta property="og:image" content="http://oeclakg19.bkt.clouddn.com/ROC_tick_colorless.png">
+<meta property="og:updated_time" content="2017-08-24T03:27:47.987Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Market manipulation detection based on Classification methods">
+<meta name="twitter:description" content="Market manipulation detection based on Classification methodsAbstractIn this paper, we use supervised machine learning methods to detect the market manipulation in China based on the information relea">
+<meta name="twitter:image" content="http://oeclakg19.bkt.clouddn.com/daily.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.2',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/08/24/paper/Market manipulation detection based on Classification methods/"/>
+
+
+
+
+
+  <title>Market manipulation detection based on Classification methods | 杰德的博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">杰德的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">随便写写</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/24/paper/Market manipulation detection based on Classification methods/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="吴杰德">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://oeclakg19.bkt.clouddn.com/IMG_20160731_115131_1_1.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="杰德的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Market manipulation detection based on Classification methods</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-24T09:58:18+08:00">
+                2017-08-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper/" itemprop="url" rel="index">
+                    <span itemprop="name">paper</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="Market-manipulation-detection-based-on-Classification-methods"><a href="#Market-manipulation-detection-based-on-Classification-methods" class="headerlink" title="Market manipulation detection based on Classification methods"></a>Market manipulation detection based on Classification methods</h1><h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>In this paper, we use supervised machine learning methods to detect the market manipulation in China based on the information released by China Securities Regulation Commission (CSRC). For the supervised machine learning, we mainly use classified method to detect the anomaly from the daily and tick trading data of manipulated stocks. As a result, we find that the supervised machine learning method are good at detecting market manipulation from daily trading data and have poor performance of tick data. The best used supervised machine learning models are K-nearest neighbor (KNN) and Decision Tree classifier (DTC) which have over 99\% of accuracy, sensitivity, specificity and area under the curve (AUC).</p>
+<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>arket manipulation is a deliberate attempt to intervene in  the free and fair operation of the market and create artificial, false or misleading appearances with respect to price of security <sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="T. C. Lin, The new market manipulation
+">[1]</span></a></sup>. Market manipulation, broadly defined, has existed since the infancy of financial markets <sup id="fnref:2"><a href="#fn:2" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="J. W. Markham, Law enforcement and the history of financial market manipulation, ME Sharpe, 2013.
+">[2]</span></a></sup>, which has become an import issue of emerging and developed market. Manipulated security market not only distorts the prices and transactions in the security market, but also undermines the function of security market. What’s more, many investors would lose significantly because of most manipulators making illegal profit.</p>
+<p>There has been increasing research on data mining techniques in detecting market manipulation. Allen and Gale<sup id="fnref:3"><a href="#fn:3" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="F. Allen, D. Gale, Stock-price manipulation, The Review of Financial Studies (1992) 503–529
+">[3]</span></a></sup>classify manipulation as action-based manipulation, information based manipulation, and trade-based manipulation. We study the trade-based manipulation that a trader attempting to manipulate a stock price simply by buying and then selling (or vice versa), without releasing any false information or taking any other publicly observable actions designed to alter the value of security , by using supervised and unsupervised machine learning methods. Based on information about the manipulated stocks from China Securities Regulation Commission (CSRC). We obtain daily stock data and tick stock data of 64 manipulated stocks published in CSRC website. We use those data to train the supervised machine learning models, K-Nearest Neighbors (KNN), Support Vector Machines (SVM), Decision Tree Learning (DTL), Linear Discriminant Analysis (LDA), Quadratic Discriminant Analysis (QDA), Logistic Regression (LR), Artificial Neural Networks (ANN), so when the sample data set is given, they can classify the manipulated period and the normal period.</p>
+<p>Currently, most scholars’ study of detecting market manipulation is theoretical and pattern description which is still hard to accurately and fast detect market manipulation. To increase the possibility and efficiency of detecting market manipulation, we apply supervised machine learning models to detect market manipulation in real time, which might undermine the extent to those individual investors losing money in trading the manipulated stocks. By collecting historical stock data, it is also very helpful for regulator to train the supervised machine learning models and detect the market manipulation.</p>
+<p>This paper is organized as follows: Section 2 summarizes the main result of prior study. Section 3 and Section 4 give information about supervised machine learning models. Empirical analysis and data are presented in Section 4. Section 5 has our conclusion and some future works.</p>
+<h2 id="Literature-Review"><a href="#Literature-Review" class="headerlink" title="Literature Review"></a>Literature Review</h2><p>Allen and Gale (1992)<sup id="fnref:3"><a href="#fn:3" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="F. Allen, D. Gale, Stock-price manipulation, The Review of Financial Studies (1992) 503–529
+">[3]</span></a></sup> and Jarrow (1992)<sup id="fnref:4"><a href="#fn:4" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="R. A. Jarrow, Market manipulation, bubbles, corners, and short squeezes, Journal of financial and Quantitative Analysis 27 (3) (1992)
+311–336.
+">[4]</span></a></sup> were the first researchers to study manipulation. After studying the history of stock-price manipulation, Allen and Gale classified the manipulation as action-based manipulation, information-based manipulation and trade-based manipulation<sup id="fnref:3"><a href="#fn:3" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="F. Allen, D. Gale, Stock-price manipulation, The Review of Financial Studies (1992) 503–529
+">[3]</span></a></sup>. They define trade-based manipulation as manipulating stocks through actual trading or trading orders by distorting stock market prices, rather than changing company values or issuing false information. In a dynamic model of asset markets, by investigating large traders’ manipulation of trading strategies in the securities market, Jarrow found that large investors have a greater impact on stock prices<sup id="fnref:4"><a href="#fn:4" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="R. A. Jarrow, Market manipulation, bubbles, corners, and short squeezes, Journal of financial and Quantitative Analysis 27 (3) (1992)
+311–336.
+">[4]</span></a></sup>. Carhart and Reed (2002)<sup id="fnref:5"><a href="#fn:5" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="M. M. Carhart, R. Kaniel, D. K. Musto, A. V. Reed, Leaning for the tape: Evidence of gaming behavior in equity mutual funds, The
+Journal of Finance 57 (2) (2002) 661–693.
+">[5]</span></a></sup> found that a large trader can manipulate the market where without derivative securities by cornering the market or lure the market to “manipulate” their own trades. And he develop a theory for option pricing in an economy with a larger trader showing that the standard option pricing models holds, but with a random “volatility” price process. Hanson and Oprea (2004)<sup id="fnref:6"><a href="#fn:6" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="R. Hanson, R. Oprea, Manipulators increase information market accuracy, George Mason University.
+">[6]</span></a></sup> developed an experimental model to study whether the manipulators could distort the prices in a prediction market.</p>
+<p>Some researchers have attempted to detect manipulation in different methods. Aggarwal and Wu (2003)<sup id="fnref:7"><a href="#fn:7" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="R. K. Aggarwal, G. Wu, Stock market manipulation-theory and evidence.
+">[7]</span></a></sup> studied The US stock market from 1990 to 2001 to detect market manipulation and found that the manipulated stock had abnormal stock prices, liquidity, volatility and return. H.Ogut and Aktas (2009)<sup id="fnref:8"><a href="#fn:8" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="H. O gut, M. M. Do  ganay, R. Aktas, Detecting stock-price manipulation in an emerging market: The case of Turkey, Expert Systems ˇ
+with Applications 36 (9) (2009) 11944–11949.
+">[8]</span></a></sup> compared the performance of Artificial Neural Networks (ANN) and Support Vector Machine (SVM) with discriminant analysis and logistics regression on detecting the market manipulation and found that data mining techniques were better than multivariate techniques. According to Mongkolnavin and Tirapat (2009)<sup id="fnref:9"><a href="#fn:9" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="J. Mongkolnavin, S. Tirapat, Marking the Close analysis in Thai Bond Market Surveillance using association rules, Expert Systems with
+Applications 36 (4) (2009) 8523–8527.
+">[9]</span></a></sup>, association rules were applied to detect mark-the-close in intraday trades from the Thai Bond Market Association. Price variation in the market and behavior of investors were integrated to analyze warning signals in real time. The method can produce a list of investors, who perhaps are manipulators. Fallh and Kordlouie (2011)<sup id="fnref:10"><a href="#fn:10" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="S. M. Fallah, H. Kordlouie, Forecasting Stock Price Manipulation in Capital Market.
+">[10]</span></a></sup> used logit model, artificial neural network, and multiple discriminant analysis to create stock price manipulation models in Tehran stock exchange. The performances of three aforesaid models were effective. The selected data were thoroughly studied by runs test, skewness test, and duration correlative test. The events of price manipulation were indicated. The selected data can be divided into two sets: manipulated and non-manipulated companies. The factors that were related to stock price manipulation were defined such as: size of company, P/E ratio, liquidity of stock, status of information clarity, and structure of shareholders. In Yang (2014)<sup id="fnref:11"><a href="#fn:11" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="F. Yang, H. Yang, M. Yang, Discrimination of China’s stock price manipulation based on primary component analysis, in: Behavior,
+Economic and Social Computing (BESC), 2014 International Conference on, IEEE, 2014, pp. 1–5.
+">[11]</span></a></sup>, logistic regression model was chosen to detect stock price manipulation activities in Shanghai and Shenzhen market that were published as manipulated stocks. They analyzed independent variables based on primary component analysis, which increased performance for forecasting the model. The model was better than the linear regression model. Cao and McGinnity (2015)<sup id="fnref:12"><a href="#fn:12" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="Y. Cao, Y. Li, S. Coleman, A. Belatreche, T. M. McGinnity, Adaptive hidden Markov model with anomaly states for price manipulation
+detection, IEEE transactions on neural networks and learning systems 26 (2) (2015) 318–330.
+">[12]</span></a></sup> proposed the Adaptive Hidden Markov Model with Anomaly States (AHMMAS) to detect intraday stock price manipulation activities. The stock tick data were level 2 data from NASDAQ and London stock exchange. The model was tested with simulated data and real market data. The performance evaluation of AHMMAS outperforms other benchmark algorithms such as: Gaussian Mixture Models (GMM), K-Nearest Neighbors Algorithm (kNN), and One Class Support Vector Machines (OCSVM). Leangarun and Thajchayapong (2016)<sup id="fnref:8"><a href="#fn:8" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="H. O gut, M. M. Do  ganay, R. Aktas, Detecting stock-price manipulation in an emerging market: The case of Turkey, Expert Systems ˇ
+with Applications 36 (9) (2009) 11944–11949.
+">[8]</span></a></sup> investigated two popular scenarios of stock price manipulations: pump-and-dump and spoof trading. They defined and used level 2 data to train the neural network models which achieve high accuracy for detecting pump-and-dump, and two dimensional Gaussian model which shows it can detect spoof trading.</p>
+<h2 id="Methodology"><a href="#Methodology" class="headerlink" title="Methodology"></a>Methodology</h2><p>Supervised machine learning is the search for algorithms that reason from externally supplied instances to produce general hypotheses, which then make predictions about future instances<sup id="fnref:13"><a href="#fn:13" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="S. B. Kotsiantis, I. Zaharakis, P. Pintelas, Supervised Machine Learning: A Review of Classification Techniques, 2007.
+">[13]</span></a></sup>. In other words, the goal of supervised learning is to build a concise model of the distribution of class labels in terms of predictor features. The resulting classifier is then used to assign class labels to the testing instances where the values of the predictor features are known, but the value of the class label is unknown. Supervised machine learning is mainly consist of classification and regression. Classification is learning a function that maps (classifies) a data item into one of several predefined classes<sup id="fnref:14"><a href="#fn:14" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="U. Fayyad, G. Piatetsky-Shapiro, P. Smyth, From data mining to knowledge discovery in databases, AI magazine 17 (3) (1996) 37
+">[14]</span></a></sup>. And similarly regression is learning a function that maps a data item to a real-valued prediction variable.</p>
+<h3 id="K-Nearest-Neighbour"><a href="#K-Nearest-Neighbour" class="headerlink" title="K-Nearest Neighbour"></a>K-Nearest Neighbour</h3><p>K-Nearest Neighbour (KNN) is an instance based classifier method. The parameter units consist of samples that are used in the method and this algorithm then assumes that all instances relate to the points in the n-dimensional space $R^{N}$<sup id="fnref:15"><a href="#fn:15" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="R. S. Michalski, J. G. Carbonell, T. M. Mitchell, Machine Learning: An Artificial Intelligence Approach, Springer Science & Business
+Media, 2013.
+">[15]</span></a></sup>. The algorithm is very expedient as the information in the training data is never lost. However, this algorithm would be suitable if the training data set is large as this algorithm is very time consuming when each of the sample in training set is processed while classifying a new data and this process requires a longer classification time.</p>
+<h3 id="Support-Vector"><a href="#Support-Vector" class="headerlink" title="Support Vector"></a>Support Vector</h3><p>Support Vector Method (SVM) is a classier that performs classification tasks by constructing hyperplanes in a multidimensional space that separates cases of different class labels. SVM method provides an optimally separating hyperplane in the sense that the margin between two groups is maximized. The SVM is proven to be advantageous in handling classification tasks with excellent generalization performance. The method seeks to minimize the upper bound of the generalization error based on the structural risk minimization principle. SVM training is equivalent to solve a linear constrained quadratic programming problem<sup id="fnref:16"><a href="#fn:16" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="B. Zheng, S. W. Yoon, S. S. Lam, Breast cancer diagnosis based on feature extraction using a hybrid of K-means and support vector
+machine algorithms, Expert Systems with Applications 41 (4) (2014) 1476–1482.
+">[16]</span></a></sup>.</p>
+<h3 id="Decision-Tree-Classifier"><a href="#Decision-Tree-Classifier" class="headerlink" title="Decision Tree Classifier"></a>Decision Tree Classifier</h3><p>Decision Tree Classifier (DTC) is one of the most popular technique for prediction. An empirical tree represents a segmentation of the data that is created by applying a series of simple rules. Each rule assigns an observation to a segment based on the value of one input. Most of researchers have used this technique because of its simplicity and comprehensibility to uncover small or large data structure and predict the value. Romero et al. (2008) said that the decision tree models are easily understood because of their reasoning process and can be directly converted into set of IF-THEN rules<sup id="fnref:17"><a href="#fn:17" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="C. Romero, S. Ventura, P. G. Espejo, C. Hervas, Data mining algorithms to classify students, in: Educational Data Mining 2008, 2008. ´
+">[17]</span></a></sup>.</p>
+<h3 id="Linear-Discriminant-Analysis"><a href="#Linear-Discriminant-Analysis" class="headerlink" title="Linear Discriminant Analysis"></a>Linear Discriminant Analysis</h3><p>Linear Discriminant Analysis (LDA) is widely used in discriminant analysis to predict the class based on a given set of measurements on new unlabeled observations<sup id="fnref:14"><a href="#fn:14" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="U. Fayyad, G. Piatetsky-Shapiro, P. Smyth, From data mining to knowledge discovery in databases, AI magazine 17 (3) (1996) 37
+">[14]</span></a></sup>. The algorithm’s ability to capture statistical dependencies among the predictor variables indicates that this algorithm would be suitable to explore the linear constraint of this study to discovery the synergy between motor and non-motor symptoms.</p>
+<h3 id="Quadratic-Discriminant-Analysis"><a href="#Quadratic-Discriminant-Analysis" class="headerlink" title="Quadratic Discriminant Analysis"></a>Quadratic Discriminant Analysis</h3><p>Quadratic Discriminant Analysis (QDA) is closely related to linear discriminant analysis, where it is assumed that the measurements from each class are normally distributed. Unlike LDA however, in QDA there is no assumption that the covariance of each of the classes is identical. When the normality assumption is true, the best possible test for the hypothesis that a given measurement is from a given class is the likelihood ratio test.</p>
+<h3 id="Logistic-Regression"><a href="#Logistic-Regression" class="headerlink" title="Logistic Regression"></a>Logistic Regression</h3><p>Logistic Regression (LR) is a method that would use the given set of features either continuous, discrete, or a mixture of both types and the binary target, LR then computes a linear combination of the inputs and passes through the logistic function<sup id="fnref:18"><a href="#fn:18" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="P. J. Garc´ıa-Laencina, P. H. Abreu, M. H. Abreu, N. Afonoso, Missing data imputation on the 5-year survival prediction of breast cancer
+patients with unknown discrete values, Computers in biology and medicine 59 (2015) 125–133.
+">[18]</span></a></sup>. This method is commonly used because it is easy to implementation and it provides competitive results.</p>
+<h3 id="Artificial-Neural-Networks"><a href="#Artificial-Neural-Networks" class="headerlink" title="Artificial Neural Networks"></a>Artificial Neural Networks</h3><p>Artificial Neural Network (ANN) is another popular technique used in educational data mining. The advantage of neural network is that it has an ability to detect all possible interactions between predictors’ variables<sup id="fnref:19"><a href="#fn:19" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="G. Gray, C. McGuinness, P. Owende, An application of classification models to predict learner progression in tertiary education, in:
+Advance Computing Conference (IACC), 2014 IEEE International, IEEE, 2014, pp. 549–554.
+">[19]</span></a></sup>. Artificial neural network could also do a complete detection without having any doubt even in complex nonlinear relationship between dependent and independent variables<sup id="fnref:20"><a href="#fn:20" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="P. M. Arsad, N. Buniyamin, others, A neural network students’ performance prediction model (NNSPPM), in: Smart Instrumentation,
+Measurement and Applications (ICSIMA), 2013 IEEE International Conference On, IEEE, 2013, pp. 1–5.
+">[20]</span></a></sup>. Therefore, artificial neural network technique is selected as one of the best prediction method.</p>
+<h2 id="Empirical-Analysis"><a href="#Empirical-Analysis" class="headerlink" title="Empirical Analysis"></a>Empirical Analysis</h2><p>We used supervised machine learning models to detect the daily trading data and tick trading data of the manipulated stock to find out the manipulated time and evaluate the supervised machine learning model. The supervised machine learning models are suitable to daily trading data and have high accuracy to detect the manipulated data, while have poor performance of detecting the tick trading data.</p>
+<h3 id="Data-Description-and-Data-Preprocessing"><a href="#Data-Description-and-Data-Preprocessing" class="headerlink" title="Data Description and Data Preprocessing"></a>Data Description and Data Preprocessing</h3><p>In this paper, we use the market manipulation cases released by China Security Regulatory Commission(CSRC). Once CSRC officials discovered someone have manipulated the stock market, they would punish the manipulators and release this case on the website regularly. Based on that, we can download the daily trading data and tick trading data of these manipulated stocks. We select 64 manipulated stocks of daily trading data, which include daily open price, daily highest price, daily lowest price, daily close price and daily trading volume and tick trading data, which include tick price, tick price change volume, tick trading volume, tick trading amount and type released by CSRC from 2013 to 2016. For each stock’s analysis period is from the time that the first manipulation day $- 2<em>$the manipulation period to that the end manipulation day $+ 2</em>$the manipulation period (Table1), which make sure the rate of manipulated data about 20\%.</p>
+<p>We combine all of the daily trading data and tick trading data, and standardize them by zero-mean normalization. We get 4, 593 daily trading data and 8, 986, 466 tick trading data. We simple random sampling 1\% of the tick trading data as the aggregate of tick trading is too big to compute (Table2). And we transform the nonnumerical data into numerical data. Then, we label the data as 1 if it was manipulated at the time according to CSRC, and others as 0. So the input data for the supervised machine learning is the preprocessed daily trading data and tick trading data, while the output is binary, marked 0 and 1.</p>
+<center>Table 1: Some manipulated stock cases</center>
+
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>stock   name</th>
+<th>Stock code</th>
+<th>starting day of manipulation</th>
+<th>ending dayof manipulation</th>
+<th>starting day of analysis</th>
+<th>ending dayof analysis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Jingyi Co., Ltd</td>
+<td>002295</td>
+<td>1/19/2015</td>
+<td>1/19/2015</td>
+<td>1/15/2015</td>
+<td>1/21/2015</td>
+</tr>
+<tr>
+<td>Fuda Co., Ltd</td>
+<td>603166</td>
+<td>7/5/2016</td>
+<td>7/18/2016</td>
+<td>5/26/2016</td>
+<td>8/25/2016</td>
+</tr>
+<tr>
+<td>Zhongxing Commerce Co., Ltd</td>
+<td>000715</td>
+<td>1/4/2013</td>
+<td>5/26/2014</td>
+<td>2/12/2009</td>
+<td>4/17/2018</td>
+</tr>
+<tr>
+<td>Shibeigaoxin Co., Ltd</td>
+<td>600604</td>
+<td>9/8/2015</td>
+<td>9/9/2015</td>
+<td>9/2/2015</td>
+<td>9/15/2015</td>
+</tr>
+<tr>
+<td>Shuangxin Co., Ltd</td>
+<td>300100</td>
+<td>11/26/2014</td>
+<td>11/28/2014</td>
+<td>11/18/2014</td>
+<td>12/8/2014</td>
+</tr>
+</tbody>
+</table>
+</div>
+<center>Table 2: Analysis stock data</center>
+
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th></th>
+<th>daily</th>
+<th>tick</th>
+<th>simplified tick</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>total point</td>
+<td>4593</td>
+<td>8986466</td>
+<td>89864</td>
+</tr>
+<tr>
+<td>out point</td>
+<td>919</td>
+<td>1985096</td>
+<td>19851</td>
+</tr>
+<tr>
+<td>out rate</td>
+<td>20.27%</td>
+<td>22.09%</td>
+<td>22.09%</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="Performance-Evaluation"><a href="#Performance-Evaluation" class="headerlink" title="Performance Evaluation"></a>Performance Evaluation</h3><p>Measures of the quality of classification are built from a confusion matrix which records correctly and incorrectly recognized examples for each class. Table 3 presents a confusion matrix for binary classification, where TP are true positive, TF are false positive, FN are false negative, and TN are true negative counts. In this paper, for example, TN means this data are predicted as being manipulated and they are truly being manipulated according to CSRC.</p>
+<center>Table 3: Confusion Matrix</center>
+
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th>predicted class</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td>success</td>
+<td>failure</td>
+</tr>
+<tr>
+<td>Actual class</td>
+<td>success</td>
+<td>TP</td>
+<td>FN</td>
+</tr>
+<tr>
+<td>failure</td>
+<td>FP</td>
+<td>TN</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Classifying performance without focusing on a class is the most general way of comparing algorithms.<br>It does not favor any particular application. The most used empirical measure, accuracy, does not distinguish between the number of correct labels of different classes. Accuracy approximates how effective the algorithm is by showing the probability of the true value of the class label. In other words it assesses the overall effectiveness of the algorithm.</p>
+<script type="math/tex; mode=display">Accuracy = \frac{TP+TN}{TP+FP+FN+TN}</script><p>Corresponding to it, two measures that separately estimate a classifier’s performance on different classes are sensitivity and specificity which approximates the probability of the positive (negative) label being true; in other words, it assesses the effectiveness of the algorithm on a single class.</p>
+<script type="math/tex; mode=display">Sensitivity =   \frac{TP}{TP + FN}</script><script type="math/tex; mode=display">
+Specificity =   \frac{TN}{FP + TN}</script><p>A comprehensive evaluation of classifier performance can be obtained by the ROC: shows a relation between the sensitivity and the specificity of the algorithm ROC curves, which plot sensitivity as a function of specificity for all possible thresholds<sup id="fnref:21"><a href="#fn:21" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="P. Cortez, A. Cerdeira, F. Almeida, T. Matos, J. Reis, Modeling wine preferences by data mining from physicochemical properties,
+Decision Support Systems 47 (2009) 547–553.
+">[21]</span></a></sup>, and illustrate a classifier’s trade-off between true positives and false negatives. A higher value of sensitivity for a given value of specificity indicates better performance. The area under the ROC curve (AUC) is a commonly used metric for evaluating a classifier’s performance.</p>
+<h3 id="Experimental-Results"><a href="#Experimental-Results" class="headerlink" title="Experimental Results"></a>Experimental Results</h3><p>We use 5-fold cross-validation to evaluate our predictive models by partitioning the daily training data and tick training data into a training set to train our models, and a test set to evaluate them. For the supervised machine learning models, we use K-nearest neighbors (KNN), Decision tree classifier (DTC),Linear discriminant analysis (LDA), Quadratic discriminant analysis (QDA), Logistic regression (LR), Artificial neural networks (ANN), Support vector machines(SVM).<br>Table 4 and Table 5 show the confusing matrix and the proportion of all mentioned models of daily training data and tick training data. As can be seen, most of the TP and TN have a rather higher rate than FN and FP of the daily training data, while the rate of TN is lower than FP and even some are near to zero of the tick training data.</p>
+<center>Table 4: Confusing Matrix of daily training data</center>
+
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">KNN</th>
+<th style="text-align:center">　</th>
+<th style="text-align:center">DTC</th>
+<th style="text-align:center">　</th>
+<th style="text-align:center">LDA</th>
+<th style="text-align:center">　</th>
+<th style="text-align:center">QDA</th>
+<th style="text-align:center">　</th>
+<th style="text-align:center">ANN</th>
+<th style="text-align:center">　</th>
+<th style="text-align:center">LGR</th>
+<th style="text-align:center">　</th>
+<th style="text-align:center">SVM</th>
+<th style="text-align:center">　</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">3658</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">3658</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">3658</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">3622</td>
+<td style="text-align:center">40</td>
+<td style="text-align:center">3658</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">3596</td>
+<td style="text-align:center">66</td>
+<td style="text-align:center">3658</td>
+<td style="text-align:center">4</td>
+</tr>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">931</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">931</td>
+<td style="text-align:center">434</td>
+<td style="text-align:center">497</td>
+<td style="text-align:center">236</td>
+<td style="text-align:center">695</td>
+<td style="text-align:center">88</td>
+<td style="text-align:center">843</td>
+<td style="text-align:center">434</td>
+<td style="text-align:center">497</td>
+<td style="text-align:center">372</td>
+<td style="text-align:center">559</td>
+</tr>
+<tr>
+<td style="text-align:center">79.6%</td>
+<td style="text-align:center">0.1%</td>
+<td style="text-align:center">79.6%</td>
+<td style="text-align:center">0.1%</td>
+<td style="text-align:center">79.6%</td>
+<td style="text-align:center">0.1%</td>
+<td style="text-align:center">78.9%</td>
+<td style="text-align:center">0.9%</td>
+<td style="text-align:center">79.6%</td>
+<td style="text-align:center">0.1%</td>
+<td style="text-align:center">78.3%</td>
+<td style="text-align:center">1.4%</td>
+<td style="text-align:center">79.6%</td>
+<td style="text-align:center">0.1%</td>
+</tr>
+<tr>
+<td style="text-align:center">0.0%</td>
+<td style="text-align:center">20.3%</td>
+<td style="text-align:center">0.0%</td>
+<td style="text-align:center">20.3%</td>
+<td style="text-align:center">9.4%</td>
+<td style="text-align:center">10.8%</td>
+<td style="text-align:center">5.1%</td>
+<td style="text-align:center">15.1%</td>
+<td style="text-align:center">1.9%</td>
+<td style="text-align:center">18.4%</td>
+<td style="text-align:center">9.4%</td>
+<td style="text-align:center">10.8%</td>
+<td style="text-align:center">8.1%</td>
+<td style="text-align:center">12.2%</td>
+</tr>
+</tbody>
+</table>
+</div>
+<center>Table 5: Confusion Matrix of tick training data</center>
+
+
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">KNN</th>
+<th style="text-align:center">　</th>
+<th style="text-align:center">DTC</th>
+<th style="text-align:center">　</th>
+<th style="text-align:center">LDA</th>
+<th style="text-align:center">　</th>
+<th style="text-align:center">QDA</th>
+<th style="text-align:center">　</th>
+<th style="text-align:center">ANN</th>
+<th style="text-align:center">　</th>
+<th style="text-align:center">LGR</th>
+<th style="text-align:center">　</th>
+<th style="text-align:center">SVM</th>
+<th style="text-align:center">　</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">58468</td>
+<td style="text-align:center">11545</td>
+<td style="text-align:center">52871</td>
+<td style="text-align:center">17142</td>
+<td style="text-align:center">68854</td>
+<td style="text-align:center">1159</td>
+<td style="text-align:center">66168</td>
+<td style="text-align:center">3845</td>
+<td style="text-align:center">69772</td>
+<td style="text-align:center">241</td>
+<td style="text-align:center">69250</td>
+<td style="text-align:center">763</td>
+<td style="text-align:center">69348</td>
+<td style="text-align:center">665</td>
+</tr>
+<tr>
+<td style="text-align:center">15507</td>
+<td style="text-align:center">4344</td>
+<td style="text-align:center">14106</td>
+<td style="text-align:center">5745</td>
+<td style="text-align:center">18490</td>
+<td style="text-align:center">1361</td>
+<td style="text-align:center">17262</td>
+<td style="text-align:center">2589</td>
+<td style="text-align:center">19091</td>
+<td style="text-align:center">760</td>
+<td style="text-align:center">18788</td>
+<td style="text-align:center">1063</td>
+<td style="text-align:center">18940</td>
+<td style="text-align:center">911</td>
+</tr>
+<tr>
+<td style="text-align:center">65.1%</td>
+<td style="text-align:center">12.8%</td>
+<td style="text-align:center">58.8%</td>
+<td style="text-align:center">19.1%</td>
+<td style="text-align:center">76.6%</td>
+<td style="text-align:center">1.3%</td>
+<td style="text-align:center">73.6%</td>
+<td style="text-align:center">4.3%</td>
+<td style="text-align:center">77.6%</td>
+<td style="text-align:center">0.3%</td>
+<td style="text-align:center">77.1%</td>
+<td style="text-align:center">0.8%</td>
+<td style="text-align:center">77.2%</td>
+<td style="text-align:center">0.7%</td>
+</tr>
+<tr>
+<td style="text-align:center">17.3%</td>
+<td style="text-align:center">4.8%</td>
+<td style="text-align:center">15.7%</td>
+<td style="text-align:center">6.4%</td>
+<td style="text-align:center">20.6%</td>
+<td style="text-align:center">1.5%</td>
+<td style="text-align:center">19.2%</td>
+<td style="text-align:center">2.9%</td>
+<td style="text-align:center">21.2%</td>
+<td style="text-align:center">0.8%</td>
+<td style="text-align:center">20.9%</td>
+<td style="text-align:center">1.2%</td>
+<td style="text-align:center">21.1%</td>
+<td style="text-align:center">1.0%</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Fig 1 presents the result of different models of daily and tick training data based on above 4 evaluation index, accuracy, sensitivity, specificity and AUC. From the fig 1(a), most of models of daily training have a good accuracy, sensitivity and AUC which are over 90\%, and some of them even reach 100\%, while the result of specificity is not good as other index for some models of daily training data. It is worth noting that KNN and DTC perform excellent in the four indexes that all exceed 99\%.</p>
+<center>Fig. 1:(a) daily training data</center>
+
+<p><img src="http://oeclakg19.bkt.clouddn.com/daily.png" alt="daily training data"></p>
+<center>Fig. 1:(b) tick training data</center>
+
+<p><img src="http://oeclakg19.bkt.clouddn.com/tick.png" alt="tick training data"></p>
+<p>The result is not ideal for the supervised machine learning models to train tick training data according to the fig 1(b) showing all of the models have high score of sensitivity and rather low specificity. Our mainly aim is to accurately detect the manipulated data which pursue a high specificity.</p>
+<p>Fig 2 shows Receiver Operating Characteristic (ROC) and Area Under the Curve (AUC) for different models of daily and tick training data. The AUC of all the models of daily training data is greater than 90\% which means excellent estimate result, while the AUC of all the models of tick training data is nearly 50\% which is slightly better than random estimate result.</p>
+<center>Fig. 2: (a) daily training data</center>
+
+<p><img src="http://oeclakg19.bkt.clouddn.com/ROC_daily_colorless.png" alt="ROC_daily_colorless"></p>
+<center>Fig. 2: (a) daily training data</center>
+
+<p><img src="http://oeclakg19.bkt.clouddn.com/ROC_tick_colorless.png" alt="ROC_tick_colorless"></p>
+<h2 id="Conclusion-and-Future-Work"><a href="#Conclusion-and-Future-Work" class="headerlink" title="Conclusion and Future Work"></a>Conclusion and Future Work</h2><p>This paper presents a comparative machine learning method for market manipulation detecting, especially for stock-price market manipulation. Based on manipulated information released by China Securities Regulation Commission (CSRC), we use supervised and unsupervised machine learning models to detect the anomaly from daily and tick trading data from the manipulated stocks. The supervised machine learning models, which are mainly classify machine learning models, have excellent performance for detecting the anomaly from the daily data, while having poor performance of tick data. Among the used classify machine learning models, KNN and DTC are the best, which exceed 99\% of all the indexes, including accuracy, sensitivity, specificity and AUC.</p>
+<p>For the supervised machine learning models to detecting the anomaly from the tick trading data, one of the reason for its poor performance is hard to exactly label the tick trading data as normal or abnormal, because it is almost impossible to know exact which specific time or specific tick trading data was manipulated. As the same, the evaluation of clustering tick trading data are inaccurate as the difficulty of deciding accurate anomalies. So a more suitable way to process the tick trading data is worth to be further studied.</p>
+<h2 id="Acknowledgement"><a href="#Acknowledgement" class="headerlink" title="Acknowledgement"></a>Acknowledgement</h2><p>This paper is partly supported by the National Natural Science Foundation (71401188), Beijing Social Science Foundation (15SHB017) and Supported by Program for Innovation Research in Central University of Finance and Economics.</p>
+<div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">T. C. Lin, The new market manipulation<a href="#fnref:1" rev="footnote"> ↩</a></span></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">2.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">J. W. Markham, Law enforcement and the history of financial market manipulation, ME Sharpe, 2013.<a href="#fnref:2" rev="footnote"> ↩</a></span></li><li id="fn:3"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">3.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">F. Allen, D. Gale, Stock-price manipulation, The Review of Financial Studies (1992) 503–529<a href="#fnref:3" rev="footnote"> ↩</a></span></li><li id="fn:4"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">4.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">R. A. Jarrow, Market manipulation, bubbles, corners, and short squeezes, Journal of financial and Quantitative Analysis 27 (3) (1992)
+311–336.<a href="#fnref:4" rev="footnote"> ↩</a></span></li><li id="fn:5"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">5.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">M. M. Carhart, R. Kaniel, D. K. Musto, A. V. Reed, Leaning for the tape: Evidence of gaming behavior in equity mutual funds, The
+Journal of Finance 57 (2) (2002) 661–693.<a href="#fnref:5" rev="footnote"> ↩</a></span></li><li id="fn:6"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">6.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">R. Hanson, R. Oprea, Manipulators increase information market accuracy, George Mason University.<a href="#fnref:6" rev="footnote"> ↩</a></span></li><li id="fn:7"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">7.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">R. K. Aggarwal, G. Wu, Stock market manipulation-theory and evidence.<a href="#fnref:7" rev="footnote"> ↩</a></span></li><li id="fn:8"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">8.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">H. O gut, M. M. Do  ganay, R. Aktas, Detecting stock-price manipulation in an emerging market: The case of Turkey, Expert Systems ˇ
+with Applications 36 (9) (2009) 11944–11949.<a href="#fnref:8" rev="footnote"> ↩</a></span></li><li id="fn:9"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">9.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">J. Mongkolnavin, S. Tirapat, Marking the Close analysis in Thai Bond Market Surveillance using association rules, Expert Systems with
+Applications 36 (4) (2009) 8523–8527.<a href="#fnref:9" rev="footnote"> ↩</a></span></li><li id="fn:10"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">10.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">S. M. Fallah, H. Kordlouie, Forecasting Stock Price Manipulation in Capital Market.<a href="#fnref:10" rev="footnote"> ↩</a></span></li><li id="fn:11"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">11.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">F. Yang, H. Yang, M. Yang, Discrimination of China’s stock price manipulation based on primary component analysis, in: Behavior,
+Economic and Social Computing (BESC), 2014 International Conference on, IEEE, 2014, pp. 1–5.<a href="#fnref:11" rev="footnote"> ↩</a></span></li><li id="fn:12"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">12.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">Y. Cao, Y. Li, S. Coleman, A. Belatreche, T. M. McGinnity, Adaptive hidden Markov model with anomaly states for price manipulation
+detection, IEEE transactions on neural networks and learning systems 26 (2) (2015) 318–330.<a href="#fnref:12" rev="footnote"> ↩</a></span></li><li id="fn:13"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">13.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">S. B. Kotsiantis, I. Zaharakis, P. Pintelas, Supervised Machine Learning: A Review of Classification Techniques, 2007.<a href="#fnref:13" rev="footnote"> ↩</a></span></li><li id="fn:14"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">14.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">U. Fayyad, G. Piatetsky-Shapiro, P. Smyth, From data mining to knowledge discovery in databases, AI magazine 17 (3) (1996) 37<a href="#fnref:14" rev="footnote"> ↩</a></span></li><li id="fn:15"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">15.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">R. S. Michalski, J. G. Carbonell, T. M. Mitchell, Machine Learning: An Artificial Intelligence Approach, Springer Science &amp; Business
+Media, 2013.<a href="#fnref:15" rev="footnote"> ↩</a></span></li><li id="fn:16"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">16.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">B. Zheng, S. W. Yoon, S. S. Lam, Breast cancer diagnosis based on feature extraction using a hybrid of K-means and support vector
+machine algorithms, Expert Systems with Applications 41 (4) (2014) 1476–1482.<a href="#fnref:16" rev="footnote"> ↩</a></span></li><li id="fn:17"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">17.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">C. Romero, S. Ventura, P. G. Espejo, C. Hervas, Data mining algorithms to classify students, in: Educational Data Mining 2008, 2008. ´<a href="#fnref:17" rev="footnote"> ↩</a></span></li><li id="fn:18"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">18.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">P. J. Garc´ıa-Laencina, P. H. Abreu, M. H. Abreu, N. Afonoso, Missing data imputation on the 5-year survival prediction of breast cancer
+patients with unknown discrete values, Computers in biology and medicine 59 (2015) 125–133.<a href="#fnref:18" rev="footnote"> ↩</a></span></li><li id="fn:19"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">19.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">G. Gray, C. McGuinness, P. Owende, An application of classification models to predict learner progression in tertiary education, in:
+Advance Computing Conference (IACC), 2014 IEEE International, IEEE, 2014, pp. 549–554.<a href="#fnref:19" rev="footnote"> ↩</a></span></li><li id="fn:20"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">20.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">P. M. Arsad, N. Buniyamin, others, A neural network students’ performance prediction model (NNSPPM), in: Smart Instrumentation,
+Measurement and Applications (ICSIMA), 2013 IEEE International Conference On, IEEE, 2013, pp. 1–5.<a href="#fnref:20" rev="footnote"> ↩</a></span></li><li id="fn:21"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">21.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">P. Cortez, A. Cerdeira, F. Almeida, T. Matos, J. Reis, Modeling wine preferences by data mining from physicochemical properties,
+Decision Support Systems 47 (2009) 547–553.<a href="#fnref:21" rev="footnote"> ↩</a></span></li></ol></div></div>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Market-manipulation/" rel="tag"># Market manipulation</a>
+          
+            <a href="/tags/Classification-methods/" rel="tag"># Classification methods</a>
+          
+            <a href="/tags/Anomaly-detection/" rel="tag"># Anomaly detection</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/08/23/Git/git基础操作/" rel="next" title="Git基础操作">
+                <i class="fa fa-chevron-left"></i> Git基础操作
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  <div onclick="showGitment()" id="gitment_title" class="gitment_title">显示 Gitment 评论</div>
+  <div id="container" style="display:none"></div>
+  <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+  <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+  <script>
+  const myTheme = {
+    render(state, instance) {
+      const container = document.createElement('div');
+      container.lang = "en-US";
+      container.className = 'gitment-container gitment-root-container';
+      container.appendChild(instance.renderHeader(state, instance));
+      container.appendChild(instance.renderEditor(state, instance));
+      container.appendChild(instance.renderComments(state, instance));
+      container.appendChild(instance.renderFooter(state, instance));
+      return container;
+    }
+  }
+  function showGitment() {
+    $("#gitment_title").attr("style", "display:none");
+    $("#container").attr("style", "").addClass("gitment_container");
+    var gitment = new Gitment({
+      id: window.location.pathname,
+      theme: myTheme,
+      owner: 'Jedan',
+      repo: 'xxxx',
+      oauth: {
+        client_id: 'ad70e4afe260d083b339',
+        client_secret: '0cc093f6f92b41446bb08b59b4b411cab22ce6f8'
+      }
+    });
+    gitment.render('container');
+  }
+  </script>
+
+
+  </div>
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://oeclakg19.bkt.clouddn.com/IMG_20160731_115131_1_1.jpg"
+               alt="吴杰德" />
+          <p class="site-author-name" itemprop="name">吴杰德</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">25</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/jedan010" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                    
+                      GitHub
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="547054738@qq.com" target="_blank" title="E-Mail">
+                  
+                    <i class="fa fa-fw fa-envelope"></i>
+                  
+                    
+                      E-Mail
+                    
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Market-manipulation-detection-based-on-Classification-methods"><span class="nav-number">1.</span> <span class="nav-text">Market manipulation detection based on Classification methods</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Abstract"><span class="nav-number">1.1.</span> <span class="nav-text">Abstract</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Introduction"><span class="nav-number">1.2.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Literature-Review"><span class="nav-number">1.3.</span> <span class="nav-text">Literature Review</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Methodology"><span class="nav-number">1.4.</span> <span class="nav-text">Methodology</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#K-Nearest-Neighbour"><span class="nav-number">1.4.1.</span> <span class="nav-text">K-Nearest Neighbour</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Support-Vector"><span class="nav-number">1.4.2.</span> <span class="nav-text">Support Vector</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Decision-Tree-Classifier"><span class="nav-number">1.4.3.</span> <span class="nav-text">Decision Tree Classifier</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Linear-Discriminant-Analysis"><span class="nav-number">1.4.4.</span> <span class="nav-text">Linear Discriminant Analysis</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Quadratic-Discriminant-Analysis"><span class="nav-number">1.4.5.</span> <span class="nav-text">Quadratic Discriminant Analysis</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Logistic-Regression"><span class="nav-number">1.4.6.</span> <span class="nav-text">Logistic Regression</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Artificial-Neural-Networks"><span class="nav-number">1.4.7.</span> <span class="nav-text">Artificial Neural Networks</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Empirical-Analysis"><span class="nav-number">1.5.</span> <span class="nav-text">Empirical Analysis</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Data-Description-and-Data-Preprocessing"><span class="nav-number">1.5.1.</span> <span class="nav-text">Data Description and Data Preprocessing</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Performance-Evaluation"><span class="nav-number">1.5.2.</span> <span class="nav-text">Performance Evaluation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Experimental-Results"><span class="nav-number">1.5.3.</span> <span class="nav-text">Experimental Results</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Conclusion-and-Future-Work"><span class="nav-number">1.6.</span> <span class="nav-text">Conclusion and Future Work</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Acknowledgement"><span class="nav-number">1.7.</span> <span class="nav-text">Acknowledgement</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">吴杰德</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+  <span class="post-meta-divider">|</span>
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.2</div>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>
