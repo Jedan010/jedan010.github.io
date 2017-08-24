@@ -121,7 +121,7 @@
 <meta property="og:image" content="https://sebastianraschka.com/images/faq/logisticregr-neuralnet/sigmoid.png">
 <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/ArtificialNeuronModel_english.png/600px-ArtificialNeuronModel_english.png">
 <meta property="og:image" content="https://sebastianraschka.com/images/faq/closed-form-vs-gd/ball.png">
-<meta property="og:updated_time" content="2017-08-24T01:48:08.758Z">
+<meta property="og:updated_time" content="2017-08-24T01:53:34.487Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="深度学习入门">
 <meta name="twitter:description" content="深度学习入门经过一段时间对深入学习的学习，写一些东西来记录一下自己的所学。 神经网络与深度学习深度学习是机器学习拉出的分支，它从经验中学习，并根据层次化的概念体系来理解世界，而每个概念则通过与某些相对简单的概念之间的关系来定义。 由于是从经验中学习，所以可以极大地避免由人类给计算机形式化指定它所需要学习的东西，这就能让机器自动学习，极大地促进了机器学习的发展。而层次化的概念则让机器可以通过构建简单">
@@ -402,7 +402,7 @@ softmax(z)&=&\frac{e^{z_i}}{\sum_je^{z_j}}
 <script type="math/tex; mode=display">a^l=\sigma(W^la^{l-1} + b^l)</script><h3 id="梯度下降"><a href="#梯度下降" class="headerlink" title="梯度下降"></a>梯度下降</h3><p>当我们对于每一个输入的$x$得到输出的结果$y^{‘}$的时候，我们如何判断我们我们的结果怎么样呢？换句话说，我们如何判断$y^{‘}$与$y$有多相同呢？</p>
 <p>一个直观的想法就是对于每一个结果计算他们之间的均方误差：</p>
 <script type="math/tex; mode=display">
-Error = \sum_i(y_i-y^{'}_i)^2</script><p>这样我们就可以把$Error$当成我们的目标函数，也称为代价函数$C$，通过不断改变每个神经元的权重$w$和偏置$b$，以达到$C$的最小值。即：</p>
+Error = \frac{1}{n}\sum_i(y_i-y^{'}_i)^2</script><p>这样我们就可以把$Error$当成我们的目标函数，也称为代价函数$C$，通过不断改变每个神经元的权重$w$和偏置$b$，以达到$C$的最小值。即：</p>
 <script type="math/tex; mode=display">
 \min {C=\frac{1}{2n}\sum\left \|  y(x)-a^l(x)\right \|^2}</script><p>运用我们运筹学中学过的非线性规划，我们可以用梯度下降(gradient descent)的方法求得最小值。而且$C$是二次函数，所以存在全局最小值。我们设置一个合适的下降速率，慢慢地我们总能达到最小值。</p>
 <script type="math/tex; mode=display">
@@ -439,6 +439,10 @@ Error = \sum_i(y_i-y^{'}_i)^2</script><p>这样我们就可以把$Error$当成�
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/08/23/如何学习/学习/" rel="next" title="学习">
+                <i class="fa fa-chevron-left"></i> 学习
+              </a>
             
           </div>
 
