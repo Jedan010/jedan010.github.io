@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next mist use-motion" lang="zh-Hans">
+<html class="theme-next pisces use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -127,7 +127,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Mist',
+    scheme: 'Pisces',
     version: '5.1.2',
     sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
@@ -430,8 +430,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/08/23/通往财富自由之路/通往财富自由之路_4/" rel="next" title="通往财富自由之路_4">
-                <i class="fa fa-chevron-left"></i> 通往财富自由之路_4
+              <a href="/2017/08/23/如何学习/记忆/" rel="next" title="记忆">
+                <i class="fa fa-chevron-left"></i> 记忆
               </a>
             
           </div>
@@ -440,8 +440,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/08/23/通往财富自由之路/通往财富自由之路_1/" rel="prev" title="通往财富自由之路_1">
-                通往财富自由之路_1 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/08/23/Git/git基础操作/" rel="prev" title="Git基础操作">
+                Git基础操作 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -472,39 +472,39 @@
           
   <div class="comments" id="comments">
     
-    <div onclick="showGitment()" id="gitment_title" class="gitment_title">显示 Gitment 评论</div>
-    <div id="container" style="display:none"></div>
-    <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
-    <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
-    <script>
-    const myTheme = {
-      render(state, instance) {
-        const container = document.createElement('div');
-        container.lang = "en-US";
-        container.className = 'gitment-container gitment-root-container';
-        container.appendChild(instance.renderHeader(state, instance));
-        container.appendChild(instance.renderEditor(state, instance));
-        container.appendChild(instance.renderComments(state, instance));
-        container.appendChild(instance.renderFooter(state, instance));
-        return container;
+  <div onclick="showGitment()" id="gitment_title" class="gitment_title">显示 Gitment 评论</div>
+  <div id="container" style="display:none"></div>
+  <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+  <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+  <script>
+  const myTheme = {
+    render(state, instance) {
+      const container = document.createElement('div');
+      container.lang = "en-US";
+      container.className = 'gitment-container gitment-root-container';
+      container.appendChild(instance.renderHeader(state, instance));
+      container.appendChild(instance.renderEditor(state, instance));
+      container.appendChild(instance.renderComments(state, instance));
+      container.appendChild(instance.renderFooter(state, instance));
+      return container;
+    }
+  }
+  function showGitment() {
+    $("#gitment_title").attr("style", "display:none");
+    $("#container").attr("style", "").addClass("gitment_container");
+    var gitment = new Gitment({
+      id: window.location.pathname,
+      theme: myTheme,
+      owner: 'Jedan',
+      repo: 'xxxx',
+      oauth: {
+        client_id: 'ad70e4afe260d083b339',
+        client_secret: '0cc093f6f92b41446bb08b59b4b411cab22ce6f8'
       }
-    }
-    function showGitment() {
-      $("#gitment_title").attr("style", "display:none");
-      $("#container").attr("style", "").addClass("gitment_container");
-      var gitment = new Gitment({
-        id: window.location.pathname,
-        theme: myTheme,
-        owner: 'Jedan',
-        repo: 'https://github.com/Jedan010/git_comment',
-        oauth: {
-          client_id: 'ad70e4afe260d083b339',
-          client_secret: '0cc093f6f92b41446bb08b59b4b411cab22ce6f8'
-        }
-      });
-      gitment.render('container');
-    }
-    </script>
+    });
+    gitment.render('container');
+  }
+  </script>
 
 
   </div>
@@ -555,7 +555,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-count">11</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -566,7 +566,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -577,7 +577,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">20</span>
+                <span class="site-state-item-count">22</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -680,7 +680,7 @@
 
   <span class="post-meta-divider">|</span>
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.2</div>
+  <div class="theme-info">主题 &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.2</div>
 
 
         
@@ -764,6 +764,13 @@
   
   
 
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+
+
+
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
@@ -804,9 +811,6 @@
 
 
 
-
-
-	
 
 
   

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-08-23T01:05:21.721Z</updated>
+  <updated>2017-08-23T10:07:33.820Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,57 +16,83 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>通往财富自由之路_1</title>
-    <link href="http://yoursite.com/2017/08/23/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF_1/"/>
-    <id>http://yoursite.com/2017/08/23/通往财富自由之路/通往财富自由之路_1/</id>
-    <published>2017-08-23T01:05:21.721Z</published>
-    <updated>2017-08-23T01:05:21.721Z</updated>
+    <title>Git基础操作</title>
+    <link href="http://yoursite.com/2017/08/23/Git/git%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/"/>
+    <id>http://yoursite.com/2017/08/23/Git/git基础操作/</id>
+    <published>2017-08-23T02:17:01.471Z</published>
+    <updated>2017-08-23T10:07:33.820Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="通往财富自由之路"><a href="#通往财富自由之路" class="headerlink" title="通往财富自由之路"></a>通往财富自由之路</h1><ul>
-<li><strong>安全感</strong></li>
-<li><strong>活在未来</strong></li>
-<li><strong>遇到贵人的方法</strong></li>
+    <content type="html"><![CDATA[<h1 id="Git基础操作"><a href="#Git基础操作" class="headerlink" title="Git基础操作"></a>Git基础操作</h1><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>git是什么呢？git是一个分布式版本控制系统，以便于追踪改变和多人协作。</p>
+<p>为什么我们要关注版本控制呢？当你写完一篇文章后，如果我们想要修改，又不想破坏原文件，以便修改失误后能还原，我们一般会复制一份原文件，然后再修改。可是如果我们有很多份文件要修改呢？如果我们要修改很多次呢？那每次修改都复制一份出来就显得很繁琐。通过版本控制，我们就可以在一个文件中修改，并能很好的在各个修改的版本中来回转换。</p>
+<p>为什么是分布式呢？分布式是相对于集中式的。集中式就是把文件集中放在一个地方，如果需要修改，就把要修改的文件取出来，修改完后将修改的部分再替换回去。这个有两点不好，一是如果集中放置文件的主机出问题了，那所有文件都找不回来了。二是修改必须是联网，如果主机网络出问题，那其他人也不能修改。而分布式则是将文件放在所有需要的人主机上，这样就相当于将文件备份了无数份，几乎没有丢失的可能。另外，所有人都可以在自己的本级上修改，只需要在修改完之后联网传送修改好的版本即可。</p>
+<h2 id="基础命令"><a href="#基础命令" class="headerlink" title="基础命令"></a>基础命令</h2><h3 id="获取git仓库"><a href="#获取git仓库" class="headerlink" title="获取git仓库"></a>获取git仓库</h3><ul>
+<li>从现有目录中初始化仓库</li>
+<li>从服务器克隆现有仓库</li>
 </ul>
-<h2 id="安全感"><a href="#安全感" class="headerlink" title="安全感"></a>安全感</h2><p>由于注意力是我们最宝贵的东西，所有要想成长，合理的运用注意力是最重要的事情之一。既然要合理运用注意力，我们就得在我们认为重要，甚至是认为最重要的事情上投入大量的注意力，我们才能有尽可能大的收获。而当我们在我们认为重要的事情上投入我们的注意力的时候，意味着我们在其他的事情上几乎不关注。</p>
-<p>而这很可能会让人觉得不太合群，只关注自己认为重要的事情，有时候就不能和其他人一起聊八卦，打游戏等等，会让人觉得没有安全感。可能，我们只有放弃部分的安全感，我们才能朝自己的方向坚定不移地前行，才能在一个地方长期、深入地思考。</p>
-<p>一味地追求完全安全，是低效且不可能实现的。世界上有无数的可能性，每件事也有数不清的可能性，当我们想要一个人面对，解决所有可能性的时候，我们就不可能在一种或者很少的几种可能性中集中我们的注意力，进而再所有可能都不能解决好，而我们又不可能解决所有的可能性，所以到头来一无所获。</p>
-<p>但我们又不是只有一个人，我们专注于一种可能，然后放弃应对其他可能的能力，即放弃那部分的安全感，我们接受其它可能到来的时候，我们接受我们没有办法自己解决，而我们同时相信其他人能解决好那种可能。</p>
-<p>这就需要合作和信任。只有相互信任，才能形成合作。信任就是我把我的一部分安全感交给对方，而且我相信对方不会利用我的这部分安全感来伤害我。</p>
-<p>所以，如果有可能，尽可能不要选择与没有安全感的人合作，更不要与没有安全感的人恋爱、结婚。因为，他们不敢把自己那部分安全感交给别人，不相信交给别人，别人不会利用那部分安全感。彼此之间几乎没有信任。</p>
-<h2 id="活在未来"><a href="#活在未来" class="headerlink" title="活在未来"></a>活在未来</h2><p>当我们放弃部分安全感的时候，我们就能将我们注意力放在我们认为最重要的事情上了。当我们在一件事上投入大量注意力的时候，我们其实是在投资，以期未来获得收益。而且注意力使我们最宝贵的财富，我们投入的是最为重要的是资源。所以，未来的收益要足够大，我们投资才有价值。</p>
-<p>所以我们必须活在未来，只有活在未来我们才能在此时此刻将我们最宝贵的注意力放在未来收益最大的地方。<strong>做对的事情远比把事情做对重要</strong> 就是这个道理。当我们方向错了的时候，把再多事情做对也无益。所以，我们只有活在未来，我们才能选择去做<em>对的事情</em> 。</p>
-<p>活在未来，最重要就是要预测未来。要想预测未来，我们必须根据过去的信息，经过我们加工整理，然后对未来作出判断。因为，活在未来是一个联结过去，现在和未来的一种活法。</p>
-<p>我们最重要的财富是注意力，所以我们只能活在现在，才能在“<strong>现在</strong>”把注意力用在我们放在最重要的事情上。而为了把注意力放在最重要的事情上，我们又必须活在未来，只有活在未来“<strong>未来</strong>”，我们才能确定什么是最重要的事，我们 <strong>现在</strong> 最应该做什么。而为了活在未来，我们又不得不活在过去，只有活在“<strong>过去</strong>”， 我们才能基于过去而预测未来，进而活在未来。</p>
-<p>所以，当我们活在未来，我们就不只活在现在一个点，我们活在以现在为中点的一个时空区间上，这就在时空上拓宽我们的人生。</p>
-<h2 id="遇到贵人的方法"><a href="#遇到贵人的方法" class="headerlink" title="遇到贵人的方法"></a>遇到贵人的方法</h2><p>前面提到，信任别人，与人合作我们能够各自放弃部分安全感，进而取得比自己很好的结果。如果我们能够找到这样的合作对象，那他们就是我们的贵人。因为，在他们的帮助下，我们获得了更大的成长。</p>
-<p>当然，贵人不一定是我们的合作者，那些给我们帮助，让我们更好的成长的人都是我们的贵人。当我们有贵人相助的时候，我们就更容易取得我们想要的东西，我们成长的就会更快。</p>
-<p>但是，要想遇到贵人，<strong>最要重要的我们自己得先成为贵人</strong>。当我们自己是贵人的时候我们我们就容易吸引到更多的贵人。</p>
-<p>更可能遇到贵人的人有的特征还有很多，比如：</p>
-<ul>
-<li>乐观的人</li>
-<li>做对的事情的人</li>
-<li>乐于分享的人</li>
-<li>活在未来的人</li>
-<li>……</li>
+<h4 id="从现有目录初始化仓库"><a href="#从现有目录初始化仓库" class="headerlink" title="从现有目录初始化仓库"></a>从现有目录初始化仓库</h4><p>只需要进入需要初始化的仓库，然后输入：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git init</div></pre></td></tr></table></figure></p>
+<p>该命令将创建一个名为 .git 的子目录，git所有重要文件都放在这个文件夹里面。</p>
+<h4 id="从服务器克隆现有仓库"><a href="#从服务器克隆现有仓库" class="headerlink" title="从服务器克隆现有仓库"></a>从服务器克隆现有仓库</h4><p>克隆的命令是<code>git clone [url]</code>。比如，要克隆 Git 的可链接库 libgit2，可以用下面的命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git clone https://github.com/libgit2/libgit2</div></pre></td></tr></table></figure></p>
+<p>这样就把现有的仓库复制到自己的主机上，并且这个文件夹会自动生成.git文件夹。</p>
+<h3 id="记录每次更新到仓库"><a href="#记录每次更新到仓库" class="headerlink" title="记录每次更新到仓库"></a>记录每次更新到仓库</h3><p>在工作目录下的文件只有两种状态：已追踪和未追踪。未追踪的是指没有纳入git版本控制的文件，而已追踪的则是纳入了版本控制的文件，可以用git来进行版本的控制。而纳入了版本控制的已追踪文件有三种状态：未修改、已修改、已放入暂存区。初次克隆某个仓库的时候，工作目录中的所有文件都是已追踪的，并处于未修改状态。</p>
+<p>编辑过某些文件后，git会将它们标记会已修改文件。等我们修改好之后，将文件放入暂存区，则git会将这些文件标记为已暂存。最后，我们将暂存的文件提交。这样我们就将记录更新到仓库了，并且此时，git会将这些文件标记为未修改。</p>
+<p><img src="https://git-scm.com/book/en/v2/images/lifecycle.png" alt="文件的状态变化周期"></p>
+<p>所以，我们修改完文件后，先提交到暂存区，然后再从暂存区提交到我们的仓库。为什么中间要多加一个暂存区，不直接将修改好的文件添加到仓库呢？要理解暂存区的作用，我们先看看暂存区是怎么工作的。当我们把修改的文件提交到暂存区后，该文件就被标记为已暂存。可是这时你还没修改完，又修改了一部分。那此时这个文件会被标记为已暂存和未修改。已暂存指的是之前暂存的文件，未修改指的是后来又修改后的文件。这样我们就同时记录了两次修改的文件，以便于我们选择我们需要文件。当我们再把已修改的文件提交到暂存区，此时这次文件就只有一个状态——已暂存，而且已暂存的时候最后一次提交的文件。当我们把所有修改好的文件都提交到暂存区后，就可以将暂存区的文件一次全部提交到仓库。所以，暂存区有两个好处，一是进行快照，便于退回；二是分批、分阶段提交。</p>
+<h4 id="git命令"><a href="#git命令" class="headerlink" title="git命令"></a>git命令</h4><ul>
+<li>加入暂存区：<code>git add</code></li>
+<li>提交仓库：<code>git commit</code></li>
+<li>查询状态：<code>git status</code></li>
+<li>查询修改：<code>git diff</code></li>
+<li>移除文件：<code>git rm</code></li>
 </ul>
+<h5 id="加入暂存区："><a href="#加入暂存区：" class="headerlink" title="加入暂存区："></a>加入暂存区：</h5><p><code>git add [files]</code>命令有两个作用，一是将未追踪的文件纳入已追踪中，二是将已修改的文件提交到暂存区。</p>
+<h5 id="提交仓库："><a href="#提交仓库：" class="headerlink" title="提交仓库："></a>提交仓库：</h5><p><code>git commit -m &quot;your description&quot;</code>命令是将暂存区的所有文件都提交到仓库中，并添加一段描述以便于很好的识别这个版本。</p>
+<h5 id="查询状态"><a href="#查询状态" class="headerlink" title="查询状态"></a>查询状态</h5><p><code>git status</code>命令是用于检查当前状态。</p>
+<p>未修改时显示为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ git status</div><div class="line">On branch master</div><div class="line">nothing to commit, working directort clean</div></pre></td></tr></table></figure></p>
+<p>现在创建一个新的<code>README.md</code>文件，则该文件属于未追踪状态，则输出为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">$ git status</div><div class="line">On branch master</div><div class="line">Untracked files:</div><div class="line">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)</div><div class="line"></div><div class="line">    README</div><div class="line"></div><div class="line">nothing added to commit but untracked files present (use &quot;git add&quot; to track)</div></pre></td></tr></table></figure></p>
+<p>将文件纳入追踪系统，并放入暂存状态后，输入为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$ git add README</div><div class="line">$ git status</div><div class="line">On branch master</div><div class="line">Changes to be committed:</div><div class="line">  (use &quot;git reset HEAD &lt;file&gt;...&quot; to unstage)</div><div class="line"></div><div class="line">    new file:   README.md</div></pre></td></tr></table></figure></p>
+<p>修改<code>README.md</code>文件后，输出为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$ git status</div><div class="line">On branch master</div><div class="line">Changes not staged for commit:</div><div class="line">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)</div><div class="line">  (use &quot;git checkout -- &lt;file&gt;...&quot; to discard changes in working directory)</div><div class="line"></div><div class="line">    modified:   README.md</div></pre></td></tr></table></figure></p>
+<h5 id="查询修改"><a href="#查询修改" class="headerlink" title="查询修改"></a>查询修改</h5><p><code>git diff</code>用于查看工作目录中当前文件和暂存区域快照之间的差异，也就是修改之后还没有暂存起来的变化内容。</p>
+<p><code>git diff --cached</code>或<code>git diff --staged</code>可以用来查看已暂存的文件与仓库中文件差异。</p>
+<h5 id="移除文件"><a href="#移除文件" class="headerlink" title="移除文件"></a>移除文件</h5><p><code>git rm &lt;file&gt;</code>可以将某个文件从仓库中移除，即从已追踪状态转换为未追踪状态，并且从工作目录中将该文件删除，这样以后该文件就不会再出现在未追踪清单中。如果，该文件已放入暂存区，则需要使用<code>git rm &lt;file&gt; -f</code>命令来强制移除该文件。</p>
+<h3 id="撤销操作"><a href="#撤销操作" class="headerlink" title="撤销操作"></a>撤销操作</h3><ul>
+<li>重新提交：<code>git commit --amend</code></li>
+<li>取消暂存文件：<code>git reset HEAD &lt;file&gt;</code></li>
+<li>撤销对文件的修改：<code>git checkout -- &lt;file&gt;</code></li>
+</ul>
+<h4 id="重新提交"><a href="#重新提交" class="headerlink" title="重新提交"></a>重新提交</h4><p>当我们提交文件时发现漏了几个文件没有添加，或者提交信息写错了，此时用<code>git commit --amend</code>可以尝试重新提交，则这次的提交会替代上次的提交。</p>
+<h4 id="取消暂存文件"><a href="#取消暂存文件" class="headerlink" title="取消暂存文件"></a>取消暂存文件</h4><p><code>git reset HEAD &lt;file&gt;</code>会将文件从暂存区取出来，即该文件的状态从已暂存改为已修改。</p>
+<h4 id="撤销对文件的修改"><a href="#撤销对文件的修改" class="headerlink" title="撤销对文件的修改"></a>撤销对文件的修改</h4><p><code>git checkout -- &lt;file&gt;</code>撤销对文件的修改，即将修改过文件退回到上一次提交时的状态，即从已修改状态转为未修改状态。</p>
+<h3 id="远程仓库的使用"><a href="#远程仓库的使用" class="headerlink" title="远程仓库的使用"></a>远程仓库的使用</h3><ul>
+<li>添加远程仓库：<code>git remote add</code></li>
+<li>从远程仓库中抓取的拉取：<code>git fetch</code> or <code>git pull</code></li>
+<li>推送到远程仓库：<code>git push</code></li>
+<li>查看远程仓库：<code>git remote show</code></li>
+<li>远程仓库的移除与重命名：<code>git rm</code> or <code>git rename</code></li>
+</ul>
+<h4 id="添加远程仓库"><a href="#添加远程仓库" class="headerlink" title="添加远程仓库"></a>添加远程仓库</h4><p><code>git remote add &lt;shortname&gt; &lt;url&gt;</code>可以添加一个新的远程仓库，同时指定一个可以轻松引用的简写。</p>
+<h4 id="从远程仓库中抓取的拉取"><a href="#从远程仓库中抓取的拉取" class="headerlink" title="从远程仓库中抓取的拉取"></a>从远程仓库中抓取的拉取</h4><p><code>git fetch [remote-name]</code>可以从远程仓库中获取数据，但它并不会自动合并或修改你当前的工作。当准备好的时候，必须手动将其合并入你的工作。</p>
+<p><code>git pull</code>可以实现自动抓取并合并远程分支到当前分支。</p>
+<h4 id="推送到远程仓库"><a href="#推送到远程仓库" class="headerlink" title="推送到远程仓库"></a>推送到远程仓库</h4><p><code>git push [remote-name] [brach-name]</code>可以将本地分支推送到远程仓库的某个服务器中，这个只有当你对该服务器具有写入权限，并之前没有人推送过才有用。</p>
+<p>当之前有人推送过，你的推送就会被拒绝。你必须先用<code>git pull</code>将他们的工作拉取下拉合并到你的分支中，才能推送。</p>
+<h4 id="查看远程仓库"><a href="#查看远程仓库" class="headerlink" title="查看远程仓库"></a>查看远程仓库</h4><p><code>git remote &lt;url&gt;</code>可以查看已经配置的远程仓库的服务器，如果你克隆了自己的仓库，那么至少能看到<code>origin</code>，这是git给你仓库服务器的默认名字。</p>
+<p><code>git remote -v</code>则会显示需要读写远程仓库所需要使用的git保存的简写即对应的URL。</p>
+<p><code>git remore show [remote-name]</code>除了会列出远程仓库的URL，还列出跟踪分支的信息。告诉你在特定的分支上执行<code>git push</code>会自动推送到哪一个远程分支，哪些远程分支不在你的本地，哪些远程分支已经从服务器移除，当你执行<code>git pull</code>时，哪些分支会自动合并。</p>
+<h4 id="远程仓库的移除与重命名"><a href="#远程仓库的移除与重命名" class="headerlink" title="远程仓库的移除与重命名"></a>远程仓库的移除与重命名</h4><p><code>git remote rm &lt;remote-name&gt;</code>可以移除一个远程仓库，<code>git remote rename &lt;remote-name&gt; &lt;new-name&gt;</code>可以将远程仓库重命名。</p>
+<p>参考:<a href="https://git-scm.com/book/zh/v2/" target="_blank" rel="external">https://git-scm.com/book/zh/v2/</a></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;通往财富自由之路&quot;&gt;&lt;a href=&quot;#通往财富自由之路&quot; class=&quot;headerlink&quot; title=&quot;通往财富自由之路&quot;&gt;&lt;/a&gt;通往财富自由之路&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;安全感&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;活在
+      &lt;h1 id=&quot;Git基础操作&quot;&gt;&lt;a href=&quot;#Git基础操作&quot; class=&quot;headerlink&quot; title=&quot;Git基础操作&quot;&gt;&lt;/a&gt;Git基础操作&lt;/h1&gt;&lt;h2 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介
     
     </summary>
     
-      <category term="通往财富自由之路" scheme="http://yoursite.com/categories/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF/"/>
+      <category term="git" scheme="http://yoursite.com/categories/git/"/>
     
     
-      <category term="通往财富自由之路" scheme="http://yoursite.com/tags/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF/"/>
+      <category term="git" scheme="http://yoursite.com/tags/git/"/>
     
-      <category term="安全感" scheme="http://yoursite.com/tags/%E5%AE%89%E5%85%A8%E6%84%9F/"/>
-    
-      <category term="活在未来" scheme="http://yoursite.com/tags/%E6%B4%BB%E5%9C%A8%E6%9C%AA%E6%9D%A5/"/>
+      <category term="github" scheme="http://yoursite.com/tags/github/"/>
     
   </entry>
   
@@ -130,6 +156,101 @@
       <category term="落后" scheme="http://yoursite.com/tags/%E8%90%BD%E5%90%8E/"/>
     
       <category term="多维竞争" scheme="http://yoursite.com/tags/%E5%A4%9A%E7%BB%B4%E7%AB%9E%E4%BA%89/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>记忆</title>
+    <link href="http://yoursite.com/2017/08/23/%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0/%E8%AE%B0%E5%BF%86/"/>
+    <id>http://yoursite.com/2017/08/23/如何学习/记忆/</id>
+    <published>2017-08-23T01:05:21.721Z</published>
+    <updated>2017-08-23T01:05:21.721Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="记忆"><a href="#记忆" class="headerlink" title="记忆"></a>记忆</h2><h3 id="工作记忆与长期记忆"><a href="#工作记忆与长期记忆" class="headerlink" title="工作记忆与长期记忆"></a>工作记忆与长期记忆</h3><p>工作记忆就是你的大脑在即时且有意识地处理信息所涉及的那部分记忆。当你尝试将脑中的一些想法结合起来去帮助理解某一概念或者解决某一问题是则动用工作记忆。</p>
+<p>工作记忆与短期记忆有些相似，但也有很大不同。它们都只能短暂的储存在大脑中，过一段时间很快就会忘记。工作记忆与短期记忆最大的不同在于它们功能不同。工作记忆主要是作为大脑的缓存区，让大脑在这短暂的时间内可以记住所需要的信息，并且对这部分信息进行更进一步加工，比如思考。而短期记忆的功能主要是在短时间内记住这部分信息，并不处理这部分信息。当你在书上学习新的知识并且用这部分知识做题的时候，使用的就是工作记忆。当你单纯的背一个电话号码的时候，使用的就是短期记忆。工作记忆对我们的学习，影响重大，所以我更多谈论工作记忆而不是短期记忆。</p>
+<p>工作记忆集中在大脑的前额叶皮质，它也有与大脑的其他部分有着联系，以便于你读取长期记忆。以前的研究人员认为，工作记忆可以储存7个组块的信息。而现在的共识是工作记忆大约只能储存4个组块的信息。我们大脑会将记忆项合并为组块的形式，所以我们的工作记忆看似比实际容量要大。组块这个概念我后面会讲到。</p>
+<p>工作记忆就像一块有些劣质的黑板，你必须时常重复你所需要记忆的信息，它们才能稳定地储存在工作记忆中。当你全身关注的时候，你会发现自己无视了那些侵占工作记忆有限空间的冗余信息。</p>
+<blockquote>
+<p>长期记忆（LTM）是提出的双内存模式的最后阶段阿特金森Shiffrin内存模型，其中的信息可以保存长时间的时间。信息可以无限期地保持在长期存储器中。</p>
+</blockquote>
+<p>这是维基百科对长期记忆的定义。长期记忆就是能够长时间保存在大脑中的那部分记忆。</p>
+<p>长期记忆的重要性在于它储存着你学习的所有科目的基本概念和技巧。没有了长期记忆，人类就没有了文化，因为不能长期记忆，就不能传播；不能长期记忆，就不能深入思考。所学的东西越难、越深入，所涉及的概念和方法就越多，只有将所需要的概念和方法牢牢地储存在大脑中，学习的时候工作记忆才能灵活的调用它们进行更深一步的思考。</p>
+<p>长期记忆就像一个储存仓库，它分布在一个很大的区域中。不同的长期记忆储存在大脑的不同区域。研究表明：当你首次尝试将一段短期记忆转入长期记忆中时，你需要多次回顾以增加需要时能够找到相关信息的几率。长期记忆的仓库是巨大的，它可以储存数以亿计的内容。事实上，由于太多信息可能会相互掩盖 要找到所需信息会有难度，除非你练习并重复几次。</p>
+<p>当你遇到新的事物的时候，通常你会用工作记忆来处理它。如果需要把这些信息转移到长期记忆中，就需要一些时间和练习的过程。促进这一过程有效的方式是间隔性重复。具体的做法是不断重复你尝试记忆的内容，但是重复的过程必须间隔开。研究表明：一次重复记忆20次相同的内容，记忆效果比不上在几天内重复相同次数的效果。</p>
+<p>一般时候大脑的记忆处于休眠状态，当你想将工作记忆转换为长期记忆的时候，工作记忆会将长期记忆唤醒，通过修改神经元树突上的突出来将记忆变为长期记忆。苏醒的长期记忆将新的内容转为长期记忆的时候，也更改了旧的记忆。所以，大脑的记忆常常交织在一起，学习新的东西的时候，旧的记忆也会改变。这一过程在睡眠期间比较活跃。</p>
+<h3 id="记忆小方法"><a href="#记忆小方法" class="headerlink" title="记忆小方法"></a>记忆小方法</h3><h4 id="图像记忆"><a href="#图像记忆" class="headerlink" title="图像记忆"></a>图像记忆</h4><p>我们的大脑天生就有强大的视觉和空间记忆，十分擅长记忆不同地点的概况。图像与右脑的视觉空间中枢直接相连，通过利用具有更强的记忆能力的视觉区域，图像能够帮助你把单调乏味、难以记忆的概念概括起来，通过激活各种感官建立的神经钩越多，你就越容易记住这个概念和其含义。你可以将所需要的记忆的内容，想象成一个图像来帮助你记忆，而且这个图像越夸张效果越好。</p>
+<h4 id="记忆宫殿"><a href="#记忆宫殿" class="headerlink" title="记忆宫殿"></a>记忆宫殿</h4><p>前面也说了我们大脑不但有强大的图像记忆，空间记忆也非常强大。因为我们祖先外出打猎时必须记得回家的路线，外面哪个位置野果比较丰富，哪个位置比较危险等等，这就让我们发展出强大的空间记忆。</p>
+<p>记忆宫殿的具体做法有3步。首先将你需要记忆的内容分类，然后回忆起一个你非常熟悉的路线，比如从宿舍到教室，最后通过夸张的想象，将所需要的记忆的内容与这条路线上你所熟悉的建筑或标志物一一联系起来。</p>
+<h4 id="简化记忆"><a href="#简化记忆" class="headerlink" title="简化记忆"></a>简化记忆</h4><p>简化记忆就是创造有意义的意群来简化所需要记忆的信息。你可以将要记忆的数字与难忘的事联系起来，比如2008年是中国举办奥运会的那一年，3.30是考1000m的时候的成绩。你也可以通过创造好记的句子来帮助记忆一些概念，这个句子可由你需要记忆的信息的首字组成。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;记忆&quot;&gt;&lt;a href=&quot;#记忆&quot; class=&quot;headerlink&quot; title=&quot;记忆&quot;&gt;&lt;/a&gt;记忆&lt;/h2&gt;&lt;h3 id=&quot;工作记忆与长期记忆&quot;&gt;&lt;a href=&quot;#工作记忆与长期记忆&quot; class=&quot;headerlink&quot; title=&quot;工作记忆与长期
+    
+    </summary>
+    
+      <category term="学习何如学习" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0%E4%BD%95%E5%A6%82%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="工作记忆" scheme="http://yoursite.com/tags/%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BF%86/"/>
+    
+      <category term="长期记忆" scheme="http://yoursite.com/tags/%E9%95%BF%E6%9C%9F%E8%AE%B0%E5%BF%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>通往财富自由之路_1</title>
+    <link href="http://yoursite.com/2017/08/23/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF_1/"/>
+    <id>http://yoursite.com/2017/08/23/通往财富自由之路/通往财富自由之路_1/</id>
+    <published>2017-08-23T01:05:21.721Z</published>
+    <updated>2017-08-23T01:05:21.721Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="通往财富自由之路"><a href="#通往财富自由之路" class="headerlink" title="通往财富自由之路"></a>通往财富自由之路</h1><ul>
+<li><strong>安全感</strong></li>
+<li><strong>活在未来</strong></li>
+<li><strong>遇到贵人的方法</strong></li>
+</ul>
+<h2 id="安全感"><a href="#安全感" class="headerlink" title="安全感"></a>安全感</h2><p>由于注意力是我们最宝贵的东西，所有要想成长，合理的运用注意力是最重要的事情之一。既然要合理运用注意力，我们就得在我们认为重要，甚至是认为最重要的事情上投入大量的注意力，我们才能有尽可能大的收获。而当我们在我们认为重要的事情上投入我们的注意力的时候，意味着我们在其他的事情上几乎不关注。</p>
+<p>而这很可能会让人觉得不太合群，只关注自己认为重要的事情，有时候就不能和其他人一起聊八卦，打游戏等等，会让人觉得没有安全感。可能，我们只有放弃部分的安全感，我们才能朝自己的方向坚定不移地前行，才能在一个地方长期、深入地思考。</p>
+<p>一味地追求完全安全，是低效且不可能实现的。世界上有无数的可能性，每件事也有数不清的可能性，当我们想要一个人面对，解决所有可能性的时候，我们就不可能在一种或者很少的几种可能性中集中我们的注意力，进而再所有可能都不能解决好，而我们又不可能解决所有的可能性，所以到头来一无所获。</p>
+<p>但我们又不是只有一个人，我们专注于一种可能，然后放弃应对其他可能的能力，即放弃那部分的安全感，我们接受其它可能到来的时候，我们接受我们没有办法自己解决，而我们同时相信其他人能解决好那种可能。</p>
+<p>这就需要合作和信任。只有相互信任，才能形成合作。信任就是我把我的一部分安全感交给对方，而且我相信对方不会利用我的这部分安全感来伤害我。</p>
+<p>所以，如果有可能，尽可能不要选择与没有安全感的人合作，更不要与没有安全感的人恋爱、结婚。因为，他们不敢把自己那部分安全感交给别人，不相信交给别人，别人不会利用那部分安全感。彼此之间几乎没有信任。</p>
+<h2 id="活在未来"><a href="#活在未来" class="headerlink" title="活在未来"></a>活在未来</h2><p>当我们放弃部分安全感的时候，我们就能将我们注意力放在我们认为最重要的事情上了。当我们在一件事上投入大量注意力的时候，我们其实是在投资，以期未来获得收益。而且注意力使我们最宝贵的财富，我们投入的是最为重要的是资源。所以，未来的收益要足够大，我们投资才有价值。</p>
+<p>所以我们必须活在未来，只有活在未来我们才能在此时此刻将我们最宝贵的注意力放在未来收益最大的地方。<strong>做对的事情远比把事情做对重要</strong> 就是这个道理。当我们方向错了的时候，把再多事情做对也无益。所以，我们只有活在未来，我们才能选择去做<em>对的事情</em> 。</p>
+<p>活在未来，最重要就是要预测未来。要想预测未来，我们必须根据过去的信息，经过我们加工整理，然后对未来作出判断。因为，活在未来是一个联结过去，现在和未来的一种活法。</p>
+<p>我们最重要的财富是注意力，所以我们只能活在现在，才能在“<strong>现在</strong>”把注意力用在我们放在最重要的事情上。而为了把注意力放在最重要的事情上，我们又必须活在未来，只有活在未来“<strong>未来</strong>”，我们才能确定什么是最重要的事，我们 <strong>现在</strong> 最应该做什么。而为了活在未来，我们又不得不活在过去，只有活在“<strong>过去</strong>”， 我们才能基于过去而预测未来，进而活在未来。</p>
+<p>所以，当我们活在未来，我们就不只活在现在一个点，我们活在以现在为中点的一个时空区间上，这就在时空上拓宽我们的人生。</p>
+<h2 id="遇到贵人的方法"><a href="#遇到贵人的方法" class="headerlink" title="遇到贵人的方法"></a>遇到贵人的方法</h2><p>前面提到，信任别人，与人合作我们能够各自放弃部分安全感，进而取得比自己很好的结果。如果我们能够找到这样的合作对象，那他们就是我们的贵人。因为，在他们的帮助下，我们获得了更大的成长。</p>
+<p>当然，贵人不一定是我们的合作者，那些给我们帮助，让我们更好的成长的人都是我们的贵人。当我们有贵人相助的时候，我们就更容易取得我们想要的东西，我们成长的就会更快。</p>
+<p>但是，要想遇到贵人，<strong>最要重要的我们自己得先成为贵人</strong>。当我们自己是贵人的时候我们我们就容易吸引到更多的贵人。</p>
+<p>更可能遇到贵人的人有的特征还有很多，比如：</p>
+<ul>
+<li>乐观的人</li>
+<li>做对的事情的人</li>
+<li>乐于分享的人</li>
+<li>活在未来的人</li>
+<li>……</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;通往财富自由之路&quot;&gt;&lt;a href=&quot;#通往财富自由之路&quot; class=&quot;headerlink&quot; title=&quot;通往财富自由之路&quot;&gt;&lt;/a&gt;通往财富自由之路&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;安全感&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;活在
+    
+    </summary>
+    
+      <category term="通往财富自由之路" scheme="http://yoursite.com/categories/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF/"/>
+    
+    
+      <category term="通往财富自由之路" scheme="http://yoursite.com/tags/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF/"/>
+    
+      <category term="安全感" scheme="http://yoursite.com/tags/%E5%AE%89%E5%85%A8%E6%84%9F/"/>
+    
+      <category term="活在未来" scheme="http://yoursite.com/tags/%E6%B4%BB%E5%9C%A8%E6%9C%AA%E6%9D%A5/"/>
     
   </entry>
   
@@ -307,42 +428,45 @@
   </entry>
   
   <entry>
-    <title>记忆</title>
-    <link href="http://yoursite.com/2017/08/23/%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0/%E8%AE%B0%E5%BF%86/"/>
-    <id>http://yoursite.com/2017/08/23/如何学习/记忆/</id>
-    <published>2017-08-23T01:05:21.721Z</published>
+    <title>组块</title>
+    <link href="http://yoursite.com/2017/08/23/%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0/%E7%BB%84%E5%9D%97/"/>
+    <id>http://yoursite.com/2017/08/23/如何学习/组块/</id>
+    <published>2017-08-23T01:05:21.705Z</published>
     <updated>2017-08-23T01:05:21.721Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="记忆"><a href="#记忆" class="headerlink" title="记忆"></a>记忆</h2><h3 id="工作记忆与长期记忆"><a href="#工作记忆与长期记忆" class="headerlink" title="工作记忆与长期记忆"></a>工作记忆与长期记忆</h3><p>工作记忆就是你的大脑在即时且有意识地处理信息所涉及的那部分记忆。当你尝试将脑中的一些想法结合起来去帮助理解某一概念或者解决某一问题是则动用工作记忆。</p>
-<p>工作记忆与短期记忆有些相似，但也有很大不同。它们都只能短暂的储存在大脑中，过一段时间很快就会忘记。工作记忆与短期记忆最大的不同在于它们功能不同。工作记忆主要是作为大脑的缓存区，让大脑在这短暂的时间内可以记住所需要的信息，并且对这部分信息进行更进一步加工，比如思考。而短期记忆的功能主要是在短时间内记住这部分信息，并不处理这部分信息。当你在书上学习新的知识并且用这部分知识做题的时候，使用的就是工作记忆。当你单纯的背一个电话号码的时候，使用的就是短期记忆。工作记忆对我们的学习，影响重大，所以我更多谈论工作记忆而不是短期记忆。</p>
-<p>工作记忆集中在大脑的前额叶皮质，它也有与大脑的其他部分有着联系，以便于你读取长期记忆。以前的研究人员认为，工作记忆可以储存7个组块的信息。而现在的共识是工作记忆大约只能储存4个组块的信息。我们大脑会将记忆项合并为组块的形式，所以我们的工作记忆看似比实际容量要大。组块这个概念我后面会讲到。</p>
-<p>工作记忆就像一块有些劣质的黑板，你必须时常重复你所需要记忆的信息，它们才能稳定地储存在工作记忆中。当你全身关注的时候，你会发现自己无视了那些侵占工作记忆有限空间的冗余信息。</p>
-<blockquote>
-<p>长期记忆（LTM）是提出的双内存模式的最后阶段阿特金森Shiffrin内存模型，其中的信息可以保存长时间的时间。信息可以无限期地保持在长期存储器中。</p>
-</blockquote>
-<p>这是维基百科对长期记忆的定义。长期记忆就是能够长时间保存在大脑中的那部分记忆。</p>
-<p>长期记忆的重要性在于它储存着你学习的所有科目的基本概念和技巧。没有了长期记忆，人类就没有了文化，因为不能长期记忆，就不能传播；不能长期记忆，就不能深入思考。所学的东西越难、越深入，所涉及的概念和方法就越多，只有将所需要的概念和方法牢牢地储存在大脑中，学习的时候工作记忆才能灵活的调用它们进行更深一步的思考。</p>
-<p>长期记忆就像一个储存仓库，它分布在一个很大的区域中。不同的长期记忆储存在大脑的不同区域。研究表明：当你首次尝试将一段短期记忆转入长期记忆中时，你需要多次回顾以增加需要时能够找到相关信息的几率。长期记忆的仓库是巨大的，它可以储存数以亿计的内容。事实上，由于太多信息可能会相互掩盖 要找到所需信息会有难度，除非你练习并重复几次。</p>
-<p>当你遇到新的事物的时候，通常你会用工作记忆来处理它。如果需要把这些信息转移到长期记忆中，就需要一些时间和练习的过程。促进这一过程有效的方式是间隔性重复。具体的做法是不断重复你尝试记忆的内容，但是重复的过程必须间隔开。研究表明：一次重复记忆20次相同的内容，记忆效果比不上在几天内重复相同次数的效果。</p>
-<p>一般时候大脑的记忆处于休眠状态，当你想将工作记忆转换为长期记忆的时候，工作记忆会将长期记忆唤醒，通过修改神经元树突上的突出来将记忆变为长期记忆。苏醒的长期记忆将新的内容转为长期记忆的时候，也更改了旧的记忆。所以，大脑的记忆常常交织在一起，学习新的东西的时候，旧的记忆也会改变。这一过程在睡眠期间比较活跃。</p>
-<h3 id="记忆小方法"><a href="#记忆小方法" class="headerlink" title="记忆小方法"></a>记忆小方法</h3><h4 id="图像记忆"><a href="#图像记忆" class="headerlink" title="图像记忆"></a>图像记忆</h4><p>我们的大脑天生就有强大的视觉和空间记忆，十分擅长记忆不同地点的概况。图像与右脑的视觉空间中枢直接相连，通过利用具有更强的记忆能力的视觉区域，图像能够帮助你把单调乏味、难以记忆的概念概括起来，通过激活各种感官建立的神经钩越多，你就越容易记住这个概念和其含义。你可以将所需要的记忆的内容，想象成一个图像来帮助你记忆，而且这个图像越夸张效果越好。</p>
-<h4 id="记忆宫殿"><a href="#记忆宫殿" class="headerlink" title="记忆宫殿"></a>记忆宫殿</h4><p>前面也说了我们大脑不但有强大的图像记忆，空间记忆也非常强大。因为我们祖先外出打猎时必须记得回家的路线，外面哪个位置野果比较丰富，哪个位置比较危险等等，这就让我们发展出强大的空间记忆。</p>
-<p>记忆宫殿的具体做法有3步。首先将你需要记忆的内容分类，然后回忆起一个你非常熟悉的路线，比如从宿舍到教室，最后通过夸张的想象，将所需要的记忆的内容与这条路线上你所熟悉的建筑或标志物一一联系起来。</p>
-<h4 id="简化记忆"><a href="#简化记忆" class="headerlink" title="简化记忆"></a>简化记忆</h4><p>简化记忆就是创造有意义的意群来简化所需要记忆的信息。你可以将要记忆的数字与难忘的事联系起来，比如2008年是中国举办奥运会的那一年，3.30是考1000m的时候的成绩。你也可以通过创造好记的句子来帮助记忆一些概念，这个句子可由你需要记忆的信息的首字组成。</p>
+    <content type="html"><![CDATA[<h2 id="组块"><a href="#组块" class="headerlink" title="组块"></a>组块</h2><h3 id="了解组块"><a href="#了解组块" class="headerlink" title="了解组块"></a>了解组块</h3><p>组块（Chunking）就根据意义将零碎的信息拼接起来而形成一个新的逻辑整体。这个新的逻辑整体可以让组块更易记忆，同时也可以让你更轻松的将组块整合到所学内容的大致框架中。</p>
+<p>丛神经科学的角度来看，组块就是把简化的而抽象的的思想组块一起的复杂的神经活动。这些思想无论是概念，灵感还是缩写，都是大多数科学、文学和艺术的基础。很多优秀的语言学习项目都是通过结构性的重复和强记联系，即用专注模式学习语言，同时运动和母语国家人的自由交流即发散模式的方法，这能让你铭记基础的词汇和搭配，而且说得新语言也能像母语那样。</p>
+<p>本质上说，组块就是让多个神经元共同运作的网络，只有这样才能平稳有效地进行思考和完成动作。专注的训练和重复可以建立强的记忆痕迹，从而帮助组块，专业的培训是一步一步的，这个过程中小的组块可以形成更大的组块，并且随着学习材料的理解越来越深入，所有的专业知识都是更有创造性的铺路石。</p>
+<p>当你学习一个东西的时候，这个东西是个大的组块，然后你通过一点点的学习不断将学习的东西转为一个个小的组块，之后再将这些小组快组合起来形成一个大的组块，最后你就将这个学会了。最好的组块是那些根深蒂固的，你甚至不需要有意识地去将储存在脑中的模式连接起来，这也正是将复杂的想法、动作和反应组成一个单独的组块的意义所在。</p>
+<p>学习数学和科学也是一样的，在刚开始你会看到一些例题和解决方法，那是因为在刚开始尝试解决问题是，你会有很强的认知负荷，而示范性的例子能在你起步的时候帮助理解，通过理解每个步骤的意思和步骤之间的联系，可能帮你发现问题的重点和隐含原理。思考步骤之间的联系非常重要，这样才能明白为什么在这种情况下要进行这个步骤。</p>
+<h3 id="组块作用"><a href="#组块作用" class="headerlink" title="组块作用"></a>组块作用</h3><ul>
+<li><p>组块能够让大脑工作得更有效率，一旦将某个想法、概念或动作组块后，你就不需要记住这个想法、概念或动作有关的全部细节，你只需要知道最主要的那个概念就行了，这也就是只需记住组块。</p>
+</li>
+<li><p>组块能更好地将新的和原有组块结合起来。为了增长知识和获得专业技能，人们会逐渐地增加头脑中组块的数量和有价值的信息。比如，象棋大师们能轻而易举地回忆出数以千计的不同棋谱；音乐家、语言学家和科学家，都能回忆出他们各自领域内类似的知识组块。无论你学什么科目，你的组块式心理图书馆越大，运用越熟练，你都将能够更轻易地解决问题或者找到解决方法。</p>
+</li>
+<li><p>组块可以帮助我们理解新概念。这是因为当你理解一个组块时，你会发现这一组块能以令人惊讶的方式与相似的组块联系起来。不仅在同一领域中如此，在截然不同的领域中也这样，这就是迁移 (transfer)。专注于你正在学习的单元，你会发现一旦你把第一个问题或概念放进心理图书馆，不论那是什么，第二个概念的进入就会容易一些。然后第三个概念也就更容易，这并不都那么简单，但会越来越容易。</p>
+</li>
+</ul>
+<h3 id="建立组块"><a href="#建立组块" class="headerlink" title="建立组块"></a>建立组块</h3><ul>
+<li><p>全神贯注。当其他事情占用有限的工作记忆时，这就会加大你建立新的神经并且与其它神经的连接的困难。</p>
+</li>
+<li><p>对组块的内容有基本的了解。只有理解了的知识才能与融入你学习的其他材料之中。</p>
+</li>
+<li><p>练习。通过练习，了解背景知识，即不但明白怎么使用这个知识，也明白在什么时候使用这个知识。某件事情，如果知识再看或者理解如何做也不代表能真正做到，只有在你自己实际操作和完全掌握情况相爱才能建立起神经模型。练习能够拓宽组块连接的神经网络，并且确保他们不仅仅是牢固的，而且能够通过不同的途径惊醒访问。背景认识意味着学会在特定的时候使用正确的方法。</p>
+</li>
+</ul>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;记忆&quot;&gt;&lt;a href=&quot;#记忆&quot; class=&quot;headerlink&quot; title=&quot;记忆&quot;&gt;&lt;/a&gt;记忆&lt;/h2&gt;&lt;h3 id=&quot;工作记忆与长期记忆&quot;&gt;&lt;a href=&quot;#工作记忆与长期记忆&quot; class=&quot;headerlink&quot; title=&quot;工作记忆与长期
+      &lt;h2 id=&quot;组块&quot;&gt;&lt;a href=&quot;#组块&quot; class=&quot;headerlink&quot; title=&quot;组块&quot;&gt;&lt;/a&gt;组块&lt;/h2&gt;&lt;h3 id=&quot;了解组块&quot;&gt;&lt;a href=&quot;#了解组块&quot; class=&quot;headerlink&quot; title=&quot;了解组块&quot;&gt;&lt;/a&gt;了解组块&lt;/h
     
     </summary>
     
       <category term="学习何如学习" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0%E4%BD%95%E5%A6%82%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="工作记忆" scheme="http://yoursite.com/tags/%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BF%86/"/>
-    
-      <category term="长期记忆" scheme="http://yoursite.com/tags/%E9%95%BF%E6%9C%9F%E8%AE%B0%E5%BF%86/"/>
+      <category term="组块" scheme="http://yoursite.com/tags/%E7%BB%84%E5%9D%97/"/>
     
   </entry>
   
@@ -413,33 +537,6 @@ Error = \sum_i(y_i-y^{'}_i)^2</script><p>这样我们就可以把$Error$当成�
   </entry>
   
   <entry>
-    <title>Hello World</title>
-    <link href="http://yoursite.com/2017/08/23/hello-world/"/>
-    <id>http://yoursite.com/2017/08/23/hello-world/</id>
-    <published>2017-08-23T01:05:21.705Z</published>
-    <updated>2017-08-23T01:05:21.705Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
     <title>学习</title>
     <link href="http://yoursite.com/2017/08/23/%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0/%E5%AD%A6%E4%B9%A0/"/>
     <id>http://yoursite.com/2017/08/23/如何学习/学习/</id>
@@ -474,45 +571,29 @@ Error = \sum_i(y_i-y^{'}_i)^2</script><p>这样我们就可以把$Error$当成�
   </entry>
   
   <entry>
-    <title>组块</title>
-    <link href="http://yoursite.com/2017/08/23/%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0/%E7%BB%84%E5%9D%97/"/>
-    <id>http://yoursite.com/2017/08/23/如何学习/组块/</id>
+    <title>Hello World</title>
+    <link href="http://yoursite.com/2017/08/23/hello-world/"/>
+    <id>http://yoursite.com/2017/08/23/hello-world/</id>
     <published>2017-08-23T01:05:21.705Z</published>
-    <updated>2017-08-23T01:05:21.721Z</updated>
+    <updated>2017-08-23T01:05:21.705Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="组块"><a href="#组块" class="headerlink" title="组块"></a>组块</h2><h3 id="了解组块"><a href="#了解组块" class="headerlink" title="了解组块"></a>了解组块</h3><p>组块（Chunking）就根据意义将零碎的信息拼接起来而形成一个新的逻辑整体。这个新的逻辑整体可以让组块更易记忆，同时也可以让你更轻松的将组块整合到所学内容的大致框架中。</p>
-<p>丛神经科学的角度来看，组块就是把简化的而抽象的的思想组块一起的复杂的神经活动。这些思想无论是概念，灵感还是缩写，都是大多数科学、文学和艺术的基础。很多优秀的语言学习项目都是通过结构性的重复和强记联系，即用专注模式学习语言，同时运动和母语国家人的自由交流即发散模式的方法，这能让你铭记基础的词汇和搭配，而且说得新语言也能像母语那样。</p>
-<p>本质上说，组块就是让多个神经元共同运作的网络，只有这样才能平稳有效地进行思考和完成动作。专注的训练和重复可以建立强的记忆痕迹，从而帮助组块，专业的培训是一步一步的，这个过程中小的组块可以形成更大的组块，并且随着学习材料的理解越来越深入，所有的专业知识都是更有创造性的铺路石。</p>
-<p>当你学习一个东西的时候，这个东西是个大的组块，然后你通过一点点的学习不断将学习的东西转为一个个小的组块，之后再将这些小组快组合起来形成一个大的组块，最后你就将这个学会了。最好的组块是那些根深蒂固的，你甚至不需要有意识地去将储存在脑中的模式连接起来，这也正是将复杂的想法、动作和反应组成一个单独的组块的意义所在。</p>
-<p>学习数学和科学也是一样的，在刚开始你会看到一些例题和解决方法，那是因为在刚开始尝试解决问题是，你会有很强的认知负荷，而示范性的例子能在你起步的时候帮助理解，通过理解每个步骤的意思和步骤之间的联系，可能帮你发现问题的重点和隐含原理。思考步骤之间的联系非常重要，这样才能明白为什么在这种情况下要进行这个步骤。</p>
-<h3 id="组块作用"><a href="#组块作用" class="headerlink" title="组块作用"></a>组块作用</h3><ul>
-<li><p>组块能够让大脑工作得更有效率，一旦将某个想法、概念或动作组块后，你就不需要记住这个想法、概念或动作有关的全部细节，你只需要知道最主要的那个概念就行了，这也就是只需记住组块。</p>
-</li>
-<li><p>组块能更好地将新的和原有组块结合起来。为了增长知识和获得专业技能，人们会逐渐地增加头脑中组块的数量和有价值的信息。比如，象棋大师们能轻而易举地回忆出数以千计的不同棋谱；音乐家、语言学家和科学家，都能回忆出他们各自领域内类似的知识组块。无论你学什么科目，你的组块式心理图书馆越大，运用越熟练，你都将能够更轻易地解决问题或者找到解决方法。</p>
-</li>
-<li><p>组块可以帮助我们理解新概念。这是因为当你理解一个组块时，你会发现这一组块能以令人惊讶的方式与相似的组块联系起来。不仅在同一领域中如此，在截然不同的领域中也这样，这就是迁移 (transfer)。专注于你正在学习的单元，你会发现一旦你把第一个问题或概念放进心理图书馆，不论那是什么，第二个概念的进入就会容易一些。然后第三个概念也就更容易，这并不都那么简单，但会越来越容易。</p>
-</li>
-</ul>
-<h3 id="建立组块"><a href="#建立组块" class="headerlink" title="建立组块"></a>建立组块</h3><ul>
-<li><p>全神贯注。当其他事情占用有限的工作记忆时，这就会加大你建立新的神经并且与其它神经的连接的困难。</p>
-</li>
-<li><p>对组块的内容有基本的了解。只有理解了的知识才能与融入你学习的其他材料之中。</p>
-</li>
-<li><p>练习。通过练习，了解背景知识，即不但明白怎么使用这个知识，也明白在什么时候使用这个知识。某件事情，如果知识再看或者理解如何做也不代表能真正做到，只有在你自己实际操作和完全掌握情况相爱才能建立起神经模型。练习能够拓宽组块连接的神经网络，并且确保他们不仅仅是牢固的，而且能够通过不同的途径惊醒访问。背景认识意味着学会在特定的时候使用正确的方法。</p>
-</li>
-</ul>
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;组块&quot;&gt;&lt;a href=&quot;#组块&quot; class=&quot;headerlink&quot; title=&quot;组块&quot;&gt;&lt;/a&gt;组块&lt;/h2&gt;&lt;h3 id=&quot;了解组块&quot;&gt;&lt;a href=&quot;#了解组块&quot; class=&quot;headerlink&quot; title=&quot;了解组块&quot;&gt;&lt;/a&gt;了解组块&lt;/h
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
     
     </summary>
     
-      <category term="学习何如学习" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0%E4%BD%95%E5%A6%82%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="组块" scheme="http://yoursite.com/tags/%E7%BB%84%E5%9D%97/"/>
     
   </entry>
   
