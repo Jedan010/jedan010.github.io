@@ -448,70 +448,87 @@ Decision Support Systems 47 (2009) 547–553.<a href="#fnref:21" rev="footnote">
     <link href="http://yoursite.com/2017/08/23/Git/git%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/"/>
     <id>http://yoursite.com/2017/08/23/Git/git基础操作/</id>
     <published>2017-08-23T02:17:01.471Z</published>
-    <updated>2017-08-23T10:07:33.820Z</updated>
+    <updated>2017-08-24T07:17:56.873Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="Git基础操作"><a href="#Git基础操作" class="headerlink" title="Git基础操作"></a>Git基础操作</h1><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>git是什么呢？git是一个分布式版本控制系统，以便于追踪改变和多人协作。</p>
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>git是什么呢？git是一个分布式版本控制系统，以便于追踪改变和多人协作。</p>
 <p>为什么我们要关注版本控制呢？当你写完一篇文章后，如果我们想要修改，又不想破坏原文件，以便修改失误后能还原，我们一般会复制一份原文件，然后再修改。可是如果我们有很多份文件要修改呢？如果我们要修改很多次呢？那每次修改都复制一份出来就显得很繁琐。通过版本控制，我们就可以在一个文件中修改，并能很好的在各个修改的版本中来回转换。</p>
 <p>为什么是分布式呢？分布式是相对于集中式的。集中式就是把文件集中放在一个地方，如果需要修改，就把要修改的文件取出来，修改完后将修改的部分再替换回去。这个有两点不好，一是如果集中放置文件的主机出问题了，那所有文件都找不回来了。二是修改必须是联网，如果主机网络出问题，那其他人也不能修改。而分布式则是将文件放在所有需要的人主机上，这样就相当于将文件备份了无数份，几乎没有丢失的可能。另外，所有人都可以在自己的本级上修改，只需要在修改完之后联网传送修改好的版本即可。</p>
-<h2 id="基础命令"><a href="#基础命令" class="headerlink" title="基础命令"></a>基础命令</h2><h3 id="获取git仓库"><a href="#获取git仓库" class="headerlink" title="获取git仓库"></a>获取git仓库</h3><ul>
+<h1 id="基础命令"><a href="#基础命令" class="headerlink" title="基础命令"></a>基础命令</h1><h2 id="获取git仓库"><a href="#获取git仓库" class="headerlink" title="获取git仓库"></a>获取git仓库</h2><ul>
 <li>从现有目录中初始化仓库</li>
 <li>从服务器克隆现有仓库</li>
 </ul>
-<h4 id="从现有目录初始化仓库"><a href="#从现有目录初始化仓库" class="headerlink" title="从现有目录初始化仓库"></a>从现有目录初始化仓库</h4><p>只需要进入需要初始化的仓库，然后输入：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git init</div></pre></td></tr></table></figure></p>
+<h3 id="从现有目录初始化仓库"><a href="#从现有目录初始化仓库" class="headerlink" title="从现有目录初始化仓库"></a>从现有目录初始化仓库</h3><p>只需要进入需要初始化的仓库，然后输入：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git init</div></pre></td></tr></table></figure></p>
 <p>该命令将创建一个名为 .git 的子目录，git所有重要文件都放在这个文件夹里面。</p>
-<h4 id="从服务器克隆现有仓库"><a href="#从服务器克隆现有仓库" class="headerlink" title="从服务器克隆现有仓库"></a>从服务器克隆现有仓库</h4><p>克隆的命令是<code>git clone [url]</code>。比如，要克隆 Git 的可链接库 libgit2，可以用下面的命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git clone https://github.com/libgit2/libgit2</div></pre></td></tr></table></figure></p>
+<h3 id="从服务器克隆现有仓库"><a href="#从服务器克隆现有仓库" class="headerlink" title="从服务器克隆现有仓库"></a>从服务器克隆现有仓库</h3><p>克隆的命令是<code>git clone [url]</code>。比如，要克隆 Git 的可链接库 libgit2，可以用下面的命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git clone https://github.com/libgit2/libgit2</div></pre></td></tr></table></figure></p>
 <p>这样就把现有的仓库复制到自己的主机上，并且这个文件夹会自动生成.git文件夹。</p>
-<h3 id="记录每次更新到仓库"><a href="#记录每次更新到仓库" class="headerlink" title="记录每次更新到仓库"></a>记录每次更新到仓库</h3><p>在工作目录下的文件只有两种状态：已追踪和未追踪。未追踪的是指没有纳入git版本控制的文件，而已追踪的则是纳入了版本控制的文件，可以用git来进行版本的控制。而纳入了版本控制的已追踪文件有三种状态：未修改、已修改、已放入暂存区。初次克隆某个仓库的时候，工作目录中的所有文件都是已追踪的，并处于未修改状态。</p>
+<h2 id="记录每次更新到仓库"><a href="#记录每次更新到仓库" class="headerlink" title="记录每次更新到仓库"></a>记录每次更新到仓库</h2><p>在工作目录下的文件只有两种状态：已追踪和未追踪。未追踪的是指没有纳入git版本控制的文件，而已追踪的则是纳入了版本控制的文件，可以用git来进行版本的控制。而纳入了版本控制的已追踪文件有三种状态：未修改、已修改、已放入暂存区。初次克隆某个仓库的时候，工作目录中的所有文件都是已追踪的，并处于未修改状态。</p>
 <p>编辑过某些文件后，git会将它们标记会已修改文件。等我们修改好之后，将文件放入暂存区，则git会将这些文件标记为已暂存。最后，我们将暂存的文件提交。这样我们就将记录更新到仓库了，并且此时，git会将这些文件标记为未修改。</p>
 <p><img src="https://git-scm.com/book/en/v2/images/lifecycle.png" alt="文件的状态变化周期"></p>
 <p>所以，我们修改完文件后，先提交到暂存区，然后再从暂存区提交到我们的仓库。为什么中间要多加一个暂存区，不直接将修改好的文件添加到仓库呢？要理解暂存区的作用，我们先看看暂存区是怎么工作的。当我们把修改的文件提交到暂存区后，该文件就被标记为已暂存。可是这时你还没修改完，又修改了一部分。那此时这个文件会被标记为已暂存和未修改。已暂存指的是之前暂存的文件，未修改指的是后来又修改后的文件。这样我们就同时记录了两次修改的文件，以便于我们选择我们需要文件。当我们再把已修改的文件提交到暂存区，此时这次文件就只有一个状态——已暂存，而且已暂存的时候最后一次提交的文件。当我们把所有修改好的文件都提交到暂存区后，就可以将暂存区的文件一次全部提交到仓库。所以，暂存区有两个好处，一是进行快照，便于退回；二是分批、分阶段提交。</p>
-<h4 id="git命令"><a href="#git命令" class="headerlink" title="git命令"></a>git命令</h4><ul>
+<h3 id="git命令"><a href="#git命令" class="headerlink" title="git命令"></a>git命令</h3><ul>
 <li>加入暂存区：<code>git add</code></li>
 <li>提交仓库：<code>git commit</code></li>
 <li>查询状态：<code>git status</code></li>
 <li>查询修改：<code>git diff</code></li>
 <li>移除文件：<code>git rm</code></li>
 </ul>
-<h5 id="加入暂存区："><a href="#加入暂存区：" class="headerlink" title="加入暂存区："></a>加入暂存区：</h5><p><code>git add [files]</code>命令有两个作用，一是将未追踪的文件纳入已追踪中，二是将已修改的文件提交到暂存区。</p>
-<h5 id="提交仓库："><a href="#提交仓库：" class="headerlink" title="提交仓库："></a>提交仓库：</h5><p><code>git commit -m &quot;your description&quot;</code>命令是将暂存区的所有文件都提交到仓库中，并添加一段描述以便于很好的识别这个版本。</p>
-<h5 id="查询状态"><a href="#查询状态" class="headerlink" title="查询状态"></a>查询状态</h5><p><code>git status</code>命令是用于检查当前状态。</p>
+<h4 id="加入暂存区："><a href="#加入暂存区：" class="headerlink" title="加入暂存区："></a>加入暂存区：</h4><p><code>git add [files]</code>命令有两个作用，一是将未追踪的文件纳入已追踪中，二是将已修改的文件提交到暂存区。</p>
+<h4 id="提交仓库："><a href="#提交仓库：" class="headerlink" title="提交仓库："></a>提交仓库：</h4><p><code>git commit -m &quot;your description&quot;</code>命令是将暂存区的所有文件都提交到仓库中，并添加一段描述以便于很好的识别这个版本。</p>
+<h4 id="查询状态"><a href="#查询状态" class="headerlink" title="查询状态"></a>查询状态</h4><p><code>git status</code>命令是用于检查当前状态。</p>
 <p>未修改时显示为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ git status</div><div class="line">On branch master</div><div class="line">nothing to commit, working directort clean</div></pre></td></tr></table></figure></p>
 <p>现在创建一个新的<code>README.md</code>文件，则该文件属于未追踪状态，则输出为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">$ git status</div><div class="line">On branch master</div><div class="line">Untracked files:</div><div class="line">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)</div><div class="line"></div><div class="line">    README</div><div class="line"></div><div class="line">nothing added to commit but untracked files present (use &quot;git add&quot; to track)</div></pre></td></tr></table></figure></p>
 <p>将文件纳入追踪系统，并放入暂存状态后，输入为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$ git add README</div><div class="line">$ git status</div><div class="line">On branch master</div><div class="line">Changes to be committed:</div><div class="line">  (use &quot;git reset HEAD &lt;file&gt;...&quot; to unstage)</div><div class="line"></div><div class="line">    new file:   README.md</div></pre></td></tr></table></figure></p>
 <p>修改<code>README.md</code>文件后，输出为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$ git status</div><div class="line">On branch master</div><div class="line">Changes not staged for commit:</div><div class="line">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)</div><div class="line">  (use &quot;git checkout -- &lt;file&gt;...&quot; to discard changes in working directory)</div><div class="line"></div><div class="line">    modified:   README.md</div></pre></td></tr></table></figure></p>
-<h5 id="查询修改"><a href="#查询修改" class="headerlink" title="查询修改"></a>查询修改</h5><p><code>git diff</code>用于查看工作目录中当前文件和暂存区域快照之间的差异，也就是修改之后还没有暂存起来的变化内容。</p>
+<h4 id="查询修改"><a href="#查询修改" class="headerlink" title="查询修改"></a>查询修改</h4><p><code>git diff</code>用于查看工作目录中当前文件和暂存区域快照之间的差异，也就是修改之后还没有暂存起来的变化内容。</p>
 <p><code>git diff --cached</code>或<code>git diff --staged</code>可以用来查看已暂存的文件与仓库中文件差异。</p>
-<h5 id="移除文件"><a href="#移除文件" class="headerlink" title="移除文件"></a>移除文件</h5><p><code>git rm &lt;file&gt;</code>可以将某个文件从仓库中移除，即从已追踪状态转换为未追踪状态，并且从工作目录中将该文件删除，这样以后该文件就不会再出现在未追踪清单中。如果，该文件已放入暂存区，则需要使用<code>git rm &lt;file&gt; -f</code>命令来强制移除该文件。</p>
-<h3 id="撤销操作"><a href="#撤销操作" class="headerlink" title="撤销操作"></a>撤销操作</h3><ul>
+<h4 id="移除文件"><a href="#移除文件" class="headerlink" title="移除文件"></a>移除文件</h4><p><code>git rm &lt;file&gt;</code>可以将某个文件从仓库中移除，即从已追踪状态转换为未追踪状态，并且从工作目录中将该文件删除，这样以后该文件就不会再出现在未追踪清单中。如果，该文件已放入暂存区，则需要使用<code>git rm &lt;file&gt; -f</code>命令来强制移除该文件。</p>
+<h2 id="撤销操作"><a href="#撤销操作" class="headerlink" title="撤销操作"></a>撤销操作</h2><ul>
 <li>重新提交：<code>git commit --amend</code></li>
 <li>取消暂存文件：<code>git reset HEAD &lt;file&gt;</code></li>
 <li>撤销对文件的修改：<code>git checkout -- &lt;file&gt;</code></li>
 </ul>
-<h4 id="重新提交"><a href="#重新提交" class="headerlink" title="重新提交"></a>重新提交</h4><p>当我们提交文件时发现漏了几个文件没有添加，或者提交信息写错了，此时用<code>git commit --amend</code>可以尝试重新提交，则这次的提交会替代上次的提交。</p>
-<h4 id="取消暂存文件"><a href="#取消暂存文件" class="headerlink" title="取消暂存文件"></a>取消暂存文件</h4><p><code>git reset HEAD &lt;file&gt;</code>会将文件从暂存区取出来，即该文件的状态从已暂存改为已修改。</p>
-<h4 id="撤销对文件的修改"><a href="#撤销对文件的修改" class="headerlink" title="撤销对文件的修改"></a>撤销对文件的修改</h4><p><code>git checkout -- &lt;file&gt;</code>撤销对文件的修改，即将修改过文件退回到上一次提交时的状态，即从已修改状态转为未修改状态。</p>
-<h3 id="远程仓库的使用"><a href="#远程仓库的使用" class="headerlink" title="远程仓库的使用"></a>远程仓库的使用</h3><ul>
+<h3 id="重新提交"><a href="#重新提交" class="headerlink" title="重新提交"></a>重新提交</h3><p>当我们提交文件时发现漏了几个文件没有添加，或者提交信息写错了，此时用<code>git commit --amend</code>可以尝试重新提交，则这次的提交会替代上次的提交。</p>
+<h3 id="取消暂存文件"><a href="#取消暂存文件" class="headerlink" title="取消暂存文件"></a>取消暂存文件</h3><p><code>git reset HEAD &lt;file&gt;</code>会将文件从暂存区取出来，即该文件的状态从已暂存改为已修改。</p>
+<h3 id="撤销对文件的修改"><a href="#撤销对文件的修改" class="headerlink" title="撤销对文件的修改"></a>撤销对文件的修改</h3><p><code>git checkout -- &lt;file&gt;</code>撤销对文件的修改，即将修改过文件退回到上一次提交时的状态，即从已修改状态转为未修改状态。</p>
+<h2 id="远程仓库的使用"><a href="#远程仓库的使用" class="headerlink" title="远程仓库的使用"></a>远程仓库的使用</h2><ul>
 <li>添加远程仓库：<code>git remote add</code></li>
 <li>从远程仓库中抓取的拉取：<code>git fetch</code> or <code>git pull</code></li>
 <li>推送到远程仓库：<code>git push</code></li>
 <li>查看远程仓库：<code>git remote show</code></li>
 <li>远程仓库的移除与重命名：<code>git rm</code> or <code>git rename</code></li>
 </ul>
-<h4 id="添加远程仓库"><a href="#添加远程仓库" class="headerlink" title="添加远程仓库"></a>添加远程仓库</h4><p><code>git remote add &lt;shortname&gt; &lt;url&gt;</code>可以添加一个新的远程仓库，同时指定一个可以轻松引用的简写。</p>
-<h4 id="从远程仓库中抓取的拉取"><a href="#从远程仓库中抓取的拉取" class="headerlink" title="从远程仓库中抓取的拉取"></a>从远程仓库中抓取的拉取</h4><p><code>git fetch [remote-name]</code>可以从远程仓库中获取数据，但它并不会自动合并或修改你当前的工作。当准备好的时候，必须手动将其合并入你的工作。</p>
+<h3 id="添加远程仓库"><a href="#添加远程仓库" class="headerlink" title="添加远程仓库"></a>添加远程仓库</h3><p><code>git remote add &lt;shortname&gt; &lt;url&gt;</code>可以添加一个新的远程仓库，同时指定一个可以轻松引用的简写。</p>
+<h3 id="从远程仓库中抓取的拉取"><a href="#从远程仓库中抓取的拉取" class="headerlink" title="从远程仓库中抓取的拉取"></a>从远程仓库中抓取的拉取</h3><p><code>git fetch [remote-name]</code>可以从远程仓库中获取数据，但它并不会自动合并或修改你当前的工作。当准备好的时候，必须手动将其合并入你的工作。</p>
 <p><code>git pull</code>可以实现自动抓取并合并远程分支到当前分支。</p>
-<h4 id="推送到远程仓库"><a href="#推送到远程仓库" class="headerlink" title="推送到远程仓库"></a>推送到远程仓库</h4><p><code>git push [remote-name] [brach-name]</code>可以将本地分支推送到远程仓库的某个服务器中，这个只有当你对该服务器具有写入权限，并之前没有人推送过才有用。</p>
+<h3 id="推送到远程仓库"><a href="#推送到远程仓库" class="headerlink" title="推送到远程仓库"></a>推送到远程仓库</h3><p><code>git push [remote-name] [brach-name]</code>可以将本地分支推送到远程仓库的某个服务器中，这个只有当你对该服务器具有写入权限，并之前没有人推送过才有用。</p>
 <p>当之前有人推送过，你的推送就会被拒绝。你必须先用<code>git pull</code>将他们的工作拉取下拉合并到你的分支中，才能推送。</p>
-<h4 id="查看远程仓库"><a href="#查看远程仓库" class="headerlink" title="查看远程仓库"></a>查看远程仓库</h4><p><code>git remote &lt;url&gt;</code>可以查看已经配置的远程仓库的服务器，如果你克隆了自己的仓库，那么至少能看到<code>origin</code>，这是git给你仓库服务器的默认名字。</p>
+<h3 id="查看远程仓库"><a href="#查看远程仓库" class="headerlink" title="查看远程仓库"></a>查看远程仓库</h3><p><code>git remote &lt;url&gt;</code>可以查看已经配置的远程仓库的服务器，如果你克隆了自己的仓库，那么至少能看到<code>origin</code>，这是git给你仓库服务器的默认名字。</p>
 <p><code>git remote -v</code>则会显示需要读写远程仓库所需要使用的git保存的简写即对应的URL。</p>
 <p><code>git remore show [remote-name]</code>除了会列出远程仓库的URL，还列出跟踪分支的信息。告诉你在特定的分支上执行<code>git push</code>会自动推送到哪一个远程分支，哪些远程分支不在你的本地，哪些远程分支已经从服务器移除，当你执行<code>git pull</code>时，哪些分支会自动合并。</p>
-<h4 id="远程仓库的移除与重命名"><a href="#远程仓库的移除与重命名" class="headerlink" title="远程仓库的移除与重命名"></a>远程仓库的移除与重命名</h4><p><code>git remote rm &lt;remote-name&gt;</code>可以移除一个远程仓库，<code>git remote rename &lt;remote-name&gt; &lt;new-name&gt;</code>可以将远程仓库重命名。</p>
+<h3 id="远程仓库的移除与重命名"><a href="#远程仓库的移除与重命名" class="headerlink" title="远程仓库的移除与重命名"></a>远程仓库的移除与重命名</h3><p><code>git remote rm &lt;remote-name&gt;</code>可以移除一个远程仓库，<code>git remote rename &lt;remote-name&gt; &lt;new-name&gt;</code>可以将远程仓库重命名。</p>
+<h2 id="Git-分支"><a href="#Git-分支" class="headerlink" title="Git 分支"></a>Git 分支</h2><p>几乎所有的版本控制系统都以某种形式支持分支。 使用分支意味着你可以把你的工作从开发主线上分离开来，以免影响开发主线。 比如，当你想为你的项目添加一个新的特性时，你可以创建一个新的分支，在分支上对项目进行修改。如果你修改的不好，你可以直接删除这个分支，对主线毫无影响。如果，你修改的好，你可以将这个分支合并在主线中。</p>
+<ul>
+<li>分支创建：<code>git branch</code></li>
+<li>分支切换：<code>git checkout</code></li>
+<li>分支的合并：<code>git merge</code></li>
+<li>分支的删除：<code>git branch -d</code></li>
+<li>远程分支：<code>git remote</code></li>
+</ul>
+<h3 id="分支创建"><a href="#分支创建" class="headerlink" title="分支创建"></a>分支创建</h3><p><code>git branch &lt;branch-name&gt;</code>可以创建一个新的分支，git会为你创建一个可移动的新指针，指向你提交的对象。此时现在操作的用的指针<code>HEAD</code>仍然指向原来的指针。</p>
+<h3 id="分支切换"><a href="#分支切换" class="headerlink" title="分支切换"></a>分支切换</h3><p><code>git checkout &lt;branch-name&gt;</code>可以将当前的工作目录切换到另一个分支中，即将<code>HEAD</code>指向另一个指针。</p>
+<h3 id="分支合并"><a href="#分支合并" class="headerlink" title="分支合并"></a>分支合并</h3><p>当我们在支线分支上完成我们所需的任务后，我们想要把它合并到我们的主线分支上，我们就可以切换到我们的主线分支，然后输入<code>git merge &lt;branch-name&gt;</code>合并支线分支。</p>
+<p>如果合并的两个分支同时对一个文件的同一个地方进行修改，那么这两个分支合并就会出现问题，可以用<code>git status</code>查看冲突，然后手动处理好冲突之后再合并。</p>
+<h3 id="分支删除"><a href="#分支删除" class="headerlink" title="分支删除"></a>分支删除</h3><p>当我们在支线分支上修改失败或者修改成功并且合并到主线分支上之后，我们就没必要留着支线分支了，输入<code>git branch -d &lt;branch-name&gt;</code>可以将该分支删除。</p>
+<h3 id="远程分支"><a href="#远程分支" class="headerlink" title="远程分支"></a>远程分支</h3><p>获取远程分支常用的方法是远程跟踪分支，它是对远程分支状态的引用。它们是你不能移动的本地引用，当你做任何网络通信操作时，它们会自动移动。 远程跟踪分支像是你上次连接到远程仓库时，那些分支所处状态的书签。远程分支常以 (remote)/(branch) 形式命名。</p>
+<p>可以用<code>git checkout -b [branch] [remotename]/[branch]</code>来跟踪远程分支，这样就会从在本地创建一个和远程分支一样的分支，叫做跟踪分支。</p>
+<p>此时，运行<code>git pull</code>就会自动从跟踪的远程分支中拉取数据，并合并到跟踪分支中。</p>
+<p>当我们在一个分支上已经完成我们的任务时候，我们可以运行带有<code>--delete &lt;remote-branch-name&gt;</code>的推送来删除远程分支，即运行<code>git push &lt;name&gt; --delete &lt;remote-branch-name&gt;</code>。</p>
 <p>参考:<a href="https://git-scm.com/book/zh/v2/" target="_blank" rel="external">https://git-scm.com/book/zh/v2/</a></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;h1 id=&quot;Git基础操作&quot;&gt;&lt;a href=&quot;#Git基础操作&quot; class
+      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;h1 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerli
     
     </summary>
     
@@ -525,45 +542,100 @@ Decision Support Systems 47 (2009) 547–553.<a href="#fnref:21" rev="footnote">
   </entry>
   
   <entry>
-    <title>通往财富自由之路_2</title>
-    <link href="http://yoursite.com/2017/08/23/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF_2/"/>
-    <id>http://yoursite.com/2017/08/23/通往财富自由之路/通往财富自由之路_2/</id>
+    <title>记忆</title>
+    <link href="http://yoursite.com/2017/08/23/%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0/%E8%AE%B0%E5%BF%86/"/>
+    <id>http://yoursite.com/2017/08/23/如何学习/记忆/</id>
+    <published>2017-08-23T01:05:21.721Z</published>
+    <updated>2017-08-23T01:05:21.721Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="记忆"><a href="#记忆" class="headerlink" title="记忆"></a>记忆</h2><h3 id="工作记忆与长期记忆"><a href="#工作记忆与长期记忆" class="headerlink" title="工作记忆与长期记忆"></a>工作记忆与长期记忆</h3><p>工作记忆就是你的大脑在即时且有意识地处理信息所涉及的那部分记忆。当你尝试将脑中的一些想法结合起来去帮助理解某一概念或者解决某一问题是则动用工作记忆。</p>
+<p>工作记忆与短期记忆有些相似，但也有很大不同。它们都只能短暂的储存在大脑中，过一段时间很快就会忘记。工作记忆与短期记忆最大的不同在于它们功能不同。工作记忆主要是作为大脑的缓存区，让大脑在这短暂的时间内可以记住所需要的信息，并且对这部分信息进行更进一步加工，比如思考。而短期记忆的功能主要是在短时间内记住这部分信息，并不处理这部分信息。当你在书上学习新的知识并且用这部分知识做题的时候，使用的就是工作记忆。当你单纯的背一个电话号码的时候，使用的就是短期记忆。工作记忆对我们的学习，影响重大，所以我更多谈论工作记忆而不是短期记忆。</p>
+<p>工作记忆集中在大脑的前额叶皮质，它也有与大脑的其他部分有着联系，以便于你读取长期记忆。以前的研究人员认为，工作记忆可以储存7个组块的信息。而现在的共识是工作记忆大约只能储存4个组块的信息。我们大脑会将记忆项合并为组块的形式，所以我们的工作记忆看似比实际容量要大。组块这个概念我后面会讲到。</p>
+<p>工作记忆就像一块有些劣质的黑板，你必须时常重复你所需要记忆的信息，它们才能稳定地储存在工作记忆中。当你全身关注的时候，你会发现自己无视了那些侵占工作记忆有限空间的冗余信息。</p>
+<blockquote>
+<p>长期记忆（LTM）是提出的双内存模式的最后阶段阿特金森Shiffrin内存模型，其中的信息可以保存长时间的时间。信息可以无限期地保持在长期存储器中。</p>
+</blockquote>
+<p>这是维基百科对长期记忆的定义。长期记忆就是能够长时间保存在大脑中的那部分记忆。</p>
+<p>长期记忆的重要性在于它储存着你学习的所有科目的基本概念和技巧。没有了长期记忆，人类就没有了文化，因为不能长期记忆，就不能传播；不能长期记忆，就不能深入思考。所学的东西越难、越深入，所涉及的概念和方法就越多，只有将所需要的概念和方法牢牢地储存在大脑中，学习的时候工作记忆才能灵活的调用它们进行更深一步的思考。</p>
+<p>长期记忆就像一个储存仓库，它分布在一个很大的区域中。不同的长期记忆储存在大脑的不同区域。研究表明：当你首次尝试将一段短期记忆转入长期记忆中时，你需要多次回顾以增加需要时能够找到相关信息的几率。长期记忆的仓库是巨大的，它可以储存数以亿计的内容。事实上，由于太多信息可能会相互掩盖 要找到所需信息会有难度，除非你练习并重复几次。</p>
+<p>当你遇到新的事物的时候，通常你会用工作记忆来处理它。如果需要把这些信息转移到长期记忆中，就需要一些时间和练习的过程。促进这一过程有效的方式是间隔性重复。具体的做法是不断重复你尝试记忆的内容，但是重复的过程必须间隔开。研究表明：一次重复记忆20次相同的内容，记忆效果比不上在几天内重复相同次数的效果。</p>
+<p>一般时候大脑的记忆处于休眠状态，当你想将工作记忆转换为长期记忆的时候，工作记忆会将长期记忆唤醒，通过修改神经元树突上的突出来将记忆变为长期记忆。苏醒的长期记忆将新的内容转为长期记忆的时候，也更改了旧的记忆。所以，大脑的记忆常常交织在一起，学习新的东西的时候，旧的记忆也会改变。这一过程在睡眠期间比较活跃。</p>
+<h3 id="记忆小方法"><a href="#记忆小方法" class="headerlink" title="记忆小方法"></a>记忆小方法</h3><h4 id="图像记忆"><a href="#图像记忆" class="headerlink" title="图像记忆"></a>图像记忆</h4><p>我们的大脑天生就有强大的视觉和空间记忆，十分擅长记忆不同地点的概况。图像与右脑的视觉空间中枢直接相连，通过利用具有更强的记忆能力的视觉区域，图像能够帮助你把单调乏味、难以记忆的概念概括起来，通过激活各种感官建立的神经钩越多，你就越容易记住这个概念和其含义。你可以将所需要的记忆的内容，想象成一个图像来帮助你记忆，而且这个图像越夸张效果越好。</p>
+<h4 id="记忆宫殿"><a href="#记忆宫殿" class="headerlink" title="记忆宫殿"></a>记忆宫殿</h4><p>前面也说了我们大脑不但有强大的图像记忆，空间记忆也非常强大。因为我们祖先外出打猎时必须记得回家的路线，外面哪个位置野果比较丰富，哪个位置比较危险等等，这就让我们发展出强大的空间记忆。</p>
+<p>记忆宫殿的具体做法有3步。首先将你需要记忆的内容分类，然后回忆起一个你非常熟悉的路线，比如从宿舍到教室，最后通过夸张的想象，将所需要的记忆的内容与这条路线上你所熟悉的建筑或标志物一一联系起来。</p>
+<h4 id="简化记忆"><a href="#简化记忆" class="headerlink" title="简化记忆"></a>简化记忆</h4><p>简化记忆就是创造有意义的意群来简化所需要记忆的信息。你可以将要记忆的数字与难忘的事联系起来，比如2008年是中国举办奥运会的那一年，3.30是考1000m的时候的成绩。你也可以通过创造好记的句子来帮助记忆一些概念，这个句子可由你需要记忆的信息的首字组成。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;h2 id=&quot;记忆&quot;&gt;&lt;a href=&quot;#记忆&quot; class=&quot;headerli
+    
+    </summary>
+    
+      <category term="学习何如学习" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0%E4%BD%95%E5%A6%82%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="工作记忆" scheme="http://yoursite.com/tags/%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BF%86/"/>
+    
+      <category term="长期记忆" scheme="http://yoursite.com/tags/%E9%95%BF%E6%9C%9F%E8%AE%B0%E5%BF%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>通往财富自由之路_4</title>
+    <link href="http://yoursite.com/2017/08/23/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF_4/"/>
+    <id>http://yoursite.com/2017/08/23/通往财富自由之路/通往财富自由之路_4/</id>
     <published>2017-08-23T01:05:21.721Z</published>
     <updated>2017-08-23T01:05:21.721Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="通往财富自由之路"><a href="#通往财富自由之路" class="headerlink" title="通往财富自由之路"></a>通往财富自由之路</h1><ul>
-<li><strong>资本</strong></li>
-<li><strong>落后</strong></li>
-<li><strong>多维竞争</strong></li>
+<li><strong>这个世界是有生命的</strong></li>
+<li><strong>抱怨</strong></li>
+<li><strong>别人的好</strong></li>
+<li><strong>正确的价值</strong></li>
 </ul>
-<h2 id="资本"><a href="#资本" class="headerlink" title="资本"></a>资本</h2><p>资本是由资金构成，但仅仅是资金是不可能称为资本的。资金要想要为资本有三个考虑因素。</p>
+<h2 id="这是世界是有生命的"><a href="#这是世界是有生命的" class="headerlink" title="这是世界是有生命的"></a>这是世界是有生命的</h2><p>如果一个概念在这个文化中不存在，那么这个文化中人就几乎感知不到这个“客观存在”的东西。同样，如果这个文化中存在某种概念，即使这个概念对应的东西完全不存在，可是人们还是总能感受到它的存在。</p>
+<p>就像以前的人没有“重力加速度”这个概念，就完全不能感受到会有重力加速度，就连亚里士多德也认为同样重的铅球和棉花从高处落下后，铅球会先着地。</p>
+<p>我们所生存的世界并不是冷冰冰的世界，它是有生命的。而且，我们怎么对待它，他就会怎么对待我们。它总能够证明我们是对的，即便有时候我们错的离谱。</p>
+<p>心理学家对这现象提出了一个很重要的概念“自证预言”（self-fulfilling prophecy），说的是一个预言直接或者间接地使这个预言称为现实。</p>
+<p>我们每个人来到这个世界都是一样的，不知善恶。善恶都是后天习得的，每一个善恶的选择，一方面塑造了自己，另一方面也塑造了我们的世界。同时，我们的世界又会以同样的善恶反过来塑造我们，不断循环。</p>
+<p>若你能善待你的世界，你的世界大抵可以给你足够的善待；若你能宽容你的世界，你的世界大抵能够宽容你；若你能认真对待你的世界，你的世界也会很认真对待你；</p>
+<p>你可以选择你要生活在一个怎么样的世界。那你想生活在一个怎么样的世界呢？</p>
+<h2 id="抱怨"><a href="#抱怨" class="headerlink" title="抱怨"></a>抱怨</h2><p>最应该戒掉的恶习：</p>
+<blockquote>
+<p>抱怨</p>
+</blockquote>
+<p><strong>抱怨只是无能、无奈的表现。</strong></p>
+<p>当我们遇到麻烦的时候，能解决就解决；解决不了就承受，这才是正确的态度，抱怨毫无帮助。抱怨只能向别人展示我们的无能和无奈。</p>
+<p>不想别人不是基于自己内心的骄傲，害怕别人瞧不起自己，而是基于自己的能力和坚韧：</p>
 <ul>
-<li>资金的大小</li>
-<li>资金的使用时限</li>
-<li>资金背后使用者的智慧</li>
+<li>能解决就解决（能力）</li>
+<li>不能就解决就承受（坚韧）</li>
 </ul>
-<p>资金只有足够太，投资带来的收益对我们才真正有意义。资金的使用时限足够长，我们才能拿这部分资金用作投资。若是完全不懂投资，则再多的资金也不配当做资本用于投资。</p>
-<p>资金背后的智慧是可以习得的。习得的方法是从各个维度（金额、时限、智慧）逐步循环突破。</p>
-<p>第一个要突破的是投资的重点在于投资的收益率，而不在于投资的收益额。</p>
-<p>第二个要突破的是能不能给自己的投资款“判上无期徒刑”。心理学家通过大量调查得到绝大部分人若是丢失年收入的10%，这对他们的生活完全没有影响。所以，我们完全有可能把自己的部分资金当成丢失，给他们“判上无期徒刑”。</p>
-<p>第三个要突破的是投资知识、智慧、经验几乎只能从实践中得到。这个漫长的过程不可或缺，而且不是聪明就可以跨过的，就像是怀胎就是需要十个月，不管是谁都不能跨过这个过程，而且几乎不可能缩短这个过程。</p>
-<p>不论是工作还是学习，总有一群人比别人更出众。除去所谓的能力差异，他们还有的一个特质是：</p>
+<p>而且，抱怨是会上瘾的。尤其是当有人“愿意”听我们抱怨的时候，我们会不断地抱怨。</p>
+<p>抱怨还会传染。让我们周边有人抱怨的时候，我们也容易跟着一起抱怨。</p>
+<p>抱怨的最大坏处在于：它不解决问题。</p>
+<p>不论是我们的注意力还是我们的时间都是非常宝贵和有限的。抱怨会浪费我们很多时间和注意力，我们在抱怨上多花一点时间，在解决问题上就少一点时间。</p>
+<p>而且，抱怨很消耗我们的心里能量，抱怨完我们也心力交瘁，又怎么可能好好地解决问题呢？</p>
+<p>所以，珍爱生命。远离抱怨和抱怨的人。</p>
+<h2 id="别人的好"><a href="#别人的好" class="headerlink" title="别人的好"></a>别人的好</h2><p>很多人见不得别人的好。他们与别人是一种非此即彼的关系，要么我好你不好，要么我不好你好。</p>
+<p>每个人身上都是有好的部分和不好的部分，因为他们总是想和别人比出一个胜负，分清好坏。所以，他们总是不由自主地把注意力放在对方“不好”，而不是放在对方的“好”。把注意力放在对方的“错”，而不是对方的“对”。</p>
+<p>久而久之，他们变成“盲人”而不自知，这方面的元认知能力被永远阉割。结果是，永远把注意力放在对方的不好之处，对他们来说，可能只有这样才能让他们舒服。</p>
+<p>比较是没有尽头的。有比较心理的人，不是在努力证明自己可以，就是在努力证明别人不行。</p>
+<p>但实际上这两种证明都是无意义的。因为，如果是真的，不用证明大家都看在眼里。如果是假的，那就不是证明，而是在演或者在装。</p>
+<p>这样，注意力浪费了，时间过去了，自己却没有一点成长。</p>
+<p>所以，我们没有必要与别人比较，来证明自己。我们就不用只关注对方的“不好”，我们也可以看到对方的“好”。</p>
+<p>等你真正愿意去看到对方的好的时候，你会发现对方身上其实有很多值得学习的地方。</p>
+<p>而且，由于你更能看见别人的好，你身处的世界会变得比原来美好太多……</p>
+<h2 id="正确的价值"><a href="#正确的价值" class="headerlink" title="正确的价值"></a>正确的价值</h2><p>很多人没有意识到一个事：</p>
 <blockquote>
-<p><strong>他们通常会主动选择</strong></p>
+<p><strong>正确本身，可能并没有什么价值</strong></p>
 </blockquote>
-<p>所以,从现在开始主动选择，积累投资的智慧。</p>
-<h2 id="落后"><a href="#落后" class="headerlink" title="落后"></a>落后</h2><p>过去，我们常常凭感觉，觉得平均水准以上就是不落后。</p>
-<p>然而这个感觉肯定是有偏差的。人们的感觉永远是有偏差的，比如90%的人认为自己的驾驶水平处于平均水准以上。因为，我们并不能感知整个世界，我们只能通过感知自己的周遭来判断自己是否处于平均水准之上。</p>
-<p>进入二十一世纪后，有个重大的改变正在揭示更为残酷的事实：</p>
-<blockquote>
-<p><strong>弄不好，百分之一之后都是落后</strong></p>
-</blockquote>
-<p>因为，现在互联网几乎连接了所有的人。我们每个人能感知的世界，不再是我们周遭的世界而已，我们几乎可以感知到世界的每一个角落。这种感知范围的变化，会让每个人产生不同的心理变化。我们能看到更多的牛人，看到自己与他们之间的差距。有时候就算处于前1%，我们还有能看到无数比我们厉害的很多的人，我们一样会觉得自己是落后的，更别提处于平均水准之上而已了。</p>
-<p>所以，要想不落后，我们要成为前1%，甚至前0.1%。</p>
-<h2 id="多维竞争"><a href="#多维竞争" class="headerlink" title="多维竞争"></a>多维竞争</h2><p>要想不落后其实很难，因为在每个领域永远只有一个“第一”，只有少数几个“名列前茅”，剩下绝大部分的都是落后。</p>
-<p>但仔细想想也没有那么的难，如果我们能换个角度度看问题。我们不一定只能在一个领域发展，如果我们能够自己开拓新的维度，事情就变得不一样了。将多个领域的知识、技能融汇在一起，就可能从多个维度超过一个维度的顶尖人物。</p>
-<p>举个不太准确的数学例子，在一个维度顶尖人物可能得分95分，而我们只有90分，可是我们还能整合其他维度的知识应用在这个领域，假设那个领域我们的分80分，我们得分就远远超过那个顶尖人物了。当然，这只是直观的感受，不太确切。</p>
-<p>要想多个维度同时发展，首先我们必须要在一个维度做的足够好。因为，我们生活有成本。如果在所有方面我们都是平平庸庸，那么我们生活都可能难以为继，更别提再去发展，整合别的维度。另外，如果不能在一个领域做得足够好，那么也难以将其他领域的知识、技能整合应用到这领域。</p>
+<p>当你是正确，别人都是错误的，这时候你的“正确”才具有巨大价值。而且，你的正确程度越高，反对你的人越多，你的价值越大。</p>
+<p>那，为什么很多人抱怨别人都不认同自己呢？因为，他们衡量正确的方式不是通过逻辑推理，而是通过大家的认同。</p>
+<p>他们更多是表现型的人，相比于对错，他们更在乎自己是否得到更多人的认同。进而，他们一定是“随大流”的，只有这样他们才“安全”。</p>
+<p>另外，正确的巨大价值在于特立独【行】，而不是特例独【想】。</p>
+<p>通过严谨的逻辑推力判断，看到了正确的巨大价值后，想是完全没有用的。只有行动才能带来真正的收益。</p>
 ]]></content>
     
     <summary type="html">
@@ -577,11 +649,11 @@ Decision Support Systems 47 (2009) 547–553.<a href="#fnref:21" rev="footnote">
     
       <category term="通往财富自由之路" scheme="http://yoursite.com/tags/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF/"/>
     
-      <category term="资本" scheme="http://yoursite.com/tags/%E8%B5%84%E6%9C%AC/"/>
+      <category term="抱怨" scheme="http://yoursite.com/tags/%E6%8A%B1%E6%80%A8/"/>
     
-      <category term="落后" scheme="http://yoursite.com/tags/%E8%90%BD%E5%90%8E/"/>
+      <category term="正确" scheme="http://yoursite.com/tags/%E6%AD%A3%E7%A1%AE/"/>
     
-      <category term="多维竞争" scheme="http://yoursite.com/tags/%E5%A4%9A%E7%BB%B4%E7%AB%9E%E4%BA%89/"/>
+      <category term="世界" scheme="http://yoursite.com/tags/%E4%B8%96%E7%95%8C/"/>
     
   </entry>
   
@@ -679,42 +751,63 @@ Decision Support Systems 47 (2009) 547–553.<a href="#fnref:21" rev="footnote">
   </entry>
   
   <entry>
-    <title>记忆</title>
-    <link href="http://yoursite.com/2017/08/23/%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0/%E8%AE%B0%E5%BF%86/"/>
-    <id>http://yoursite.com/2017/08/23/如何学习/记忆/</id>
+    <title>通往财富自由之路_2</title>
+    <link href="http://yoursite.com/2017/08/23/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF_2/"/>
+    <id>http://yoursite.com/2017/08/23/通往财富自由之路/通往财富自由之路_2/</id>
     <published>2017-08-23T01:05:21.721Z</published>
     <updated>2017-08-23T01:05:21.721Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="记忆"><a href="#记忆" class="headerlink" title="记忆"></a>记忆</h2><h3 id="工作记忆与长期记忆"><a href="#工作记忆与长期记忆" class="headerlink" title="工作记忆与长期记忆"></a>工作记忆与长期记忆</h3><p>工作记忆就是你的大脑在即时且有意识地处理信息所涉及的那部分记忆。当你尝试将脑中的一些想法结合起来去帮助理解某一概念或者解决某一问题是则动用工作记忆。</p>
-<p>工作记忆与短期记忆有些相似，但也有很大不同。它们都只能短暂的储存在大脑中，过一段时间很快就会忘记。工作记忆与短期记忆最大的不同在于它们功能不同。工作记忆主要是作为大脑的缓存区，让大脑在这短暂的时间内可以记住所需要的信息，并且对这部分信息进行更进一步加工，比如思考。而短期记忆的功能主要是在短时间内记住这部分信息，并不处理这部分信息。当你在书上学习新的知识并且用这部分知识做题的时候，使用的就是工作记忆。当你单纯的背一个电话号码的时候，使用的就是短期记忆。工作记忆对我们的学习，影响重大，所以我更多谈论工作记忆而不是短期记忆。</p>
-<p>工作记忆集中在大脑的前额叶皮质，它也有与大脑的其他部分有着联系，以便于你读取长期记忆。以前的研究人员认为，工作记忆可以储存7个组块的信息。而现在的共识是工作记忆大约只能储存4个组块的信息。我们大脑会将记忆项合并为组块的形式，所以我们的工作记忆看似比实际容量要大。组块这个概念我后面会讲到。</p>
-<p>工作记忆就像一块有些劣质的黑板，你必须时常重复你所需要记忆的信息，它们才能稳定地储存在工作记忆中。当你全身关注的时候，你会发现自己无视了那些侵占工作记忆有限空间的冗余信息。</p>
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="通往财富自由之路"><a href="#通往财富自由之路" class="headerlink" title="通往财富自由之路"></a>通往财富自由之路</h1><ul>
+<li><strong>资本</strong></li>
+<li><strong>落后</strong></li>
+<li><strong>多维竞争</strong></li>
+</ul>
+<h2 id="资本"><a href="#资本" class="headerlink" title="资本"></a>资本</h2><p>资本是由资金构成，但仅仅是资金是不可能称为资本的。资金要想要为资本有三个考虑因素。</p>
+<ul>
+<li>资金的大小</li>
+<li>资金的使用时限</li>
+<li>资金背后使用者的智慧</li>
+</ul>
+<p>资金只有足够太，投资带来的收益对我们才真正有意义。资金的使用时限足够长，我们才能拿这部分资金用作投资。若是完全不懂投资，则再多的资金也不配当做资本用于投资。</p>
+<p>资金背后的智慧是可以习得的。习得的方法是从各个维度（金额、时限、智慧）逐步循环突破。</p>
+<p>第一个要突破的是投资的重点在于投资的收益率，而不在于投资的收益额。</p>
+<p>第二个要突破的是能不能给自己的投资款“判上无期徒刑”。心理学家通过大量调查得到绝大部分人若是丢失年收入的10%，这对他们的生活完全没有影响。所以，我们完全有可能把自己的部分资金当成丢失，给他们“判上无期徒刑”。</p>
+<p>第三个要突破的是投资知识、智慧、经验几乎只能从实践中得到。这个漫长的过程不可或缺，而且不是聪明就可以跨过的，就像是怀胎就是需要十个月，不管是谁都不能跨过这个过程，而且几乎不可能缩短这个过程。</p>
+<p>不论是工作还是学习，总有一群人比别人更出众。除去所谓的能力差异，他们还有的一个特质是：</p>
 <blockquote>
-<p>长期记忆（LTM）是提出的双内存模式的最后阶段阿特金森Shiffrin内存模型，其中的信息可以保存长时间的时间。信息可以无限期地保持在长期存储器中。</p>
+<p><strong>他们通常会主动选择</strong></p>
 </blockquote>
-<p>这是维基百科对长期记忆的定义。长期记忆就是能够长时间保存在大脑中的那部分记忆。</p>
-<p>长期记忆的重要性在于它储存着你学习的所有科目的基本概念和技巧。没有了长期记忆，人类就没有了文化，因为不能长期记忆，就不能传播；不能长期记忆，就不能深入思考。所学的东西越难、越深入，所涉及的概念和方法就越多，只有将所需要的概念和方法牢牢地储存在大脑中，学习的时候工作记忆才能灵活的调用它们进行更深一步的思考。</p>
-<p>长期记忆就像一个储存仓库，它分布在一个很大的区域中。不同的长期记忆储存在大脑的不同区域。研究表明：当你首次尝试将一段短期记忆转入长期记忆中时，你需要多次回顾以增加需要时能够找到相关信息的几率。长期记忆的仓库是巨大的，它可以储存数以亿计的内容。事实上，由于太多信息可能会相互掩盖 要找到所需信息会有难度，除非你练习并重复几次。</p>
-<p>当你遇到新的事物的时候，通常你会用工作记忆来处理它。如果需要把这些信息转移到长期记忆中，就需要一些时间和练习的过程。促进这一过程有效的方式是间隔性重复。具体的做法是不断重复你尝试记忆的内容，但是重复的过程必须间隔开。研究表明：一次重复记忆20次相同的内容，记忆效果比不上在几天内重复相同次数的效果。</p>
-<p>一般时候大脑的记忆处于休眠状态，当你想将工作记忆转换为长期记忆的时候，工作记忆会将长期记忆唤醒，通过修改神经元树突上的突出来将记忆变为长期记忆。苏醒的长期记忆将新的内容转为长期记忆的时候，也更改了旧的记忆。所以，大脑的记忆常常交织在一起，学习新的东西的时候，旧的记忆也会改变。这一过程在睡眠期间比较活跃。</p>
-<h3 id="记忆小方法"><a href="#记忆小方法" class="headerlink" title="记忆小方法"></a>记忆小方法</h3><h4 id="图像记忆"><a href="#图像记忆" class="headerlink" title="图像记忆"></a>图像记忆</h4><p>我们的大脑天生就有强大的视觉和空间记忆，十分擅长记忆不同地点的概况。图像与右脑的视觉空间中枢直接相连，通过利用具有更强的记忆能力的视觉区域，图像能够帮助你把单调乏味、难以记忆的概念概括起来，通过激活各种感官建立的神经钩越多，你就越容易记住这个概念和其含义。你可以将所需要的记忆的内容，想象成一个图像来帮助你记忆，而且这个图像越夸张效果越好。</p>
-<h4 id="记忆宫殿"><a href="#记忆宫殿" class="headerlink" title="记忆宫殿"></a>记忆宫殿</h4><p>前面也说了我们大脑不但有强大的图像记忆，空间记忆也非常强大。因为我们祖先外出打猎时必须记得回家的路线，外面哪个位置野果比较丰富，哪个位置比较危险等等，这就让我们发展出强大的空间记忆。</p>
-<p>记忆宫殿的具体做法有3步。首先将你需要记忆的内容分类，然后回忆起一个你非常熟悉的路线，比如从宿舍到教室，最后通过夸张的想象，将所需要的记忆的内容与这条路线上你所熟悉的建筑或标志物一一联系起来。</p>
-<h4 id="简化记忆"><a href="#简化记忆" class="headerlink" title="简化记忆"></a>简化记忆</h4><p>简化记忆就是创造有意义的意群来简化所需要记忆的信息。你可以将要记忆的数字与难忘的事联系起来，比如2008年是中国举办奥运会的那一年，3.30是考1000m的时候的成绩。你也可以通过创造好记的句子来帮助记忆一些概念，这个句子可由你需要记忆的信息的首字组成。</p>
+<p>所以,从现在开始主动选择，积累投资的智慧。</p>
+<h2 id="落后"><a href="#落后" class="headerlink" title="落后"></a>落后</h2><p>过去，我们常常凭感觉，觉得平均水准以上就是不落后。</p>
+<p>然而这个感觉肯定是有偏差的。人们的感觉永远是有偏差的，比如90%的人认为自己的驾驶水平处于平均水准以上。因为，我们并不能感知整个世界，我们只能通过感知自己的周遭来判断自己是否处于平均水准之上。</p>
+<p>进入二十一世纪后，有个重大的改变正在揭示更为残酷的事实：</p>
+<blockquote>
+<p><strong>弄不好，百分之一之后都是落后</strong></p>
+</blockquote>
+<p>因为，现在互联网几乎连接了所有的人。我们每个人能感知的世界，不再是我们周遭的世界而已，我们几乎可以感知到世界的每一个角落。这种感知范围的变化，会让每个人产生不同的心理变化。我们能看到更多的牛人，看到自己与他们之间的差距。有时候就算处于前1%，我们还有能看到无数比我们厉害的很多的人，我们一样会觉得自己是落后的，更别提处于平均水准之上而已了。</p>
+<p>所以，要想不落后，我们要成为前1%，甚至前0.1%。</p>
+<h2 id="多维竞争"><a href="#多维竞争" class="headerlink" title="多维竞争"></a>多维竞争</h2><p>要想不落后其实很难，因为在每个领域永远只有一个“第一”，只有少数几个“名列前茅”，剩下绝大部分的都是落后。</p>
+<p>但仔细想想也没有那么的难，如果我们能换个角度度看问题。我们不一定只能在一个领域发展，如果我们能够自己开拓新的维度，事情就变得不一样了。将多个领域的知识、技能融汇在一起，就可能从多个维度超过一个维度的顶尖人物。</p>
+<p>举个不太准确的数学例子，在一个维度顶尖人物可能得分95分，而我们只有90分，可是我们还能整合其他维度的知识应用在这个领域，假设那个领域我们的分80分，我们得分就远远超过那个顶尖人物了。当然，这只是直观的感受，不太确切。</p>
+<p>要想多个维度同时发展，首先我们必须要在一个维度做的足够好。因为，我们生活有成本。如果在所有方面我们都是平平庸庸，那么我们生活都可能难以为继，更别提再去发展，整合别的维度。另外，如果不能在一个领域做得足够好，那么也难以将其他领域的知识、技能整合应用到这领域。</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;h2 id=&quot;记忆&quot;&gt;&lt;a href=&quot;#记忆&quot; class=&quot;headerli
+      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;h1 id=&quot;通往财富自由之路&quot;&gt;&lt;a href=&quot;#通往财富自由之路&quot; cla
     
     </summary>
     
-      <category term="学习何如学习" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0%E4%BD%95%E5%A6%82%E5%AD%A6%E4%B9%A0/"/>
+      <category term="通往财富自由之路" scheme="http://yoursite.com/categories/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF/"/>
     
     
-      <category term="工作记忆" scheme="http://yoursite.com/tags/%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BF%86/"/>
+      <category term="通往财富自由之路" scheme="http://yoursite.com/tags/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF/"/>
     
-      <category term="长期记忆" scheme="http://yoursite.com/tags/%E9%95%BF%E6%9C%9F%E8%AE%B0%E5%BF%86/"/>
+      <category term="资本" scheme="http://yoursite.com/tags/%E8%B5%84%E6%9C%AC/"/>
+    
+      <category term="落后" scheme="http://yoursite.com/tags/%E8%90%BD%E5%90%8E/"/>
+    
+      <category term="多维竞争" scheme="http://yoursite.com/tags/%E5%A4%9A%E7%BB%B4%E7%AB%9E%E4%BA%89/"/>
     
   </entry>
   
@@ -768,82 +861,6 @@ Decision Support Systems 47 (2009) 547–553.<a href="#fnref:21" rev="footnote">
       <category term="安全感" scheme="http://yoursite.com/tags/%E5%AE%89%E5%85%A8%E6%84%9F/"/>
     
       <category term="活在未来" scheme="http://yoursite.com/tags/%E6%B4%BB%E5%9C%A8%E6%9C%AA%E6%9D%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>通往财富自由之路_4</title>
-    <link href="http://yoursite.com/2017/08/23/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF_4/"/>
-    <id>http://yoursite.com/2017/08/23/通往财富自由之路/通往财富自由之路_4/</id>
-    <published>2017-08-23T01:05:21.721Z</published>
-    <updated>2017-08-23T01:05:21.721Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="通往财富自由之路"><a href="#通往财富自由之路" class="headerlink" title="通往财富自由之路"></a>通往财富自由之路</h1><ul>
-<li><strong>这个世界是有生命的</strong></li>
-<li><strong>抱怨</strong></li>
-<li><strong>别人的好</strong></li>
-<li><strong>正确的价值</strong></li>
-</ul>
-<h2 id="这是世界是有生命的"><a href="#这是世界是有生命的" class="headerlink" title="这是世界是有生命的"></a>这是世界是有生命的</h2><p>如果一个概念在这个文化中不存在，那么这个文化中人就几乎感知不到这个“客观存在”的东西。同样，如果这个文化中存在某种概念，即使这个概念对应的东西完全不存在，可是人们还是总能感受到它的存在。</p>
-<p>就像以前的人没有“重力加速度”这个概念，就完全不能感受到会有重力加速度，就连亚里士多德也认为同样重的铅球和棉花从高处落下后，铅球会先着地。</p>
-<p>我们所生存的世界并不是冷冰冰的世界，它是有生命的。而且，我们怎么对待它，他就会怎么对待我们。它总能够证明我们是对的，即便有时候我们错的离谱。</p>
-<p>心理学家对这现象提出了一个很重要的概念“自证预言”（self-fulfilling prophecy），说的是一个预言直接或者间接地使这个预言称为现实。</p>
-<p>我们每个人来到这个世界都是一样的，不知善恶。善恶都是后天习得的，每一个善恶的选择，一方面塑造了自己，另一方面也塑造了我们的世界。同时，我们的世界又会以同样的善恶反过来塑造我们，不断循环。</p>
-<p>若你能善待你的世界，你的世界大抵可以给你足够的善待；若你能宽容你的世界，你的世界大抵能够宽容你；若你能认真对待你的世界，你的世界也会很认真对待你；</p>
-<p>你可以选择你要生活在一个怎么样的世界。那你想生活在一个怎么样的世界呢？</p>
-<h2 id="抱怨"><a href="#抱怨" class="headerlink" title="抱怨"></a>抱怨</h2><p>最应该戒掉的恶习：</p>
-<blockquote>
-<p>抱怨</p>
-</blockquote>
-<p><strong>抱怨只是无能、无奈的表现。</strong></p>
-<p>当我们遇到麻烦的时候，能解决就解决；解决不了就承受，这才是正确的态度，抱怨毫无帮助。抱怨只能向别人展示我们的无能和无奈。</p>
-<p>不想别人不是基于自己内心的骄傲，害怕别人瞧不起自己，而是基于自己的能力和坚韧：</p>
-<ul>
-<li>能解决就解决（能力）</li>
-<li>不能就解决就承受（坚韧）</li>
-</ul>
-<p>而且，抱怨是会上瘾的。尤其是当有人“愿意”听我们抱怨的时候，我们会不断地抱怨。</p>
-<p>抱怨还会传染。让我们周边有人抱怨的时候，我们也容易跟着一起抱怨。</p>
-<p>抱怨的最大坏处在于：它不解决问题。</p>
-<p>不论是我们的注意力还是我们的时间都是非常宝贵和有限的。抱怨会浪费我们很多时间和注意力，我们在抱怨上多花一点时间，在解决问题上就少一点时间。</p>
-<p>而且，抱怨很消耗我们的心里能量，抱怨完我们也心力交瘁，又怎么可能好好地解决问题呢？</p>
-<p>所以，珍爱生命。远离抱怨和抱怨的人。</p>
-<h2 id="别人的好"><a href="#别人的好" class="headerlink" title="别人的好"></a>别人的好</h2><p>很多人见不得别人的好。他们与别人是一种非此即彼的关系，要么我好你不好，要么我不好你好。</p>
-<p>每个人身上都是有好的部分和不好的部分，因为他们总是想和别人比出一个胜负，分清好坏。所以，他们总是不由自主地把注意力放在对方“不好”，而不是放在对方的“好”。把注意力放在对方的“错”，而不是对方的“对”。</p>
-<p>久而久之，他们变成“盲人”而不自知，这方面的元认知能力被永远阉割。结果是，永远把注意力放在对方的不好之处，对他们来说，可能只有这样才能让他们舒服。</p>
-<p>比较是没有尽头的。有比较心理的人，不是在努力证明自己可以，就是在努力证明别人不行。</p>
-<p>但实际上这两种证明都是无意义的。因为，如果是真的，不用证明大家都看在眼里。如果是假的，那就不是证明，而是在演或者在装。</p>
-<p>这样，注意力浪费了，时间过去了，自己却没有一点成长。</p>
-<p>所以，我们没有必要与别人比较，来证明自己。我们就不用只关注对方的“不好”，我们也可以看到对方的“好”。</p>
-<p>等你真正愿意去看到对方的好的时候，你会发现对方身上其实有很多值得学习的地方。</p>
-<p>而且，由于你更能看见别人的好，你身处的世界会变得比原来美好太多……</p>
-<h2 id="正确的价值"><a href="#正确的价值" class="headerlink" title="正确的价值"></a>正确的价值</h2><p>很多人没有意识到一个事：</p>
-<blockquote>
-<p><strong>正确本身，可能并没有什么价值</strong></p>
-</blockquote>
-<p>当你是正确，别人都是错误的，这时候你的“正确”才具有巨大价值。而且，你的正确程度越高，反对你的人越多，你的价值越大。</p>
-<p>那，为什么很多人抱怨别人都不认同自己呢？因为，他们衡量正确的方式不是通过逻辑推理，而是通过大家的认同。</p>
-<p>他们更多是表现型的人，相比于对错，他们更在乎自己是否得到更多人的认同。进而，他们一定是“随大流”的，只有这样他们才“安全”。</p>
-<p>另外，正确的巨大价值在于特立独【行】，而不是特例独【想】。</p>
-<p>通过严谨的逻辑推力判断，看到了正确的巨大价值后，想是完全没有用的。只有行动才能带来真正的收益。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;h1 id=&quot;通往财富自由之路&quot;&gt;&lt;a href=&quot;#通往财富自由之路&quot; cla
-    
-    </summary>
-    
-      <category term="通往财富自由之路" scheme="http://yoursite.com/categories/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF/"/>
-    
-    
-      <category term="通往财富自由之路" scheme="http://yoursite.com/tags/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF/"/>
-    
-      <category term="抱怨" scheme="http://yoursite.com/tags/%E6%8A%B1%E6%80%A8/"/>
-    
-      <category term="正确" scheme="http://yoursite.com/tags/%E6%AD%A3%E7%A1%AE/"/>
-    
-      <category term="世界" scheme="http://yoursite.com/tags/%E4%B8%96%E7%95%8C/"/>
     
   </entry>
   
@@ -914,6 +931,56 @@ Decision Support Systems 47 (2009) 547–553.<a href="#fnref:21" rev="footnote">
     
     
       <category term="组块" scheme="http://yoursite.com/tags/%E7%BB%84%E5%9D%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>拖延与习惯</title>
+    <link href="http://yoursite.com/2017/08/23/%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0/%E6%8B%96%E5%BB%B6%E4%B8%8E%E4%B9%A0%E6%83%AF/"/>
+    <id>http://yoursite.com/2017/08/23/如何学习/拖延与习惯/</id>
+    <published>2017-08-23T01:05:21.705Z</published>
+    <updated>2017-08-23T01:05:21.705Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h3 id="回顾"><a href="#回顾" class="headerlink" title="回顾"></a>回顾</h3><p>阅读后移开视线，看看能够回忆起多少内容，相比反复阅读能够掌握的更全面和深入。在回顾时，我们并非机械地附属，而是在通过回顾这个过程加深理解，这有助于知识组块。比起重复阅读，回顾即在心里检索关键概念可以使你的学习更加专注高效。只有隔上一定时间后，重读才有效，因为这样重读就像是间隔重复练习。</p>
+<h3 id="错觉"><a href="#错觉" class="headerlink" title="错觉"></a>错觉</h3><p>当你看到答案后告诉自己明白了他们为什么这么做，这个答案并不属于你，因为你没有把这些概念切入自己潜在的神经回路中。这是一种学习中最为常见的自欺欺人式错觉。</p>
+<p>做笔记时高亮和下划线必须要谨慎，否则不仅没效而且还容易产生误导，在划的时候误以为自己已经记住了。在划之前找到中心思想，在空白处写笔记总结关键概念是一种很好的方法。</p>
+<p>当我们重读笔记或者课本的时候，会误以为这些知识已经存在我们脑海中，让我们陷入错觉之中，降低学习效率。回顾虽难，但高效。</p>
+<h3 id="测验"><a href="#测验" class="headerlink" title="测验"></a>测验</h3><p>为了减少错觉，最好的方式是自我测验。可以不断地给自己提问，也可以通过向他人讲解来测验自己。</p>
+<h3 id="犯错"><a href="#犯错" class="headerlink" title="犯错"></a>犯错</h3><p>在自测中犯错是很有价值的，因为他们能让你一点点弥补思维漏洞，犯错可以纠正思考方向，让你学的更好。</p>
+<h3 id="过度学习"><a href="#过度学习" class="headerlink" title="过度学习"></a>过度学习</h3><p>掌握此阶段所学的内容后继续学习训练就是过度学习。它能够帮助组块，在专业运动，演讲等发挥重要作用。但是，单一学习阶段的过度学习是浪费时间。这样并不能加强你所期许的长期记忆联系。过度学习是容易的，所以容易造成已经完全掌握的错觉。</p>
+<h3 id="刻意练习"><a href="#刻意练习" class="headerlink" title="刻意练习"></a>刻意练习</h3><p>你应该把精力集中在你认为困难的部分，专注于学习困难部分，这样才能将学习效率大大提高。</p>
+<h3 id="交替学习"><a href="#交替学习" class="headerlink" title="交替学习"></a>交替学习</h3><p>掌握一门新科学不仅要学习基础组块，更要学会如何选择和应用不同的组块。最佳的方法在需要不同技术和策略的问题已经情形中来回转换，这就是交替学习。已经形成的并加强的神经模式可能会阻碍你发现更棒的想法，而交替学习则能减少我们出现思维定式的问题。</p>
+<h2 id="拖延与习惯"><a href="#拖延与习惯" class="headerlink" title="拖延与习惯"></a>拖延与习惯</h2><h3 id="拖延"><a href="#拖延" class="headerlink" title="拖延"></a>拖延</h3><p>我们之前已经了解要想将工作记忆转换为长期记忆，需要一定的时间。而拖延则会让这个过程难以实现。因为拖延，我们到最后很可能只能临时抱佛脚，但这种方法不能构建稳定的神经结构。同样的学习时间，提前开始，进行有间隔的学习，能让我们学的更好。</p>
+<p>我们拖延的事常常是那些让人不太舒服的事，当我们在脑海里想到那些不太喜欢的事情时，大脑的痛觉中枢会被点亮。因此，我们会把注意力转移到你更喜欢的事物上面，这样会让你感觉更好，至少暂时会感到更好。</p>
+<p>不过可惜的是这种长期的习惯性逃避是没有好处的，当我们把学习任务往后拖的时候，再去想学习这件事就会变得更痛苦，因为这些知识没有坚实的神经基础，所以考试会卡壳。拖延是一个极其重要，影响广泛的坏习惯。换句话说，生活中的很多重要领域都会受到拖延的影响。</p>
+<p>拖延和上瘾有很多共同之处，它可以让我们短暂地兴奋并从无聊的现实中解脱出来，人们总是轻易地自欺欺人。比如我们可以骗自己说现在最好上网搜索资料，而不是去看书或者做作业。</p>
+<p>而且我们学得越深入，对抗拖延就显得越重要。</p>
+<h3 id="习惯"><a href="#习惯" class="headerlink" title="习惯"></a>习惯</h3><p>前面我们了解到，当我们把知识建立组块后，我们只掌握很少的知识就够了。神经科学的观点是，组块的形成与习惯有关。习惯是我们的节能机制，它让我们的大脑可以同时处理其他的活动，当我们习惯了做某件事，就无须集中全部的注意力，这就为我们节省了能量。</p>
+<p>习惯建立需要四个阶段：</p>
+<ul>
+<li><p><strong>信号</strong>。信号是“打开”我们习惯的开关。拖延的问题在于我们意识不到我们已经开始拖延了，因为这是一个自然而然的习惯。我们可以通过关掉手机、关掉网络、待在图书馆等来隔离那些最具杀伤力的信号。</p>
+</li>
+<li><p><strong>惯例</strong>。重设旧的惯例的关键是制定一个计划，计划刚开始可能不是很奏效，不过请坚持下去，在必要的时候修改，完成了给自己一个奖励。</p>
+</li>
+<li><p><strong>奖励</strong>。习惯的力量之所以强大是因为习惯造就了神经系统的欲望，一个新的奖励可以帮助我们克服原先的欲望，只有当大脑开始期待那个奖励，就习惯才能得到重置，我们才能养成新的习惯。所以，你需要思考你为什么会拖延，能不能在情感上找到拖延时短暂愉悦的替代品？比如完成这件事的自豪感和满足感等。给奖励设定时间点，比如下午5点前结束主要任务，这样小而实在的截止期限可以激励我们去工作。</p>
+</li>
+<li><p><strong>信念</strong>。你要相信你能够做到，这一信念可以让你在面对困难渴望回到那个舒适区时坚持下去。找到志同道合的伙伴也是个好办法。</p>
+</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;h3 id=&quot;回顾&quot;&gt;&lt;a href=&quot;#回顾&quot; class=&quot;headerli
+    
+    </summary>
+    
+      <category term="学习何如学习" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0%E4%BD%95%E5%A6%82%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="拖延" scheme="http://yoursite.com/tags/%E6%8B%96%E5%BB%B6/"/>
+    
+      <category term="习惯" scheme="http://yoursite.com/tags/%E4%B9%A0%E6%83%AF/"/>
     
   </entry>
   
@@ -1013,56 +1080,6 @@ Error = \frac{1}{n}\sum_i(y_i-y^{'}_i)^2</script><p>这样我们就可以把$Err
       <category term="深度学习" scheme="http://yoursite.com/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
     
       <category term="神经网络" scheme="http://yoursite.com/tags/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>拖延与习惯</title>
-    <link href="http://yoursite.com/2017/08/23/%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0/%E6%8B%96%E5%BB%B6%E4%B8%8E%E4%B9%A0%E6%83%AF/"/>
-    <id>http://yoursite.com/2017/08/23/如何学习/拖延与习惯/</id>
-    <published>2017-08-23T01:05:21.705Z</published>
-    <updated>2017-08-23T01:05:21.705Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h3 id="回顾"><a href="#回顾" class="headerlink" title="回顾"></a>回顾</h3><p>阅读后移开视线，看看能够回忆起多少内容，相比反复阅读能够掌握的更全面和深入。在回顾时，我们并非机械地附属，而是在通过回顾这个过程加深理解，这有助于知识组块。比起重复阅读，回顾即在心里检索关键概念可以使你的学习更加专注高效。只有隔上一定时间后，重读才有效，因为这样重读就像是间隔重复练习。</p>
-<h3 id="错觉"><a href="#错觉" class="headerlink" title="错觉"></a>错觉</h3><p>当你看到答案后告诉自己明白了他们为什么这么做，这个答案并不属于你，因为你没有把这些概念切入自己潜在的神经回路中。这是一种学习中最为常见的自欺欺人式错觉。</p>
-<p>做笔记时高亮和下划线必须要谨慎，否则不仅没效而且还容易产生误导，在划的时候误以为自己已经记住了。在划之前找到中心思想，在空白处写笔记总结关键概念是一种很好的方法。</p>
-<p>当我们重读笔记或者课本的时候，会误以为这些知识已经存在我们脑海中，让我们陷入错觉之中，降低学习效率。回顾虽难，但高效。</p>
-<h3 id="测验"><a href="#测验" class="headerlink" title="测验"></a>测验</h3><p>为了减少错觉，最好的方式是自我测验。可以不断地给自己提问，也可以通过向他人讲解来测验自己。</p>
-<h3 id="犯错"><a href="#犯错" class="headerlink" title="犯错"></a>犯错</h3><p>在自测中犯错是很有价值的，因为他们能让你一点点弥补思维漏洞，犯错可以纠正思考方向，让你学的更好。</p>
-<h3 id="过度学习"><a href="#过度学习" class="headerlink" title="过度学习"></a>过度学习</h3><p>掌握此阶段所学的内容后继续学习训练就是过度学习。它能够帮助组块，在专业运动，演讲等发挥重要作用。但是，单一学习阶段的过度学习是浪费时间。这样并不能加强你所期许的长期记忆联系。过度学习是容易的，所以容易造成已经完全掌握的错觉。</p>
-<h3 id="刻意练习"><a href="#刻意练习" class="headerlink" title="刻意练习"></a>刻意练习</h3><p>你应该把精力集中在你认为困难的部分，专注于学习困难部分，这样才能将学习效率大大提高。</p>
-<h3 id="交替学习"><a href="#交替学习" class="headerlink" title="交替学习"></a>交替学习</h3><p>掌握一门新科学不仅要学习基础组块，更要学会如何选择和应用不同的组块。最佳的方法在需要不同技术和策略的问题已经情形中来回转换，这就是交替学习。已经形成的并加强的神经模式可能会阻碍你发现更棒的想法，而交替学习则能减少我们出现思维定式的问题。</p>
-<h2 id="拖延与习惯"><a href="#拖延与习惯" class="headerlink" title="拖延与习惯"></a>拖延与习惯</h2><h3 id="拖延"><a href="#拖延" class="headerlink" title="拖延"></a>拖延</h3><p>我们之前已经了解要想将工作记忆转换为长期记忆，需要一定的时间。而拖延则会让这个过程难以实现。因为拖延，我们到最后很可能只能临时抱佛脚，但这种方法不能构建稳定的神经结构。同样的学习时间，提前开始，进行有间隔的学习，能让我们学的更好。</p>
-<p>我们拖延的事常常是那些让人不太舒服的事，当我们在脑海里想到那些不太喜欢的事情时，大脑的痛觉中枢会被点亮。因此，我们会把注意力转移到你更喜欢的事物上面，这样会让你感觉更好，至少暂时会感到更好。</p>
-<p>不过可惜的是这种长期的习惯性逃避是没有好处的，当我们把学习任务往后拖的时候，再去想学习这件事就会变得更痛苦，因为这些知识没有坚实的神经基础，所以考试会卡壳。拖延是一个极其重要，影响广泛的坏习惯。换句话说，生活中的很多重要领域都会受到拖延的影响。</p>
-<p>拖延和上瘾有很多共同之处，它可以让我们短暂地兴奋并从无聊的现实中解脱出来，人们总是轻易地自欺欺人。比如我们可以骗自己说现在最好上网搜索资料，而不是去看书或者做作业。</p>
-<p>而且我们学得越深入，对抗拖延就显得越重要。</p>
-<h3 id="习惯"><a href="#习惯" class="headerlink" title="习惯"></a>习惯</h3><p>前面我们了解到，当我们把知识建立组块后，我们只掌握很少的知识就够了。神经科学的观点是，组块的形成与习惯有关。习惯是我们的节能机制，它让我们的大脑可以同时处理其他的活动，当我们习惯了做某件事，就无须集中全部的注意力，这就为我们节省了能量。</p>
-<p>习惯建立需要四个阶段：</p>
-<ul>
-<li><p><strong>信号</strong>。信号是“打开”我们习惯的开关。拖延的问题在于我们意识不到我们已经开始拖延了，因为这是一个自然而然的习惯。我们可以通过关掉手机、关掉网络、待在图书馆等来隔离那些最具杀伤力的信号。</p>
-</li>
-<li><p><strong>惯例</strong>。重设旧的惯例的关键是制定一个计划，计划刚开始可能不是很奏效，不过请坚持下去，在必要的时候修改，完成了给自己一个奖励。</p>
-</li>
-<li><p><strong>奖励</strong>。习惯的力量之所以强大是因为习惯造就了神经系统的欲望，一个新的奖励可以帮助我们克服原先的欲望，只有当大脑开始期待那个奖励，就习惯才能得到重置，我们才能养成新的习惯。所以，你需要思考你为什么会拖延，能不能在情感上找到拖延时短暂愉悦的替代品？比如完成这件事的自豪感和满足感等。给奖励设定时间点，比如下午5点前结束主要任务，这样小而实在的截止期限可以激励我们去工作。</p>
-</li>
-<li><p><strong>信念</strong>。你要相信你能够做到，这一信念可以让你在面对困难渴望回到那个舒适区时坚持下去。找到志同道合的伙伴也是个好办法。</p>
-</li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;h3 id=&quot;回顾&quot;&gt;&lt;a href=&quot;#回顾&quot; class=&quot;headerli
-    
-    </summary>
-    
-      <category term="学习何如学习" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0%E4%BD%95%E5%A6%82%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="拖延" scheme="http://yoursite.com/tags/%E6%8B%96%E5%BB%B6/"/>
-    
-      <category term="习惯" scheme="http://yoursite.com/tags/%E4%B9%A0%E6%83%AF/"/>
     
   </entry>
   
