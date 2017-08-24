@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-08-24T03:38:49.793Z</updated>
+  <updated>2017-08-24T03:51:37.875Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,17 +20,17 @@
     <link href="http://yoursite.com/2017/08/24/paper/Market%20manipulation%20detection%20based%20on%20Classification%20methods/"/>
     <id>http://yoursite.com/2017/08/24/paper/Market manipulation detection based on Classification methods/</id>
     <published>2017-08-24T01:58:18.659Z</published>
-    <updated>2017-08-24T03:38:49.793Z</updated>
+    <updated>2017-08-24T03:51:37.875Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="Market-manipulation-detection-based-on-Classification-methods"><a href="#Market-manipulation-detection-based-on-Classification-methods" class="headerlink" title="Market manipulation detection based on Classification methods"></a>Market manipulation detection based on Classification methods</h1><h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>In this paper, we use supervised machine learning methods to detect the market manipulation in China based on the information released by China Securities Regulation Commission (CSRC). For the supervised machine learning, we mainly use classified method to detect the anomaly from the daily and tick trading data of manipulated stocks. As a result, we find that the supervised machine learning method are good at detecting market manipulation from daily trading data and have poor performance of tick data. The best used supervised machine learning models are K-nearest neighbor (KNN) and Decision Tree classifier (DTC) which have over 99% of accuracy, sensitivity, specificity and area under the curve (AUC).</p>
-<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>arket manipulation is a deliberate attempt to intervene in  the free and fair operation of the market and create artificial, false or misleading appearances with respect to price of security <sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="T. C. Lin, The new market manipulation
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p><strong>Abstract</strong><br>In this paper, we use supervised machine learning methods to detect the market manipulation in China based on the information released by China Securities Regulation Commission (CSRC). For the supervised machine learning, we mainly use classified method to detect the anomaly from the daily and tick trading data of manipulated stocks. As a result, we find that the supervised machine learning method are good at detecting market manipulation from daily trading data and have poor performance of tick data. The best used supervised machine learning models are K-nearest neighbor (KNN) and Decision Tree classifier (DTC) which have over 99% of accuracy, sensitivity, specificity and area under the curve (AUC).</p>
+<h1 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1. Introduction"></a>1. Introduction</h1><p>arket manipulation is a deliberate attempt to intervene in  the free and fair operation of the market and create artificial, false or misleading appearances with respect to price of security <sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="T. C. Lin, The new market manipulation
 ">[1]</span></a></sup>. Market manipulation, broadly defined, has existed since the infancy of financial markets <sup id="fnref:2"><a href="#fn:2" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="J. W. Markham, Law enforcement and the history of financial market manipulation, ME Sharpe, 2013.
 ">[2]</span></a></sup>, which has become an import issue of emerging and developed market. Manipulated security market not only distorts the prices and transactions in the security market, but also undermines the function of security market. What’s more, many investors would lose significantly because of most manipulators making illegal profit.</p>
 <p>There has been increasing research on data mining techniques in detecting market manipulation. Allen and Gale<sup id="fnref:3"><a href="#fn:3" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="F. Allen, D. Gale, Stock-price manipulation, The Review of Financial Studies (1992) 503–529
 ">[3]</span></a></sup>classify manipulation as action-based manipulation, information based manipulation, and trade-based manipulation. We study the trade-based manipulation that a trader attempting to manipulate a stock price simply by buying and then selling (or vice versa), without releasing any false information or taking any other publicly observable actions designed to alter the value of security , by using supervised and unsupervised machine learning methods. Based on information about the manipulated stocks from China Securities Regulation Commission (CSRC). We obtain daily stock data and tick stock data of 64 manipulated stocks published in CSRC website. We use those data to train the supervised machine learning models, K-Nearest Neighbors (KNN), Support Vector Machines (SVM), Decision Tree Learning (DTL), Linear Discriminant Analysis (LDA), Quadratic Discriminant Analysis (QDA), Logistic Regression (LR), Artificial Neural Networks (ANN), so when the sample data set is given, they can classify the manipulated period and the normal period.</p>
 <p>Currently, most scholars’ study of detecting market manipulation is theoretical and pattern description which is still hard to accurately and fast detect market manipulation. To increase the possibility and efficiency of detecting market manipulation, we apply supervised machine learning models to detect market manipulation in real time, which might undermine the extent to those individual investors losing money in trading the manipulated stocks. By collecting historical stock data, it is also very helpful for regulator to train the supervised machine learning models and detect the market manipulation.</p>
 <p>This paper is organized as follows: Section 2 summarizes the main result of prior study. Section 3 and Section 4 give information about supervised machine learning models. Empirical analysis and data are presented in Section 4. Section 5 has our conclusion and some future works.</p>
-<h2 id="Literature-Review"><a href="#Literature-Review" class="headerlink" title="Literature Review"></a>Literature Review</h2><p>Allen and Gale (1992)<sup id="fnref:3"><a href="#fn:3" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="F. Allen, D. Gale, Stock-price manipulation, The Review of Financial Studies (1992) 503–529
+<h1 id="2-Literature-Review"><a href="#2-Literature-Review" class="headerlink" title="2. Literature Review"></a>2. Literature Review</h1><p>Allen and Gale (1992)<sup id="fnref:3"><a href="#fn:3" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="F. Allen, D. Gale, Stock-price manipulation, The Review of Financial Studies (1992) 503–529
 ">[3]</span></a></sup> and Jarrow (1992)<sup id="fnref:4"><a href="#fn:4" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="R. A. Jarrow, Market manipulation, bubbles, corners, and short squeezes, Journal of financial and Quantitative Analysis 27 (3) (1992)
 311–336.
 ">[4]</span></a></sup> were the first researchers to study manipulation. After studying the history of stock-price manipulation, Allen and Gale classified the manipulation as action-based manipulation, information-based manipulation and trade-based manipulation<sup id="fnref:3"><a href="#fn:3" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="F. Allen, D. Gale, Stock-price manipulation, The Review of Financial Studies (1992) 503–529
@@ -53,30 +53,30 @@ detection, IEEE transactions on neural networks and learning systems 26 (2) (201
 ">[12]</span></a></sup> proposed the Adaptive Hidden Markov Model with Anomaly States (AHMMAS) to detect intraday stock price manipulation activities. The stock tick data were level 2 data from NASDAQ and London stock exchange. The model was tested with simulated data and real market data. The performance evaluation of AHMMAS outperforms other benchmark algorithms such as: Gaussian Mixture Models (GMM), K-Nearest Neighbors Algorithm (kNN), and One Class Support Vector Machines (OCSVM). Leangarun and Thajchayapong (2016)<sup id="fnref:8"><a href="#fn:8" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="H. O gut, M. M. Do  ganay, R. Aktas, Detecting stock-price manipulation in an emerging market: The case of Turkey, Expert Systems ˇ
 with Applications 36 (9) (2009) 11944–11949.
 ">[8]</span></a></sup> investigated two popular scenarios of stock price manipulations: pump-and-dump and spoof trading. They defined and used level 2 data to train the neural network models which achieve high accuracy for detecting pump-and-dump, and two dimensional Gaussian model which shows it can detect spoof trading.</p>
-<h2 id="Methodology"><a href="#Methodology" class="headerlink" title="Methodology"></a>Methodology</h2><p>Supervised machine learning is the search for algorithms that reason from externally supplied instances to produce general hypotheses, which then make predictions about future instances<sup id="fnref:13"><a href="#fn:13" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="S. B. Kotsiantis, I. Zaharakis, P. Pintelas, Supervised Machine Learning: A Review of Classification Techniques, 2007.
+<h1 id="3-Methodology"><a href="#3-Methodology" class="headerlink" title="3. Methodology"></a>3. Methodology</h1><p>Supervised machine learning is the search for algorithms that reason from externally supplied instances to produce general hypotheses, which then make predictions about future instances<sup id="fnref:13"><a href="#fn:13" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="S. B. Kotsiantis, I. Zaharakis, P. Pintelas, Supervised Machine Learning: A Review of Classification Techniques, 2007.
 ">[13]</span></a></sup>. In other words, the goal of supervised learning is to build a concise model of the distribution of class labels in terms of predictor features. The resulting classifier is then used to assign class labels to the testing instances where the values of the predictor features are known, but the value of the class label is unknown. Supervised machine learning is mainly consist of classification and regression. Classification is learning a function that maps (classifies) a data item into one of several predefined classes<sup id="fnref:14"><a href="#fn:14" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="U. Fayyad, G. Piatetsky-Shapiro, P. Smyth, From data mining to knowledge discovery in databases, AI magazine 17 (3) (1996) 37
 ">[14]</span></a></sup>. And similarly regression is learning a function that maps a data item to a real-valued prediction variable.</p>
-<h3 id="K-Nearest-Neighbour"><a href="#K-Nearest-Neighbour" class="headerlink" title="K-Nearest Neighbour"></a>K-Nearest Neighbour</h3><p>K-Nearest Neighbour (KNN) is an instance based classifier method. The parameter units consist of samples that are used in the method and this algorithm then assumes that all instances relate to the points in the n-dimensional space $R^{N}$<sup id="fnref:15"><a href="#fn:15" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="R. S. Michalski, J. G. Carbonell, T. M. Mitchell, Machine Learning: An Artificial Intelligence Approach, Springer Science & Business
+<h2 id="3-1-K-Nearest-Neighbour"><a href="#3-1-K-Nearest-Neighbour" class="headerlink" title="3.1. K-Nearest Neighbour"></a>3.1. K-Nearest Neighbour</h2><p>K-Nearest Neighbour (KNN) is an instance based classifier method. The parameter units consist of samples that are used in the method and this algorithm then assumes that all instances relate to the points in the n-dimensional space $R^{N}$<sup id="fnref:15"><a href="#fn:15" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="R. S. Michalski, J. G. Carbonell, T. M. Mitchell, Machine Learning: An Artificial Intelligence Approach, Springer Science & Business
 Media, 2013.
 ">[15]</span></a></sup>. The algorithm is very expedient as the information in the training data is never lost. However, this algorithm would be suitable if the training data set is large as this algorithm is very time consuming when each of the sample in training set is processed while classifying a new data and this process requires a longer classification time.</p>
-<h3 id="Support-Vector"><a href="#Support-Vector" class="headerlink" title="Support Vector"></a>Support Vector</h3><p>Support Vector Method (SVM) is a classier that performs classification tasks by constructing hyperplanes in a multidimensional space that separates cases of different class labels. SVM method provides an optimally separating hyperplane in the sense that the margin between two groups is maximized. The SVM is proven to be advantageous in handling classification tasks with excellent generalization performance. The method seeks to minimize the upper bound of the generalization error based on the structural risk minimization principle. SVM training is equivalent to solve a linear constrained quadratic programming problem<sup id="fnref:16"><a href="#fn:16" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="B. Zheng, S. W. Yoon, S. S. Lam, Breast cancer diagnosis based on feature extraction using a hybrid of K-means and support vector
+<h2 id="3-2-Support-Vector"><a href="#3-2-Support-Vector" class="headerlink" title="3.2. Support Vector"></a>3.2. Support Vector</h2><p>Support Vector Method (SVM) is a classier that performs classification tasks by constructing hyperplanes in a multidimensional space that separates cases of different class labels. SVM method provides an optimally separating hyperplane in the sense that the margin between two groups is maximized. The SVM is proven to be advantageous in handling classification tasks with excellent generalization performance. The method seeks to minimize the upper bound of the generalization error based on the structural risk minimization principle. SVM training is equivalent to solve a linear constrained quadratic programming problem<sup id="fnref:16"><a href="#fn:16" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="B. Zheng, S. W. Yoon, S. S. Lam, Breast cancer diagnosis based on feature extraction using a hybrid of K-means and support vector
 machine algorithms, Expert Systems with Applications 41 (4) (2014) 1476–1482.
 ">[16]</span></a></sup>.</p>
-<h3 id="Decision-Tree-Classifier"><a href="#Decision-Tree-Classifier" class="headerlink" title="Decision Tree Classifier"></a>Decision Tree Classifier</h3><p>Decision Tree Classifier (DTC) is one of the most popular technique for prediction. An empirical tree represents a segmentation of the data that is created by applying a series of simple rules. Each rule assigns an observation to a segment based on the value of one input. Most of researchers have used this technique because of its simplicity and comprehensibility to uncover small or large data structure and predict the value. Romero et al. (2008) said that the decision tree models are easily understood because of their reasoning process and can be directly converted into set of IF-THEN rules<sup id="fnref:17"><a href="#fn:17" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="C. Romero, S. Ventura, P. G. Espejo, C. Hervas, Data mining algorithms to classify students, in: Educational Data Mining 2008, 2008. ´
+<h2 id="3-3-Decision-Tree-Classifier"><a href="#3-3-Decision-Tree-Classifier" class="headerlink" title="3.3. Decision Tree Classifier"></a>3.3. Decision Tree Classifier</h2><p>Decision Tree Classifier (DTC) is one of the most popular technique for prediction. An empirical tree represents a segmentation of the data that is created by applying a series of simple rules. Each rule assigns an observation to a segment based on the value of one input. Most of researchers have used this technique because of its simplicity and comprehensibility to uncover small or large data structure and predict the value. Romero et al. (2008) said that the decision tree models are easily understood because of their reasoning process and can be directly converted into set of IF-THEN rules<sup id="fnref:17"><a href="#fn:17" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="C. Romero, S. Ventura, P. G. Espejo, C. Hervas, Data mining algorithms to classify students, in: Educational Data Mining 2008, 2008. ´
 ">[17]</span></a></sup>.</p>
-<h3 id="Linear-Discriminant-Analysis"><a href="#Linear-Discriminant-Analysis" class="headerlink" title="Linear Discriminant Analysis"></a>Linear Discriminant Analysis</h3><p>Linear Discriminant Analysis (LDA) is widely used in discriminant analysis to predict the class based on a given set of measurements on new unlabeled observations<sup id="fnref:14"><a href="#fn:14" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="U. Fayyad, G. Piatetsky-Shapiro, P. Smyth, From data mining to knowledge discovery in databases, AI magazine 17 (3) (1996) 37
+<h2 id="3-4-Linear-Discriminant-Analysis"><a href="#3-4-Linear-Discriminant-Analysis" class="headerlink" title="3.4. Linear Discriminant Analysis"></a>3.4. Linear Discriminant Analysis</h2><p>Linear Discriminant Analysis (LDA) is widely used in discriminant analysis to predict the class based on a given set of measurements on new unlabeled observations<sup id="fnref:14"><a href="#fn:14" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="U. Fayyad, G. Piatetsky-Shapiro, P. Smyth, From data mining to knowledge discovery in databases, AI magazine 17 (3) (1996) 37
 ">[14]</span></a></sup>. The algorithm’s ability to capture statistical dependencies among the predictor variables indicates that this algorithm would be suitable to explore the linear constraint of this study to discovery the synergy between motor and non-motor symptoms.</p>
-<h3 id="Quadratic-Discriminant-Analysis"><a href="#Quadratic-Discriminant-Analysis" class="headerlink" title="Quadratic Discriminant Analysis"></a>Quadratic Discriminant Analysis</h3><p>Quadratic Discriminant Analysis (QDA) is closely related to linear discriminant analysis, where it is assumed that the measurements from each class are normally distributed. Unlike LDA however, in QDA there is no assumption that the covariance of each of the classes is identical. When the normality assumption is true, the best possible test for the hypothesis that a given measurement is from a given class is the likelihood ratio test.</p>
-<h3 id="Logistic-Regression"><a href="#Logistic-Regression" class="headerlink" title="Logistic Regression"></a>Logistic Regression</h3><p>Logistic Regression (LR) is a method that would use the given set of features either continuous, discrete, or a mixture of both types and the binary target, LR then computes a linear combination of the inputs and passes through the logistic function<sup id="fnref:18"><a href="#fn:18" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="P. J. Garc´ıa-Laencina, P. H. Abreu, M. H. Abreu, N. Afonoso, Missing data imputation on the 5-year survival prediction of breast cancer
+<h2 id="3-5-Quadratic-Discriminant-Analysis"><a href="#3-5-Quadratic-Discriminant-Analysis" class="headerlink" title="3.5. Quadratic Discriminant Analysis"></a>3.5. Quadratic Discriminant Analysis</h2><p>Quadratic Discriminant Analysis (QDA) is closely related to linear discriminant analysis, where it is assumed that the measurements from each class are normally distributed. Unlike LDA however, in QDA there is no assumption that the covariance of each of the classes is identical. When the normality assumption is true, the best possible test for the hypothesis that a given measurement is from a given class is the likelihood ratio test.</p>
+<h2 id="3-6-Logistic-Regression"><a href="#3-6-Logistic-Regression" class="headerlink" title="3.6. Logistic Regression"></a>3.6. Logistic Regression</h2><p>Logistic Regression (LR) is a method that would use the given set of features either continuous, discrete, or a mixture of both types and the binary target, LR then computes a linear combination of the inputs and passes through the logistic function<sup id="fnref:18"><a href="#fn:18" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="P. J. Garc´ıa-Laencina, P. H. Abreu, M. H. Abreu, N. Afonoso, Missing data imputation on the 5-year survival prediction of breast cancer
 patients with unknown discrete values, Computers in biology and medicine 59 (2015) 125–133.
 ">[18]</span></a></sup>. This method is commonly used because it is easy to implementation and it provides competitive results.</p>
-<h3 id="Artificial-Neural-Networks"><a href="#Artificial-Neural-Networks" class="headerlink" title="Artificial Neural Networks"></a>Artificial Neural Networks</h3><p>Artificial Neural Network (ANN) is another popular technique used in educational data mining. The advantage of neural network is that it has an ability to detect all possible interactions between predictors’ variables<sup id="fnref:19"><a href="#fn:19" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="G. Gray, C. McGuinness, P. Owende, An application of classification models to predict learner progression in tertiary education, in:
+<h2 id="3-7-Artificial-Neural-Networks"><a href="#3-7-Artificial-Neural-Networks" class="headerlink" title="3.7. Artificial Neural Networks"></a>3.7. Artificial Neural Networks</h2><p>Artificial Neural Network (ANN) is another popular technique used in educational data mining. The advantage of neural network is that it has an ability to detect all possible interactions between predictors’ variables<sup id="fnref:19"><a href="#fn:19" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="G. Gray, C. McGuinness, P. Owende, An application of classification models to predict learner progression in tertiary education, in:
 Advance Computing Conference (IACC), 2014 IEEE International, IEEE, 2014, pp. 549–554.
 ">[19]</span></a></sup>. Artificial neural network could also do a complete detection without having any doubt even in complex nonlinear relationship between dependent and independent variables<sup id="fnref:20"><a href="#fn:20" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="P. M. Arsad, N. Buniyamin, others, A neural network students’ performance prediction model (NNSPPM), in: Smart Instrumentation,
 Measurement and Applications (ICSIMA), 2013 IEEE International Conference On, IEEE, 2013, pp. 1–5.
 ">[20]</span></a></sup>. Therefore, artificial neural network technique is selected as one of the best prediction method.</p>
-<h2 id="Empirical-Analysis"><a href="#Empirical-Analysis" class="headerlink" title="Empirical Analysis"></a>Empirical Analysis</h2><p>We used supervised machine learning models to detect the daily trading data and tick trading data of the manipulated stock to find out the manipulated time and evaluate the supervised machine learning model. The supervised machine learning models are suitable to daily trading data and have high accuracy to detect the manipulated data, while have poor performance of detecting the tick trading data.</p>
-<h3 id="Data-Description-and-Data-Preprocessing"><a href="#Data-Description-and-Data-Preprocessing" class="headerlink" title="Data Description and Data Preprocessing"></a>Data Description and Data Preprocessing</h3><p>In this paper, we use the market manipulation cases released by China Security Regulatory Commission(CSRC). Once CSRC officials discovered someone have manipulated the stock market, they would punish the manipulators and release this case on the website regularly. Based on that, we can download the daily trading data and tick trading data of these manipulated stocks. We select 64 manipulated stocks of daily trading data, which include daily open price, daily highest price, daily lowest price, daily close price and daily trading volume and tick trading data, which include tick price, tick price change volume, tick trading volume, tick trading amount and type released by CSRC from 2013 to 2016. For each stock’s analysis period is from the time that the first manipulation day -2*the manipulation period to that the end manipulation day + 2* the manipulation period (Table1), which make sure the rate of manipulated data about 20%.</p>
+<h1 id="4-Empirical-Analysis"><a href="#4-Empirical-Analysis" class="headerlink" title="4. Empirical Analysis"></a>4. Empirical Analysis</h1><p>We used supervised machine learning models to detect the daily trading data and tick trading data of the manipulated stock to find out the manipulated time and evaluate the supervised machine learning model. The supervised machine learning models are suitable to daily trading data and have high accuracy to detect the manipulated data, while have poor performance of detecting the tick trading data.</p>
+<h2 id="4-1-Data-Description-and-Data-Preprocessing"><a href="#4-1-Data-Description-and-Data-Preprocessing" class="headerlink" title="4.1. Data Description and Data Preprocessing"></a>4.1. Data Description and Data Preprocessing</h2><p>In this paper, we use the market manipulation cases released by China Security Regulatory Commission(CSRC). Once CSRC officials discovered someone have manipulated the stock market, they would punish the manipulators and release this case on the website regularly. Based on that, we can download the daily trading data and tick trading data of these manipulated stocks. We select 64 manipulated stocks of daily trading data, which include daily open price, daily highest price, daily lowest price, daily close price and daily trading volume and tick trading data, which include tick price, tick price change volume, tick trading volume, tick trading amount and type released by CSRC from 2013 to 2016. For each stock’s analysis period is from the time that the first manipulation day -2*the manipulation period to that the end manipulation day + 2* the manipulation period (Table1), which make sure the rate of manipulated data about 20%.</p>
 <p>We combine all of the daily trading data and tick trading data, and standardize them by zero-mean normalization. We get 4, 593 daily trading data and 8, 986, 466 tick trading data. We simple random sampling 1% of the tick trading data as the aggregate of tick trading is too big to compute (Table2). And we transform the nonnumerical data into numerical data. Then, we label the data as 1 if it was manipulated at the time according to CSRC, and others as 0. So the input data for the supervised machine learning is the preprocessed daily trading data and tick trading data, while the output is binary, marked 0 and 1.</p>
 <center>Table 1: Some manipulated stock cases</center>
 
@@ -170,7 +170,7 @@ Measurement and Applications (ICSIMA), 2013 IEEE International Conference On, IE
 </tbody>
 </table>
 </div>
-<h3 id="Performance-Evaluation"><a href="#Performance-Evaluation" class="headerlink" title="Performance Evaluation"></a>Performance Evaluation</h3><p>Measures of the quality of classification are built from a confusion matrix which records correctly and incorrectly recognized examples for each class. Table 3 presents a confusion matrix for binary classification, where TP are true positive, TF are false positive, FN are false negative, and TN are true negative counts. In this paper, for example, TN means this data are predicted as being manipulated and they are truly being manipulated according to CSRC.</p>
+<h2 id="4-2-Performance-Evaluation"><a href="#4-2-Performance-Evaluation" class="headerlink" title="4.2. Performance Evaluation"></a>4.2. Performance Evaluation</h2><p>Measures of the quality of classification are built from a confusion matrix which records correctly and incorrectly recognized examples for each class. Table 3 presents a confusion matrix for binary classification, where TP are true positive, TF are false positive, FN are false negative, and TN are true negative counts. In this paper, for example, TN means this data are predicted as being manipulated and they are truly being manipulated according to CSRC.</p>
 <center>Table 3: Confusion Matrix</center>
 
 <div class="table-container">
@@ -211,7 +211,7 @@ Measurement and Applications (ICSIMA), 2013 IEEE International Conference On, IE
 Specificity =   \frac{TN}{FP + TN}</script><p>A comprehensive evaluation of classifier performance can be obtained by the ROC: shows a relation between the sensitivity and the specificity of the algorithm ROC curves, which plot sensitivity as a function of specificity for all possible thresholds<sup id="fnref:21"><a href="#fn:21" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="P. Cortez, A. Cerdeira, F. Almeida, T. Matos, J. Reis, Modeling wine preferences by data mining from physicochemical properties,
 Decision Support Systems 47 (2009) 547–553.
 ">[21]</span></a></sup>, and illustrate a classifier’s trade-off between true positives and false negatives. A higher value of sensitivity for a given value of specificity indicates better performance. The area under the ROC curve (AUC) is a commonly used metric for evaluating a classifier’s performance.</p>
-<h3 id="Experimental-Results"><a href="#Experimental-Results" class="headerlink" title="Experimental Results"></a>Experimental Results</h3><p>We use 5-fold cross-validation to evaluate our predictive models by partitioning the daily training data and tick training data into a training set to train our models, and a test set to evaluate them. For the supervised machine learning models, we use K-nearest neighbors (KNN), Decision tree classifier (DTC),Linear discriminant analysis (LDA), Quadratic discriminant analysis (QDA), Logistic regression (LR), Artificial neural networks (ANN), Support vector machines(SVM).<br>Table 4 and Table 5 show the confusing matrix and the proportion of all mentioned models of daily training data and tick training data. As can be seen, most of the TP and TN have a rather higher rate than FN and FP of the daily training data, while the rate of TN is lower than FP and even some are near to zero of the tick training data.</p>
+<h2 id="4-3-Experimental-Results"><a href="#4-3-Experimental-Results" class="headerlink" title="4.3. Experimental Results"></a>4.3. Experimental Results</h2><p>We use 5-fold cross-validation to evaluate our predictive models by partitioning the daily training data and tick training data into a training set to train our models, and a test set to evaluate them. For the supervised machine learning models, we use K-nearest neighbors (KNN), Decision tree classifier (DTC),Linear discriminant analysis (LDA), Quadratic discriminant analysis (QDA), Logistic regression (LR), Artificial neural networks (ANN), Support vector machines(SVM).<br>Table 4 and Table 5 show the confusing matrix and the proportion of all mentioned models of daily training data and tick training data. As can be seen, most of the TP and TN have a rather higher rate than FN and FP of the daily training data, while the rate of TN is lower than FP and even some are near to zero of the tick training data.</p>
 <center>Table 4: Confusing Matrix of daily training data</center>
 
 <div class="table-container">
@@ -408,9 +408,10 @@ Decision Support Systems 47 (2009) 547–553.
 <center>Fig. 2: (a) daily training data</center>
 
 <p><img src="http://oeclakg19.bkt.clouddn.com/ROC_tick_colorless.png" alt="ROC_tick_colorless"></p>
-<h2 id="Conclusion-and-Future-Work"><a href="#Conclusion-and-Future-Work" class="headerlink" title="Conclusion and Future Work"></a>Conclusion and Future Work</h2><p>This paper presents a comparative machine learning method for market manipulation detecting, especially for stock-price market manipulation. Based on manipulated information released by China Securities Regulation Commission (CSRC), we use supervised and unsupervised machine learning models to detect the anomaly from daily and tick trading data from the manipulated stocks. The supervised machine learning models, which are mainly classify machine learning models, have excellent performance for detecting the anomaly from the daily data, while having poor performance of tick data. Among the used classify machine learning models, KNN and DTC are the best, which exceed 99% of all the indexes, including accuracy, sensitivity, specificity and AUC.</p>
+<h1 id="5-Conclusion-and-Future-Work"><a href="#5-Conclusion-and-Future-Work" class="headerlink" title="5. Conclusion and Future Work"></a>5. Conclusion and Future Work</h1><p>This paper presents a comparative machine learning method for market manipulation detecting, especially for stock-price market manipulation. Based on manipulated information released by China Securities Regulation Commission (CSRC), we use supervised and unsupervised machine learning models to detect the anomaly from daily and tick trading data from the manipulated stocks. The supervised machine learning models, which are mainly classify machine learning models, have excellent performance for detecting the anomaly from the daily data, while having poor performance of tick data. Among the used classify machine learning models, KNN and DTC are the best, which exceed 99% of all the indexes, including accuracy, sensitivity, specificity and AUC.</p>
 <p>For the supervised machine learning models to detecting the anomaly from the tick trading data, one of the reason for its poor performance is hard to exactly label the tick trading data as normal or abnormal, because it is almost impossible to know exact which specific time or specific tick trading data was manipulated. As the same, the evaluation of clustering tick trading data are inaccurate as the difficulty of deciding accurate anomalies. So a more suitable way to process the tick trading data is worth to be further studied.</p>
-<h2 id="Acknowledgement"><a href="#Acknowledgement" class="headerlink" title="Acknowledgement"></a>Acknowledgement</h2><p>This paper is partly supported by the National Natural Science Foundation (71401188), Beijing Social Science Foundation (15SHB017) and Supported by Program for Innovation Research in Central University of Finance and Economics.</p>
+<h1 id="6-Acknowledgement"><a href="#6-Acknowledgement" class="headerlink" title="6. Acknowledgement"></a>6. Acknowledgement</h1><p>This paper is partly supported by the National Natural Science Foundation (71401188), Beijing Social Science Foundation (15SHB017) and Supported by Program for Innovation Research in Central University of Finance and Economics.</p>
+<p><a href="http://oeclakg19.bkt.clouddn.com/Market%20manipulation%20detection%20based%20on%20Classification%20methods.pdf" title="Market manipulation detection based on Classification methods" target="_blank" rel="external">Paper Download</a></p>
 <div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">T. C. Lin, The new market manipulation<a href="#fnref:1" rev="footnote"> ↩</a></span></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">2.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">J. W. Markham, Law enforcement and the history of financial market manipulation, ME Sharpe, 2013.<a href="#fnref:2" rev="footnote"> ↩</a></span></li><li id="fn:3"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">3.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">F. Allen, D. Gale, Stock-price manipulation, The Review of Financial Studies (1992) 503–529<a href="#fnref:3" rev="footnote"> ↩</a></span></li><li id="fn:4"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">4.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">R. A. Jarrow, Market manipulation, bubbles, corners, and short squeezes, Journal of financial and Quantitative Analysis 27 (3) (1992)
 311–336.<a href="#fnref:4" rev="footnote"> ↩</a></span></li><li id="fn:5"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">5.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">M. M. Carhart, R. Kaniel, D. K. Musto, A. V. Reed, Leaning for the tape: Evidence of gaming behavior in equity mutual funds, The
 Journal of Finance 57 (2) (2002) 661–693.<a href="#fnref:5" rev="footnote"> ↩</a></span></li><li id="fn:6"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">6.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">R. Hanson, R. Oprea, Manipulators increase information market accuracy, George Mason University.<a href="#fnref:6" rev="footnote"> ↩</a></span></li><li id="fn:7"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">7.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">R. K. Aggarwal, G. Wu, Stock market manipulation-theory and evidence.<a href="#fnref:7" rev="footnote"> ↩</a></span></li><li id="fn:8"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">8.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">H. O gut, M. M. Do  ganay, R. Aktas, Detecting stock-price manipulation in an emerging market: The case of Turkey, Expert Systems ˇ
@@ -427,7 +428,7 @@ Decision Support Systems 47 (2009) 547–553.<a href="#fnref:21" rev="footnote">
     
     <summary type="html">
     
-      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;h1 id=&quot;Market-manipulation-detection-bas
+      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;br&gt;In this p
     
     </summary>
     
@@ -520,6 +521,67 @@ Decision Support Systems 47 (2009) 547–553.<a href="#fnref:21" rev="footnote">
       <category term="git" scheme="http://yoursite.com/tags/git/"/>
     
       <category term="github" scheme="http://yoursite.com/tags/github/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>通往财富自由之路_2</title>
+    <link href="http://yoursite.com/2017/08/23/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF_2/"/>
+    <id>http://yoursite.com/2017/08/23/通往财富自由之路/通往财富自由之路_2/</id>
+    <published>2017-08-23T01:05:21.721Z</published>
+    <updated>2017-08-23T01:05:21.721Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="通往财富自由之路"><a href="#通往财富自由之路" class="headerlink" title="通往财富自由之路"></a>通往财富自由之路</h1><ul>
+<li><strong>资本</strong></li>
+<li><strong>落后</strong></li>
+<li><strong>多维竞争</strong></li>
+</ul>
+<h2 id="资本"><a href="#资本" class="headerlink" title="资本"></a>资本</h2><p>资本是由资金构成，但仅仅是资金是不可能称为资本的。资金要想要为资本有三个考虑因素。</p>
+<ul>
+<li>资金的大小</li>
+<li>资金的使用时限</li>
+<li>资金背后使用者的智慧</li>
+</ul>
+<p>资金只有足够太，投资带来的收益对我们才真正有意义。资金的使用时限足够长，我们才能拿这部分资金用作投资。若是完全不懂投资，则再多的资金也不配当做资本用于投资。</p>
+<p>资金背后的智慧是可以习得的。习得的方法是从各个维度（金额、时限、智慧）逐步循环突破。</p>
+<p>第一个要突破的是投资的重点在于投资的收益率，而不在于投资的收益额。</p>
+<p>第二个要突破的是能不能给自己的投资款“判上无期徒刑”。心理学家通过大量调查得到绝大部分人若是丢失年收入的10%，这对他们的生活完全没有影响。所以，我们完全有可能把自己的部分资金当成丢失，给他们“判上无期徒刑”。</p>
+<p>第三个要突破的是投资知识、智慧、经验几乎只能从实践中得到。这个漫长的过程不可或缺，而且不是聪明就可以跨过的，就像是怀胎就是需要十个月，不管是谁都不能跨过这个过程，而且几乎不可能缩短这个过程。</p>
+<p>不论是工作还是学习，总有一群人比别人更出众。除去所谓的能力差异，他们还有的一个特质是：</p>
+<blockquote>
+<p><strong>他们通常会主动选择</strong></p>
+</blockquote>
+<p>所以,从现在开始主动选择，积累投资的智慧。</p>
+<h2 id="落后"><a href="#落后" class="headerlink" title="落后"></a>落后</h2><p>过去，我们常常凭感觉，觉得平均水准以上就是不落后。</p>
+<p>然而这个感觉肯定是有偏差的。人们的感觉永远是有偏差的，比如90%的人认为自己的驾驶水平处于平均水准以上。因为，我们并不能感知整个世界，我们只能通过感知自己的周遭来判断自己是否处于平均水准之上。</p>
+<p>进入二十一世纪后，有个重大的改变正在揭示更为残酷的事实：</p>
+<blockquote>
+<p><strong>弄不好，百分之一之后都是落后</strong></p>
+</blockquote>
+<p>因为，现在互联网几乎连接了所有的人。我们每个人能感知的世界，不再是我们周遭的世界而已，我们几乎可以感知到世界的每一个角落。这种感知范围的变化，会让每个人产生不同的心理变化。我们能看到更多的牛人，看到自己与他们之间的差距。有时候就算处于前1%，我们还有能看到无数比我们厉害的很多的人，我们一样会觉得自己是落后的，更别提处于平均水准之上而已了。</p>
+<p>所以，要想不落后，我们要成为前1%，甚至前0.1%。</p>
+<h2 id="多维竞争"><a href="#多维竞争" class="headerlink" title="多维竞争"></a>多维竞争</h2><p>要想不落后其实很难，因为在每个领域永远只有一个“第一”，只有少数几个“名列前茅”，剩下绝大部分的都是落后。</p>
+<p>但仔细想想也没有那么的难，如果我们能换个角度度看问题。我们不一定只能在一个领域发展，如果我们能够自己开拓新的维度，事情就变得不一样了。将多个领域的知识、技能融汇在一起，就可能从多个维度超过一个维度的顶尖人物。</p>
+<p>举个不太准确的数学例子，在一个维度顶尖人物可能得分95分，而我们只有90分，可是我们还能整合其他维度的知识应用在这个领域，假设那个领域我们的分80分，我们得分就远远超过那个顶尖人物了。当然，这只是直观的感受，不太确切。</p>
+<p>要想多个维度同时发展，首先我们必须要在一个维度做的足够好。因为，我们生活有成本。如果在所有方面我们都是平平庸庸，那么我们生活都可能难以为继，更别提再去发展，整合别的维度。另外，如果不能在一个领域做得足够好，那么也难以将其他领域的知识、技能整合应用到这领域。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;h1 id=&quot;通往财富自由之路&quot;&gt;&lt;a href=&quot;#通往财富自由之路&quot; cla
+    
+    </summary>
+    
+      <category term="通往财富自由之路" scheme="http://yoursite.com/categories/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF/"/>
+    
+    
+      <category term="通往财富自由之路" scheme="http://yoursite.com/tags/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF/"/>
+    
+      <category term="资本" scheme="http://yoursite.com/tags/%E8%B5%84%E6%9C%AC/"/>
+    
+      <category term="落后" scheme="http://yoursite.com/tags/%E8%90%BD%E5%90%8E/"/>
+    
+      <category term="多维竞争" scheme="http://yoursite.com/tags/%E5%A4%9A%E7%BB%B4%E7%AB%9E%E4%BA%89/"/>
     
   </entry>
   
@@ -617,63 +679,42 @@ Decision Support Systems 47 (2009) 547–553.<a href="#fnref:21" rev="footnote">
   </entry>
   
   <entry>
-    <title>通往财富自由之路_2</title>
-    <link href="http://yoursite.com/2017/08/23/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF_2/"/>
-    <id>http://yoursite.com/2017/08/23/通往财富自由之路/通往财富自由之路_2/</id>
+    <title>记忆</title>
+    <link href="http://yoursite.com/2017/08/23/%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0/%E8%AE%B0%E5%BF%86/"/>
+    <id>http://yoursite.com/2017/08/23/如何学习/记忆/</id>
     <published>2017-08-23T01:05:21.721Z</published>
     <updated>2017-08-23T01:05:21.721Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="通往财富自由之路"><a href="#通往财富自由之路" class="headerlink" title="通往财富自由之路"></a>通往财富自由之路</h1><ul>
-<li><strong>资本</strong></li>
-<li><strong>落后</strong></li>
-<li><strong>多维竞争</strong></li>
-</ul>
-<h2 id="资本"><a href="#资本" class="headerlink" title="资本"></a>资本</h2><p>资本是由资金构成，但仅仅是资金是不可能称为资本的。资金要想要为资本有三个考虑因素。</p>
-<ul>
-<li>资金的大小</li>
-<li>资金的使用时限</li>
-<li>资金背后使用者的智慧</li>
-</ul>
-<p>资金只有足够太，投资带来的收益对我们才真正有意义。资金的使用时限足够长，我们才能拿这部分资金用作投资。若是完全不懂投资，则再多的资金也不配当做资本用于投资。</p>
-<p>资金背后的智慧是可以习得的。习得的方法是从各个维度（金额、时限、智慧）逐步循环突破。</p>
-<p>第一个要突破的是投资的重点在于投资的收益率，而不在于投资的收益额。</p>
-<p>第二个要突破的是能不能给自己的投资款“判上无期徒刑”。心理学家通过大量调查得到绝大部分人若是丢失年收入的10%，这对他们的生活完全没有影响。所以，我们完全有可能把自己的部分资金当成丢失，给他们“判上无期徒刑”。</p>
-<p>第三个要突破的是投资知识、智慧、经验几乎只能从实践中得到。这个漫长的过程不可或缺，而且不是聪明就可以跨过的，就像是怀胎就是需要十个月，不管是谁都不能跨过这个过程，而且几乎不可能缩短这个过程。</p>
-<p>不论是工作还是学习，总有一群人比别人更出众。除去所谓的能力差异，他们还有的一个特质是：</p>
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="记忆"><a href="#记忆" class="headerlink" title="记忆"></a>记忆</h2><h3 id="工作记忆与长期记忆"><a href="#工作记忆与长期记忆" class="headerlink" title="工作记忆与长期记忆"></a>工作记忆与长期记忆</h3><p>工作记忆就是你的大脑在即时且有意识地处理信息所涉及的那部分记忆。当你尝试将脑中的一些想法结合起来去帮助理解某一概念或者解决某一问题是则动用工作记忆。</p>
+<p>工作记忆与短期记忆有些相似，但也有很大不同。它们都只能短暂的储存在大脑中，过一段时间很快就会忘记。工作记忆与短期记忆最大的不同在于它们功能不同。工作记忆主要是作为大脑的缓存区，让大脑在这短暂的时间内可以记住所需要的信息，并且对这部分信息进行更进一步加工，比如思考。而短期记忆的功能主要是在短时间内记住这部分信息，并不处理这部分信息。当你在书上学习新的知识并且用这部分知识做题的时候，使用的就是工作记忆。当你单纯的背一个电话号码的时候，使用的就是短期记忆。工作记忆对我们的学习，影响重大，所以我更多谈论工作记忆而不是短期记忆。</p>
+<p>工作记忆集中在大脑的前额叶皮质，它也有与大脑的其他部分有着联系，以便于你读取长期记忆。以前的研究人员认为，工作记忆可以储存7个组块的信息。而现在的共识是工作记忆大约只能储存4个组块的信息。我们大脑会将记忆项合并为组块的形式，所以我们的工作记忆看似比实际容量要大。组块这个概念我后面会讲到。</p>
+<p>工作记忆就像一块有些劣质的黑板，你必须时常重复你所需要记忆的信息，它们才能稳定地储存在工作记忆中。当你全身关注的时候，你会发现自己无视了那些侵占工作记忆有限空间的冗余信息。</p>
 <blockquote>
-<p><strong>他们通常会主动选择</strong></p>
+<p>长期记忆（LTM）是提出的双内存模式的最后阶段阿特金森Shiffrin内存模型，其中的信息可以保存长时间的时间。信息可以无限期地保持在长期存储器中。</p>
 </blockquote>
-<p>所以,从现在开始主动选择，积累投资的智慧。</p>
-<h2 id="落后"><a href="#落后" class="headerlink" title="落后"></a>落后</h2><p>过去，我们常常凭感觉，觉得平均水准以上就是不落后。</p>
-<p>然而这个感觉肯定是有偏差的。人们的感觉永远是有偏差的，比如90%的人认为自己的驾驶水平处于平均水准以上。因为，我们并不能感知整个世界，我们只能通过感知自己的周遭来判断自己是否处于平均水准之上。</p>
-<p>进入二十一世纪后，有个重大的改变正在揭示更为残酷的事实：</p>
-<blockquote>
-<p><strong>弄不好，百分之一之后都是落后</strong></p>
-</blockquote>
-<p>因为，现在互联网几乎连接了所有的人。我们每个人能感知的世界，不再是我们周遭的世界而已，我们几乎可以感知到世界的每一个角落。这种感知范围的变化，会让每个人产生不同的心理变化。我们能看到更多的牛人，看到自己与他们之间的差距。有时候就算处于前1%，我们还有能看到无数比我们厉害的很多的人，我们一样会觉得自己是落后的，更别提处于平均水准之上而已了。</p>
-<p>所以，要想不落后，我们要成为前1%，甚至前0.1%。</p>
-<h2 id="多维竞争"><a href="#多维竞争" class="headerlink" title="多维竞争"></a>多维竞争</h2><p>要想不落后其实很难，因为在每个领域永远只有一个“第一”，只有少数几个“名列前茅”，剩下绝大部分的都是落后。</p>
-<p>但仔细想想也没有那么的难，如果我们能换个角度度看问题。我们不一定只能在一个领域发展，如果我们能够自己开拓新的维度，事情就变得不一样了。将多个领域的知识、技能融汇在一起，就可能从多个维度超过一个维度的顶尖人物。</p>
-<p>举个不太准确的数学例子，在一个维度顶尖人物可能得分95分，而我们只有90分，可是我们还能整合其他维度的知识应用在这个领域，假设那个领域我们的分80分，我们得分就远远超过那个顶尖人物了。当然，这只是直观的感受，不太确切。</p>
-<p>要想多个维度同时发展，首先我们必须要在一个维度做的足够好。因为，我们生活有成本。如果在所有方面我们都是平平庸庸，那么我们生活都可能难以为继，更别提再去发展，整合别的维度。另外，如果不能在一个领域做得足够好，那么也难以将其他领域的知识、技能整合应用到这领域。</p>
+<p>这是维基百科对长期记忆的定义。长期记忆就是能够长时间保存在大脑中的那部分记忆。</p>
+<p>长期记忆的重要性在于它储存着你学习的所有科目的基本概念和技巧。没有了长期记忆，人类就没有了文化，因为不能长期记忆，就不能传播；不能长期记忆，就不能深入思考。所学的东西越难、越深入，所涉及的概念和方法就越多，只有将所需要的概念和方法牢牢地储存在大脑中，学习的时候工作记忆才能灵活的调用它们进行更深一步的思考。</p>
+<p>长期记忆就像一个储存仓库，它分布在一个很大的区域中。不同的长期记忆储存在大脑的不同区域。研究表明：当你首次尝试将一段短期记忆转入长期记忆中时，你需要多次回顾以增加需要时能够找到相关信息的几率。长期记忆的仓库是巨大的，它可以储存数以亿计的内容。事实上，由于太多信息可能会相互掩盖 要找到所需信息会有难度，除非你练习并重复几次。</p>
+<p>当你遇到新的事物的时候，通常你会用工作记忆来处理它。如果需要把这些信息转移到长期记忆中，就需要一些时间和练习的过程。促进这一过程有效的方式是间隔性重复。具体的做法是不断重复你尝试记忆的内容，但是重复的过程必须间隔开。研究表明：一次重复记忆20次相同的内容，记忆效果比不上在几天内重复相同次数的效果。</p>
+<p>一般时候大脑的记忆处于休眠状态，当你想将工作记忆转换为长期记忆的时候，工作记忆会将长期记忆唤醒，通过修改神经元树突上的突出来将记忆变为长期记忆。苏醒的长期记忆将新的内容转为长期记忆的时候，也更改了旧的记忆。所以，大脑的记忆常常交织在一起，学习新的东西的时候，旧的记忆也会改变。这一过程在睡眠期间比较活跃。</p>
+<h3 id="记忆小方法"><a href="#记忆小方法" class="headerlink" title="记忆小方法"></a>记忆小方法</h3><h4 id="图像记忆"><a href="#图像记忆" class="headerlink" title="图像记忆"></a>图像记忆</h4><p>我们的大脑天生就有强大的视觉和空间记忆，十分擅长记忆不同地点的概况。图像与右脑的视觉空间中枢直接相连，通过利用具有更强的记忆能力的视觉区域，图像能够帮助你把单调乏味、难以记忆的概念概括起来，通过激活各种感官建立的神经钩越多，你就越容易记住这个概念和其含义。你可以将所需要的记忆的内容，想象成一个图像来帮助你记忆，而且这个图像越夸张效果越好。</p>
+<h4 id="记忆宫殿"><a href="#记忆宫殿" class="headerlink" title="记忆宫殿"></a>记忆宫殿</h4><p>前面也说了我们大脑不但有强大的图像记忆，空间记忆也非常强大。因为我们祖先外出打猎时必须记得回家的路线，外面哪个位置野果比较丰富，哪个位置比较危险等等，这就让我们发展出强大的空间记忆。</p>
+<p>记忆宫殿的具体做法有3步。首先将你需要记忆的内容分类，然后回忆起一个你非常熟悉的路线，比如从宿舍到教室，最后通过夸张的想象，将所需要的记忆的内容与这条路线上你所熟悉的建筑或标志物一一联系起来。</p>
+<h4 id="简化记忆"><a href="#简化记忆" class="headerlink" title="简化记忆"></a>简化记忆</h4><p>简化记忆就是创造有意义的意群来简化所需要记忆的信息。你可以将要记忆的数字与难忘的事联系起来，比如2008年是中国举办奥运会的那一年，3.30是考1000m的时候的成绩。你也可以通过创造好记的句子来帮助记忆一些概念，这个句子可由你需要记忆的信息的首字组成。</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;h1 id=&quot;通往财富自由之路&quot;&gt;&lt;a href=&quot;#通往财富自由之路&quot; cla
+      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;h2 id=&quot;记忆&quot;&gt;&lt;a href=&quot;#记忆&quot; class=&quot;headerli
     
     </summary>
     
-      <category term="通往财富自由之路" scheme="http://yoursite.com/categories/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF/"/>
+      <category term="学习何如学习" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0%E4%BD%95%E5%A6%82%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="通往财富自由之路" scheme="http://yoursite.com/tags/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF/"/>
+      <category term="工作记忆" scheme="http://yoursite.com/tags/%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BF%86/"/>
     
-      <category term="资本" scheme="http://yoursite.com/tags/%E8%B5%84%E6%9C%AC/"/>
-    
-      <category term="落后" scheme="http://yoursite.com/tags/%E8%90%BD%E5%90%8E/"/>
-    
-      <category term="多维竞争" scheme="http://yoursite.com/tags/%E5%A4%9A%E7%BB%B4%E7%AB%9E%E4%BA%89/"/>
+      <category term="长期记忆" scheme="http://yoursite.com/tags/%E9%95%BF%E6%9C%9F%E8%AE%B0%E5%BF%86/"/>
     
   </entry>
   
@@ -807,42 +848,106 @@ Decision Support Systems 47 (2009) 547–553.<a href="#fnref:21" rev="footnote">
   </entry>
   
   <entry>
-    <title>记忆</title>
-    <link href="http://yoursite.com/2017/08/23/%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0/%E8%AE%B0%E5%BF%86/"/>
-    <id>http://yoursite.com/2017/08/23/如何学习/记忆/</id>
-    <published>2017-08-23T01:05:21.721Z</published>
-    <updated>2017-08-23T01:05:21.721Z</updated>
+    <title>Hello World</title>
+    <link href="http://yoursite.com/2017/08/23/hello-world/"/>
+    <id>http://yoursite.com/2017/08/23/hello-world/</id>
+    <published>2017-08-23T01:05:21.705Z</published>
+    <updated>2017-08-23T01:05:21.705Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="记忆"><a href="#记忆" class="headerlink" title="记忆"></a>记忆</h2><h3 id="工作记忆与长期记忆"><a href="#工作记忆与长期记忆" class="headerlink" title="工作记忆与长期记忆"></a>工作记忆与长期记忆</h3><p>工作记忆就是你的大脑在即时且有意识地处理信息所涉及的那部分记忆。当你尝试将脑中的一些想法结合起来去帮助理解某一概念或者解决某一问题是则动用工作记忆。</p>
-<p>工作记忆与短期记忆有些相似，但也有很大不同。它们都只能短暂的储存在大脑中，过一段时间很快就会忘记。工作记忆与短期记忆最大的不同在于它们功能不同。工作记忆主要是作为大脑的缓存区，让大脑在这短暂的时间内可以记住所需要的信息，并且对这部分信息进行更进一步加工，比如思考。而短期记忆的功能主要是在短时间内记住这部分信息，并不处理这部分信息。当你在书上学习新的知识并且用这部分知识做题的时候，使用的就是工作记忆。当你单纯的背一个电话号码的时候，使用的就是短期记忆。工作记忆对我们的学习，影响重大，所以我更多谈论工作记忆而不是短期记忆。</p>
-<p>工作记忆集中在大脑的前额叶皮质，它也有与大脑的其他部分有着联系，以便于你读取长期记忆。以前的研究人员认为，工作记忆可以储存7个组块的信息。而现在的共识是工作记忆大约只能储存4个组块的信息。我们大脑会将记忆项合并为组块的形式，所以我们的工作记忆看似比实际容量要大。组块这个概念我后面会讲到。</p>
-<p>工作记忆就像一块有些劣质的黑板，你必须时常重复你所需要记忆的信息，它们才能稳定地储存在工作记忆中。当你全身关注的时候，你会发现自己无视了那些侵占工作记忆有限空间的冗余信息。</p>
-<blockquote>
-<p>长期记忆（LTM）是提出的双内存模式的最后阶段阿特金森Shiffrin内存模型，其中的信息可以保存长时间的时间。信息可以无限期地保持在长期存储器中。</p>
-</blockquote>
-<p>这是维基百科对长期记忆的定义。长期记忆就是能够长时间保存在大脑中的那部分记忆。</p>
-<p>长期记忆的重要性在于它储存着你学习的所有科目的基本概念和技巧。没有了长期记忆，人类就没有了文化，因为不能长期记忆，就不能传播；不能长期记忆，就不能深入思考。所学的东西越难、越深入，所涉及的概念和方法就越多，只有将所需要的概念和方法牢牢地储存在大脑中，学习的时候工作记忆才能灵活的调用它们进行更深一步的思考。</p>
-<p>长期记忆就像一个储存仓库，它分布在一个很大的区域中。不同的长期记忆储存在大脑的不同区域。研究表明：当你首次尝试将一段短期记忆转入长期记忆中时，你需要多次回顾以增加需要时能够找到相关信息的几率。长期记忆的仓库是巨大的，它可以储存数以亿计的内容。事实上，由于太多信息可能会相互掩盖 要找到所需信息会有难度，除非你练习并重复几次。</p>
-<p>当你遇到新的事物的时候，通常你会用工作记忆来处理它。如果需要把这些信息转移到长期记忆中，就需要一些时间和练习的过程。促进这一过程有效的方式是间隔性重复。具体的做法是不断重复你尝试记忆的内容，但是重复的过程必须间隔开。研究表明：一次重复记忆20次相同的内容，记忆效果比不上在几天内重复相同次数的效果。</p>
-<p>一般时候大脑的记忆处于休眠状态，当你想将工作记忆转换为长期记忆的时候，工作记忆会将长期记忆唤醒，通过修改神经元树突上的突出来将记忆变为长期记忆。苏醒的长期记忆将新的内容转为长期记忆的时候，也更改了旧的记忆。所以，大脑的记忆常常交织在一起，学习新的东西的时候，旧的记忆也会改变。这一过程在睡眠期间比较活跃。</p>
-<h3 id="记忆小方法"><a href="#记忆小方法" class="headerlink" title="记忆小方法"></a>记忆小方法</h3><h4 id="图像记忆"><a href="#图像记忆" class="headerlink" title="图像记忆"></a>图像记忆</h4><p>我们的大脑天生就有强大的视觉和空间记忆，十分擅长记忆不同地点的概况。图像与右脑的视觉空间中枢直接相连，通过利用具有更强的记忆能力的视觉区域，图像能够帮助你把单调乏味、难以记忆的概念概括起来，通过激活各种感官建立的神经钩越多，你就越容易记住这个概念和其含义。你可以将所需要的记忆的内容，想象成一个图像来帮助你记忆，而且这个图像越夸张效果越好。</p>
-<h4 id="记忆宫殿"><a href="#记忆宫殿" class="headerlink" title="记忆宫殿"></a>记忆宫殿</h4><p>前面也说了我们大脑不但有强大的图像记忆，空间记忆也非常强大。因为我们祖先外出打猎时必须记得回家的路线，外面哪个位置野果比较丰富，哪个位置比较危险等等，这就让我们发展出强大的空间记忆。</p>
-<p>记忆宫殿的具体做法有3步。首先将你需要记忆的内容分类，然后回忆起一个你非常熟悉的路线，比如从宿舍到教室，最后通过夸张的想象，将所需要的记忆的内容与这条路线上你所熟悉的建筑或标志物一一联系起来。</p>
-<h4 id="简化记忆"><a href="#简化记忆" class="headerlink" title="简化记忆"></a>简化记忆</h4><p>简化记忆就是创造有意义的意群来简化所需要记忆的信息。你可以将要记忆的数字与难忘的事联系起来，比如2008年是中国举办奥运会的那一年，3.30是考1000m的时候的成绩。你也可以通过创造好记的句子来帮助记忆一些概念，这个句子可由你需要记忆的信息的首字组成。</p>
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;h2 id=&quot;记忆&quot;&gt;&lt;a href=&quot;#记忆&quot; class=&quot;headerli
+      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; 
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>组块</title>
+    <link href="http://yoursite.com/2017/08/23/%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0/%E7%BB%84%E5%9D%97/"/>
+    <id>http://yoursite.com/2017/08/23/如何学习/组块/</id>
+    <published>2017-08-23T01:05:21.705Z</published>
+    <updated>2017-08-23T01:05:21.721Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="组块"><a href="#组块" class="headerlink" title="组块"></a>组块</h2><h3 id="了解组块"><a href="#了解组块" class="headerlink" title="了解组块"></a>了解组块</h3><p>组块（Chunking）就根据意义将零碎的信息拼接起来而形成一个新的逻辑整体。这个新的逻辑整体可以让组块更易记忆，同时也可以让你更轻松的将组块整合到所学内容的大致框架中。</p>
+<p>丛神经科学的角度来看，组块就是把简化的而抽象的的思想组块一起的复杂的神经活动。这些思想无论是概念，灵感还是缩写，都是大多数科学、文学和艺术的基础。很多优秀的语言学习项目都是通过结构性的重复和强记联系，即用专注模式学习语言，同时运动和母语国家人的自由交流即发散模式的方法，这能让你铭记基础的词汇和搭配，而且说得新语言也能像母语那样。</p>
+<p>本质上说，组块就是让多个神经元共同运作的网络，只有这样才能平稳有效地进行思考和完成动作。专注的训练和重复可以建立强的记忆痕迹，从而帮助组块，专业的培训是一步一步的，这个过程中小的组块可以形成更大的组块，并且随着学习材料的理解越来越深入，所有的专业知识都是更有创造性的铺路石。</p>
+<p>当你学习一个东西的时候，这个东西是个大的组块，然后你通过一点点的学习不断将学习的东西转为一个个小的组块，之后再将这些小组快组合起来形成一个大的组块，最后你就将这个学会了。最好的组块是那些根深蒂固的，你甚至不需要有意识地去将储存在脑中的模式连接起来，这也正是将复杂的想法、动作和反应组成一个单独的组块的意义所在。</p>
+<p>学习数学和科学也是一样的，在刚开始你会看到一些例题和解决方法，那是因为在刚开始尝试解决问题是，你会有很强的认知负荷，而示范性的例子能在你起步的时候帮助理解，通过理解每个步骤的意思和步骤之间的联系，可能帮你发现问题的重点和隐含原理。思考步骤之间的联系非常重要，这样才能明白为什么在这种情况下要进行这个步骤。</p>
+<h3 id="组块作用"><a href="#组块作用" class="headerlink" title="组块作用"></a>组块作用</h3><ul>
+<li><p>组块能够让大脑工作得更有效率，一旦将某个想法、概念或动作组块后，你就不需要记住这个想法、概念或动作有关的全部细节，你只需要知道最主要的那个概念就行了，这也就是只需记住组块。</p>
+</li>
+<li><p>组块能更好地将新的和原有组块结合起来。为了增长知识和获得专业技能，人们会逐渐地增加头脑中组块的数量和有价值的信息。比如，象棋大师们能轻而易举地回忆出数以千计的不同棋谱；音乐家、语言学家和科学家，都能回忆出他们各自领域内类似的知识组块。无论你学什么科目，你的组块式心理图书馆越大，运用越熟练，你都将能够更轻易地解决问题或者找到解决方法。</p>
+</li>
+<li><p>组块可以帮助我们理解新概念。这是因为当你理解一个组块时，你会发现这一组块能以令人惊讶的方式与相似的组块联系起来。不仅在同一领域中如此，在截然不同的领域中也这样，这就是迁移 (transfer)。专注于你正在学习的单元，你会发现一旦你把第一个问题或概念放进心理图书馆，不论那是什么，第二个概念的进入就会容易一些。然后第三个概念也就更容易，这并不都那么简单，但会越来越容易。</p>
+</li>
+</ul>
+<h3 id="建立组块"><a href="#建立组块" class="headerlink" title="建立组块"></a>建立组块</h3><ul>
+<li><p>全神贯注。当其他事情占用有限的工作记忆时，这就会加大你建立新的神经并且与其它神经的连接的困难。</p>
+</li>
+<li><p>对组块的内容有基本的了解。只有理解了的知识才能与融入你学习的其他材料之中。</p>
+</li>
+<li><p>练习。通过练习，了解背景知识，即不但明白怎么使用这个知识，也明白在什么时候使用这个知识。某件事情，如果知识再看或者理解如何做也不代表能真正做到，只有在你自己实际操作和完全掌握情况相爱才能建立起神经模型。练习能够拓宽组块连接的神经网络，并且确保他们不仅仅是牢固的，而且能够通过不同的途径惊醒访问。背景认识意味着学会在特定的时候使用正确的方法。</p>
+</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;h2 id=&quot;组块&quot;&gt;&lt;a href=&quot;#组块&quot; class=&quot;headerli
     
     </summary>
     
       <category term="学习何如学习" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0%E4%BD%95%E5%A6%82%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="工作记忆" scheme="http://yoursite.com/tags/%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BF%86/"/>
+      <category term="组块" scheme="http://yoursite.com/tags/%E7%BB%84%E5%9D%97/"/>
     
-      <category term="长期记忆" scheme="http://yoursite.com/tags/%E9%95%BF%E6%9C%9F%E8%AE%B0%E5%BF%86/"/>
+  </entry>
+  
+  <entry>
+    <title>学习</title>
+    <link href="http://yoursite.com/2017/08/23/%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0/%E5%AD%A6%E4%B9%A0/"/>
+    <id>http://yoursite.com/2017/08/23/如何学习/学习/</id>
+    <published>2017-08-23T01:05:21.705Z</published>
+    <updated>2017-08-23T01:05:21.705Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="学习"><a href="#学习" class="headerlink" title="学习"></a>学习</h1><h2 id="专注与发散思维模式"><a href="#专注与发散思维模式" class="headerlink" title="专注与发散思维模式"></a>专注与发散思维模式</h2><p>人们在学习的时候，有两种思维模式，专注思维模式和发散思维模式。然而，很多人只知道专注思维模式。如果能够很好的利用这两种思维模式，我们学习的效率会提高。</p>
+<h3 id="专注思维模式"><a href="#专注思维模式" class="headerlink" title="专注思维模式"></a>专注思维模式</h3><p>专注思维模式（focus mold）就是你集中你所有的注意力专注于一个知识，或者一个问题上。比如，当你在认真听课的时候，当你在努力解一道数学难题的时候，当你在考试的时候，你都是在使用你的专注思维模式。</p>
+<p>专注思维模式对我们的学习有着至关重要的作用，我们从小到大就被教导要集中注意力。确实，我们在学习一个知识的时候，应该全身关注，集中我们却大部分注意力在这个知识上，这样我们才把一个又一个的知识学会。如果一个人学习的时候，不能集中注意力，使用他的专注思维模式，那他面对较为困难的学习材料的时候，就很有可能学不会。</p>
+<p>然而，仅仅使用专注思维模式去学习，有时候是不够的，或者说是效率相对低下的。如果我们能够交替使用专注思维模式和发散思维模式，我们的效率更高。</p>
+<h3 id="发散思维模式"><a href="#发散思维模式" class="headerlink" title="发散思维模式"></a>发散思维模式</h3><p>发散思维模式（diffuse mold）是当你在做一些其他的时候的时候，你的大脑会自动的思考一些你之前努力去学习或者解决的东西。它是一种相对轻松的思考模式。当你在听音乐的时候，当你在坐着放松的时候，当你在散步的时候等你都在使用你的发散思维模式。</p>
+<p>发散思维模式有助于整合我们学过的知识，加深对那些知识的记忆。当你的大脑进入发散思维模式的时候，大脑会从整体出发，对你所学过的知识进行再次处理，将一些重要的知识进行进一步加工，并且剔除那些不重要的知识。当然，重要不重要也只是相对的，而且大脑处理的不一定完全正确。</p>
+<p>另外，发散思维模式产生让人惊喜的事。当你的大脑进入发散思维模式的时候，大脑不仅会加深你所学知识的记忆，而且还会自动思考你之前一直在思考的问题。有时候，一道数学难题在你苦苦思考了很久做出不来的时候，却在你听音乐的时候这道题的答案自然而然就出现在你的脑海里。而且，很多有创意的想法，都是人们在发散思维模式的时候想出来的。</p>
+<h3 id="交替使用专注与发散思维模式"><a href="#交替使用专注与发散思维模式" class="headerlink" title="交替使用专注与发散思维模式"></a>交替使用专注与发散思维模式</h3><p>当你在学习一些新的东西的，尤其是一些比较难的东西的时候，你的大脑需要一种能够在专注思维模式和发散思维模式之前来回转换的能力，这能够帮助你更加高效的学习。当你使用专注思维模式的时候，你将知识一点点的理解，记忆。当你使用发散思维模式的时候，你将知识从整体的角度更好的整合加工。这样交替使用专注思维模式和发散思维模式能够让你学习的东西更加牢固。这就像锻炼的时候，你不可能只在一天拼命练习就能将肌肉练出来。要想练出肌肉，你就必须每天做一些训练，然后休息。就这样训练与休息交替进行，才能逐步锻炼出肌肉。类似的，要想锻炼你的神经，你也需要每天都都一些训练，并且给予适当的休息，这两个交替进行，逐步建立起支撑你思考的神经骨架。</p>
+<p> 萨尔瓦多·达利(Salvador Dalí)是20世纪著名的超现实主义画家，他曾经使用过一种很有意思的方法来帮助他创造那些创意无限的超现实主义派画作。他会坐在椅子上放空自己的大脑并常常会漫无目的地思考一下之前的工作并且他会手拿一把钥匙在地面上方晃来晃去当他睡着进入梦乡的时候，钥匙会从手里摔到地上发出哒的一声，恰到好处地把他叫醒。这样他就能把脑海中那些在发散模式下得到的的联想和点子及时地收集起来，然后他会带着这些在发散模式下得到的新想法回到专注模式里去。</p>
+<p>当然，这不仅对艺术家有帮助，对科学或者具有数学性的思考也有帮助。来看看世界上最伟大的发明家托马斯·爱迪生。 据传爱迪生会坐在椅子上放松，手上抓几个滚珠轴承这样放松自己的身体和意识，回想之前的工作。当爱迪生睡着的时候那些滚珠轴承就会掉到地上，发出哒的一声就和达利 (的钥匙) 一样。这样就会吵醒爱迪生， 然后他就可以带着发散模式下得到的点子回到专注模式当中。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;h1 id=&quot;学习&quot;&gt;&lt;a href=&quot;#学习&quot; class=&quot;headerli
+    
+    </summary>
+    
+      <category term="学习何如学习" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0%E4%BD%95%E5%A6%82%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="专注思维" scheme="http://yoursite.com/tags/%E4%B8%93%E6%B3%A8%E6%80%9D%E7%BB%B4/"/>
+    
+      <category term="发散思维" scheme="http://yoursite.com/tags/%E5%8F%91%E6%95%A3%E6%80%9D%E7%BB%B4/"/>
     
   </entry>
   
@@ -958,110 +1063,6 @@ Error = \frac{1}{n}\sum_i(y_i-y^{'}_i)^2</script><p>这样我们就可以把$Err
       <category term="拖延" scheme="http://yoursite.com/tags/%E6%8B%96%E5%BB%B6/"/>
     
       <category term="习惯" scheme="http://yoursite.com/tags/%E4%B9%A0%E6%83%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://yoursite.com/2017/08/23/hello-world/"/>
-    <id>http://yoursite.com/2017/08/23/hello-world/</id>
-    <published>2017-08-23T01:05:21.705Z</published>
-    <updated>2017-08-23T01:05:21.705Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; 
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>学习</title>
-    <link href="http://yoursite.com/2017/08/23/%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0/%E5%AD%A6%E4%B9%A0/"/>
-    <id>http://yoursite.com/2017/08/23/如何学习/学习/</id>
-    <published>2017-08-23T01:05:21.705Z</published>
-    <updated>2017-08-23T01:05:21.705Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="学习"><a href="#学习" class="headerlink" title="学习"></a>学习</h1><h2 id="专注与发散思维模式"><a href="#专注与发散思维模式" class="headerlink" title="专注与发散思维模式"></a>专注与发散思维模式</h2><p>人们在学习的时候，有两种思维模式，专注思维模式和发散思维模式。然而，很多人只知道专注思维模式。如果能够很好的利用这两种思维模式，我们学习的效率会提高。</p>
-<h3 id="专注思维模式"><a href="#专注思维模式" class="headerlink" title="专注思维模式"></a>专注思维模式</h3><p>专注思维模式（focus mold）就是你集中你所有的注意力专注于一个知识，或者一个问题上。比如，当你在认真听课的时候，当你在努力解一道数学难题的时候，当你在考试的时候，你都是在使用你的专注思维模式。</p>
-<p>专注思维模式对我们的学习有着至关重要的作用，我们从小到大就被教导要集中注意力。确实，我们在学习一个知识的时候，应该全身关注，集中我们却大部分注意力在这个知识上，这样我们才把一个又一个的知识学会。如果一个人学习的时候，不能集中注意力，使用他的专注思维模式，那他面对较为困难的学习材料的时候，就很有可能学不会。</p>
-<p>然而，仅仅使用专注思维模式去学习，有时候是不够的，或者说是效率相对低下的。如果我们能够交替使用专注思维模式和发散思维模式，我们的效率更高。</p>
-<h3 id="发散思维模式"><a href="#发散思维模式" class="headerlink" title="发散思维模式"></a>发散思维模式</h3><p>发散思维模式（diffuse mold）是当你在做一些其他的时候的时候，你的大脑会自动的思考一些你之前努力去学习或者解决的东西。它是一种相对轻松的思考模式。当你在听音乐的时候，当你在坐着放松的时候，当你在散步的时候等你都在使用你的发散思维模式。</p>
-<p>发散思维模式有助于整合我们学过的知识，加深对那些知识的记忆。当你的大脑进入发散思维模式的时候，大脑会从整体出发，对你所学过的知识进行再次处理，将一些重要的知识进行进一步加工，并且剔除那些不重要的知识。当然，重要不重要也只是相对的，而且大脑处理的不一定完全正确。</p>
-<p>另外，发散思维模式产生让人惊喜的事。当你的大脑进入发散思维模式的时候，大脑不仅会加深你所学知识的记忆，而且还会自动思考你之前一直在思考的问题。有时候，一道数学难题在你苦苦思考了很久做出不来的时候，却在你听音乐的时候这道题的答案自然而然就出现在你的脑海里。而且，很多有创意的想法，都是人们在发散思维模式的时候想出来的。</p>
-<h3 id="交替使用专注与发散思维模式"><a href="#交替使用专注与发散思维模式" class="headerlink" title="交替使用专注与发散思维模式"></a>交替使用专注与发散思维模式</h3><p>当你在学习一些新的东西的，尤其是一些比较难的东西的时候，你的大脑需要一种能够在专注思维模式和发散思维模式之前来回转换的能力，这能够帮助你更加高效的学习。当你使用专注思维模式的时候，你将知识一点点的理解，记忆。当你使用发散思维模式的时候，你将知识从整体的角度更好的整合加工。这样交替使用专注思维模式和发散思维模式能够让你学习的东西更加牢固。这就像锻炼的时候，你不可能只在一天拼命练习就能将肌肉练出来。要想练出肌肉，你就必须每天做一些训练，然后休息。就这样训练与休息交替进行，才能逐步锻炼出肌肉。类似的，要想锻炼你的神经，你也需要每天都都一些训练，并且给予适当的休息，这两个交替进行，逐步建立起支撑你思考的神经骨架。</p>
-<p> 萨尔瓦多·达利(Salvador Dalí)是20世纪著名的超现实主义画家，他曾经使用过一种很有意思的方法来帮助他创造那些创意无限的超现实主义派画作。他会坐在椅子上放空自己的大脑并常常会漫无目的地思考一下之前的工作并且他会手拿一把钥匙在地面上方晃来晃去当他睡着进入梦乡的时候，钥匙会从手里摔到地上发出哒的一声，恰到好处地把他叫醒。这样他就能把脑海中那些在发散模式下得到的的联想和点子及时地收集起来，然后他会带着这些在发散模式下得到的新想法回到专注模式里去。</p>
-<p>当然，这不仅对艺术家有帮助，对科学或者具有数学性的思考也有帮助。来看看世界上最伟大的发明家托马斯·爱迪生。 据传爱迪生会坐在椅子上放松，手上抓几个滚珠轴承这样放松自己的身体和意识，回想之前的工作。当爱迪生睡着的时候那些滚珠轴承就会掉到地上，发出哒的一声就和达利 (的钥匙) 一样。这样就会吵醒爱迪生， 然后他就可以带着发散模式下得到的点子回到专注模式当中。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;h1 id=&quot;学习&quot;&gt;&lt;a href=&quot;#学习&quot; class=&quot;headerli
-    
-    </summary>
-    
-      <category term="学习何如学习" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0%E4%BD%95%E5%A6%82%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="专注思维" scheme="http://yoursite.com/tags/%E4%B8%93%E6%B3%A8%E6%80%9D%E7%BB%B4/"/>
-    
-      <category term="发散思维" scheme="http://yoursite.com/tags/%E5%8F%91%E6%95%A3%E6%80%9D%E7%BB%B4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>组块</title>
-    <link href="http://yoursite.com/2017/08/23/%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0/%E7%BB%84%E5%9D%97/"/>
-    <id>http://yoursite.com/2017/08/23/如何学习/组块/</id>
-    <published>2017-08-23T01:05:21.705Z</published>
-    <updated>2017-08-23T01:05:21.721Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="组块"><a href="#组块" class="headerlink" title="组块"></a>组块</h2><h3 id="了解组块"><a href="#了解组块" class="headerlink" title="了解组块"></a>了解组块</h3><p>组块（Chunking）就根据意义将零碎的信息拼接起来而形成一个新的逻辑整体。这个新的逻辑整体可以让组块更易记忆，同时也可以让你更轻松的将组块整合到所学内容的大致框架中。</p>
-<p>丛神经科学的角度来看，组块就是把简化的而抽象的的思想组块一起的复杂的神经活动。这些思想无论是概念，灵感还是缩写，都是大多数科学、文学和艺术的基础。很多优秀的语言学习项目都是通过结构性的重复和强记联系，即用专注模式学习语言，同时运动和母语国家人的自由交流即发散模式的方法，这能让你铭记基础的词汇和搭配，而且说得新语言也能像母语那样。</p>
-<p>本质上说，组块就是让多个神经元共同运作的网络，只有这样才能平稳有效地进行思考和完成动作。专注的训练和重复可以建立强的记忆痕迹，从而帮助组块，专业的培训是一步一步的，这个过程中小的组块可以形成更大的组块，并且随着学习材料的理解越来越深入，所有的专业知识都是更有创造性的铺路石。</p>
-<p>当你学习一个东西的时候，这个东西是个大的组块，然后你通过一点点的学习不断将学习的东西转为一个个小的组块，之后再将这些小组快组合起来形成一个大的组块，最后你就将这个学会了。最好的组块是那些根深蒂固的，你甚至不需要有意识地去将储存在脑中的模式连接起来，这也正是将复杂的想法、动作和反应组成一个单独的组块的意义所在。</p>
-<p>学习数学和科学也是一样的，在刚开始你会看到一些例题和解决方法，那是因为在刚开始尝试解决问题是，你会有很强的认知负荷，而示范性的例子能在你起步的时候帮助理解，通过理解每个步骤的意思和步骤之间的联系，可能帮你发现问题的重点和隐含原理。思考步骤之间的联系非常重要，这样才能明白为什么在这种情况下要进行这个步骤。</p>
-<h3 id="组块作用"><a href="#组块作用" class="headerlink" title="组块作用"></a>组块作用</h3><ul>
-<li><p>组块能够让大脑工作得更有效率，一旦将某个想法、概念或动作组块后，你就不需要记住这个想法、概念或动作有关的全部细节，你只需要知道最主要的那个概念就行了，这也就是只需记住组块。</p>
-</li>
-<li><p>组块能更好地将新的和原有组块结合起来。为了增长知识和获得专业技能，人们会逐渐地增加头脑中组块的数量和有价值的信息。比如，象棋大师们能轻而易举地回忆出数以千计的不同棋谱；音乐家、语言学家和科学家，都能回忆出他们各自领域内类似的知识组块。无论你学什么科目，你的组块式心理图书馆越大，运用越熟练，你都将能够更轻易地解决问题或者找到解决方法。</p>
-</li>
-<li><p>组块可以帮助我们理解新概念。这是因为当你理解一个组块时，你会发现这一组块能以令人惊讶的方式与相似的组块联系起来。不仅在同一领域中如此，在截然不同的领域中也这样，这就是迁移 (transfer)。专注于你正在学习的单元，你会发现一旦你把第一个问题或概念放进心理图书馆，不论那是什么，第二个概念的进入就会容易一些。然后第三个概念也就更容易，这并不都那么简单，但会越来越容易。</p>
-</li>
-</ul>
-<h3 id="建立组块"><a href="#建立组块" class="headerlink" title="建立组块"></a>建立组块</h3><ul>
-<li><p>全神贯注。当其他事情占用有限的工作记忆时，这就会加大你建立新的神经并且与其它神经的连接的困难。</p>
-</li>
-<li><p>对组块的内容有基本的了解。只有理解了的知识才能与融入你学习的其他材料之中。</p>
-</li>
-<li><p>练习。通过练习，了解背景知识，即不但明白怎么使用这个知识，也明白在什么时候使用这个知识。某件事情，如果知识再看或者理解如何做也不代表能真正做到，只有在你自己实际操作和完全掌握情况相爱才能建立起神经模型。练习能够拓宽组块连接的神经网络，并且确保他们不仅仅是牢固的，而且能够通过不同的途径惊醒访问。背景认识意味着学会在特定的时候使用正确的方法。</p>
-</li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;h2 id=&quot;组块&quot;&gt;&lt;a href=&quot;#组块&quot; class=&quot;headerli
-    
-    </summary>
-    
-      <category term="学习何如学习" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0%E4%BD%95%E5%A6%82%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="组块" scheme="http://yoursite.com/tags/%E7%BB%84%E5%9D%97/"/>
     
   </entry>
   
