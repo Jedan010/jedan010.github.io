@@ -1,28 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-  <title>杰德的博客</title>
-  <subtitle>随便写写</subtitle>
-  <link href="/atom.xml" rel="self"/>
+<search> 
   
-  <link href="http://yoursite.com/"/>
-  <updated>2017-08-24T03:51:37.875Z</updated>
-  <id>http://yoursite.com/</id>
-  
-  <author>
-    <name>吴杰德</name>
-    <email>547054738@qq.com</email>
-  </author>
-  
-  <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>Market manipulation detection based on Classification methods</title>
-    <link href="http://yoursite.com/2017/08/24/paper/Market%20manipulation%20detection%20based%20on%20Classification%20methods/"/>
-    <id>http://yoursite.com/2017/08/24/paper/Market manipulation detection based on Classification methods/</id>
-    <published>2017-08-24T01:58:18.659Z</published>
-    <updated>2017-08-24T03:51:37.875Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p><strong>Abstract</strong><br>In this paper, we use supervised machine learning methods to detect the market manipulation in China based on the information released by China Securities Regulation Commission (CSRC). For the supervised machine learning, we mainly use classified method to detect the anomaly from the daily and tick trading data of manipulated stocks. As a result, we find that the supervised machine learning method are good at detecting market manipulation from daily trading data and have poor performance of tick data. The best used supervised machine learning models are K-nearest neighbor (KNN) and Decision Tree classifier (DTC) which have over 99% of accuracy, sensitivity, specificity and area under the curve (AUC).</p>
+    <entry>
+      <title><![CDATA[Market manipulation detection based on Classification methods]]></title>
+      <url>/2017/08/24/paper/Market%20manipulation%20detection%20based%20on%20Classification%20methods/</url>
+      <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p><strong>Abstract</strong><br>In this paper, we use supervised machine learning methods to detect the market manipulation in China based on the information released by China Securities Regulation Commission (CSRC). For the supervised machine learning, we mainly use classified method to detect the anomaly from the daily and tick trading data of manipulated stocks. As a result, we find that the supervised machine learning method are good at detecting market manipulation from daily trading data and have poor performance of tick data. The best used supervised machine learning models are K-nearest neighbor (KNN) and Decision Tree classifier (DTC) which have over 99% of accuracy, sensitivity, specificity and area under the curve (AUC).</p>
 <h1 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1. Introduction"></a>1. Introduction</h1><p>arket manipulation is a deliberate attempt to intervene in  the free and fair operation of the market and create artificial, false or misleading appearances with respect to price of security <sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="T. C. Lin, The new market manipulation
 ">[1]</span></a></sup>. Market manipulation, broadly defined, has existed since the infancy of financial markets <sup id="fnref:2"><a href="#fn:2" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="J. W. Markham, Law enforcement and the history of financial market manipulation, ME Sharpe, 2013.
 ">[2]</span></a></sup>, which has become an import issue of emerging and developed market. Manipulated security market not only distorts the prices and transactions in the security market, but also undermines the function of security market. What’s more, many investors would lose significantly because of most manipulators making illegal profit.</p>
@@ -425,32 +408,30 @@ patients with unknown discrete values, Computers in biology and medicine 59 (201
 Advance Computing Conference (IACC), 2014 IEEE International, IEEE, 2014, pp. 549–554.<a href="#fnref:19" rev="footnote"> ↩</a></span></li><li id="fn:20"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">20.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">P. M. Arsad, N. Buniyamin, others, A neural network students’ performance prediction model (NNSPPM), in: Smart Instrumentation,
 Measurement and Applications (ICSIMA), 2013 IEEE International Conference On, IEEE, 2013, pp. 1–5.<a href="#fnref:20" rev="footnote"> ↩</a></span></li><li id="fn:21"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">21.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">P. Cortez, A. Cerdeira, F. Almeida, T. Matos, J. Reis, Modeling wine preferences by data mining from physicochemical properties,
 Decision Support Systems 47 (2009) 547–553.<a href="#fnref:21" rev="footnote"> ↩</a></span></li></ol></div></div>]]></content>
+      
+        <categories>
+            
+            <category> paper </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Market manipulation </tag>
+            
+            <tag> Classification methods </tag>
+            
+            <tag> Anomaly detection </tag>
+            
+        </tags>
+        
+    </entry>
     
-    <summary type="html">
-    
-      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;br&gt;In this p
-    
-    </summary>
-    
-      <category term="paper" scheme="http://yoursite.com/categories/paper/"/>
-    
-    
-      <category term="Market manipulation" scheme="http://yoursite.com/tags/Market-manipulation/"/>
-    
-      <category term="Classification methods" scheme="http://yoursite.com/tags/Classification-methods/"/>
-    
-      <category term="Anomaly detection" scheme="http://yoursite.com/tags/Anomaly-detection/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Git基础操作</title>
-    <link href="http://yoursite.com/2017/08/23/Git/git%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/"/>
-    <id>http://yoursite.com/2017/08/23/Git/git基础操作/</id>
-    <published>2017-08-23T02:17:01.471Z</published>
-    <updated>2017-08-24T07:17:56.873Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>git是什么呢？git是一个分布式版本控制系统，以便于追踪改变和多人协作。</p>
+    <entry>
+      <title><![CDATA[Git基础操作]]></title>
+      <url>/2017/08/23/Git/git%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/</url>
+      <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>git是什么呢？git是一个分布式版本控制系统，以便于追踪改变和多人协作。</p>
 <p>为什么我们要关注版本控制呢？当你写完一篇文章后，如果我们想要修改，又不想破坏原文件，以便修改失误后能还原，我们一般会复制一份原文件，然后再修改。可是如果我们有很多份文件要修改呢？如果我们要修改很多次呢？那每次修改都复制一份出来就显得很繁琐。通过版本控制，我们就可以在一个文件中修改，并能很好的在各个修改的版本中来回转换。</p>
 <p>为什么是分布式呢？分布式是相对于集中式的。集中式就是把文件集中放在一个地方，如果需要修改，就把要修改的文件取出来，修改完后将修改的部分再替换回去。这个有两点不好，一是如果集中放置文件的主机出问题了，那所有文件都找不回来了。二是修改必须是联网，如果主机网络出问题，那其他人也不能修改。而分布式则是将文件放在所有需要的人主机上，这样就相当于将文件备份了无数份，几乎没有丢失的可能。另外，所有人都可以在自己的本级上修改，只需要在修改完之后联网传送修改好的版本即可。</p>
 <h1 id="基础命令"><a href="#基础命令" class="headerlink" title="基础命令"></a>基础命令</h1><h2 id="获取git仓库"><a href="#获取git仓库" class="headerlink" title="获取git仓库"></a>获取git仓库</h2><ul>
@@ -525,30 +506,28 @@ Decision Support Systems 47 (2009) 547–553.<a href="#fnref:21" rev="footnote">
 <p>当我们在一个分支上已经完成我们的任务时候，我们可以运行带有<code>--delete &lt;remote-branch-name&gt;</code>的推送来删除远程分支，即运行<code>git push &lt;name&gt; --delete &lt;remote-branch-name&gt;</code>。</p>
 <p>参考:<a href="https://git-scm.com/book/zh/v2/" target="_blank" rel="external">https://git-scm.com/book/zh/v2/</a></p>
 ]]></content>
+      
+        <categories>
+            
+            <category> git </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> git </tag>
+            
+            <tag> github </tag>
+            
+        </tags>
+        
+    </entry>
     
-    <summary type="html">
-    
-      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;h1 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerli
-    
-    </summary>
-    
-      <category term="git" scheme="http://yoursite.com/categories/git/"/>
-    
-    
-      <category term="git" scheme="http://yoursite.com/tags/git/"/>
-    
-      <category term="github" scheme="http://yoursite.com/tags/github/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>记忆</title>
-    <link href="http://yoursite.com/2017/08/23/%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0/%E8%AE%B0%E5%BF%86/"/>
-    <id>http://yoursite.com/2017/08/23/如何学习/记忆/</id>
-    <published>2017-08-23T01:05:21.721Z</published>
-    <updated>2017-08-23T01:05:21.721Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="记忆"><a href="#记忆" class="headerlink" title="记忆"></a>记忆</h2><h3 id="工作记忆与长期记忆"><a href="#工作记忆与长期记忆" class="headerlink" title="工作记忆与长期记忆"></a>工作记忆与长期记忆</h3><p>工作记忆就是你的大脑在即时且有意识地处理信息所涉及的那部分记忆。当你尝试将脑中的一些想法结合起来去帮助理解某一概念或者解决某一问题是则动用工作记忆。</p>
+    <entry>
+      <title><![CDATA[记忆]]></title>
+      <url>/2017/08/23/%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0/%E8%AE%B0%E5%BF%86/</url>
+      <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="记忆"><a href="#记忆" class="headerlink" title="记忆"></a>记忆</h2><h3 id="工作记忆与长期记忆"><a href="#工作记忆与长期记忆" class="headerlink" title="工作记忆与长期记忆"></a>工作记忆与长期记忆</h3><p>工作记忆就是你的大脑在即时且有意识地处理信息所涉及的那部分记忆。当你尝试将脑中的一些想法结合起来去帮助理解某一概念或者解决某一问题是则动用工作记忆。</p>
 <p>工作记忆与短期记忆有些相似，但也有很大不同。它们都只能短暂的储存在大脑中，过一段时间很快就会忘记。工作记忆与短期记忆最大的不同在于它们功能不同。工作记忆主要是作为大脑的缓存区，让大脑在这短暂的时间内可以记住所需要的信息，并且对这部分信息进行更进一步加工，比如思考。而短期记忆的功能主要是在短时间内记住这部分信息，并不处理这部分信息。当你在书上学习新的知识并且用这部分知识做题的时候，使用的就是工作记忆。当你单纯的背一个电话号码的时候，使用的就是短期记忆。工作记忆对我们的学习，影响重大，所以我更多谈论工作记忆而不是短期记忆。</p>
 <p>工作记忆集中在大脑的前额叶皮质，它也有与大脑的其他部分有着联系，以便于你读取长期记忆。以前的研究人员认为，工作记忆可以储存7个组块的信息。而现在的共识是工作记忆大约只能储存4个组块的信息。我们大脑会将记忆项合并为组块的形式，所以我们的工作记忆看似比实际容量要大。组块这个概念我后面会讲到。</p>
 <p>工作记忆就像一块有些劣质的黑板，你必须时常重复你所需要记忆的信息，它们才能稳定地储存在工作记忆中。当你全身关注的时候，你会发现自己无视了那些侵占工作记忆有限空间的冗余信息。</p>
@@ -565,30 +544,28 @@ Decision Support Systems 47 (2009) 547–553.<a href="#fnref:21" rev="footnote">
 <p>记忆宫殿的具体做法有3步。首先将你需要记忆的内容分类，然后回忆起一个你非常熟悉的路线，比如从宿舍到教室，最后通过夸张的想象，将所需要的记忆的内容与这条路线上你所熟悉的建筑或标志物一一联系起来。</p>
 <h4 id="简化记忆"><a href="#简化记忆" class="headerlink" title="简化记忆"></a>简化记忆</h4><p>简化记忆就是创造有意义的意群来简化所需要记忆的信息。你可以将要记忆的数字与难忘的事联系起来，比如2008年是中国举办奥运会的那一年，3.30是考1000m的时候的成绩。你也可以通过创造好记的句子来帮助记忆一些概念，这个句子可由你需要记忆的信息的首字组成。</p>
 ]]></content>
+      
+        <categories>
+            
+            <category> 学习何如学习 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 工作记忆 </tag>
+            
+            <tag> 长期记忆 </tag>
+            
+        </tags>
+        
+    </entry>
     
-    <summary type="html">
-    
-      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;h2 id=&quot;记忆&quot;&gt;&lt;a href=&quot;#记忆&quot; class=&quot;headerli
-    
-    </summary>
-    
-      <category term="学习何如学习" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0%E4%BD%95%E5%A6%82%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="工作记忆" scheme="http://yoursite.com/tags/%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BF%86/"/>
-    
-      <category term="长期记忆" scheme="http://yoursite.com/tags/%E9%95%BF%E6%9C%9F%E8%AE%B0%E5%BF%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>通往财富自由之路_1</title>
-    <link href="http://yoursite.com/2017/08/23/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF_1/"/>
-    <id>http://yoursite.com/2017/08/23/通往财富自由之路/通往财富自由之路_1/</id>
-    <published>2017-08-23T01:05:21.721Z</published>
-    <updated>2017-08-23T01:05:21.721Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="通往财富自由之路"><a href="#通往财富自由之路" class="headerlink" title="通往财富自由之路"></a>通往财富自由之路</h1><ul>
+    <entry>
+      <title><![CDATA[通往财富自由之路_1]]></title>
+      <url>/2017/08/23/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF_1/</url>
+      <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="通往财富自由之路"><a href="#通往财富自由之路" class="headerlink" title="通往财富自由之路"></a>通往财富自由之路</h1><ul>
 <li><strong>安全感</strong></li>
 <li><strong>活在未来</strong></li>
 <li><strong>遇到贵人的方法</strong></li>
@@ -616,32 +593,30 @@ Decision Support Systems 47 (2009) 547–553.<a href="#fnref:21" rev="footnote">
 <li>……</li>
 </ul>
 ]]></content>
+      
+        <categories>
+            
+            <category> 通往财富自由之路 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 通往财富自由之路 </tag>
+            
+            <tag> 安全感 </tag>
+            
+            <tag> 活在未来 </tag>
+            
+        </tags>
+        
+    </entry>
     
-    <summary type="html">
-    
-      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;h1 id=&quot;通往财富自由之路&quot;&gt;&lt;a href=&quot;#通往财富自由之路&quot; cla
-    
-    </summary>
-    
-      <category term="通往财富自由之路" scheme="http://yoursite.com/categories/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF/"/>
-    
-    
-      <category term="通往财富自由之路" scheme="http://yoursite.com/tags/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF/"/>
-    
-      <category term="安全感" scheme="http://yoursite.com/tags/%E5%AE%89%E5%85%A8%E6%84%9F/"/>
-    
-      <category term="活在未来" scheme="http://yoursite.com/tags/%E6%B4%BB%E5%9C%A8%E6%9C%AA%E6%9D%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>通往财富自由之路_2</title>
-    <link href="http://yoursite.com/2017/08/23/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF_2/"/>
-    <id>http://yoursite.com/2017/08/23/通往财富自由之路/通往财富自由之路_2/</id>
-    <published>2017-08-23T01:05:21.721Z</published>
-    <updated>2017-08-23T01:05:21.721Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="通往财富自由之路"><a href="#通往财富自由之路" class="headerlink" title="通往财富自由之路"></a>通往财富自由之路</h1><ul>
+    <entry>
+      <title><![CDATA[通往财富自由之路_2]]></title>
+      <url>/2017/08/23/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF_2/</url>
+      <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="通往财富自由之路"><a href="#通往财富自由之路" class="headerlink" title="通往财富自由之路"></a>通往财富自由之路</h1><ul>
 <li><strong>资本</strong></li>
 <li><strong>落后</strong></li>
 <li><strong>多维竞争</strong></li>
@@ -675,34 +650,32 @@ Decision Support Systems 47 (2009) 547–553.<a href="#fnref:21" rev="footnote">
 <p>举个不太准确的数学例子，在一个维度顶尖人物可能得分95分，而我们只有90分，可是我们还能整合其他维度的知识应用在这个领域，假设那个领域我们的分80分，我们得分就远远超过那个顶尖人物了。当然，这只是直观的感受，不太确切。</p>
 <p>要想多个维度同时发展，首先我们必须要在一个维度做的足够好。因为，我们生活有成本。如果在所有方面我们都是平平庸庸，那么我们生活都可能难以为继，更别提再去发展，整合别的维度。另外，如果不能在一个领域做得足够好，那么也难以将其他领域的知识、技能整合应用到这领域。</p>
 ]]></content>
+      
+        <categories>
+            
+            <category> 通往财富自由之路 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 通往财富自由之路 </tag>
+            
+            <tag> 资本 </tag>
+            
+            <tag> 落后 </tag>
+            
+            <tag> 多维竞争 </tag>
+            
+        </tags>
+        
+    </entry>
     
-    <summary type="html">
-    
-      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;h1 id=&quot;通往财富自由之路&quot;&gt;&lt;a href=&quot;#通往财富自由之路&quot; cla
-    
-    </summary>
-    
-      <category term="通往财富自由之路" scheme="http://yoursite.com/categories/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF/"/>
-    
-    
-      <category term="通往财富自由之路" scheme="http://yoursite.com/tags/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF/"/>
-    
-      <category term="资本" scheme="http://yoursite.com/tags/%E8%B5%84%E6%9C%AC/"/>
-    
-      <category term="落后" scheme="http://yoursite.com/tags/%E8%90%BD%E5%90%8E/"/>
-    
-      <category term="多维竞争" scheme="http://yoursite.com/tags/%E5%A4%9A%E7%BB%B4%E7%AB%9E%E4%BA%89/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>通往财富自由之路_4</title>
-    <link href="http://yoursite.com/2017/08/23/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF_4/"/>
-    <id>http://yoursite.com/2017/08/23/通往财富自由之路/通往财富自由之路_4/</id>
-    <published>2017-08-23T01:05:21.721Z</published>
-    <updated>2017-08-23T01:05:21.721Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="通往财富自由之路"><a href="#通往财富自由之路" class="headerlink" title="通往财富自由之路"></a>通往财富自由之路</h1><ul>
+    <entry>
+      <title><![CDATA[通往财富自由之路_4]]></title>
+      <url>/2017/08/23/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF_4/</url>
+      <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="通往财富自由之路"><a href="#通往财富自由之路" class="headerlink" title="通往财富自由之路"></a>通往财富自由之路</h1><ul>
 <li><strong>这个世界是有生命的</strong></li>
 <li><strong>抱怨</strong></li>
 <li><strong>别人的好</strong></li>
@@ -751,34 +724,32 @@ Decision Support Systems 47 (2009) 547–553.<a href="#fnref:21" rev="footnote">
 <p>另外，正确的巨大价值在于特立独【行】，而不是特例独【想】。</p>
 <p>通过严谨的逻辑推力判断，看到了正确的巨大价值后，想是完全没有用的。只有行动才能带来真正的收益。</p>
 ]]></content>
+      
+        <categories>
+            
+            <category> 通往财富自由之路 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 通往财富自由之路 </tag>
+            
+            <tag> 抱怨 </tag>
+            
+            <tag> 正确 </tag>
+            
+            <tag> 世界 </tag>
+            
+        </tags>
+        
+    </entry>
     
-    <summary type="html">
-    
-      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;h1 id=&quot;通往财富自由之路&quot;&gt;&lt;a href=&quot;#通往财富自由之路&quot; cla
-    
-    </summary>
-    
-      <category term="通往财富自由之路" scheme="http://yoursite.com/categories/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF/"/>
-    
-    
-      <category term="通往财富自由之路" scheme="http://yoursite.com/tags/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF/"/>
-    
-      <category term="抱怨" scheme="http://yoursite.com/tags/%E6%8A%B1%E6%80%A8/"/>
-    
-      <category term="正确" scheme="http://yoursite.com/tags/%E6%AD%A3%E7%A1%AE/"/>
-    
-      <category term="世界" scheme="http://yoursite.com/tags/%E4%B8%96%E7%95%8C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>通往财富自由之路_3</title>
-    <link href="http://yoursite.com/2017/08/23/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF_3/"/>
-    <id>http://yoursite.com/2017/08/23/通往财富自由之路/通往财富自由之路_3/</id>
-    <published>2017-08-23T01:05:21.721Z</published>
-    <updated>2017-08-23T01:05:21.721Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="通往财富自由之路"><a href="#通往财富自由之路" class="headerlink" title="通往财富自由之路"></a>通往财富自由之路</h1><ul>
+    <entry>
+      <title><![CDATA[通往财富自由之路_3]]></title>
+      <url>/2017/08/23/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF_3/</url>
+      <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="通往财富自由之路"><a href="#通往财富自由之路" class="headerlink" title="通往财富自由之路"></a>通往财富自由之路</h1><ul>
 <li><strong>元认知</strong></li>
 <li><strong>万能钥匙</strong></li>
 <li><strong>坚持</strong></li>
@@ -846,32 +817,30 @@ Decision Support Systems 47 (2009) 547–553.<a href="#fnref:21" rev="footnote">
 <p>有时候，我们只是为了逃避困难而试着说服自己，这件事和自己没有关系。</p>
 <p>感觉没关系，可能是错觉，也常常是最可怕你的自证预言。若是主动吸收那个观念，按照那个观念做，就“事实上有关系了”，做不好没关系，没有人能一开始就做好的，拼命做就好了，否则就真的和你没有关系了。</p>
 ]]></content>
+      
+        <categories>
+            
+            <category> 通往财富自由之路 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 通往财富自由之路 </tag>
+            
+            <tag> 元认知 </tag>
+            
+            <tag> 坚持 </tag>
+            
+        </tags>
+        
+    </entry>
     
-    <summary type="html">
-    
-      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;h1 id=&quot;通往财富自由之路&quot;&gt;&lt;a href=&quot;#通往财富自由之路&quot; cla
-    
-    </summary>
-    
-      <category term="通往财富自由之路" scheme="http://yoursite.com/categories/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF/"/>
-    
-    
-      <category term="通往财富自由之路" scheme="http://yoursite.com/tags/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF/"/>
-    
-      <category term="元认知" scheme="http://yoursite.com/tags/%E5%85%83%E8%AE%A4%E7%9F%A5/"/>
-    
-      <category term="坚持" scheme="http://yoursite.com/tags/%E5%9D%9A%E6%8C%81/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://yoursite.com/2017/08/23/hello-world/"/>
-    <id>http://yoursite.com/2017/08/23/hello-world/</id>
-    <published>2017-08-23T01:05:21.705Z</published>
-    <updated>2017-08-23T01:05:21.705Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+    <entry>
+      <title><![CDATA[Hello World]]></title>
+      <url>/2017/08/23/hello-world/</url>
+      <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
 <h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
@@ -881,24 +850,14 @@ Decision Support Systems 47 (2009) 547–553.<a href="#fnref:21" rev="footnote">
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
 ]]></content>
+      
+        
+    </entry>
     
-    <summary type="html">
-    
-      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; 
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>学习</title>
-    <link href="http://yoursite.com/2017/08/23/%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0/%E5%AD%A6%E4%B9%A0/"/>
-    <id>http://yoursite.com/2017/08/23/如何学习/学习/</id>
-    <published>2017-08-23T01:05:21.705Z</published>
-    <updated>2017-08-23T01:05:21.705Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="学习"><a href="#学习" class="headerlink" title="学习"></a>学习</h1><h2 id="专注与发散思维模式"><a href="#专注与发散思维模式" class="headerlink" title="专注与发散思维模式"></a>专注与发散思维模式</h2><p>人们在学习的时候，有两种思维模式，专注思维模式和发散思维模式。然而，很多人只知道专注思维模式。如果能够很好的利用这两种思维模式，我们学习的效率会提高。</p>
+    <entry>
+      <title><![CDATA[学习]]></title>
+      <url>/2017/08/23/%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0/%E5%AD%A6%E4%B9%A0/</url>
+      <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="学习"><a href="#学习" class="headerlink" title="学习"></a>学习</h1><h2 id="专注与发散思维模式"><a href="#专注与发散思维模式" class="headerlink" title="专注与发散思维模式"></a>专注与发散思维模式</h2><p>人们在学习的时候，有两种思维模式，专注思维模式和发散思维模式。然而，很多人只知道专注思维模式。如果能够很好的利用这两种思维模式，我们学习的效率会提高。</p>
 <h3 id="专注思维模式"><a href="#专注思维模式" class="headerlink" title="专注思维模式"></a>专注思维模式</h3><p>专注思维模式（focus mold）就是你集中你所有的注意力专注于一个知识，或者一个问题上。比如，当你在认真听课的时候，当你在努力解一道数学难题的时候，当你在考试的时候，你都是在使用你的专注思维模式。</p>
 <p>专注思维模式对我们的学习有着至关重要的作用，我们从小到大就被教导要集中注意力。确实，我们在学习一个知识的时候，应该全身关注，集中我们却大部分注意力在这个知识上，这样我们才把一个又一个的知识学会。如果一个人学习的时候，不能集中注意力，使用他的专注思维模式，那他面对较为困难的学习材料的时候，就很有可能学不会。</p>
 <p>然而，仅仅使用专注思维模式去学习，有时候是不够的，或者说是效率相对低下的。如果我们能够交替使用专注思维模式和发散思维模式，我们的效率更高。</p>
@@ -909,30 +868,28 @@ Decision Support Systems 47 (2009) 547–553.<a href="#fnref:21" rev="footnote">
 <p> 萨尔瓦多·达利(Salvador Dalí)是20世纪著名的超现实主义画家，他曾经使用过一种很有意思的方法来帮助他创造那些创意无限的超现实主义派画作。他会坐在椅子上放空自己的大脑并常常会漫无目的地思考一下之前的工作并且他会手拿一把钥匙在地面上方晃来晃去当他睡着进入梦乡的时候，钥匙会从手里摔到地上发出哒的一声，恰到好处地把他叫醒。这样他就能把脑海中那些在发散模式下得到的的联想和点子及时地收集起来，然后他会带着这些在发散模式下得到的新想法回到专注模式里去。</p>
 <p>当然，这不仅对艺术家有帮助，对科学或者具有数学性的思考也有帮助。来看看世界上最伟大的发明家托马斯·爱迪生。 据传爱迪生会坐在椅子上放松，手上抓几个滚珠轴承这样放松自己的身体和意识，回想之前的工作。当爱迪生睡着的时候那些滚珠轴承就会掉到地上，发出哒的一声就和达利 (的钥匙) 一样。这样就会吵醒爱迪生， 然后他就可以带着发散模式下得到的点子回到专注模式当中。</p>
 ]]></content>
+      
+        <categories>
+            
+            <category> 学习何如学习 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 专注思维 </tag>
+            
+            <tag> 发散思维 </tag>
+            
+        </tags>
+        
+    </entry>
     
-    <summary type="html">
-    
-      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;h1 id=&quot;学习&quot;&gt;&lt;a href=&quot;#学习&quot; class=&quot;headerli
-    
-    </summary>
-    
-      <category term="学习何如学习" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0%E4%BD%95%E5%A6%82%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="专注思维" scheme="http://yoursite.com/tags/%E4%B8%93%E6%B3%A8%E6%80%9D%E7%BB%B4/"/>
-    
-      <category term="发散思维" scheme="http://yoursite.com/tags/%E5%8F%91%E6%95%A3%E6%80%9D%E7%BB%B4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>组块</title>
-    <link href="http://yoursite.com/2017/08/23/%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0/%E7%BB%84%E5%9D%97/"/>
-    <id>http://yoursite.com/2017/08/23/如何学习/组块/</id>
-    <published>2017-08-23T01:05:21.705Z</published>
-    <updated>2017-08-23T01:05:21.721Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="组块"><a href="#组块" class="headerlink" title="组块"></a>组块</h2><h3 id="了解组块"><a href="#了解组块" class="headerlink" title="了解组块"></a>了解组块</h3><p>组块（Chunking）就根据意义将零碎的信息拼接起来而形成一个新的逻辑整体。这个新的逻辑整体可以让组块更易记忆，同时也可以让你更轻松的将组块整合到所学内容的大致框架中。</p>
+    <entry>
+      <title><![CDATA[组块]]></title>
+      <url>/2017/08/23/%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0/%E7%BB%84%E5%9D%97/</url>
+      <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="组块"><a href="#组块" class="headerlink" title="组块"></a>组块</h2><h3 id="了解组块"><a href="#了解组块" class="headerlink" title="了解组块"></a>了解组块</h3><p>组块（Chunking）就根据意义将零碎的信息拼接起来而形成一个新的逻辑整体。这个新的逻辑整体可以让组块更易记忆，同时也可以让你更轻松的将组块整合到所学内容的大致框架中。</p>
 <p>丛神经科学的角度来看，组块就是把简化的而抽象的的思想组块一起的复杂的神经活动。这些思想无论是概念，灵感还是缩写，都是大多数科学、文学和艺术的基础。很多优秀的语言学习项目都是通过结构性的重复和强记联系，即用专注模式学习语言，同时运动和母语国家人的自由交流即发散模式的方法，这能让你铭记基础的词汇和搭配，而且说得新语言也能像母语那样。</p>
 <p>本质上说，组块就是让多个神经元共同运作的网络，只有这样才能平稳有效地进行思考和完成动作。专注的训练和重复可以建立强的记忆痕迹，从而帮助组块，专业的培训是一步一步的，这个过程中小的组块可以形成更大的组块，并且随着学习材料的理解越来越深入，所有的专业知识都是更有创造性的铺路石。</p>
 <p>当你学习一个东西的时候，这个东西是个大的组块，然后你通过一点点的学习不断将学习的东西转为一个个小的组块，之后再将这些小组快组合起来形成一个大的组块，最后你就将这个学会了。最好的组块是那些根深蒂固的，你甚至不需要有意识地去将储存在脑中的模式连接起来，这也正是将复杂的想法、动作和反应组成一个单独的组块的意义所在。</p>
@@ -954,28 +911,26 @@ Decision Support Systems 47 (2009) 547–553.<a href="#fnref:21" rev="footnote">
 </li>
 </ul>
 ]]></content>
+      
+        <categories>
+            
+            <category> 学习何如学习 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 组块 </tag>
+            
+        </tags>
+        
+    </entry>
     
-    <summary type="html">
-    
-      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;h2 id=&quot;组块&quot;&gt;&lt;a href=&quot;#组块&quot; class=&quot;headerli
-    
-    </summary>
-    
-      <category term="学习何如学习" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0%E4%BD%95%E5%A6%82%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="组块" scheme="http://yoursite.com/tags/%E7%BB%84%E5%9D%97/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>深度学习入门</title>
-    <link href="http://yoursite.com/2017/08/23/deep%20learning%20introduction/"/>
-    <id>http://yoursite.com/2017/08/23/deep learning introduction/</id>
-    <published>2017-08-23T01:05:21.705Z</published>
-    <updated>2017-08-24T01:53:34.487Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="深度学习入门"><a href="#深度学习入门" class="headerlink" title="深度学习入门"></a>深度学习入门</h1><p>经过一段时间对深入学习的学习，写一些东西来记录一下自己的所学。</p>
+    <entry>
+      <title><![CDATA[深度学习入门]]></title>
+      <url>/2017/08/23/deep%20learning%20introduction/</url>
+      <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="深度学习入门"><a href="#深度学习入门" class="headerlink" title="深度学习入门"></a>深度学习入门</h1><p>经过一段时间对深入学习的学习，写一些东西来记录一下自己的所学。</p>
 <h2 id="神经网络与深度学习"><a href="#神经网络与深度学习" class="headerlink" title="神经网络与深度学习"></a>神经网络与深度学习</h2><p>深度学习是机器学习拉出的分支，它从经验中学习，并根据层次化的概念体系来理解世界，而每个概念则通过与某些相对简单的概念之间的关系来定义。</p>
 <p>由于是从经验中学习，所以可以极大地避免由人类给计算机形式化指定它所需要学习的东西，这就能让机器自动学习，极大地促进了机器学习的发展。而层次化的概念则让机器可以通过构建简单的概念来学习复杂的概念，提高了机器学习的能力。大致地说，深度学习的深在于它的层，层越多，则越深。</p>
 <p>现在最成功的深度学习方式是运用神经网络进行学习。神经网络也称人工神经网络（ANN）是一种模仿生物神经网络的结构和功能的数学模型或计算模型，能够从观测到的数据中进行学习。</p>
@@ -1017,30 +972,28 @@ Error = \frac{1}{n}\sum_i(y_i-y^{'}_i)^2</script><p>这样我们就可以把$Err
 \theta_{n+1}(w,b) = \theta_{n}(w,b)-\eta \nabla C(\theta_{n}(w,b))</script><p><img src="https://sebastianraschka.com/images/faq/closed-form-vs-gd/ball.png" alt=""></p>
 <p>我们总结一下我们提到的内容。首先，对于对输入$x$的所有特征进行加权求和得到$z$，然后用激活函数$\sigma(z)$作用在上面，得到这一层的输入$a^l$，通过这一层的激活函数值$a^l$与下一层的激活函数值$a^{l+1}$之间的联系，一直到输出层，得到输出结果$y’$，通过计算误差函数$C$来不断改变$w$和$b$以尽量达到最小的误差函数$C$，这样我们就训练好了我们的神经网络。</p>
 ]]></content>
+      
+        <categories>
+            
+            <category> 深度学习 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 深度学习 </tag>
+            
+            <tag> 神经网络 </tag>
+            
+        </tags>
+        
+    </entry>
     
-    <summary type="html">
-    
-      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;h1 id=&quot;深度学习入门&quot;&gt;&lt;a href=&quot;#深度学习入门&quot; class=&quot;
-    
-    </summary>
-    
-      <category term="深度学习" scheme="http://yoursite.com/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="深度学习" scheme="http://yoursite.com/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
-    
-      <category term="神经网络" scheme="http://yoursite.com/tags/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>拖延与习惯</title>
-    <link href="http://yoursite.com/2017/08/23/%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0/%E6%8B%96%E5%BB%B6%E4%B8%8E%E4%B9%A0%E6%83%AF/"/>
-    <id>http://yoursite.com/2017/08/23/如何学习/拖延与习惯/</id>
-    <published>2017-08-23T01:05:21.705Z</published>
-    <updated>2017-08-23T01:05:21.705Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h3 id="回顾"><a href="#回顾" class="headerlink" title="回顾"></a>回顾</h3><p>阅读后移开视线，看看能够回忆起多少内容，相比反复阅读能够掌握的更全面和深入。在回顾时，我们并非机械地附属，而是在通过回顾这个过程加深理解，这有助于知识组块。比起重复阅读，回顾即在心里检索关键概念可以使你的学习更加专注高效。只有隔上一定时间后，重读才有效，因为这样重读就像是间隔重复练习。</p>
+    <entry>
+      <title><![CDATA[拖延与习惯]]></title>
+      <url>/2017/08/23/%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0/%E6%8B%96%E5%BB%B6%E4%B8%8E%E4%B9%A0%E6%83%AF/</url>
+      <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h3 id="回顾"><a href="#回顾" class="headerlink" title="回顾"></a>回顾</h3><p>阅读后移开视线，看看能够回忆起多少内容，相比反复阅读能够掌握的更全面和深入。在回顾时，我们并非机械地附属，而是在通过回顾这个过程加深理解，这有助于知识组块。比起重复阅读，回顾即在心里检索关键概念可以使你的学习更加专注高效。只有隔上一定时间后，重读才有效，因为这样重读就像是间隔重复练习。</p>
 <h3 id="错觉"><a href="#错觉" class="headerlink" title="错觉"></a>错觉</h3><p>当你看到答案后告诉自己明白了他们为什么这么做，这个答案并不属于你，因为你没有把这些概念切入自己潜在的神经回路中。这是一种学习中最为常见的自欺欺人式错觉。</p>
 <p>做笔记时高亮和下划线必须要谨慎，否则不仅没效而且还容易产生误导，在划的时候误以为自己已经记住了。在划之前找到中心思想，在空白处写笔记总结关键概念是一种很好的方法。</p>
 <p>当我们重读笔记或者课本的时候，会误以为这些知识已经存在我们脑海中，让我们陷入错觉之中，降低学习效率。回顾虽难，但高效。</p>
@@ -1067,20 +1020,24 @@ Error = \frac{1}{n}\sum_i(y_i-y^{'}_i)^2</script><p>这样我们就可以把$Err
 </li>
 </ul>
 ]]></content>
+      
+        <categories>
+            
+            <category> 学习何如学习 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 拖延 </tag>
+            
+            <tag> 习惯 </tag>
+            
+        </tags>
+        
+    </entry>
     
-    <summary type="html">
-    
-      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;h3 id=&quot;回顾&quot;&gt;&lt;a href=&quot;#回顾&quot; class=&quot;headerli
-    
-    </summary>
-    
-      <category term="学习何如学习" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0%E4%BD%95%E5%A6%82%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="拖延" scheme="http://yoursite.com/tags/%E6%8B%96%E5%BB%B6/"/>
-    
-      <category term="习惯" scheme="http://yoursite.com/tags/%E4%B9%A0%E6%83%AF/"/>
-    
-  </entry>
   
-</feed>
+  
+</search>
