@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-10-14T07:54:27.930Z</updated>
+  <updated>2017-10-14T08:05:03.970Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>python 环境搭建</title>
-    <link href="http://yoursite.com/2017/10/14/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B9%8Bpython/0.1.python_env/"/>
-    <id>http://yoursite.com/2017/10/14/数据挖掘之python/0.1.python_env/</id>
-    <published>2017-10-14T07:33:40.439Z</published>
-    <updated>2017-10-14T07:54:27.930Z</updated>
+    <title>数据挖掘之python</title>
+    <link href="http://yoursite.com/2017/10/14/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B9%8Bpython/"/>
+    <id>http://yoursite.com/2017/10/14/数据挖掘之python/</id>
+    <published>2017-10-14T08:01:39.000Z</published>
+    <updated>2017-10-14T08:05:03.970Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>更好的阅读体验请前往：<a href="https://nbviewer.jupyter.org/github/Jedan010/data-mining-in-python/blob/master/article/0.1.python_env.ipynb" target="_blank" rel="external">https://nbviewer.jupyter.org/github/Jedan010/data-mining-in-python/blob/master/article/0.1.python_env.ipynb</a></p>
 <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p><a href="https://www.anaconda.com/" target="_blank" rel="external">Anaconda</a>是一个用于科学计算的Python发行版，支持 Linux, Mac, Windows系统，提供了包管理与环境管理的功能，可以很方便地解决多版本python并存、切换以及各种第三方包安装问题。Anaconda利用工具/命令conda来进行package和environment的管理，并且已经包含了Python和相关的配套工具。</p>
@@ -28,19 +28,19 @@
 <li>官网下载：<a href="https://www.anaconda.com/download/" target="_blank" rel="external">https://www.anaconda.com/download/</a></li>
 <li>清华大学镜像下载：<a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/" target="_blank" rel="external">https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/</a> (推荐）</li>
 </ul>
-<p>推荐使用清华大学镜像下载，选择对应的版本，如：”Anaconda3-5.0.0-Windows-x86_64.exe”.<br><img src="/2017/10/14/数据挖掘之python/0.1.python_env/1.png" alt="下载"><br></p>
+<p>推荐使用清华大学镜像下载，选择对应的版本，如：”Anaconda3-5.0.0-Windows-x86_64.exe”.<br><img src="/2017/10/14/数据挖掘之python/1.png" alt="下载"><br></p>
 <p>下载好之后默认安装就好，最后会询问是否加入到系统变量，选择加入。</p>
-<h3 id="python版本问题"><a href="#python版本问题" class="headerlink" title="python版本问题"></a>python版本问题</h3><p>Python有两个支持的版本，分别是2.7和3.5+。3.0以上的版本与2.7版本有了不少的改动，所以在3.0+的版本中2.7的语句有些是编译不成功的。本教程使用的版本是3.5+版本。要想查看python的版本，可以在cmd命令行中输入 <code>python --version</code> 来查看 <img src="/2017/10/14/数据挖掘之python/0.1.python_env/10.png" alt="python version"></p>
+<h3 id="python版本问题"><a href="#python版本问题" class="headerlink" title="python版本问题"></a>python版本问题</h3><p>Python有两个支持的版本，分别是2.7和3.5+。3.0以上的版本与2.7版本有了不少的改动，所以在3.0+的版本中2.7的语句有些是编译不成功的。本教程使用的版本是3.5+版本。要想查看python的版本，可以在cmd命令行中输入 <code>python --version</code> 来查看 <img src="/2017/10/14/数据挖掘之python/10.png" alt="python version"></p>
 <h2 id="jupyter"><a href="#jupyter" class="headerlink" title="jupyter"></a>jupyter</h2><h3 id="打开jupyter"><a href="#打开jupyter" class="headerlink" title="打开jupyter"></a>打开jupyter</h3><ul>
 <li>下载好了之后,按 <code>win(开始键)</code>+<code>R</code> 然后输入<code>cmd</code>后点确定，会弹出一个界面。</li>
 <li>在弹出的界面里面输入<code>jupytre notebook</code>,会弹出一个网页.</li>
 <li>点击右上角的 <code>new</code> 选择 <code>python3</code> 即可创建并打开一个新的可运行 python`的笔记本jupyter。</li>
 </ul>
-<p><img src="/2017/10/14/数据挖掘之python/0.1.python_env/2.png" alt="打开cmd"> <img src="/2017/10/14/数据挖掘之python/0.1.python_env/3.png" alt="cmd"> <img src="/2017/10/14/数据挖掘之python/0.1.python_env/4.png" alt="jupyter"></p>
+<p><img src="/2017/10/14/数据挖掘之python/2.png" alt="打开cmd"> <img src="/2017/10/14/数据挖掘之python/3.png" alt="cmd"> <img src="/2017/10/14/数据挖掘之python/4.png" alt="jupyter"></p>
 <h3 id="jupyter操作"><a href="#jupyter操作" class="headerlink" title="jupyter操作"></a>jupyter操作</h3><p>主要：代码运行、保存、文件重命名、文件上传</p>
-<p>在单元框里面写入代码后，按<code>Shift</code>+<code>Enter</code>键即可运行代码，显示结果。也可以选择导航栏中的按钮运行代码。<br><img src="/2017/10/14/数据挖掘之python/0.1.python_env/5.png" alt="jupyter run"><br>按左上角的保存键即可保存文件,或者按file下的save and checkpoint。<br><img src="/2017/10/14/数据挖掘之python/0.1.python_env/6.png" alt="save and rename"></p>
-<p>文件上传在jupyter主界面点右上角的upload后选择要上传的文件，再点一次upload即可上传文件。<br><img src="/2017/10/14/数据挖掘之python/0.1.python_env/7.png" alt="upload_1"> <img src="/2017/10/14/数据挖掘之python/0.1.python_env/8.png" alt="upload_2"></p>
-<h3 id="选择在不同的工作目录下运行jupyter"><a href="#选择在不同的工作目录下运行jupyter" class="headerlink" title="选择在不同的工作目录下运行jupyter"></a>选择在不同的工作目录下运行jupyter</h3><p>打开你要运行的工作目录，也就是打开你要存放代码的文件夹，然后按住Shift和右键,点击在此处打开powershell，然后和之前的一样，输入jupyter notebook即可在这个文件夹下打开jupyter，而且文件也保存在这个文件夹下，可以方便读取和存储数据在这个文件夹下。<br><img src="/2017/10/14/数据挖掘之python/0.1.python_env/9.png" alt="powershell"></p>
+<p>在单元框里面写入代码后，按<code>Shift</code>+<code>Enter</code>键即可运行代码，显示结果。也可以选择导航栏中的按钮运行代码。<br><img src="/2017/10/14/数据挖掘之python/5.png" alt="jupyter run"><br>按左上角的保存键即可保存文件,或者按file下的save and checkpoint。<br><img src="/2017/10/14/数据挖掘之python/6.png" alt="save and rename"></p>
+<p>文件上传在jupyter主界面点右上角的upload后选择要上传的文件，再点一次upload即可上传文件。<br><img src="/2017/10/14/数据挖掘之python/7.png" alt="upload_1"> <img src="/2017/10/14/数据挖掘之python/8.png" alt="upload_2"></p>
+<h3 id="选择在不同的工作目录下运行jupyter"><a href="#选择在不同的工作目录下运行jupyter" class="headerlink" title="选择在不同的工作目录下运行jupyter"></a>选择在不同的工作目录下运行jupyter</h3><p>打开你要运行的工作目录，也就是打开你要存放代码的文件夹，然后按住Shift和右键,点击在此处打开powershell，然后和之前的一样，输入jupyter notebook即可在这个文件夹下打开jupyter，而且文件也保存在这个文件夹下，可以方便读取和存储数据在这个文件夹下。<br><img src="/2017/10/14/数据挖掘之python/9.png" alt="powershell"></p>
 <h2 id="包管理"><a href="#包管理" class="headerlink" title="包管理"></a>包管理</h2><h3 id="python数据挖掘主要使用的包"><a href="#python数据挖掘主要使用的包" class="headerlink" title="python数据挖掘主要使用的包"></a>python数据挖掘主要使用的包</h3><p>python本身的非常小，编写简单，容易上手。又由于python有各种各样的拓展包，所以python的功能非常强大。在数据挖掘领域，我们主要使用的拓展包为：</p>
 <ul>
 <li>numpy</li>
@@ -67,7 +67,7 @@
 <pre><code>7
 </code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## 导入matplotlib中的pyplot包，并简化命名为plt</span></div><div class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</div><div class="line"></div><div class="line"><span class="comment">##让图像在显示在界面中</span></div><div class="line">%matplotlib inline</div><div class="line"></div><div class="line"><span class="comment">## 用numpy生成100个正态分布随机数，然后用matpoltlib画图</span></div><div class="line">plt.plot(np.random.randn(<span class="number">100</span>))</div></pre></td></tr></table></figure>
 <pre><code>[&lt;matplotlib.lines.Line2D at 0x2124e7d6470&gt;]
-</code></pre><p><img src="/2017/10/14/数据挖掘之python/0.1.python_env/output_17_1.png" alt="png"></p>
+</code></pre><p><img src="/2017/10/14/数据挖掘之python/output_17_1.png" alt="png"></p>
 ]]></content>
     
     <summary type="html">
@@ -88,395 +88,20 @@
   </entry>
   
   <entry>
-    <title>python教程</title>
-    <link href="http://yoursite.com/2017/10/14/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B9%8Bpython/0.2.python%20turorial/"/>
-    <id>http://yoursite.com/2017/10/14/数据挖掘之python/0.2.python turorial/</id>
-    <published>2017-10-14T07:28:15.130Z</published>
-    <updated>2017-10-14T07:30:43.911Z</updated>
+    <title>python_tutorial</title>
+    <link href="http://yoursite.com/2017/10/14/python-tutorial/"/>
+    <id>http://yoursite.com/2017/10/14/python-tutorial/</id>
+    <published>2017-10-14T07:57:52.000Z</published>
+    <updated>2017-10-14T07:57:52.309Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="Python-Tutorial"><a href="#Python-Tutorial" class="headerlink" title="Python Tutorial"></a>Python Tutorial</h1><ul>
-<li><strong>Python</strong></li>
-<li><strong>Numpy</strong></li>
-<li><strong>Matplotlib</strong></li>
-</ul>
-<h2 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h2><p>Python是一种高级的，动态类型的多范型编程语言。很多时候，大家会说Python看起来简直和伪代码一样，这是因为你能够通过很少行数的代码表达出很有力的思想。</p>
-<p>教程内容包括：</p>
-<ul>
-<li>基础数据类型</li>
-<li>复合数据类型</li>
-<li>控制语句</li>
-<li>循环</li>
-</ul>
-<p>参考：</p>
-<ul>
-<li>官方教程：<a href="https://docs.python.org/3/tutorial/index.html" target="_blank" rel="external">https://docs.python.org/3/tutorial/index.html</a></li>
-<li>Python 入门指南: <a href="http://www.pythondoc.com/pythontutorial3/index.html" target="_blank" rel="external">http://www.pythondoc.com/pythontutorial3/index.html</a></li>
-<li>廖雪峰python教程： <a href="https://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000" target="_blank" rel="external">https://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000</a></li>
-<li>CS231n python 教程：<a href="http://cs231n.github.io/python-numpy-tutorial/" target="_blank" rel="external">http://cs231n.github.io/python-numpy-tutorial/</a></li>
-</ul>
-<h3 id="基础数据类型"><a href="#基础数据类型" class="headerlink" title="基础数据类型"></a>基础数据类型</h3><p>和大多数编程语言一样，Python拥有一系列的基本数据类型，比如整型、浮点型、布尔型和字符串等。这些类型的使用方式和在其他语言中的使用方式是类似的。</p>
-<ul>
-<li><strong>数值型</strong></li>
-<li><strong>字符串</strong></li>
-<li><strong>布尔型</strong></li>
-</ul>
-<h4 id="数值型"><a href="#数值型" class="headerlink" title="数值型"></a>数值型</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">x = <span class="number">5</span></div><div class="line">type(x)</div></pre></td></tr></table></figure>
-<pre><code>int
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">print(x + <span class="number">2</span>) <span class="comment">## 加</span></div><div class="line">print(x - <span class="number">2</span>) <span class="comment">## 减</span></div><div class="line">print(x * <span class="number">2</span>) <span class="comment">## 乘</span></div><div class="line">print(x / <span class="number">2</span>) <span class="comment">## 除</span></div><div class="line">print(x // <span class="number">2</span>)  <span class="comment">## 整除</span></div><div class="line">print(x % <span class="number">2</span>) <span class="comment">## 求余</span></div><div class="line">print(x ** <span class="number">2</span>) <span class="comment">##指数运算</span></div></pre></td></tr></table></figure>
-<pre><code>7
-3
-10
-2.5
-2
-1
-25
-</code></pre><h4 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h4><p>Python对字符串的支持非常棒。字符串可以用单引号<code>&#39;</code>或者双引号<code>&quot;</code>引起来。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">hello = <span class="string">'hello'</span></div><div class="line">world = <span class="string">"world"</span></div><div class="line">print(hello) <span class="comment">##打印字符串</span></div><div class="line">print(len(hello)) <span class="comment">##求字符串长度</span></div><div class="line"></div><div class="line">hw = hello + <span class="string">' '</span> + world + <span class="string">'!'</span><span class="comment">##字符串相加</span></div><div class="line">print(hw)</div><div class="line"></div><div class="line">print(hello, <span class="number">100</span>) <span class="comment">##打印不同东西可以用 逗号',' 隔开</span></div></pre></td></tr></table></figure>
-<pre><code>hello
-5
-hello world!
-hello 100
-</code></pre><p>字符串对象有一系列有用的方法</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">s = <span class="string">'hello'</span></div><div class="line">print(s.capitalize())<span class="comment">##首字母大写</span></div><div class="line">print(s.upper())   <span class="comment">## 全部大写</span></div><div class="line">print(s.replace(<span class="string">'e'</span>, <span class="string">'E'</span>))  <span class="comment">##替换字符串</span></div><div class="line"></div><div class="line">print(<span class="string">'   hello  '</span>)</div><div class="line">print(<span class="string">'   hello  '</span>.strip()) <span class="comment">## 去除字符串的空格</span></div></pre></td></tr></table></figure>
-<pre><code>Hello
-HELLO
-hEllo
-   hello  
-hello
-</code></pre><h3 id="复合数据类型"><a href="#复合数据类型" class="headerlink" title="复合数据类型"></a>复合数据类型</h3><ul>
-<li>列表 list:[]</li>
-<li>字典 dict:{}</li>
-<li>集合 set()</li>
-<li>元组 truple :()</li>
-</ul>
-<h4 id="列表-list"><a href="#列表-list" class="headerlink" title="列表 list"></a>列表 list</h4><p>用[]表示列表。</p>
-<p>list 就是 Python 中的数组，但是列表长度可变，且能包含不同类型元素。</p>
-<ul>
-<li>注意python的序号是从0开始计数的，与c语言一样，[0]表示取第1个元素</li>
-<li>[a:b] 数学上表示[a,b)这个左闭右开的集合，所以选择的是从第a个到第b-1个元素</li>
-</ul>
-<h5 id="创建列表"><a href="#创建列表" class="headerlink" title="创建列表"></a>创建列表</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">xs = [<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</div><div class="line">xs</div></pre></td></tr></table></figure>
-<pre><code>[0, 1, 2, 3, 4, 5]
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## 列表长度</span></div><div class="line">len(xs)</div></pre></td></tr></table></figure>
-<pre><code>6
-</code></pre><h5 id="访问列表"><a href="#访问列表" class="headerlink" title="访问列表"></a>访问列表</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">xs[<span class="number">0</span>]</div></pre></td></tr></table></figure>
-<pre><code>0
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">##切片访问</span></div><div class="line">xs[<span class="number">0</span>:<span class="number">2</span>]</div></pre></td></tr></table></figure>
-<pre><code>[0, 1]
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## 用负数代表从后往前数</span></div><div class="line">xs[<span class="number">0</span>:<span class="number">-1</span>]</div></pre></td></tr></table></figure>
-<pre><code>[0, 1, 2, 3, 4]
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## 访问所有</span></div><div class="line">xs[:]</div></pre></td></tr></table></figure>
-<pre><code>[0, 1, 2, 3, 4, 5]
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## 访问偶数序号</span></div><div class="line">xs[::<span class="number">2</span>]</div></pre></td></tr></table></figure>
-<pre><code>[0, 2, 4]
-</code></pre><h5 id="添加元素"><a href="#添加元素" class="headerlink" title="添加元素"></a>添加元素</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">xs.append(<span class="number">10</span>)</div><div class="line">xs</div></pre></td></tr></table></figure>
-<pre><code>[0, 1, 2, 3, 4, 5, 10]
-</code></pre><h5 id="删除元素"><a href="#删除元素" class="headerlink" title="删除元素"></a>删除元素</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## 按位置删除元素</span></div><div class="line">xs.pop(<span class="number">-1</span>)</div><div class="line">xs</div></pre></td></tr></table></figure>
-<pre><code>[0, 1, 2, 3, 4, 5]
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## 删除指定元素</span></div><div class="line">xs.remove(<span class="number">3</span>)</div><div class="line">xs</div></pre></td></tr></table></figure>
-<pre><code>[0, 1, 2, 4, 5]
-</code></pre><h5 id="修改元素"><a href="#修改元素" class="headerlink" title="修改元素"></a>修改元素</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## 按序号修改</span></div><div class="line">xs[<span class="number">0</span>] = <span class="number">999</span></div><div class="line">xs</div></pre></td></tr></table></figure>
-<pre><code>[999, 1, 2, 4, 5]
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## 切片修改</span></div><div class="line">xs[<span class="number">0</span>:<span class="number">2</span>] = [<span class="number">-999</span>, <span class="number">-999</span>]</div><div class="line">xs</div></pre></td></tr></table></figure>
-<pre><code>[-999, -999, 2, 4, 5]
-</code></pre><h5 id="遍历列表"><a href="#遍历列表" class="headerlink" title="遍历列表"></a>遍历列表</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">animals = [<span class="string">'cat'</span>, <span class="string">'dog'</span>, <span class="string">'monkey'</span>]</div><div class="line"><span class="keyword">for</span> animal <span class="keyword">in</span> animals:</div><div class="line">    print(animal)</div></pre></td></tr></table></figure>
-<pre><code>cat
-dog
-monkey
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## 也可以添加每个位置的指针</span></div><div class="line"><span class="keyword">for</span> i, animal <span class="keyword">in</span> enumerate(animals):</div><div class="line">    print(i, animal)</div></pre></td></tr></table></figure>
-<pre><code>0 cat
-1 dog
-2 monkey
-</code></pre><h5 id="列表推导-List-comprehensions"><a href="#列表推导-List-comprehensions" class="headerlink" title="列表推导 List comprehensions"></a>列表推导 List comprehensions</h5><p>当我们想对列表中每个元素进行同样的操作的时候，可以用 for 循环来对每个元素进行操作，也可以直接用列表推导来操作。</p>
-<p>比如我么想对每个元素都进行平方操作：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## for循环</span></div><div class="line">x = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</div><div class="line">x2 = []</div><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> x:</div><div class="line">    x2.append(i ** <span class="number">2</span>)</div><div class="line">x2</div></pre></td></tr></table></figure>
-<pre><code>[1, 4, 9, 16, 25]
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## 直接用列表推导</span></div><div class="line">x3 = [i**<span class="number">2</span> <span class="keyword">for</span> i <span class="keyword">in</span> x]</div><div class="line">x3</div></pre></td></tr></table></figure>
-<pre><code>[1, 4, 9, 16, 25]
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## 也可以在列表推导里面加入条件判断</span></div><div class="line">x4 = [ i**<span class="number">2</span> <span class="keyword">for</span> i <span class="keyword">in</span> x <span class="keyword">if</span> i%<span class="number">2</span> == <span class="number">0</span>]</div><div class="line">x4</div></pre></td></tr></table></figure>
-<pre><code>[4, 16]
-</code></pre><h4 id="字典dict"><a href="#字典dict" class="headerlink" title="字典dict"></a>字典dict</h4><p>用{key: value}表示。</p>
-<p>字典用来储存（键key, 值value），通过建立key和value之间的对应关系，我们就可以通过key很快的找到value。</p>
-<h5 id="创建字典"><a href="#创建字典" class="headerlink" title="创建字典"></a>创建字典</h5><p>比如我们要建立一个学生与成绩对应的字典：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">grade = &#123;<span class="string">'Jedan'</span>: <span class="number">100</span>, <span class="string">'Bob'</span>: <span class="number">90</span>, <span class="string">'Mike'</span>: <span class="number">80</span>&#125;</div><div class="line">grade</div></pre></td></tr></table></figure>
-<pre><code>{&#39;Bob&#39;: 90, &#39;Jedan&#39;: 100, &#39;Mike&#39;: 80}
-</code></pre><h5 id="访问字典"><a href="#访问字典" class="headerlink" title="访问字典"></a>访问字典</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">grade[<span class="string">'Jedan'</span>]</div></pre></td></tr></table></figure>
-<pre><code>100
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## 或者通过get属性访问字典（推荐）</span></div><div class="line">grade.get(<span class="string">'Jedan'</span>)</div></pre></td></tr></table></figure>
-<pre><code>100
-</code></pre><h5 id="添加元素-1"><a href="#添加元素-1" class="headerlink" title="添加元素"></a>添加元素</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">grade[<span class="string">'new_one'</span>] = <span class="number">60</span></div><div class="line">grade</div></pre></td></tr></table></figure>
-<pre><code>{&#39;Bob&#39;: 90, &#39;Jedan&#39;: 100, &#39;Mike&#39;: 80, &#39;new_one&#39;: 60}
-</code></pre><h5 id="修改key对应的value"><a href="#修改key对应的value" class="headerlink" title="修改key对应的value"></a>修改key对应的value</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">grade[<span class="string">'new_one'</span>] = <span class="number">70</span></div><div class="line">grade</div></pre></td></tr></table></figure>
-<pre><code>{&#39;Bob&#39;: 90, &#39;Jedan&#39;: 100, &#39;Mike&#39;: 80, &#39;new_one&#39;: 70}
-</code></pre><h5 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">grade.pop(<span class="string">'new_one'</span>)</div><div class="line">grade</div></pre></td></tr></table></figure>
-<pre><code>{&#39;Bob&#39;: 90, &#39;Jedan&#39;: 100, &#39;Mike&#39;: 80}
-</code></pre><h5 id="遍历字典"><a href="#遍历字典" class="headerlink" title="遍历字典"></a>遍历字典</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> key, value <span class="keyword">in</span> grade.items():</div><div class="line">    print(key, value)</div></pre></td></tr></table></figure>
-<pre><code>Jedan 100
-Bob 90
-Mike 80
-</code></pre><h4 id="集合set"><a href="#集合set" class="headerlink" title="集合set"></a>集合set</h4><p>用{}表示</p>
-<p>set和数学中的集合有相同的性质，即无序，元素不重复，所以不能通过序号来选取元素</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">grade = [<span class="number">100</span>, <span class="number">90</span>, <span class="number">95</span> , <span class="number">90</span>, <span class="number">85</span>, <span class="number">100</span>]</div><div class="line">grade</div></pre></td></tr></table></figure>
-<pre><code>[100, 90, 95, 90, 85, 100]
-</code></pre><h5 id="创建set"><a href="#创建set" class="headerlink" title="创建set"></a>创建set</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">grade_set = set(grade)</div><div class="line">grade_set</div></pre></td></tr></table></figure>
-<pre><code>{85, 90, 95, 100}
-</code></pre><h5 id="添加元素-2"><a href="#添加元素-2" class="headerlink" title="添加元素"></a>添加元素</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">grade_set.add(<span class="number">60</span>)</div><div class="line">grade_set</div></pre></td></tr></table></figure>
-<pre><code>{60, 85, 90, 95, 100}
-</code></pre><h5 id="删除元素-1"><a href="#删除元素-1" class="headerlink" title="删除元素"></a>删除元素</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">grade_set.remove(<span class="number">60</span>)</div><div class="line">grade_set</div></pre></td></tr></table></figure>
-<pre><code>{85, 90, 95, 100}
-</code></pre><h5 id="求元素长度"><a href="#求元素长度" class="headerlink" title="求元素长度"></a>求元素长度</h5><p>这个可以对很多有重复的list，通过set求不同元素的个数</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">print(len(grade_set))</div><div class="line">len(set([<span class="number">100</span>,<span class="number">100</span>,<span class="number">100</span>,<span class="number">90</span>,<span class="number">90</span>,<span class="number">90</span>]))</div></pre></td></tr></table></figure>
-<pre><code>4
-
-
-
-
-
-2
-</code></pre><h4 id="元组Tuples"><a href="#元组Tuples" class="headerlink" title="元组Tuples"></a>元组Tuples</h4><p>用()表示</p>
-<p>元组是一个值的有序列表（不可改变）。从很多方面来说，元组和列表都很相似。和列表最重要的不同在于，元组可以在字典中用作键key，还可以作为集合的元素，而列表不行。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">data = &#123;(x, x + <span class="number">1</span>): x <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">10</span>)&#125;</div><div class="line">data</div></pre></td></tr></table></figure>
-<pre><code>{(0, 1): 0,
- (1, 2): 1,
- (2, 3): 2,
- (3, 4): 3,
- (4, 5): 4,
- (5, 6): 5,
- (6, 7): 6,
- (7, 8): 7,
- (8, 9): 8,
- (9, 10): 9}
-</code></pre><h3 id="控制语句"><a href="#控制语句" class="headerlink" title="控制语句"></a>控制语句</h3><ul>
-<li>for 循环</li>
-<li>while 循环</li>
-<li>if 条件语句</li>
-</ul>
-<p>所有的控制语句后面都必须有冒号：表示，否则编译不成功</p>
-<h4 id="for-循环"><a href="#for-循环" class="headerlink" title="for 循环"></a>for 循环</h4><p>在python中 for 循环可以完成绝大部分循环功能。</p>
-<h5 id="for-a-in-b"><a href="#for-a-in-b" class="headerlink" title="for a in b:"></a><code>for a in b:</code></h5><p>表示将b中的元素一个一个赋值给a直到所有结束</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">words = [<span class="string">'cat'</span>, <span class="string">'dog'</span>, <span class="string">'good'</span>, <span class="string">'hello'</span>]</div><div class="line"><span class="keyword">for</span> word <span class="keyword">in</span> words:</div><div class="line">    print(word, len(words))</div></pre></td></tr></table></figure>
-<pre><code>cat 4
-dog 4
-good 4
-hello 4
-</code></pre><h5 id="range"><a href="#range" class="headerlink" title="range()"></a>range()</h5><p>range(a,b)表示生成一个[a, b)的整数列表a默认为0，则range(10)表示生成0到9一共10个整数</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">10</span>):</div><div class="line">    print(i)</div></pre></td></tr></table></figure>
-<pre><code>0
-1
-2
-3
-4
-5
-6
-7
-8
-9
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(len(words)):</div><div class="line">    print(i, words[i])</div></pre></td></tr></table></figure>
-<pre><code>0 cat
-1 dog
-2 good
-3 hello
-</code></pre><h4 id="while-和-if"><a href="#while-和-if" class="headerlink" title="while 和 if"></a>while 和 if</h4><p>while 和 if 使用与c语言相差不大</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">n = <span class="number">3</span></div><div class="line">x = <span class="number">10</span></div><div class="line">y = x</div><div class="line"><span class="keyword">while</span> n != <span class="number">0</span> :</div><div class="line">    y = y * x</div><div class="line">    n = n - <span class="number">1</span></div><div class="line">y</div></pre></td></tr></table></figure>
-<pre><code>10000
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">x = <span class="number">100</span></div><div class="line"><span class="keyword">if</span> x % <span class="number">10</span> == <span class="number">0</span>:</div><div class="line">    print(<span class="string">'x是10的倍数'</span>)</div><div class="line"><span class="keyword">else</span>:</div><div class="line">    print(<span class="string">'x不是10的倍数'</span>)</div></pre></td></tr></table></figure>
-<pre><code>x是10的倍数
-</code></pre><h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><p>Python用 <code>def</code> 定义 函数，<code>def 函数名(要传入的参数):</code> 注意不要漏了后面的冒号，否是编译失败。另外，函数的内容必须与函数首部有一个<code>tab</code>键的缩进，否则也会失败。</p>
-<p>另外，和c语言一样，传入函数的参数只在函数内部有效，出了函数则无效</p>
-<h4 id="函数定义"><a href="#函数定义" class="headerlink" title="函数定义"></a>函数定义</h4><p>比如我们要定义平方公式:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">power_2</span><span class="params">(x)</span>:</span></div><div class="line">    y = x * x</div><div class="line">    <span class="keyword">return</span> y</div></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">power_2(<span class="number">10</span>)</div></pre></td></tr></table></figure>
-<pre><code>100
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## x的n次方</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">power_n</span><span class="params">(x, n)</span>:</span></div><div class="line">    y = x</div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>,n):</div><div class="line">        y = x * y</div><div class="line">    <span class="keyword">return</span> y</div></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">power_n(<span class="number">10</span>, n=<span class="number">3</span>)</div></pre></td></tr></table></figure>
-<pre><code>1000
-</code></pre><h4 id="函数默认值"><a href="#函数默认值" class="headerlink" title="函数默认值"></a>函数默认值</h4><p>如果我们想定义一个n次方函数，可是我们常用的是平方，如果每次都要写n=2就有点麻烦了。所以可以在定义的时候就是先默认n=2这样计算平方的时候只用指定x就可以了，想要计算n次方，像之前那样指定n就可以了。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">power</span><span class="params">(x, n=<span class="number">2</span>)</span>:</span></div><div class="line">    y = x</div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>,n):</div><div class="line">        y = x * y</div><div class="line">    <span class="keyword">return</span> y</div></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">power(<span class="number">10</span>)</div></pre></td></tr></table></figure>
-<pre><code>100
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">power(<span class="number">10</span>, <span class="number">4</span>)</div></pre></td></tr></table></figure>
-<pre><code>10000
-</code></pre><h2 id="NumPy"><a href="#NumPy" class="headerlink" title="NumPy"></a>NumPy</h2><p>Numpy是Python中用于科学计算的核心库。它提供了高性能的多维数组对象，以及相关工具。</p>
-<p>内容包含：</p>
-<ul>
-<li>数组array的基本操作</li>
-<li>数组的运算</li>
-</ul>
-<p>参考：</p>
-<ul>
-<li>Numpy quickstart tutorial ：<a href="https://docs.scipy.org/doc/numpy-dev/user/quickstart.html" target="_blank" rel="external">https://docs.scipy.org/doc/numpy-dev/user/quickstart.html</a></li>
-</ul>
-<h3 id="数组Arrays"><a href="#数组Arrays" class="headerlink" title="数组Arrays"></a>数组Arrays</h3><p>简单来说，NumPy的对象就是一个多维数组。它由不同的元素组成一个表，所有的元素类型都相同，并且可以通过整数来访问元素。在NumPy中，维度称为轴（axes），维度的个数是秩（rank），数组的大小是一个由整型数构成的元组，可以描述数组不同维度上的大小。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## 导入numpy</span></div><div class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</div></pre></td></tr></table></figure>
-<h4 id="创建数组"><a href="#创建数组" class="headerlink" title="创建数组"></a>创建数组</h4><h5 id="1维"><a href="#1维" class="headerlink" title="1维"></a>1维</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">a = np.array([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>])</div><div class="line">a</div></pre></td></tr></table></figure>
-<pre><code>array([1, 2, 3, 4, 5])
-</code></pre><h5 id="2-维"><a href="#2-维" class="headerlink" title="2 维"></a>2 维</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">b = np.array([[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],[<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>]])</div><div class="line">b</div></pre></td></tr></table></figure>
-<pre><code>array([[1, 2, 3],
-       [4, 5, 6],
-       [7, 8, 9]])
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## 数组的维度</span></div><div class="line">b.shape</div></pre></td></tr></table></figure>
-<pre><code>(3, 3)
-</code></pre><h5 id="0数组"><a href="#0数组" class="headerlink" title="0数组"></a>0数组</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">c = np.zeros([<span class="number">3</span>,<span class="number">3</span>])</div><div class="line">c</div></pre></td></tr></table></figure>
-<pre><code>array([[ 0.,  0.,  0.],
-       [ 0.,  0.,  0.],
-       [ 0.,  0.,  0.]])
-</code></pre><h5 id="单位数组"><a href="#单位数组" class="headerlink" title="单位数组"></a>单位数组</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">d = np.ones([<span class="number">3</span>,<span class="number">3</span>])</div><div class="line">d</div></pre></td></tr></table></figure>
-<pre><code>array([[ 1.,  1.,  1.],
-       [ 1.,  1.,  1.],
-       [ 1.,  1.,  1.]])
-</code></pre><h5 id="随机数组"><a href="#随机数组" class="headerlink" title="随机数组"></a>随机数组</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## 标准正态</span></div><div class="line">e = np.random.randn(<span class="number">3</span>,<span class="number">3</span>)</div><div class="line">e</div></pre></td></tr></table></figure>
-<pre><code>array([[ 0.83501996,  0.02049602, -0.65572486],
-       [ 0.4146055 ,  1.17995873,  0.30880011],
-       [ 0.03466711,  1.1188649 , -1.59032107]])
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## 0,1 均匀分布</span></div><div class="line">f = np.random.rand(<span class="number">3</span>,<span class="number">3</span>)</div><div class="line">f</div></pre></td></tr></table></figure>
-<pre><code>array([[ 0.33050181,  0.96588204,  0.67309195],
-       [ 0.53159039,  0.65490935,  0.53038985],
-       [ 0.2754414 ,  0.64880951,  0.16782205]])
-</code></pre><h4 id="访问数组"><a href="#访问数组" class="headerlink" title="访问数组"></a>访问数组</h4><h5 id="切片访问"><a href="#切片访问" class="headerlink" title="切片访问"></a>切片访问</h5><p>切片和Python列表类似，numpy数组可以使用切片语法。因为数组可以是多维的，所以你必须为每个维度指定好切片。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">a = np.array([[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>], [<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>], [<span class="number">9</span>,<span class="number">10</span>,<span class="number">11</span>,<span class="number">12</span>], [<span class="number">13</span>,<span class="number">14</span>,<span class="number">15</span>,<span class="number">16</span>]])</div><div class="line">a</div></pre></td></tr></table></figure>
-<pre><code>array([[ 1,  2,  3,  4],
-       [ 5,  6,  7,  8],
-       [ 9, 10, 11, 12],
-       [13, 14, 15, 16]])
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">a[<span class="number">2</span>,<span class="number">2</span>]</div></pre></td></tr></table></figure>
-<pre><code>11
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## 取a中第0维的第1到3序列的元素，取第1维的第2到3序列的元素</span></div><div class="line">a[<span class="number">0</span>:<span class="number">3</span>,<span class="number">1</span>:<span class="number">3</span>]</div></pre></td></tr></table></figure>
-<pre><code>array([[ 2,  3],
-       [ 6,  7],
-       [10, 11]])
-</code></pre><h5 id="整数访问"><a href="#整数访问" class="headerlink" title="整数访问"></a>整数访问</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## 取a第0维的第1和第4序列元素，第1维的第2和第4个元素</span></div><div class="line">a[[<span class="number">0</span>, <span class="number">3</span>], [<span class="number">1</span>, <span class="number">3</span>]]</div></pre></td></tr></table></figure>
-<pre><code>array([ 2, 16])
-</code></pre><h5 id="布尔型数组访问"><a href="#布尔型数组访问" class="headerlink" title="布尔型数组访问"></a>布尔型数组访问</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">a = np.array([[<span class="number">1</span>,<span class="number">2</span>], [<span class="number">3</span>, <span class="number">4</span>], [<span class="number">5</span>, <span class="number">6</span>]])</div><div class="line">a</div></pre></td></tr></table></figure>
-<pre><code>array([[1, 2],
-       [3, 4],
-       [5, 6]])
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">bool_idx = (a &gt; <span class="number">2</span>)</div><div class="line">bool_idx</div></pre></td></tr></table></figure>
-<pre><code>array([[False, False],
-       [ True,  True],
-       [ True,  True]], dtype=bool)
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">a[bool_idx]</div></pre></td></tr></table></figure>
-<pre><code>array([3, 4, 5, 6])
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## 合起来就是</span></div><div class="line">a[a &gt; <span class="number">2</span>]</div></pre></td></tr></table></figure>
-<pre><code>array([3, 4, 5, 6])
-</code></pre><p>为了教程的简洁，有很多数组访问的细节我们没有详细说明，可以查看<a href="https://docs.scipy.org/doc/numpy/reference/arrays.indexing.html" target="_blank" rel="external">文档</a>。</p>
-<h3 id="数组运算"><a href="#数组运算" class="headerlink" title="数组运算"></a>数组运算</h3><p>像Matlab一样，NumPy既可以对数组进行逐个元素运算，也可以进行矩阵运算。一般默认是逐个元素运算。</p>
-<h4 id="逐个元素运算"><a href="#逐个元素运算" class="headerlink" title="逐个元素运算"></a>逐个元素运算</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">x = np.array([[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>]])</div><div class="line">y = np.array([[<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>]])</div></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">x + y</div></pre></td></tr></table></figure>
-<pre><code>array([[ 6,  8],
-       [10, 12]])
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">x * y</div></pre></td></tr></table></figure>
-<pre><code>array([[ 5, 12],
-       [21, 32]])
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">x ** y</div></pre></td></tr></table></figure>
-<pre><code>array([[    1,    64],
-       [ 2187, 65536]], dtype=int32)
-</code></pre><h4 id="内置函数"><a href="#内置函数" class="headerlink" title="内置函数"></a>内置函数</h4><h5 id="求和-np-sum"><a href="#求和-np-sum" class="headerlink" title="求和 np.sum"></a>求和 np.sum</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">x = np.array([[ <span class="number">0</span>,  <span class="number">1</span>,  <span class="number">2</span>,  <span class="number">3</span>],</div><div class="line">       [ <span class="number">4</span>,  <span class="number">5</span>,  <span class="number">6</span>,  <span class="number">7</span>],</div><div class="line">       [ <span class="number">8</span>,  <span class="number">9</span>, <span class="number">10</span>, <span class="number">11</span>],</div><div class="line">       [<span class="number">12</span>, <span class="number">13</span>, <span class="number">14</span>, <span class="number">15</span>]])</div><div class="line">x</div></pre></td></tr></table></figure>
-<pre><code>array([[ 0,  1,  2,  3],
-       [ 4,  5,  6,  7],
-       [ 8,  9, 10, 11],
-       [12, 13, 14, 15]])
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## 全部求和</span></div><div class="line">np.sum(x)</div></pre></td></tr></table></figure>
-<pre><code>120
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## 对某个维度求和,如对第0维</span></div><div class="line">np.sum(x, axis=<span class="number">0</span>)</div></pre></td></tr></table></figure>
-<pre><code>array([24, 28, 32, 36])
-</code></pre><p>想要了解更多函数，可以查看<a href="https://docs.scipy.org/doc/numpy/reference/routines.math.html" target="_blank" rel="external">文档</a>。</p>
-<h4 id="数组矩阵运算"><a href="#数组矩阵运算" class="headerlink" title="数组矩阵运算"></a>数组矩阵运算</h4><h5 id="矩阵相乘"><a href="#矩阵相乘" class="headerlink" title="矩阵相乘"></a>矩阵相乘</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">x = np.array([[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>]])</div><div class="line">y = np.array([[<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>]])</div></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">np.dot(x, y)</div></pre></td></tr></table></figure>
-<pre><code>array([[19, 22],
-       [43, 50]])
-</code></pre><h4 id="广播（boardcast）"><a href="#广播（boardcast）" class="headerlink" title="广播（boardcast）"></a>广播（boardcast）</h4><p>广播是一种强有力的机制，它让NumPy可以让不同大小的矩阵在一起进行数学计算。<br>我们常常会有一个小的矩阵和一个大的矩阵，然后我们会需要用小的矩阵对大的矩阵做一些计算。</p>
-<p>举个例子，如果我们想要把一个向量加到矩阵的每一行，我们可以通过循环将向量与矩阵每行分别进行相加</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">x = np.array([[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],[<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>],[<span class="number">10</span>,<span class="number">11</span>,<span class="number">12</span>]])</div><div class="line">x</div></pre></td></tr></table></figure>
-<pre><code>array([[ 1,  2,  3],
-       [ 4,  5,  6],
-       [ 7,  8,  9],
-       [10, 11, 12]])
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">y = np.array([<span class="number">1</span>,<span class="number">0</span>,<span class="number">1</span>])</div><div class="line">y</div></pre></td></tr></table></figure>
-<pre><code>array([1, 0, 1])
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">v= np.empty_like(x)</div><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(x.shape[<span class="number">0</span>]):</div><div class="line">    v[i, :] = x[i, :] + y</div><div class="line">v</div></pre></td></tr></table></figure>
-<pre><code>array([[ 2,  2,  4],
-       [ 5,  5,  7],
-       [ 8,  8, 10],
-       [11, 11, 13]])
-</code></pre><p>当x的维度非常大的时候，这样的循环开销的非常大。换一种思路是将向量先拓展成矩阵的维度，然后再进行两者相加。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">y_expand = np.tile(y, (x.shape[<span class="number">0</span>], <span class="number">1</span>))</div><div class="line">y_expand</div></pre></td></tr></table></figure>
-<pre><code>array([[1, 0, 1],
-       [1, 0, 1],
-       [1, 0, 1],
-       [1, 0, 1]])
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">x + y_expand</div></pre></td></tr></table></figure>
-<pre><code>array([[ 2,  2,  4],
-       [ 5,  5,  7],
-       [ 8,  8, 10],
-       [11, 11, 13]])
-</code></pre><p>更方便的是，Numpy广播机制可以让我们不用创建y_expand，就能直接运算</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">x + y</div></pre></td></tr></table></figure>
-<pre><code>array([[ 2,  2,  4],
-       [ 5,  5,  7],
-       [ 8,  8, 10],
-       [11, 11, 13]])
-</code></pre><p>对两个数组使用广播机制要遵守下列规则：</p>
-<ul>
-<li>如果数组的秩不同，使用1来将秩较小的数组进行扩展，直到两个数组的尺寸的长度都一样。</li>
-<li>如果两个数组在某个维度上的长度是一样的，或者其中一个数组在该维度上长度为1，那么我们就说这两个数组在该维度上是相容的。</li>
-<li>如果两个数组在所有维度上都是相容的，他们就能使用广播。</li>
-<li>如果两个输入数组的尺寸不同，那么注意其中较大的那个尺寸。因为广播之后，两个数组的尺寸将和那个较大的尺寸一样。</li>
-<li><p>在任何一个维度上，如果一个数组的长度为1，另一个数组长度大于1，那么在该维度上，就好像是对第一个数组进行了复制。</p>
-<p>如果上述解释看不明白，强烈推荐阅读<a href="https://docs.scipy.org/doc/numpy/user/basics.broadcasting.html" target="_blank" rel="external">文档</a>中的例子和这个<a href="http://scipy.github.io/old-wiki/pages/EricsBroadcastingDoc" target="_blank" rel="external">解释</a>。</p>
-</li>
-</ul>
-<p>这篇教程涉及了你需要了解的numpy中的一些重要内容，但是numpy远不止如此。可以查阅<a href="https://docs.scipy.org/doc/numpy/reference/" target="_blank" rel="external">numpy</a>文档来了解更多。</p>
-<h2 id="Matplotlib"><a href="#Matplotlib" class="headerlink" title="Matplotlib"></a>Matplotlib</h2><p>Matplotlib是一个作图库。这里简要介绍matplotlib.pyplot模块，功能和MATLAB的作图功能类似。</p>
-<p>内容包括：</p>
-<ul>
-<li>绘图</li>
-<li>子图</li>
-<li>其他类型图</li>
-</ul>
-<p>参考：</p>
-<ul>
-<li>matplotlib tutorial： <a href="https://matplotlib.org/tutorials/index.html" target="_blank" rel="external">https://matplotlib.org/tutorials/index.html</a></li>
-</ul>
-<p>在jupyter 运行matplotlib的时候，要先设置 <code>%matplotlib inline</code> 使得图像能在jupyter中显示</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</div><div class="line">%matplotlib inline</div></pre></td></tr></table></figure>
-<h3 id="绘图"><a href="#绘图" class="headerlink" title="绘图"></a>绘图</h3><p>matplotlib库中最重要的函数是Plot。该函数允许你做出2D图形，如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">x = np.linspace(<span class="number">0</span>, <span class="number">3</span> * np.pi, <span class="number">1000</span>) <span class="comment">##生成[0, 3 pi]之间的1000个有序数</span></div><div class="line">y = np.sin(x)</div></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">plt.plot(x, y)  <span class="comment">##绘图</span></div><div class="line">plt.show() <span class="comment">##图像展示</span></div></pre></td></tr></table></figure>
-<p><img src="/2017/10/14/数据挖掘之python/0.2.python turorial/output_144_0.png" alt="png"></p>
-<h4 id="图像的一些基本操作"><a href="#图像的一些基本操作" class="headerlink" title="图像的一些基本操作"></a>图像的一些基本操作</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## 控制图像大小</span></div><div class="line">fig = plt.figure(figsize=(<span class="number">10</span>,<span class="number">6</span>))</div><div class="line"></div><div class="line"><span class="comment">## 绘图</span></div><div class="line"><span class="comment">## 添加标签，改变颜色</span></div><div class="line">plt.plot(x, y, c = <span class="string">'g'</span>,label=<span class="string">'f(x) = sin(x)'</span>)</div><div class="line"></div><div class="line"><span class="comment">## 添加不同的图</span></div><div class="line">z = np.cos(x)</div><div class="line">plt.plot(x, z, label = <span class="string">'f(x) = cos(x)'</span>)</div><div class="line"></div><div class="line"><span class="comment">##添加x标签和y标签</span></div><div class="line">plt.xlabel(<span class="string">'x axis label'</span>)</div><div class="line">plt.ylabel(<span class="string">'y axis label'</span>)</div><div class="line"></div><div class="line"><span class="comment">## 添加图例</span></div><div class="line">plt.legend()</div><div class="line"></div><div class="line"><span class="comment">## 添加标题</span></div><div class="line">plt.title(<span class="string">'cos(x) and sin(x)'</span>)</div><div class="line"></div><div class="line"><span class="comment">##保存图像</span></div><div class="line"><span class="comment">#fig.savefig('fig.png')</span></div><div class="line"></div><div class="line">plt.show()</div></pre></td></tr></table></figure>
-<p><img src="/2017/10/14/数据挖掘之python/0.2.python turorial/output_146_0.png" alt="png"></p>
-<p>可以在文档中阅读更多关于<a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.plot" target="_blank" rel="external">plot</a>的内容。</p>
-<h3 id="绘制子图"><a href="#绘制子图" class="headerlink" title="绘制子图"></a>绘制子图</h3><p>可以使用subplot函数来在一幅图中画不同的东西</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## 定义子图的位置</span></div><div class="line">plt.subplot(<span class="number">2</span>,<span class="number">1</span>,<span class="number">1</span>) <span class="comment">##表示创建2行，1列个子图，然后对第1个子图进行操作</span></div><div class="line">plt.plot(x,y, label=<span class="string">'sin(x)'</span>)</div><div class="line">plt.legend()</div><div class="line">plt.title(<span class="string">'sin(x)'</span>)</div><div class="line"></div><div class="line">plt.subplot(<span class="number">2</span>,<span class="number">1</span>,<span class="number">2</span>) <span class="comment">##对第2个子图进行操作</span></div><div class="line">plt.plot(x, z, label=<span class="string">'cos(x)'</span>)</div><div class="line">plt.legend()</div><div class="line">plt.title(<span class="string">'con(x)'</span>)</div></pre></td></tr></table></figure>
-<pre><code>&lt;matplotlib.text.Text at 0x21b8db6b128&gt;
-</code></pre><p><img src="/2017/10/14/数据挖掘之python/0.2.python turorial/output_149_1.png" alt="png"></p>
-<h3 id="其他类型的图像"><a href="#其他类型的图像" class="headerlink" title="其他类型的图像"></a>其他类型的图像</h3><h4 id="散点图"><a href="#散点图" class="headerlink" title="散点图"></a>散点图</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">plt.scatter(np.random.rand(<span class="number">100</span>), np.random.rand(<span class="number">100</span>))</div></pre></td></tr></table></figure>
-<pre><code>&lt;matplotlib.collections.PathCollection at 0x21b8ba00e80&gt;
-</code></pre><p><img src="/2017/10/14/数据挖掘之python/0.2.python turorial/output_152_1.png" alt="png"></p>
-<h4 id="hist图"><a href="#hist图" class="headerlink" title="hist图"></a>hist图</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">plt.hist(np.random.randn(<span class="number">1000</span>))</div></pre></td></tr></table></figure>
-<pre><code>(array([   1.,    3.,   24.,   92.,  198.,  286.,  240.,  112.,   38.,    6.]),
- array([-4.03366139, -3.31693408, -2.60020677, -1.88347946, -1.16675215,
-        -0.45002484,  0.26670247,  0.98342978,  1.70015709,  2.4168844 ,
-         3.13361171]),
- &lt;a list of 10 Patch objects&gt;)
-</code></pre><p><img src="/2017/10/14/数据挖掘之python/0.2.python turorial/output_154_1.png" alt="png"></p>
-<p>更多内容，可以阅读<a href="https://matplotlib.org/tutorials/index.html" target="_blank" rel="external">文档</a></p>
-]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css">]]></content>
     
     <summary type="html">
     
-      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;h1 id=&quot;Python-Tutorial&quot;&gt;&lt;a href=&quot;#Python
+      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;
     
     </summary>
     
-      <category term="数据挖掘之python" scheme="http://yoursite.com/categories/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B9%8Bpython/"/>
-    
-    
-      <category term="python" scheme="http://yoursite.com/tags/python/"/>
-    
-      <category term="numpy" scheme="http://yoursite.com/tags/numpy/"/>
-    
-      <category term="matplotlib" scheme="http://yoursite.com/tags/matplotlib/"/>
     
   </entry>
   
@@ -1176,6 +801,67 @@ Decision Support Systems 47 (2009) 547–553.<a href="#fnref:21" rev="footnote">
   </entry>
   
   <entry>
+    <title>通往财富自由之路_2</title>
+    <link href="http://yoursite.com/2017/08/23/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF_2/"/>
+    <id>http://yoursite.com/2017/08/23/通往财富自由之路/通往财富自由之路_2/</id>
+    <published>2017-08-23T01:05:21.721Z</published>
+    <updated>2017-08-23T01:05:21.721Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="通往财富自由之路"><a href="#通往财富自由之路" class="headerlink" title="通往财富自由之路"></a>通往财富自由之路</h1><ul>
+<li><strong>资本</strong></li>
+<li><strong>落后</strong></li>
+<li><strong>多维竞争</strong></li>
+</ul>
+<h2 id="资本"><a href="#资本" class="headerlink" title="资本"></a>资本</h2><p>资本是由资金构成，但仅仅是资金是不可能称为资本的。资金要想要为资本有三个考虑因素。</p>
+<ul>
+<li>资金的大小</li>
+<li>资金的使用时限</li>
+<li>资金背后使用者的智慧</li>
+</ul>
+<p>资金只有足够太，投资带来的收益对我们才真正有意义。资金的使用时限足够长，我们才能拿这部分资金用作投资。若是完全不懂投资，则再多的资金也不配当做资本用于投资。</p>
+<p>资金背后的智慧是可以习得的。习得的方法是从各个维度（金额、时限、智慧）逐步循环突破。</p>
+<p>第一个要突破的是投资的重点在于投资的收益率，而不在于投资的收益额。</p>
+<p>第二个要突破的是能不能给自己的投资款“判上无期徒刑”。心理学家通过大量调查得到绝大部分人若是丢失年收入的10%，这对他们的生活完全没有影响。所以，我们完全有可能把自己的部分资金当成丢失，给他们“判上无期徒刑”。</p>
+<p>第三个要突破的是投资知识、智慧、经验几乎只能从实践中得到。这个漫长的过程不可或缺，而且不是聪明就可以跨过的，就像是怀胎就是需要十个月，不管是谁都不能跨过这个过程，而且几乎不可能缩短这个过程。</p>
+<p>不论是工作还是学习，总有一群人比别人更出众。除去所谓的能力差异，他们还有的一个特质是：</p>
+<blockquote>
+<p><strong>他们通常会主动选择</strong></p>
+</blockquote>
+<p>所以,从现在开始主动选择，积累投资的智慧。</p>
+<h2 id="落后"><a href="#落后" class="headerlink" title="落后"></a>落后</h2><p>过去，我们常常凭感觉，觉得平均水准以上就是不落后。</p>
+<p>然而这个感觉肯定是有偏差的。人们的感觉永远是有偏差的，比如90%的人认为自己的驾驶水平处于平均水准以上。因为，我们并不能感知整个世界，我们只能通过感知自己的周遭来判断自己是否处于平均水准之上。</p>
+<p>进入二十一世纪后，有个重大的改变正在揭示更为残酷的事实：</p>
+<blockquote>
+<p><strong>弄不好，百分之一之后都是落后</strong></p>
+</blockquote>
+<p>因为，现在互联网几乎连接了所有的人。我们每个人能感知的世界，不再是我们周遭的世界而已，我们几乎可以感知到世界的每一个角落。这种感知范围的变化，会让每个人产生不同的心理变化。我们能看到更多的牛人，看到自己与他们之间的差距。有时候就算处于前1%，我们还有能看到无数比我们厉害的很多的人，我们一样会觉得自己是落后的，更别提处于平均水准之上而已了。</p>
+<p>所以，要想不落后，我们要成为前1%，甚至前0.1%。</p>
+<h2 id="多维竞争"><a href="#多维竞争" class="headerlink" title="多维竞争"></a>多维竞争</h2><p>要想不落后其实很难，因为在每个领域永远只有一个“第一”，只有少数几个“名列前茅”，剩下绝大部分的都是落后。</p>
+<p>但仔细想想也没有那么的难，如果我们能换个角度度看问题。我们不一定只能在一个领域发展，如果我们能够自己开拓新的维度，事情就变得不一样了。将多个领域的知识、技能融汇在一起，就可能从多个维度超过一个维度的顶尖人物。</p>
+<p>举个不太准确的数学例子，在一个维度顶尖人物可能得分95分，而我们只有90分，可是我们还能整合其他维度的知识应用在这个领域，假设那个领域我们的分80分，我们得分就远远超过那个顶尖人物了。当然，这只是直观的感受，不太确切。</p>
+<p>要想多个维度同时发展，首先我们必须要在一个维度做的足够好。因为，我们生活有成本。如果在所有方面我们都是平平庸庸，那么我们生活都可能难以为继，更别提再去发展，整合别的维度。另外，如果不能在一个领域做得足够好，那么也难以将其他领域的知识、技能整合应用到这领域。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;h1 id=&quot;通往财富自由之路&quot;&gt;&lt;a href=&quot;#通往财富自由之路&quot; cla
+    
+    </summary>
+    
+      <category term="通往财富自由之路" scheme="http://yoursite.com/categories/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF/"/>
+    
+    
+      <category term="通往财富自由之路" scheme="http://yoursite.com/tags/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF/"/>
+    
+      <category term="资本" scheme="http://yoursite.com/tags/%E8%B5%84%E6%9C%AC/"/>
+    
+      <category term="落后" scheme="http://yoursite.com/tags/%E8%90%BD%E5%90%8E/"/>
+    
+      <category term="多维竞争" scheme="http://yoursite.com/tags/%E5%A4%9A%E7%BB%B4%E7%AB%9E%E4%BA%89/"/>
+    
+  </entry>
+  
+  <entry>
     <title>通往财富自由之路_3</title>
     <link href="http://yoursite.com/2017/08/23/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF_3/"/>
     <id>http://yoursite.com/2017/08/23/通往财富自由之路/通往财富自由之路_3/</id>
@@ -1269,67 +955,6 @@ Decision Support Systems 47 (2009) 547–553.<a href="#fnref:21" rev="footnote">
   </entry>
   
   <entry>
-    <title>通往财富自由之路_2</title>
-    <link href="http://yoursite.com/2017/08/23/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF_2/"/>
-    <id>http://yoursite.com/2017/08/23/通往财富自由之路/通往财富自由之路_2/</id>
-    <published>2017-08-23T01:05:21.721Z</published>
-    <updated>2017-08-23T01:05:21.721Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="通往财富自由之路"><a href="#通往财富自由之路" class="headerlink" title="通往财富自由之路"></a>通往财富自由之路</h1><ul>
-<li><strong>资本</strong></li>
-<li><strong>落后</strong></li>
-<li><strong>多维竞争</strong></li>
-</ul>
-<h2 id="资本"><a href="#资本" class="headerlink" title="资本"></a>资本</h2><p>资本是由资金构成，但仅仅是资金是不可能称为资本的。资金要想要为资本有三个考虑因素。</p>
-<ul>
-<li>资金的大小</li>
-<li>资金的使用时限</li>
-<li>资金背后使用者的智慧</li>
-</ul>
-<p>资金只有足够太，投资带来的收益对我们才真正有意义。资金的使用时限足够长，我们才能拿这部分资金用作投资。若是完全不懂投资，则再多的资金也不配当做资本用于投资。</p>
-<p>资金背后的智慧是可以习得的。习得的方法是从各个维度（金额、时限、智慧）逐步循环突破。</p>
-<p>第一个要突破的是投资的重点在于投资的收益率，而不在于投资的收益额。</p>
-<p>第二个要突破的是能不能给自己的投资款“判上无期徒刑”。心理学家通过大量调查得到绝大部分人若是丢失年收入的10%，这对他们的生活完全没有影响。所以，我们完全有可能把自己的部分资金当成丢失，给他们“判上无期徒刑”。</p>
-<p>第三个要突破的是投资知识、智慧、经验几乎只能从实践中得到。这个漫长的过程不可或缺，而且不是聪明就可以跨过的，就像是怀胎就是需要十个月，不管是谁都不能跨过这个过程，而且几乎不可能缩短这个过程。</p>
-<p>不论是工作还是学习，总有一群人比别人更出众。除去所谓的能力差异，他们还有的一个特质是：</p>
-<blockquote>
-<p><strong>他们通常会主动选择</strong></p>
-</blockquote>
-<p>所以,从现在开始主动选择，积累投资的智慧。</p>
-<h2 id="落后"><a href="#落后" class="headerlink" title="落后"></a>落后</h2><p>过去，我们常常凭感觉，觉得平均水准以上就是不落后。</p>
-<p>然而这个感觉肯定是有偏差的。人们的感觉永远是有偏差的，比如90%的人认为自己的驾驶水平处于平均水准以上。因为，我们并不能感知整个世界，我们只能通过感知自己的周遭来判断自己是否处于平均水准之上。</p>
-<p>进入二十一世纪后，有个重大的改变正在揭示更为残酷的事实：</p>
-<blockquote>
-<p><strong>弄不好，百分之一之后都是落后</strong></p>
-</blockquote>
-<p>因为，现在互联网几乎连接了所有的人。我们每个人能感知的世界，不再是我们周遭的世界而已，我们几乎可以感知到世界的每一个角落。这种感知范围的变化，会让每个人产生不同的心理变化。我们能看到更多的牛人，看到自己与他们之间的差距。有时候就算处于前1%，我们还有能看到无数比我们厉害的很多的人，我们一样会觉得自己是落后的，更别提处于平均水准之上而已了。</p>
-<p>所以，要想不落后，我们要成为前1%，甚至前0.1%。</p>
-<h2 id="多维竞争"><a href="#多维竞争" class="headerlink" title="多维竞争"></a>多维竞争</h2><p>要想不落后其实很难，因为在每个领域永远只有一个“第一”，只有少数几个“名列前茅”，剩下绝大部分的都是落后。</p>
-<p>但仔细想想也没有那么的难，如果我们能换个角度度看问题。我们不一定只能在一个领域发展，如果我们能够自己开拓新的维度，事情就变得不一样了。将多个领域的知识、技能融汇在一起，就可能从多个维度超过一个维度的顶尖人物。</p>
-<p>举个不太准确的数学例子，在一个维度顶尖人物可能得分95分，而我们只有90分，可是我们还能整合其他维度的知识应用在这个领域，假设那个领域我们的分80分，我们得分就远远超过那个顶尖人物了。当然，这只是直观的感受，不太确切。</p>
-<p>要想多个维度同时发展，首先我们必须要在一个维度做的足够好。因为，我们生活有成本。如果在所有方面我们都是平平庸庸，那么我们生活都可能难以为继，更别提再去发展，整合别的维度。另外，如果不能在一个领域做得足够好，那么也难以将其他领域的知识、技能整合应用到这领域。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;h1 id=&quot;通往财富自由之路&quot;&gt;&lt;a href=&quot;#通往财富自由之路&quot; cla
-    
-    </summary>
-    
-      <category term="通往财富自由之路" scheme="http://yoursite.com/categories/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF/"/>
-    
-    
-      <category term="通往财富自由之路" scheme="http://yoursite.com/tags/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF/"/>
-    
-      <category term="资本" scheme="http://yoursite.com/tags/%E8%B5%84%E6%9C%AC/"/>
-    
-      <category term="落后" scheme="http://yoursite.com/tags/%E8%90%BD%E5%90%8E/"/>
-    
-      <category term="多维竞争" scheme="http://yoursite.com/tags/%E5%A4%9A%E7%BB%B4%E7%AB%9E%E4%BA%89/"/>
-    
-  </entry>
-  
-  <entry>
     <title>深度学习入门</title>
     <link href="http://yoursite.com/2017/08/23/%E7%BC%96%E7%A8%8B/deep%20learning%20introduction/"/>
     <id>http://yoursite.com/2017/08/23/编程/deep learning introduction/</id>
@@ -1391,6 +1016,49 @@ Error = \frac{1}{n}\sum_i(y_i-y^{'}_i)^2</script><p>这样我们就可以把$Err
       <category term="深度学习" scheme="http://yoursite.com/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
     
       <category term="神经网络" scheme="http://yoursite.com/tags/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>组块</title>
+    <link href="http://yoursite.com/2017/08/23/%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0/%E7%BB%84%E5%9D%97/"/>
+    <id>http://yoursite.com/2017/08/23/如何学习/组块/</id>
+    <published>2017-08-23T01:05:21.705Z</published>
+    <updated>2017-08-23T01:05:21.721Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="组块"><a href="#组块" class="headerlink" title="组块"></a>组块</h2><h3 id="了解组块"><a href="#了解组块" class="headerlink" title="了解组块"></a>了解组块</h3><p>组块（Chunking）就根据意义将零碎的信息拼接起来而形成一个新的逻辑整体。这个新的逻辑整体可以让组块更易记忆，同时也可以让你更轻松的将组块整合到所学内容的大致框架中。</p>
+<p>丛神经科学的角度来看，组块就是把简化的而抽象的的思想组块一起的复杂的神经活动。这些思想无论是概念，灵感还是缩写，都是大多数科学、文学和艺术的基础。很多优秀的语言学习项目都是通过结构性的重复和强记联系，即用专注模式学习语言，同时运动和母语国家人的自由交流即发散模式的方法，这能让你铭记基础的词汇和搭配，而且说得新语言也能像母语那样。</p>
+<p>本质上说，组块就是让多个神经元共同运作的网络，只有这样才能平稳有效地进行思考和完成动作。专注的训练和重复可以建立强的记忆痕迹，从而帮助组块，专业的培训是一步一步的，这个过程中小的组块可以形成更大的组块，并且随着学习材料的理解越来越深入，所有的专业知识都是更有创造性的铺路石。</p>
+<p>当你学习一个东西的时候，这个东西是个大的组块，然后你通过一点点的学习不断将学习的东西转为一个个小的组块，之后再将这些小组快组合起来形成一个大的组块，最后你就将这个学会了。最好的组块是那些根深蒂固的，你甚至不需要有意识地去将储存在脑中的模式连接起来，这也正是将复杂的想法、动作和反应组成一个单独的组块的意义所在。</p>
+<p>学习数学和科学也是一样的，在刚开始你会看到一些例题和解决方法，那是因为在刚开始尝试解决问题是，你会有很强的认知负荷，而示范性的例子能在你起步的时候帮助理解，通过理解每个步骤的意思和步骤之间的联系，可能帮你发现问题的重点和隐含原理。思考步骤之间的联系非常重要，这样才能明白为什么在这种情况下要进行这个步骤。</p>
+<h3 id="组块作用"><a href="#组块作用" class="headerlink" title="组块作用"></a>组块作用</h3><ul>
+<li><p>组块能够让大脑工作得更有效率，一旦将某个想法、概念或动作组块后，你就不需要记住这个想法、概念或动作有关的全部细节，你只需要知道最主要的那个概念就行了，这也就是只需记住组块。</p>
+</li>
+<li><p>组块能更好地将新的和原有组块结合起来。为了增长知识和获得专业技能，人们会逐渐地增加头脑中组块的数量和有价值的信息。比如，象棋大师们能轻而易举地回忆出数以千计的不同棋谱；音乐家、语言学家和科学家，都能回忆出他们各自领域内类似的知识组块。无论你学什么科目，你的组块式心理图书馆越大，运用越熟练，你都将能够更轻易地解决问题或者找到解决方法。</p>
+</li>
+<li><p>组块可以帮助我们理解新概念。这是因为当你理解一个组块时，你会发现这一组块能以令人惊讶的方式与相似的组块联系起来。不仅在同一领域中如此，在截然不同的领域中也这样，这就是迁移 (transfer)。专注于你正在学习的单元，你会发现一旦你把第一个问题或概念放进心理图书馆，不论那是什么，第二个概念的进入就会容易一些。然后第三个概念也就更容易，这并不都那么简单，但会越来越容易。</p>
+</li>
+</ul>
+<h3 id="建立组块"><a href="#建立组块" class="headerlink" title="建立组块"></a>建立组块</h3><ul>
+<li><p>全神贯注。当其他事情占用有限的工作记忆时，这就会加大你建立新的神经并且与其它神经的连接的困难。</p>
+</li>
+<li><p>对组块的内容有基本的了解。只有理解了的知识才能与融入你学习的其他材料之中。</p>
+</li>
+<li><p>练习。通过练习，了解背景知识，即不但明白怎么使用这个知识，也明白在什么时候使用这个知识。某件事情，如果知识再看或者理解如何做也不代表能真正做到，只有在你自己实际操作和完全掌握情况相爱才能建立起神经模型。练习能够拓宽组块连接的神经网络，并且确保他们不仅仅是牢固的，而且能够通过不同的途径惊醒访问。背景认识意味着学会在特定的时候使用正确的方法。</p>
+</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;h2 id=&quot;组块&quot;&gt;&lt;a href=&quot;#组块&quot; class=&quot;headerli
+    
+    </summary>
+    
+      <category term="学习何如学习" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0%E4%BD%95%E5%A6%82%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="组块" scheme="http://yoursite.com/tags/%E7%BB%84%E5%9D%97/"/>
     
   </entry>
   
@@ -1502,49 +1170,6 @@ Error = \frac{1}{n}\sum_i(y_i-y^{'}_i)^2</script><p>这样我们就可以把$Err
       <category term="专注思维" scheme="http://yoursite.com/tags/%E4%B8%93%E6%B3%A8%E6%80%9D%E7%BB%B4/"/>
     
       <category term="发散思维" scheme="http://yoursite.com/tags/%E5%8F%91%E6%95%A3%E6%80%9D%E7%BB%B4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>组块</title>
-    <link href="http://yoursite.com/2017/08/23/%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0/%E7%BB%84%E5%9D%97/"/>
-    <id>http://yoursite.com/2017/08/23/如何学习/组块/</id>
-    <published>2017-08-23T01:05:21.705Z</published>
-    <updated>2017-08-23T01:05:21.721Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="组块"><a href="#组块" class="headerlink" title="组块"></a>组块</h2><h3 id="了解组块"><a href="#了解组块" class="headerlink" title="了解组块"></a>了解组块</h3><p>组块（Chunking）就根据意义将零碎的信息拼接起来而形成一个新的逻辑整体。这个新的逻辑整体可以让组块更易记忆，同时也可以让你更轻松的将组块整合到所学内容的大致框架中。</p>
-<p>丛神经科学的角度来看，组块就是把简化的而抽象的的思想组块一起的复杂的神经活动。这些思想无论是概念，灵感还是缩写，都是大多数科学、文学和艺术的基础。很多优秀的语言学习项目都是通过结构性的重复和强记联系，即用专注模式学习语言，同时运动和母语国家人的自由交流即发散模式的方法，这能让你铭记基础的词汇和搭配，而且说得新语言也能像母语那样。</p>
-<p>本质上说，组块就是让多个神经元共同运作的网络，只有这样才能平稳有效地进行思考和完成动作。专注的训练和重复可以建立强的记忆痕迹，从而帮助组块，专业的培训是一步一步的，这个过程中小的组块可以形成更大的组块，并且随着学习材料的理解越来越深入，所有的专业知识都是更有创造性的铺路石。</p>
-<p>当你学习一个东西的时候，这个东西是个大的组块，然后你通过一点点的学习不断将学习的东西转为一个个小的组块，之后再将这些小组快组合起来形成一个大的组块，最后你就将这个学会了。最好的组块是那些根深蒂固的，你甚至不需要有意识地去将储存在脑中的模式连接起来，这也正是将复杂的想法、动作和反应组成一个单独的组块的意义所在。</p>
-<p>学习数学和科学也是一样的，在刚开始你会看到一些例题和解决方法，那是因为在刚开始尝试解决问题是，你会有很强的认知负荷，而示范性的例子能在你起步的时候帮助理解，通过理解每个步骤的意思和步骤之间的联系，可能帮你发现问题的重点和隐含原理。思考步骤之间的联系非常重要，这样才能明白为什么在这种情况下要进行这个步骤。</p>
-<h3 id="组块作用"><a href="#组块作用" class="headerlink" title="组块作用"></a>组块作用</h3><ul>
-<li><p>组块能够让大脑工作得更有效率，一旦将某个想法、概念或动作组块后，你就不需要记住这个想法、概念或动作有关的全部细节，你只需要知道最主要的那个概念就行了，这也就是只需记住组块。</p>
-</li>
-<li><p>组块能更好地将新的和原有组块结合起来。为了增长知识和获得专业技能，人们会逐渐地增加头脑中组块的数量和有价值的信息。比如，象棋大师们能轻而易举地回忆出数以千计的不同棋谱；音乐家、语言学家和科学家，都能回忆出他们各自领域内类似的知识组块。无论你学什么科目，你的组块式心理图书馆越大，运用越熟练，你都将能够更轻易地解决问题或者找到解决方法。</p>
-</li>
-<li><p>组块可以帮助我们理解新概念。这是因为当你理解一个组块时，你会发现这一组块能以令人惊讶的方式与相似的组块联系起来。不仅在同一领域中如此，在截然不同的领域中也这样，这就是迁移 (transfer)。专注于你正在学习的单元，你会发现一旦你把第一个问题或概念放进心理图书馆，不论那是什么，第二个概念的进入就会容易一些。然后第三个概念也就更容易，这并不都那么简单，但会越来越容易。</p>
-</li>
-</ul>
-<h3 id="建立组块"><a href="#建立组块" class="headerlink" title="建立组块"></a>建立组块</h3><ul>
-<li><p>全神贯注。当其他事情占用有限的工作记忆时，这就会加大你建立新的神经并且与其它神经的连接的困难。</p>
-</li>
-<li><p>对组块的内容有基本的了解。只有理解了的知识才能与融入你学习的其他材料之中。</p>
-</li>
-<li><p>练习。通过练习，了解背景知识，即不但明白怎么使用这个知识，也明白在什么时候使用这个知识。某件事情，如果知识再看或者理解如何做也不代表能真正做到，只有在你自己实际操作和完全掌握情况相爱才能建立起神经模型。练习能够拓宽组块连接的神经网络，并且确保他们不仅仅是牢固的，而且能够通过不同的途径惊醒访问。背景认识意味着学会在特定的时候使用正确的方法。</p>
-</li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;h2 id=&quot;组块&quot;&gt;&lt;a href=&quot;#组块&quot; class=&quot;headerli
-    
-    </summary>
-    
-      <category term="学习何如学习" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0%E4%BD%95%E5%A6%82%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="组块" scheme="http://yoursite.com/tags/%E7%BB%84%E5%9D%97/"/>
     
   </entry>
   
