@@ -2,16 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yoursite.com/2017/10/14/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B9%8Bpython/python-%E6%95%99%E7%A8%8B/</loc>
+    <loc>http://yoursite.com/2017/10/14/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B9%8Bpython/python-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</loc>
     
-    <lastmod>2017-10-14T08:21:24.167Z</lastmod>
+    <lastmod>2017-10-14T08:27:33.761Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2017/10/14/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B9%8Bpython/python-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</loc>
+    <loc>http://yoursite.com/2017/10/14/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B9%8Bpython/python-%E6%95%99%E7%A8%8B/</loc>
     
-    <lastmod>2017-10-14T08:19:52.091Z</lastmod>
+    <lastmod>2017-10-14T08:21:24.167Z</lastmod>
     
   </url>
   
@@ -37,20 +37,6 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2017/08/23/%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0/%E7%BB%84%E5%9D%97/</loc>
-    
-    <lastmod>2017-08-23T01:05:21.721Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/tags/index.html</loc>
-    
-    <lastmod>2017-08-23T01:05:21.721Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://yoursite.com/2017/08/23/%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0/%E8%AE%B0%E5%BF%86/</loc>
     
     <lastmod>2017-08-23T01:05:21.721Z</lastmod>
@@ -65,14 +51,14 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2017/08/23/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF_2/</loc>
+    <loc>http://yoursite.com/tags/index.html</loc>
     
     <lastmod>2017-08-23T01:05:21.721Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2017/08/23/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF_3/</loc>
+    <loc>http://yoursite.com/2017/08/23/%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0/%E7%BB%84%E5%9D%97/</loc>
     
     <lastmod>2017-08-23T01:05:21.721Z</lastmod>
     
@@ -93,14 +79,28 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2017/08/23/%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0/%E5%AD%A6%E4%B9%A0/</loc>
+    <loc>http://yoursite.com/2017/08/23/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF_2/</loc>
+    
+    <lastmod>2017-08-23T01:05:21.721Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2017/08/23/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF_3/</loc>
+    
+    <lastmod>2017-08-23T01:05:21.721Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2017/08/23/%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0/%E6%8B%96%E5%BB%B6%E4%B8%8E%E4%B9%A0%E6%83%AF/</loc>
     
     <lastmod>2017-08-23T01:05:21.705Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2017/08/23/%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0/%E6%8B%96%E5%BB%B6%E4%B8%8E%E4%B9%A0%E6%83%AF/</loc>
+    <loc>http://yoursite.com/2017/08/23/%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0/%E5%AD%A6%E4%B9%A0/</loc>
     
     <lastmod>2017-08-23T01:05:21.705Z</lastmod>
     
