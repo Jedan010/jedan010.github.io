@@ -3,24 +3,24 @@
 
 
     
-    
-    
   <url>
-    <loc>http://yoursite.com/2017/08/23/Git/git%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/</loc>
-    <lastmod>2017-08-24T07:17:56.873Z</lastmod>
+    <loc>http://yoursite.com/2017/10/14/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B9%8Bpython/0.1.python_env/</loc>
+    <lastmod>2017-10-14T07:35:52.608Z</lastmod>
     <data>
         <display>
-        <title>Git基础操作</title>
-        <pubTime>2017-08-23T02:17:01.471Z</pubTime>
+        <title>python 环境搭建</title>
+        <pubTime>2017-10-14T07:33:40.439Z</pubTime>
         
-        <tag>git</tag>
+        <tag>anaconda</tag>
          
-        <tag>github</tag>
+        <tag>python环境</tag>
+         
+        <tag>jupyter</tag>
          
          
            
              
-              <breadCrumb title="git" url="http://yoursite.com/categories/git/"/>
+              <breadCrumb title="数据挖掘之python" url="http://yoursite.com/categories/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B9%8Bpython/"/>
           
         </display>
     </data>
@@ -28,8 +28,32 @@
 
     
   <url>
-    <loc>http://yoursite.com/2017/08/24/paper/Market%20manipulation%20detection%20based%20on%20Classification%20methods/</loc>
-    <lastmod>2017-08-24T03:51:37.875Z</lastmod>
+    <loc>http://yoursite.com/2017/10/14/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B9%8Bpython/0.2.python%20turorial/</loc>
+    <lastmod>2017-10-14T07:30:43.911Z</lastmod>
+    <data>
+        <display>
+        <title>python教程</title>
+        <pubTime>2017-10-14T07:28:15.130Z</pubTime>
+        
+        <tag>python</tag>
+         
+        <tag>numpy</tag>
+         
+        <tag>matplotlib</tag>
+         
+         
+           
+             
+              <breadCrumb title="数据挖掘之python" url="http://yoursite.com/categories/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B9%8Bpython/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2017/08/24/%E8%AE%BA%E6%96%87/Market%20manipulation%20detection%20based%20on%20Classification%20methods/</loc>
+    <lastmod>2017-10-14T07:13:36.468Z</lastmod>
     <data>
         <display>
         <title>Market manipulation detection based on Classification methods</title>
@@ -44,7 +68,7 @@
          
            
              
-              <breadCrumb title="paper" url="http://yoursite.com/categories/paper/"/>
+              <breadCrumb title="论文" url="http://yoursite.com/categories/%E8%AE%BA%E6%96%87/"/>
           
         </display>
     </data>
@@ -52,7 +76,31 @@
 
     
   <url>
-    <loc>http://yoursite.com/2017/08/23/deep%20learning%20introduction/</loc>
+    <loc>http://yoursite.com/2017/08/23/%E7%BC%96%E7%A8%8B/git%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/</loc>
+    <lastmod>2017-10-14T07:13:18.821Z</lastmod>
+    <data>
+        <display>
+        <title>Git基础操作</title>
+        <pubTime>2017-08-23T02:17:01.471Z</pubTime>
+        
+        <tag>git</tag>
+         
+        <tag>github</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程" url="http://yoursite.com/categories/%E7%BC%96%E7%A8%8B/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+    
+  <url>
+    <loc>http://yoursite.com/2017/08/23/%E7%BC%96%E7%A8%8B/deep%20learning%20introduction/</loc>
     <lastmod>2017-08-24T01:53:34.487Z</lastmod>
     <data>
         <display>
@@ -67,54 +115,6 @@
            
              
               <breadCrumb title="深度学习" url="http://yoursite.com/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2017/08/23/%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0/%E8%AE%B0%E5%BF%86/</loc>
-    <lastmod>2017-08-23T01:05:21.721Z</lastmod>
-    <data>
-        <display>
-        <title>记忆</title>
-        <pubTime>2017-08-23T01:05:21.721Z</pubTime>
-        
-        <tag>工作记忆</tag>
-         
-        <tag>长期记忆</tag>
-         
-         
-           
-             
-              <breadCrumb title="学习何如学习" url="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0%E4%BD%95%E5%A6%82%E5%AD%A6%E4%B9%A0/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2017/08/23/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF_4/</loc>
-    <lastmod>2017-08-23T01:05:21.721Z</lastmod>
-    <data>
-        <display>
-        <title>通往财富自由之路_4</title>
-        <pubTime>2017-08-23T01:05:21.721Z</pubTime>
-        
-        <tag>通往财富自由之路</tag>
-         
-        <tag>抱怨</tag>
-         
-        <tag>正确</tag>
-         
-        <tag>世界</tag>
-         
-         
-           
-             
-              <breadCrumb title="通往财富自由之路" url="http://yoursite.com/categories/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF/"/>
           
         </display>
     </data>
@@ -145,19 +145,43 @@
     </url>
 
     
+    
   <url>
-    <loc>http://yoursite.com/2017/08/23/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF_1/</loc>
+    <loc>http://yoursite.com/2017/08/23/%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0/%E7%BB%84%E5%9D%97/</loc>
     <lastmod>2017-08-23T01:05:21.721Z</lastmod>
     <data>
         <display>
-        <title>通往财富自由之路_1</title>
+        <title>组块</title>
+        <pubTime>2017-08-23T01:05:21.705Z</pubTime>
+        
+        <tag>组块</tag>
+         
+         
+           
+             
+              <breadCrumb title="学习何如学习" url="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0%E4%BD%95%E5%A6%82%E5%AD%A6%E4%B9%A0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
+    <loc>http://yoursite.com/2017/08/23/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF_4/</loc>
+    <lastmod>2017-08-23T01:05:21.721Z</lastmod>
+    <data>
+        <display>
+        <title>通往财富自由之路_4</title>
         <pubTime>2017-08-23T01:05:21.721Z</pubTime>
         
         <tag>通往财富自由之路</tag>
          
-        <tag>安全感</tag>
+        <tag>抱怨</tag>
          
-        <tag>活在未来</tag>
+        <tag>正确</tag>
+         
+        <tag>世界</tag>
          
          
            
@@ -169,17 +193,17 @@
     </url>
 
     
-    
-    
   <url>
-    <loc>http://yoursite.com/2017/08/23/%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0/%E7%BB%84%E5%9D%97/</loc>
+    <loc>http://yoursite.com/2017/08/23/%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0/%E8%AE%B0%E5%BF%86/</loc>
     <lastmod>2017-08-23T01:05:21.721Z</lastmod>
     <data>
         <display>
-        <title>组块</title>
-        <pubTime>2017-08-23T01:05:21.705Z</pubTime>
+        <title>记忆</title>
+        <pubTime>2017-08-23T01:05:21.721Z</pubTime>
         
-        <tag>组块</tag>
+        <tag>工作记忆</tag>
+         
+        <tag>长期记忆</tag>
          
          
            
@@ -218,21 +242,23 @@
 
     
   <url>
-    <loc>http://yoursite.com/2017/08/23/%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0/%E5%AD%A6%E4%B9%A0/</loc>
-    <lastmod>2017-08-23T01:05:21.705Z</lastmod>
+    <loc>http://yoursite.com/2017/08/23/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF_1/</loc>
+    <lastmod>2017-08-23T01:05:21.721Z</lastmod>
     <data>
         <display>
-        <title>学习</title>
-        <pubTime>2017-08-23T01:05:21.705Z</pubTime>
+        <title>通往财富自由之路_1</title>
+        <pubTime>2017-08-23T01:05:21.721Z</pubTime>
         
-        <tag>专注思维</tag>
+        <tag>通往财富自由之路</tag>
          
-        <tag>发散思维</tag>
+        <tag>安全感</tag>
+         
+        <tag>活在未来</tag>
          
          
            
              
-              <breadCrumb title="学习何如学习" url="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0%E4%BD%95%E5%A6%82%E5%AD%A6%E4%B9%A0/"/>
+              <breadCrumb title="通往财富自由之路" url="http://yoursite.com/categories/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF/"/>
           
         </display>
     </data>
@@ -250,6 +276,28 @@
         <tag>拖延</tag>
          
         <tag>习惯</tag>
+         
+         
+           
+             
+              <breadCrumb title="学习何如学习" url="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0%E4%BD%95%E5%A6%82%E5%AD%A6%E4%B9%A0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2017/08/23/%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0/%E5%AD%A6%E4%B9%A0/</loc>
+    <lastmod>2017-08-23T01:05:21.705Z</lastmod>
+    <data>
+        <display>
+        <title>学习</title>
+        <pubTime>2017-08-23T01:05:21.705Z</pubTime>
+        
+        <tag>专注思维</tag>
+         
+        <tag>发散思维</tag>
          
          
            
