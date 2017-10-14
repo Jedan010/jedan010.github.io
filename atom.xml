@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-10-14T08:21:24.167Z</updated>
+  <updated>2017-10-14T08:37:09.625Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,12 +20,12 @@
     <link href="http://yoursite.com/2017/10/14/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B9%8Bpython/python-%E6%95%99%E7%A8%8B/"/>
     <id>http://yoursite.com/2017/10/14/数据挖掘之python/python-教程/</id>
     <published>2017-10-14T08:14:46.000Z</published>
-    <updated>2017-10-14T08:21:24.167Z</updated>
+    <updated>2017-10-14T08:37:09.625Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="Python-Tutorial"><a href="#Python-Tutorial" class="headerlink" title="Python Tutorial"></a>Python Tutorial</h1><ul>
 <li><strong>Python</strong></li>
 <li><strong>Numpy</strong></li>
-<li><strong>Matplotlib</strong></li>
+<li><strong>Matplotlib</strong><br>-<br>更好的阅读体验请前往：<a href="https://nbviewer.jupyter.org/github/Jedan010/data-mining-in-python/blob/master/0.2.python%20turorial.ipynb" target="_blank" rel="external">https://nbviewer.jupyter.org/github/Jedan010/data-mining-in-python/blob/master/0.2.python%20turorial.ipynb</a></li>
 </ul>
 <h2 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h2><p>Python是一种高级的，动态类型的多范型编程语言。很多时候，大家会说Python看起来简直和伪代码一样，这是因为你能够通过很少行数的代码表达出很有力的思想。</p>
 <p>教程内容包括：</p>
@@ -155,11 +155,6 @@ Mike 80
 </code></pre><h5 id="求元素长度"><a href="#求元素长度" class="headerlink" title="求元素长度"></a>求元素长度</h5><p>这个可以对很多有重复的list，通过set求不同元素的个数</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">print(len(grade_set))</div><div class="line">len(set([<span class="number">100</span>,<span class="number">100</span>,<span class="number">100</span>,<span class="number">90</span>,<span class="number">90</span>,<span class="number">90</span>]))</div></pre></td></tr></table></figure>
 <pre><code>4
-
-
-
-
-
 2
 </code></pre><h4 id="元组Tuples"><a href="#元组Tuples" class="headerlink" title="元组Tuples"></a>元组Tuples</h4><p>用()表示</p>
 <p>元组是一个值的有序列表（不可改变）。从很多方面来说，元组和列表都很相似。和列表最重要的不同在于，元组可以在字典中用作键key，还可以作为集合的元素，而列表不行。</p>
@@ -413,9 +408,9 @@ hello 4
     <link href="http://yoursite.com/2017/10/14/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B9%8Bpython/python-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"/>
     <id>http://yoursite.com/2017/10/14/数据挖掘之python/python-环境搭建/</id>
     <published>2017-10-14T08:14:18.000Z</published>
-    <updated>2017-10-14T08:27:33.761Z</updated>
+    <updated>2017-10-14T08:35:48.817Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>更好的阅读体验请前往：<a href="https://nbviewer.jupyter.org/github/Jedan010/data-mining-in-python/blob/master/article/0.1.python_env.ipynb" target="_blank" rel="external">https://nbviewer.jupyter.org/github/Jedan010/data-mining-in-python/blob/master/article/0.1.python_env.ipynb</a></p>
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>更好的阅读体验请前往：<a href="https://nbviewer.jupyter.org/github/Jedan010/data-mining-in-python/blob/master/0.1.python_env.ipynb" target="_blank" rel="external">https://nbviewer.jupyter.org/github/Jedan010/data-mining-in-python/blob/master/0.1.python_env.ipynb</a></p>
 <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p><a href="https://www.anaconda.com/" target="_blank" rel="external">Anaconda</a>是一个用于科学计算的Python发行版，支持 Linux, Mac, Windows系统，提供了包管理与环境管理的功能，可以很方便地解决多版本python并存、切换以及各种第三方包安装问题。Anaconda利用工具/命令conda来进行package和environment的管理，并且已经包含了Python和相关的配套工具。</p>
 <h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><ul>
 <li>官网下载：<a href="https://www.anaconda.com/download/" target="_blank" rel="external">https://www.anaconda.com/download/</a></li>
