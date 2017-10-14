@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-10-14T08:39:10.743Z</updated>
+  <updated>2017-10-14T08:42:11.035Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2017/10/14/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B9%8Bpython/python-%E6%95%99%E7%A8%8B/"/>
     <id>http://yoursite.com/2017/10/14/数据挖掘之python/python-教程/</id>
     <published>2017-10-14T08:14:46.000Z</published>
-    <updated>2017-10-14T08:39:10.743Z</updated>
+    <updated>2017-10-14T08:42:11.035Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="Python-Tutorial"><a href="#Python-Tutorial" class="headerlink" title="Python Tutorial"></a>Python Tutorial</h1><ul>
 <li><strong>Python</strong></li>
@@ -409,7 +409,7 @@ hello 4
     <link href="http://yoursite.com/2017/10/14/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B9%8Bpython/python-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"/>
     <id>http://yoursite.com/2017/10/14/数据挖掘之python/python-环境搭建/</id>
     <published>2017-10-14T08:14:18.000Z</published>
-    <updated>2017-10-14T08:35:48.817Z</updated>
+    <updated>2017-10-14T08:42:11.038Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>更好的阅读体验请前往：<a href="https://nbviewer.jupyter.org/github/Jedan010/data-mining-in-python/blob/master/0.1.python_env.ipynb" target="_blank" rel="external">https://nbviewer.jupyter.org/github/Jedan010/data-mining-in-python/blob/master/0.1.python_env.ipynb</a></p>
 <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p><a href="https://www.anaconda.com/" target="_blank" rel="external">Anaconda</a>是一个用于科学计算的Python发行版，支持 Linux, Mac, Windows系统，提供了包管理与环境管理的功能，可以很方便地解决多版本python并存、切换以及各种第三方包安装问题。Anaconda利用工具/命令conda来进行package和environment的管理，并且已经包含了Python和相关的配套工具。</p>
