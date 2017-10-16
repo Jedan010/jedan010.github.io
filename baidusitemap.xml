@@ -4,18 +4,18 @@
 
     
   <url>
-    <loc>http://yoursite.com/2017/10/14/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B9%8Bpython/python-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</loc>
-    <lastmod>2017-10-14T08:42:11.038Z</lastmod>
+    <loc>http://yoursite.com/2017/10/14/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B9%8Bpython/python-%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2017-10-16T10:42:28.263Z</lastmod>
     <data>
         <display>
-        <title>python 环境搭建</title>
-        <pubTime>2017-10-14T08:14:18.000Z</pubTime>
+        <title>python 教程</title>
+        <pubTime>2017-10-14T08:14:46.000Z</pubTime>
         
-        <tag>anaconda</tag>
+        <tag>python</tag>
          
-        <tag>python环境</tag>
+        <tag>numpy</tag>
          
-        <tag>jupyter</tag>
+        <tag>matplotlib</tag>
          
          
            
@@ -28,18 +28,18 @@
 
     
   <url>
-    <loc>http://yoursite.com/2017/10/14/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B9%8Bpython/python-%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2017-10-14T08:42:11.035Z</lastmod>
+    <loc>http://yoursite.com/2017/10/14/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B9%8Bpython/python-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</loc>
+    <lastmod>2017-10-14T08:42:11.038Z</lastmod>
     <data>
         <display>
-        <title>python 教程</title>
-        <pubTime>2017-10-14T08:14:46.000Z</pubTime>
+        <title>python 环境搭建</title>
+        <pubTime>2017-10-14T08:14:18.000Z</pubTime>
         
-        <tag>python</tag>
+        <tag>anaconda</tag>
          
-        <tag>numpy</tag>
+        <tag>python环境</tag>
          
-        <tag>matplotlib</tag>
+        <tag>jupyter</tag>
          
          
            
