@@ -2,9 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2017/10/17/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B9%8Bpython/1-%E8%AE%A4%E8%AF%86%E6%95%B0%E6%8D%AE/</loc>
+    
+    <lastmod>2017-10-17T10:35:40.685Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2017/10/17/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B9%8Bpython/1-%E8%AE%A4%E8%AF%86%E6%95%B0%E6%8D%AE/1.%E8%AE%A4%E8%AF%86%E6%95%B0%E6%8D%AE/</loc>
+    
+    <lastmod>2017-10-17T10:27:24.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2017/10/14/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B9%8Bpython/python-%E6%95%99%E7%A8%8B/</loc>
     
-    <lastmod>2017-10-16T10:42:28.263Z</lastmod>
+    <lastmod>2017-10-16T10:46:22.525Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2017/10/14/%E7%BC%96%E7%A8%8B/git%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/</loc>
+    
+    <lastmod>2017-10-14T08:42:11.047Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2017/10/14/%E8%AE%BA%E6%96%87/Market%20manipulation%20detection%20based%20on%20Classification%20methods/</loc>
+    
+    <lastmod>2017-10-14T08:42:11.047Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2017/10/14/%E7%BC%96%E7%A8%8B/deep%20learning%20introduction/</loc>
+    
+    <lastmod>2017-10-14T08:42:11.046Z</lastmod>
     
   </url>
   
@@ -16,35 +51,14 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2017/08/24/%E8%AE%BA%E6%96%87/Market%20manipulation%20detection%20based%20on%20Classification%20methods/</loc>
-    
-    <lastmod>2017-10-14T07:13:36.468Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2017/08/23/%E7%BC%96%E7%A8%8B/git%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/</loc>
-    
-    <lastmod>2017-10-14T07:13:18.821Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2017/08/23/%E7%BC%96%E7%A8%8B/deep%20learning%20introduction/</loc>
-    
-    <lastmod>2017-08-24T01:53:34.487Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2017/08/23/%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0/%E8%AE%B0%E5%BF%86/</loc>
+    <loc>http://yoursite.com/2017/08/23/%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0/%E7%BB%84%E5%9D%97/</loc>
     
     <lastmod>2017-08-23T01:05:21.721Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/categories/index.html</loc>
+    <loc>http://yoursite.com/2017/08/23/%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0/%E8%AE%B0%E5%BF%86/</loc>
     
     <lastmod>2017-08-23T01:05:21.721Z</lastmod>
     
@@ -58,7 +72,14 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2017/08/23/%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0/%E7%BB%84%E5%9D%97/</loc>
+    <loc>http://yoursite.com/categories/index.html</loc>
+    
+    <lastmod>2017-08-23T01:05:21.721Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2017/08/23/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF_3/</loc>
     
     <lastmod>2017-08-23T01:05:21.721Z</lastmod>
     
@@ -80,13 +101,6 @@
   
   <url>
     <loc>http://yoursite.com/2017/08/23/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF_2/</loc>
-    
-    <lastmod>2017-08-23T01:05:21.721Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2017/08/23/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF/%E9%80%9A%E5%BE%80%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF_3/</loc>
     
     <lastmod>2017-08-23T01:05:21.721Z</lastmod>
     

@@ -1,0 +1,894 @@
+<h1 id="认识数据"><a href="#认识数据" class="headerlink" title="认识数据"></a>认识数据</h1><h2 id="数据对象与数据属性"><a href="#数据对象与数据属性" class="headerlink" title="数据对象与数据属性"></a>数据对象与数据属性</h2><p>数据是由数据对象组成，一个数据对象代表一个实体。每个数据对象都有不同特征，称为数据的属性(attribute)。</p>
+<p>数据的属性包含：</p>
+<ul>
+<li>标称属性(nominal)：值是符号或名称，主要用于分类</li>
+<li>二元属性(binary)：标称属性的一种，只有两个类别</li>
+<li>序数属性(ordinal)：值的顺序或秩（rank）有意义，相继值得差未知</li>
+<li>数值属性(numeric)：可度量的值<ul>
+<li>区间标度(interval-scaled)：用相同单位的尺度衡量，没有真正的零点（即数值0不代表没有，代表相对情况），倍数无意义。</li>
+<li>比率标度(retio-scaled)：具有固定零点的数值，倍数有意义。</li>
+</ul>
+</li>
+</ul>
+<h2 id="数据的基本统计描述"><a href="#数据的基本统计描述" class="headerlink" title="数据的基本统计描述"></a>数据的基本统计描述</h2><h3 id="中心趋势"><a href="#中心趋势" class="headerlink" title="中心趋势"></a>中心趋势</h3><p>描述数据的中心趋势的统计量主要由：均值、中位数和众数。</p>
+<h4 id="均值（mean）"><a href="#均值（mean）" class="headerlink" title="均值（mean）:"></a>均值（mean）:</h4><script type="math/tex; mode=display">\bar{x} = \frac{1}{N}\sum_{i=1}^{N} x_{i} \tag{1}</script><p>加权平均： <script type="math/tex">\bar{x} = \sum_{i=1}^{N} w_ix_{i} \tag{2}</script></p>
+<pre><code class="lang-python">## 导入数据
+import pandas as pd
+data = pd.read_excel(&#39;./data/居民人均可支配收入.xlsx&#39;, index_col=0)
+data.head()
+</code></pre>
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>居民人均可支配收入中位数（元）</th>
+      <th>居民人均可支配收入平均数(元)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2013年第1季度</th>
+      <td>4117.2</td>
+      <td>5006.1</td>
+    </tr>
+    <tr>
+      <th>2013年第2季度</th>
+      <td>3606.2</td>
+      <td>4043.0</td>
+    </tr>
+    <tr>
+      <th>2013年第3季度</th>
+      <td>3976.8</td>
+      <td>4507.4</td>
+    </tr>
+    <tr>
+      <th>2013年第4季度</th>
+      <td>3931.9</td>
+      <td>4754.3</td>
+    </tr>
+    <tr>
+      <th>2014年第1季度</th>
+      <td>4693.6</td>
+      <td>5562.2</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+<pre><code class="lang-python">## 计算均值
+data.mean(axis=0)
+</code></pre>
+<pre><code>居民人均可支配收入中位数（元）    4700.211111
+居民人均可支配收入平均数(元)    5399.833333
+dtype: float64
+</code></pre><h4 id="中位数-median"><a href="#中位数-median" class="headerlink" title="中位数(median)"></a>中位数(median)</h4><p>对于非对称数据，数据中心更好的度量是中位数，中位数是有序数值的中间值。</p>
+<pre><code class="lang-python">## 计算中位数
+data.median(axis=0)
+</code></pre>
+<pre><code>居民人均可支配收入中位数（元）    4726.80
+居民人均可支配收入平均数(元)    5351.55
+dtype: float64
+</code></pre><h4 id="众数-mode"><a href="#众数-mode" class="headerlink" title="众数(mode)"></a>众数(mode)</h4><p>众数是集合中出现最频繁的值，根据最高频率对应不同的值的个数，可分为单峰(unimodal)、双峰(bimodal）等。在极端情况下，如果每个数据仅出现一次，则没有众数。</p>
+<p>对于适度倾斜的单峰数据，有如下经验关系：</p>
+<script type="math/tex; mode=display">mean - mode \approx 3 \times (mean - median)  \tag{3}</script><pre><code class="lang-python">data.mode(axis=0) ##所有数据都只出现了一次
+</code></pre>
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>居民人均可支配收入中位数（元）</th>
+      <th>居民人均可支配收入平均数(元)</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+</div>
+
+
+
+
+<pre><code class="lang-python">import scipy.stats as stats
+from scipy.stats import skewnorm
+fig = plt.figure(figsize=(16,4))
+
+ax1 = plt.subplot(1,3,1)
+a = 4
+x1 = np.linspace(skewnorm.ppf(0.0001, a), skewnorm.ppf(0.9999, a), 100)
+rv = skewnorm(a)
+ax1.plot(x1, rv.pdf(x1),  label=&#39;frozen pdf&#39;)
+plt.xlabel(u&#39;a)正倾斜数据&#39;, fontsize=15)
+
+ax2 = plt.subplot(1,3,2)
+x2 = np.linspace( - 3,  3, 1000)
+ax2.plot(x2, stats.norm.pdf(x2, 0, 1))
+plt.xlabel(u&#39;b)对称数据&#39;, fontsize=15)
+
+ax3 = plt.subplot(1,3,3)
+a = -4
+x3 = np.linspace(skewnorm.ppf(0.0001, a), skewnorm.ppf(0.9999, a), 100)
+rv = skewnorm(a)
+ax3.plot(x3, rv.pdf(x3),  label=&#39;frozen pdf&#39;)
+plt.xlabel(u&#39;c)负倾斜数据&#39;,  fontsize=15)
+</code></pre>
+<pre><code>&lt;matplotlib.text.Text at 0x23c391c3240&gt;
+</code></pre><p><img src="output_12_1.png" alt="png"></p>
+<h3 id="离散程度"><a href="#离散程度" class="headerlink" title="离散程度"></a>离散程度</h3><p>度量数据的离散程度的指标包括极差、分位数、四分位数、百分位数和四分位数极差。五数概括可以用箱线图（盒图）显示，它对于离群点的是识别是有用的。</p>
+<h4 id="极差、四分位数和四分位数极差"><a href="#极差、四分位数和四分位数极差" class="headerlink" title="极差、四分位数和四分位数极差"></a>极差、四分位数和四分位数极差</h4><pre><code class="lang-python">## 极差(range)
+data.max() - data.min()
+</code></pre>
+<pre><code>居民人均可支配收入中位数（元）    2460.8
+居民人均可支配收入平均数(元)    3141.0
+dtype: float64
+</code></pre><pre><code class="lang-python">## 第1个4分位数
+data.quantile(1/4)
+</code></pre>
+<pre><code>居民人均可支配收入中位数（元）    4172.95
+居民人均可支配收入平均数(元)    4873.00
+Name: 0.25, dtype: float64
+</code></pre><h5 id="四分位数极差（IQR）"><a href="#四分位数极差（IQR）" class="headerlink" title="四分位数极差（IQR）"></a>四分位数极差（IQR）</h5><script type="math/tex; mode=display">IQR = Q_3 - Q_1 \tag{4}</script><pre><code class="lang-python">## 四分位数极差
+data.quantile(3/4) - data.quantile(1/4)
+</code></pre>
+<pre><code>居民人均可支配收入中位数（元）    985.325
+居民人均可支配收入平均数(元)    951.025
+dtype: float64
+</code></pre><h4 id="箱线图和离群点"><a href="#箱线图和离群点" class="headerlink" title="箱线图和离群点"></a>箱线图和离群点</h4><p>离群点的识别规则为：挑选落在第3个四分位数之上或第1个四分位数之下至少$1.5 \times IQR$处的值</p>
+<pre><code class="lang-python">## 箱线图
+data.boxplot()
+</code></pre>
+<pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x23c39168f28&gt;
+</code></pre><p><img src="output_20_1.png" alt="png"></p>
+<h4 id="方差和标准差"><a href="#方差和标准差" class="headerlink" title="方差和标准差"></a>方差和标准差</h4><p>方差(variance):</p>
+<script type="math/tex; mode=display">\sigma^2 = \frac{1}{N}\sum_{i=1}^{N}(x_i - \bar{x})^2 = \left ( \frac{1}{N}\sum_{i=1}^{N}x_i^2 \right )^2 - \bar{x}^2 \tag{5}</script><p>标准差(standard deviation) $\sigma$ 是方差 $\sigma^2$ 的平方根</p>
+<pre><code class="lang-python">## 方差
+data.var()
+</code></pre>
+<pre><code>居民人均可支配收入中位数（元）    416851.712810
+居民人均可支配收入平均数(元)    626944.210588
+dtype: float64
+</code></pre><pre><code class="lang-python">## 标准差
+data.std()
+</code></pre>
+<pre><code>居民人均可支配收入中位数（元）    645.640545
+居民人均可支配收入平均数(元)    791.798087
+dtype: float64
+</code></pre><h3 id="数据快速统计摘要"><a href="#数据快速统计摘要" class="headerlink" title="数据快速统计摘要"></a>数据快速统计摘要</h3><pre><code class="lang-python">data.describe()
+</code></pre>
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>居民人均可支配收入中位数（元）</th>
+      <th>居民人均可支配收入平均数(元)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>18.000000</td>
+      <td>18.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>4700.211111</td>
+      <td>5399.833333</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>645.640545</td>
+      <td>791.798087</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>3606.200000</td>
+      <td>4043.000000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>4172.950000</td>
+      <td>4873.000000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>4726.800000</td>
+      <td>5351.550000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>5158.275000</td>
+      <td>5824.025000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>6067.000000</td>
+      <td>7184.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+<h2 id="数据可视化"><a href="#数据可视化" class="headerlink" title="数据可视化"></a>数据可视化</h2><h3 id="数据的基本统计描述的图形显示"><a href="#数据的基本统计描述的图形显示" class="headerlink" title="数据的基本统计描述的图形显示"></a>数据的基本统计描述的图形显示</h3><h4 id="分位数图-quantile-plot"><a href="#分位数图-quantile-plot" class="headerlink" title="分位数图(quantile plot)"></a>分位数图(quantile plot)</h4><p>分位数图是一种观察单变量数据分布的简单有效方法,首先显示给定属性的所有数据，其次它绘出了分数数信息。</p>
+<pre><code class="lang-python">fig = plt.figure(figsize=(12,4))
+ax = fig.add_subplot(121)
+x = data.iloc[:,0]
+stats.probplot(x, plot=ax)
+plt.ylabel(u&#39;居民人均可支配收入中位数&#39;, fontsize=13)
+plt.xlabel(u&#39;f 值&#39;, fontsize=13)
+
+ax = fig.add_subplot(122)
+x = data.iloc[:,1]
+stats.probplot(x, plot=ax)
+plt.ylabel(u&#39;居民人均可支配收入平均数&#39;, fontsize=13)
+plt.xlabel(u&#39;f 值&#39;, fontsize=13)
+
+plt.show()
+</code></pre>
+<p><img src="output_29_0.png" alt="png"></p>
+<h4 id="分位数-分位数图（Q-Q图）"><a href="#分位数-分位数图（Q-Q图）" class="headerlink" title="分位数-分位数图（Q-Q图）"></a>分位数-分位数图（Q-Q图）</h4><p>q-q图对着另一个对应的分位数，绘制一个单标量分布的分位数。它可使得用户可以观察从一个分布到另一个分布是否有漂移。</p>
+<pre><code class="lang-python">import statsmodels.api as sm
+fig = plt.figure()
+ax = fig.add_subplot(111)
+a = sm.qqplot_2samples(data.iloc[:,0], data.iloc[:,1], xlabel=u&#39;居民人均可支配收入中位数&#39;, ylabel=u&#39;居民人均可支配收入平均数&#39;, line=&#39;r&#39; ,ax=ax)
+</code></pre>
+<p><img src="output_31_0.png" alt="png"></p>
+<h4 id="直方图-histogram"><a href="#直方图-histogram" class="headerlink" title="直方图(histogram)"></a>直方图(histogram)</h4><pre><code class="lang-python">data.hist(bins=10,figsize=(12,4))
+</code></pre>
+<pre><code>array([[&lt;matplotlib.axes._subplots.AxesSubplot object at 0x0000023C3ACC5A58&gt;,
+        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x0000023C3AD61668&gt;]], dtype=object)
+</code></pre><p><img src="output_33_1.png" alt="png"></p>
+<h4 id="散点图-scatter"><a href="#散点图-scatter" class="headerlink" title="散点图(scatter)"></a>散点图(scatter)</h4><p>散点图是确定两个数值变量之间看上去是否存在联系、模式或趋势的最有效图形方法之一。</p>
+<pre><code class="lang-python">data.plot.scatter(*data.columns)
+</code></pre>
+<pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x23c39342748&gt;
+</code></pre><p><img src="output_35_1.png" alt="png"></p>
+<h3 id="其他可视化基本图形"><a href="#其他可视化基本图形" class="headerlink" title="其他可视化基本图形"></a>其他可视化基本图形</h3><pre><code class="lang-python">data2 = pd.read_excel(&#39;.\data\各省份收入数据.xlsx&#39;, index_col=0)
+data2.head()
+</code></pre>
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>工资性收入</th>
+      <th>家庭性收入</th>
+      <th>财产性收入</th>
+      <th>转移性收入</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>北京</th>
+      <td>4524.25</td>
+      <td>1778.33</td>
+      <td>588.04</td>
+      <td>455.64</td>
+    </tr>
+    <tr>
+      <th>天津</th>
+      <td>2720.85</td>
+      <td>2626.46</td>
+      <td>152.88</td>
+      <td>79.64</td>
+    </tr>
+    <tr>
+      <th>河北</th>
+      <td>1293.50</td>
+      <td>1988.58</td>
+      <td>93.74</td>
+      <td>105.81</td>
+    </tr>
+    <tr>
+      <th>山西</th>
+      <td>1177.94</td>
+      <td>1563.52</td>
+      <td>62.70</td>
+      <td>86.49</td>
+    </tr>
+    <tr>
+      <th>内蒙古</th>
+      <td>504.46</td>
+      <td>2223.26</td>
+      <td>73.05</td>
+      <td>188.10</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+<h4 id="曲线图-plot"><a href="#曲线图-plot" class="headerlink" title="曲线图(plot)"></a>曲线图(plot)</h4><pre><code class="lang-python">data2.plot()
+</code></pre>
+<pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x23c3934b438&gt;
+</code></pre><p><img src="output_39_1.png" alt="png"></p>
+<h4 id="柱状图"><a href="#柱状图" class="headerlink" title="柱状图"></a>柱状图</h4><pre><code class="lang-python">data2.plot(kind=&#39;bar&#39;, stacked=True, color=[&#39;blue&#39;,&#39;gold&#39;, &#39;green&#39;, &#39;red&#39;], figsize=(10,5))
+</code></pre>
+<pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x23c3aea0d68&gt;
+</code></pre><p><img src="output_41_1.png" alt="png"></p>
+<h4 id="面积图"><a href="#面积图" class="headerlink" title="面积图"></a>面积图</h4><pre><code class="lang-python">data2.plot.area(stacked=True)
+</code></pre>
+<pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x23c392ee860&gt;
+</code></pre><p><img src="output_43_1.png" alt="png"></p>
+<h4 id="饼图"><a href="#饼图" class="headerlink" title="饼图"></a>饼图</h4><pre><code class="lang-python">data2.plot.pie(y=data2.columns[0], figsize=(10,10))
+</code></pre>
+<pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x23c3b2c60f0&gt;
+</code></pre><p><img src="output_45_1.png" alt="png"></p>
+<h3 id="其他可视化图"><a href="#其他可视化图" class="headerlink" title="其他可视化图"></a>其他可视化图</h3><pre><code class="lang-python">from scipy import stats, integrate
+import seaborn as sns
+</code></pre>
+<pre><code class="lang-python">ax = sns.boxplot(data=data2)
+ax = sns.stripplot(data=data2, jitter=True, edgecolor=&quot;gray&quot;)
+</code></pre>
+<p><img src="output_48_0.png" alt="png"></p>
+<pre><code class="lang-python">sns.violinplot( data=data2, size=6)
+</code></pre>
+<pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x23c3b864668&gt;
+</code></pre><p><img src="output_49_1.png" alt="png"></p>
+<pre><code class="lang-python">sns.jointplot(x=data2.columns[0], y=data2.columns[1], data=data2, size=5)
+</code></pre>
+<pre><code>&lt;seaborn.axisgrid.JointGrid at 0x23c3b8825f8&gt;
+</code></pre><p><img src="output_50_1.png" alt="png"></p>
+<pre><code class="lang-python">g = sns.PairGrid(data2, hue=data2.columns[2])
+g.map(plt.scatter, s=50, edgecolor=&quot;white&quot;)
+g.map_offdiag(plt.scatter)
+g.add_legend();
+</code></pre>
+<p><img src="output_51_0.png" alt="png"></p>
+<h2 id="数据的相异性与相似性"><a href="#数据的相异性与相似性" class="headerlink" title="数据的相异性与相似性"></a>数据的相异性与相似性</h2><p>在诸如聚类、离群点分析和最邻近分类等数据挖掘应用中，我们需要评估对象之间相互比较的相似性与相异性。相似性和相异性都称为临近性（proximity），如果两个对象$i$和$j$不相似,则它们相似性度量值为0,如果完全相似则为1。因此，我们可以构造数据的想异性矩阵，用来表示$n$个对象两两之间的邻近度。</p>
+<script type="math/tex; mode=display">
+\begin{bmatrix}
+ 0&  &  & &\\ 
+ d(2,1)&  0&  & &\\ 
+ d(3,1)&  d(3,2)&  0& &\\ 
+ \vdots&  \vdots&  \vdots& &\\ 
+ d(n,1)&  d(n,2)&  \dots& \dots&0
+\end{bmatrix}
+\tag{6}</script><p>其中$d(i,j)$是对象之间的想异性，一般而言，$d(i,j)$是一个非负的数值，对象$i$和$j$越接近，其值越接近0；如果越不同，该值越大。</p>
+<h3 id="标称属性的临近性度量"><a href="#标称属性的临近性度量" class="headerlink" title="标称属性的临近性度量"></a>标称属性的临近性度量</h3><p>标称属性有多个状态，设其状态数目为$M$，这些状态用一组整数表示（整数只用书数据处理，不代表特定顺序）。两个对象$i$和$j$之间的相异性可以根据不匹配率来计算：</p>
+<script type="math/tex; mode=display">d(i,j) = \frac{p-m}{p} \tag{7}</script><p>其中，$m$是匹配的数目，即($i$和$j$取值相同状态的属性值），而$p$是刻画对象属性总数。</p>
+<pre><code class="lang-python">data3 = pd.DataFrame({
+    &#39;test-1&#39;: [&#39;A&#39;, &#39;B&#39;, &#39;C&#39;, &#39;A&#39;],
+    &#39;test-2&#39;: [u&#39;优秀&#39;,u&#39;一般&#39;,u&#39;好&#39;,u&#39;优秀&#39;],
+    &#39;test-3&#39;: [45, 22, 64, 28]
+                     })
+data3
+</code></pre>
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>test-1</th>
+      <th>test-2</th>
+      <th>test-3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>A</td>
+      <td>优秀</td>
+      <td>45</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>B</td>
+      <td>一般</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>C</td>
+      <td>好</td>
+      <td>64</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>A</td>
+      <td>优秀</td>
+      <td>28</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+<pre><code class="lang-python">## 计算test-1
+test1 = data3[&#39;test-1&#39;].values
+dis_1 = np.zeros([len(test1), len(test1)])
+for i in range(len(test1)):
+    for j in range(i, len(test1)):
+        if test1[i] != test1[j]:
+            dis_1[j ,i] =1
+dis_1
+</code></pre>
+<pre><code>array([[ 0.,  0.,  0.,  0.],
+       [ 1.,  0.,  0.,  0.],
+       [ 1.,  1.,  0.,  0.],
+       [ 0.,  1.,  1.,  0.]])
+</code></pre><p>我们看到除了对象1和4（$d(4,1)=0$）之外，其他都不相似。</p>
+<p>相似性也可以用下式公式计算：</p>
+<script type="math/tex; mode=display">sim(i,j)=1-d(i,j)=\frac{m}{p} \tag{8}</script><h3 id="二元属性的邻近性度量"><a href="#二元属性的邻近性度量" class="headerlink" title="二元属性的邻近性度量"></a>二元属性的邻近性度量</h3><p>我们考虑对称和非对称二元属性刻画对象的想异性和相似性度量。</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th></th>
+<th>1</th>
+<th>0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>q</td>
+<td>r</td>
+</tr>
+<tr>
+<td>0</td>
+<td>s</td>
+<td>t</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>对于对对称的二元相异性，可以定义为：</p>
+<script type="math/tex; mode=display">d(i,j) = \frac{r+s}{q+r+s+t} \tag{9}</script><p>对于非对称的二元相异性，可以为t是不重要的，因此可以定义为：</p>
+<script type="math/tex; mode=display">d(i,j) = \frac{r+s}{q+r+s} \tag{10}</script><p>同样，我们也可以基于相似性来度两个个属性的差别，如对于非对称的二元相似性可以用下式计算：</p>
+<script type="math/tex; mode=display">sim(i,j)=\frac{q}{q+r+s}= 1-d(i,j) \tag{11}</script><p>（11）式中的系数$sim(i,j)$被称为Jaccard系数，它在文献中被广泛应用。</p>
+<pre><code class="lang-python">data4 = pd.DataFrame([[&#39;M&#39;, &#39;Y&#39;, &#39;N&#39;, &#39;P&#39;, &#39;N&#39;, &#39;N&#39;, &#39;N&#39;],[&#39;M&#39;, &#39;Y&#39;, &#39;Y&#39;, &#39;N&#39;, &#39;N&#39;, &#39;N&#39;,&#39;N&#39;],[&#39;F&#39;, &#39;Y&#39;, &#39;N&#39;, &#39;P&#39;, &#39;N&#39;, &#39;P&#39;, &#39;N&#39;]])
+data4.columns = [&#39;gender&#39;, &#39;fever&#39;, &#39;cough&#39;, &#39;test-1&#39;,&#39;test-2&#39;,&#39;test-3&#39;,&#39;test-4&#39;]
+data4.index = [&#39;Jace&#39;, &#39;Jim&#39;, &#39;Mary&#39;]
+data4
+</code></pre>
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>gender</th>
+      <th>fever</th>
+      <th>cough</th>
+      <th>test-1</th>
+      <th>test-2</th>
+      <th>test-3</th>
+      <th>test-4</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Jace</th>
+      <td>M</td>
+      <td>Y</td>
+      <td>N</td>
+      <td>P</td>
+      <td>N</td>
+      <td>N</td>
+      <td>N</td>
+    </tr>
+    <tr>
+      <th>Jim</th>
+      <td>M</td>
+      <td>Y</td>
+      <td>Y</td>
+      <td>N</td>
+      <td>N</td>
+      <td>N</td>
+      <td>N</td>
+    </tr>
+    <tr>
+      <th>Mary</th>
+      <td>F</td>
+      <td>Y</td>
+      <td>N</td>
+      <td>P</td>
+      <td>N</td>
+      <td>P</td>
+      <td>N</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+<pre><code class="lang-python">## 转换成数值型
+label_map = {&#39;Y&#39;: 1, &#39;N&#39;: 0, &#39;P&#39;: 1}
+data4_num = data4.copy()
+for column in data4.columns:
+    data4_num[column] = data4[column].map(label_map) 
+data4_num.drop(&#39;gender&#39;, axis=1, inplace=True)
+data4_num
+</code></pre>
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>fever</th>
+      <th>cough</th>
+      <th>test-1</th>
+      <th>test-2</th>
+      <th>test-3</th>
+      <th>test-4</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Jace</th>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>Jim</th>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>Mary</th>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+<pre><code class="lang-python">## 调用scipy计算jaccard 相异性
+from scipy.spatial.distance import jaccard
+jaccard(data4_num.iloc[0,:], data4_num.iloc[1,:])
+</code></pre>
+<pre><code>0.66666666666666663
+</code></pre><pre><code class="lang-python">## 或者使用sklearn 计算jaccard
+from sklearn.metrics import jaccard_similarity_score
+jaccard_similarity_score(data4_num.iloc[0,:], data4_num.iloc[1,:])
+</code></pre>
+<pre><code>0.66666666666666663
+</code></pre><pre><code class="lang-python">## 或者调用pdist计算所有jaccard
+from scipy.spatial.distance import pdist
+pdist(data4_num, metric=&#39;jaccard&#39;)
+</code></pre>
+<pre><code>array([ 0.66666667,  0.33333333,  0.75      ])
+</code></pre><h3 id="数值属性相异性"><a href="#数值属性相异性" class="headerlink" title="数值属性相异性"></a>数值属性相异性</h3><p>计算数值属性的相异性，一般我们常用的是距离。我们最常用的距离是欧几里得距离，其他被广泛应用的距离还有：曼哈顿距离、闵可夫斯基距离。</p>
+<p>距离公式都需要满足如下四个条件：</p>
+<ul>
+<li><strong>非负性</strong>： $d(i,j)\geqslant 0$：距离是一个非负的数值</li>
+<li><strong>同一性</strong>： $d(i,j)= 0$： 对象到自身的距离为0</li>
+<li><strong>对称性</strong>：  $d(i,j)= d(j,i) $：距离是一个对称的函数</li>
+<li><strong>三角不等式</strong>： $d(i,j) \leqslant d(i,k) + d(k,j)$：从对象$i$到对象$j$的直接距离不会大于途经任何其他对象$k$的距离。</li>
+</ul>
+<p>欧几里得距离(euclidean)：<script type="math/tex">d(i,j) = \sqrt{(x_{i1}-x_{j1})^2+(x_{i2}-x_{j2})^2+\dots+(x_{in}-x_{jn})^2} \tag{12}</script></p>
+<p>曼哈顿距离(Manhattan)： <script type="math/tex">d(i,j) = \left |x_{i1}-x_{j1} \right | + \left |x_{i2}-x_{j2} \right | + \dots + \left |x_{in}-x_{jn} \right | \tag{13}</script></p>
+<p>闵可夫斯基距离(Minkowski):<script type="math/tex">d(i,j) = \sqrt[h]{\left |x_{i1}-x_{j1} \right |^h + \left |x_{i2}-x_{j2} \right |^h + \dots + \left |x_{in}-x_{jn} \right |^h} \tag{14}</script></p>
+<p>切比雪夫距离（Chebyshev）或称上界距离（$L_{max}$）,是$L \to \infty$时闵可夫斯基距离的推广：</p>
+<script type="math/tex; mode=display">d(i,j) = \lim_{h\to\infty} \left( \sum_{f=1}^{n} x_{if} - x_{jf} \right)^{\frac{1}{h}} = \max_{f}^{n}\left| x_{if}-x_{jf} \right| \tag{15}</script><pre><code class="lang-python">from scipy.spatial import distance
+x1 = np.arange(0,5)
+x2 = np.arange(5,10)
+print(&#39;x1:&#39;,x1)
+print(&#39;x2:&#39;,x2)
+</code></pre>
+<pre><code>x1: [0 1 2 3 4]
+x2: [5 6 7 8 9]
+</code></pre><pre><code class="lang-python">## 欧几里德距离
+distance.euclidean(x1, x2)
+</code></pre>
+<pre><code>11.180339887498949
+</code></pre><pre><code class="lang-python">## 闵可夫斯基距离
+distance.minkowski(x1, x2, p=3) ## p=1时为曼哈顿距离 p=2时为欧几里得距离
+</code></pre>
+<pre><code>8.5498797333834844
+</code></pre><pre><code class="lang-python">## 切比雪夫距离
+distance.chebyshev(x1, x2)
+</code></pre>
+<pre><code>5
+</code></pre><pre><code class="lang-python">##计算矩阵的距离
+
+## 欧几里德距离
+pdist(data4_num, metric=&#39;euclidean&#39;)
+
+## 闵可夫斯基距离
+pdist(data4_num, metric=&#39;minkowski&#39;, p=5) ## p=1时为曼哈顿距离
+
+## 切比雪夫距离
+pdist(data4_num, metric=&#39;chebyshev&#39;)
+</code></pre>
+<pre><code>array([ 1.,  1.,  1.])
+</code></pre><h3 id="序数属性的邻近性度量"><a href="#序数属性的邻近性度量" class="headerlink" title="序数属性的邻近性度量"></a>序数属性的邻近性度量</h3><p>序数属性的值之间具有意义的序（rank），而相继值之间的值未知。序数属性的处理与数值属性非常相似。</p>
+<ol>
+<li>用数值排位$1, \dots, M<em>f$取代$x</em>{if}$</li>
+<li>再将数值映射到$[0,1]$区间，使得每个属性都有相同的权重:<script type="math/tex">z_{if} = \frac{r_{if} - 1}{M_f -1} \tag{16}</script></li>
+<li>当成数值属性计算邻近性</li>
+</ol>
+<pre><code class="lang-python">##处理data3的test-2
+data3
+</code></pre>
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>test-1</th>
+      <th>test-2</th>
+      <th>test-3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>A</td>
+      <td>优秀</td>
+      <td>45</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>B</td>
+      <td>一般</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>C</td>
+      <td>好</td>
+      <td>64</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>A</td>
+      <td>优秀</td>
+      <td>28</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+<pre><code class="lang-python">## 转换成数值型
+test_2_map = {u&#39;优秀&#39;: 3,
+              u&#39;好&#39;: 2,
+              u&#39;一般&#39;:1
+             }
+x = data3[&#39;test-2&#39;].map(test_2_map)
+x
+</code></pre>
+<pre><code>0    3
+1    1
+2    2
+3    3
+Name: test-2, dtype: int64
+</code></pre><pre><code class="lang-python">## 规范化
+x_scale = (x - 1) / (x.max() - 1)
+x_scale
+</code></pre>
+<pre><code>0    1.0
+1    0.0
+2    0.5
+3    1.0
+Name: test-2, dtype: float64
+</code></pre><pre><code class="lang-python">## 计算欧几里得距离
+dis_2 = pdist(x_scale.values.reshape(-1,1))
+dis_2
+</code></pre>
+<pre><code>array([ 1. ,  0.5,  0. ,  0.5,  1. ,  0.5])
+</code></pre><h3 id="混合类型属性相异性"><a href="#混合类型属性相异性" class="headerlink" title="混合类型属性相异性"></a>混合类型属性相异性</h3><p>前面我么分别介绍了不同类型属性的处理方法，但是在实际中，我们数据处理的属性往往混合了不同类型的属性。我们可以分别计算每种类型属性的相异性，然后将值映射到$[0,1]$区间，再进行加权平均：</p>
+<script type="math/tex; mode=display">d(i,j) = \frac{\sum_{f=1}^n\delta_{ij}^{(f)}d_{ij}^{(f)}}{\sum_{f=1}^n\delta_{ij}^{(f)}} \tag{17}</script><p>其中，如果$x<em>{if}=0$或$x</em>{jf}=0$，指示符$\delta<em>{ij}^{(f)}=0$,并且$f$是非对称的二元属性；否则$\delta</em>{ij}^{(f)}=1$。</p>
+<ul>
+<li>$f$是数值的：$d<em>{ij}^{(f)} = \frac{\left|x</em>{if} - x<em>{jf}\right|}{\max_hx</em>{hf} - \min<em>hx</em>{hf}}$</li>
+<li>$f$是表称或二元的：如果$x<em>{if}=x</em>{jf}$,则$d<em>{ij}^{(f)}=0$；否则$d</em>{ij}^{(f)}=1$</li>
+<li>$f$是序数的：计算排位$r<em>{if}$和$ z</em>{if} = \frac{r<em>{if} - 1}{M_f -1} $，并将$ z</em>{if}$当成数值属性对待</li>
+</ul>
+<pre><code class="lang-python">## 对data3进行处理
+data3
+</code></pre>
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>test-1</th>
+      <th>test-2</th>
+      <th>test-3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>A</td>
+      <td>优秀</td>
+      <td>45</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>B</td>
+      <td>一般</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>C</td>
+      <td>好</td>
+      <td>64</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>A</td>
+      <td>优秀</td>
+      <td>28</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+<pre><code class="lang-python">dis_1
+</code></pre>
+<pre><code>array([[ 0.,  0.,  0.,  0.],
+       [ 1.,  0.,  0.,  0.],
+       [ 1.,  1.,  0.,  0.],
+       [ 0.,  1.,  1.,  0.]])
+</code></pre><pre><code class="lang-python">dis_2
+</code></pre>
+<pre><code>array([ 1. ,  0.5,  0. ,  0.5,  1. ,  0.5])
+</code></pre><pre><code class="lang-python">## 计算test-3
+dis_3 = pdist(data3[&#39;test-3&#39;].values.reshape(-1,1),metric=&#39;minkowski&#39;,p=1) / (data3[&#39;test-3&#39;].max() - data3[&#39;test-3&#39;].min())
+dis_3
+</code></pre>
+<pre><code>array([ 0.54761905,  0.45238095,  0.4047619 ,  1.        ,  0.14285714,
+        0.85714286])
+</code></pre><pre><code class="lang-python">## 转换dis_1
+dis_1_ = np.array([1,1,0,1,1,1])
+</code></pre>
+<pre><code class="lang-python">dis_all = np.sum((dis_1_, dis_2, dis_3), axis=0)/ 3
+#dis_all = np.sum((dis_1_, dis_2, dis_3), axis=0)/ (2 + dis_1_)
+dis_all
+</code></pre>
+<pre><code>array([ 0.84920635,  0.65079365,  0.13492063,  0.83333333,  0.71428571,
+        0.78571429])
+</code></pre><h3 id="余弦相似性"><a href="#余弦相似性" class="headerlink" title="余弦相似性"></a>余弦相似性</h3><p>余弦相似性是一种度量，可以用于比较文档，或针对给定的查询词向量对文档排序。令$x$和$y$是两个待比较的向量，使用余弦相似函数，我们有：</p>
+<script type="math/tex; mode=display">sim(x,y) = \frac{x \cdot y}{\left\|x \right\| \left\|y\right\|}  \tag{18}</script><p>余弦值为0意味着两个向量没有匹配，余弦值越接近1，匹配程度越大。</p>
+<pre><code class="lang-python">data5 = pd.DataFrame([[5,0,3,0,2,0,0,2,0,0],[3,0,2,0,1,1,0,1,0,1,],[0,7,0,2,1,0,0,3,0,0,],[0,1,0,0,1,2,2,0,3,0,]])
+data5.columns = [&#39;team&#39;, &#39;coach&#39;, &#39;hocky&#39;, &#39;baseball&#39;, &#39;soccer&#39;, &#39;penalty&#39;, &#39;score&#39;, &#39;win&#39;, &#39;loss&#39;, &#39;season&#39;]
+data5
+</code></pre>
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>team</th>
+      <th>coach</th>
+      <th>hocky</th>
+      <th>baseball</th>
+      <th>soccer</th>
+      <th>penalty</th>
+      <th>score</th>
+      <th>win</th>
+      <th>loss</th>
+      <th>season</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>5</td>
+      <td>0</td>
+      <td>3</td>
+      <td>0</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>3</td>
+      <td>0</td>
+      <td>2</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0</td>
+      <td>7</td>
+      <td>0</td>
+      <td>2</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>3</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>2</td>
+      <td>2</td>
+      <td>0</td>
+      <td>3</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+<pre><code class="lang-python">## 计算单个余弦相似性
+1 - distance.cosine(data5.iloc[0,:], data5.iloc[1,:])
+</code></pre>
+<pre><code>0.93560148570639967
+</code></pre><pre><code class="lang-python">## 计算所有余弦相似性
+1 - pdist(data5, metric=&#39;cosine&#39;)
+</code></pre>
+<pre><code>array([ 0.93560149,  0.15552316,  0.07079923,  0.12222647,  0.16692447,
+        0.23122933])
+</code></pre><h5 id="课后习题2-6"><a href="#课后习题2-6" class="headerlink" title="课后习题2.6"></a>课后习题2.6</h5><p>求 $x=(22,1,42,10)$ 和 $y=(20,0,36,8)$ 各种距离：</p>
+<ul>
+<li>欧几里得距离</li>
+<li>曼哈顿距离</li>
+<li>闵可夫斯基距离（$q=3$）</li>
+<li>上确界距离</li>
+</ul>
+<pre><code class="lang-python">from scipy.spatial import distance 
+x=np.array([22,1,42,10])
+y=np.array([20,0,36,8])
+</code></pre>
+<pre><code class="lang-python">## 欧几里得距离
+distance.euclidean(x,y)
+</code></pre>
+<pre><code>6.7082039324993694
+</code></pre><pre><code class="lang-python">## 曼哈顿距离
+distance.minkowski(x, y , p=1)
+</code></pre>
+<pre><code>11.0
+</code></pre><pre><code class="lang-python">## 闵可夫斯基距离(p=3)
+distance.minkowski(x, y, p=3)
+</code></pre>
+<pre><code>6.1534494936636817
+</code></pre><pre><code class="lang-python">## 切比雪夫上确界距离
+distance.chebyshev(x, y)
+</code></pre>
+<pre><code>6
+</code></pre>

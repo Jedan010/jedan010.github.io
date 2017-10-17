@@ -1,0 +1,1937 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="google-site-verification" content="4gzyiI-W-0ojCHIYpnY_ivYyJ30h_JD4T78ikQ9L45E" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Georgia,serif ,"Times New Roman", "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑";:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|KaiTi:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="数据描述,数据可视化,数据相似性," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="杰德的博客" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="认识数据数据对象与数据属性数据是由数据对象组成，一个数据对象代表一个实体。每个数据对象都有不同特征，称为数据的属性(attribute)。 数据的属性包含：  标称属性(nominal)：值是符号或名称，主要用于分类 二元属性(binary)：标称属性的一种，只有两个类别 序数属性(ordinal)：值的顺序或秩（rank）有意义，相继值得差未知 数值属性(numeric)：可度量的值 区间标度(">
+<meta name="keywords" content="数据描述,数据可视化,数据相似性">
+<meta property="og:type" content="article">
+<meta property="og:title" content="1.认识数据">
+<meta property="og:url" content="http://yoursite.com/2017/10/17/数据挖掘之python/1-认识数据/index.html">
+<meta property="og:site_name" content="杰德的博客">
+<meta property="og:description" content="认识数据数据对象与数据属性数据是由数据对象组成，一个数据对象代表一个实体。每个数据对象都有不同特征，称为数据的属性(attribute)。 数据的属性包含：  标称属性(nominal)：值是符号或名称，主要用于分类 二元属性(binary)：标称属性的一种，只有两个类别 序数属性(ordinal)：值的顺序或秩（rank）有意义，相继值得差未知 数值属性(numeric)：可度量的值 区间标度(">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2017/10/17/数据挖掘之python/1-认识数据/output_12_1.png">
+<meta property="og:image" content="http://yoursite.com/2017/10/17/数据挖掘之python/1-认识数据/output_20_1.png">
+<meta property="og:image" content="http://yoursite.com/2017/10/17/数据挖掘之python/1-认识数据/output_29_0.png">
+<meta property="og:image" content="http://yoursite.com/2017/10/17/数据挖掘之python/1-认识数据/output_31_0.png">
+<meta property="og:image" content="http://yoursite.com/2017/10/17/数据挖掘之python/1-认识数据/output_33_1.png">
+<meta property="og:image" content="http://yoursite.com/2017/10/17/数据挖掘之python/1-认识数据/output_35_1.png">
+<meta property="og:image" content="http://yoursite.com/2017/10/17/数据挖掘之python/1-认识数据/output_39_1.png">
+<meta property="og:image" content="http://yoursite.com/2017/10/17/数据挖掘之python/1-认识数据/output_41_1.png">
+<meta property="og:image" content="http://yoursite.com/2017/10/17/数据挖掘之python/1-认识数据/output_43_1.png">
+<meta property="og:image" content="http://yoursite.com/2017/10/17/数据挖掘之python/1-认识数据/output_45_1.png">
+<meta property="og:image" content="http://yoursite.com/2017/10/17/数据挖掘之python/1-认识数据/output_48_0.png">
+<meta property="og:image" content="http://yoursite.com/2017/10/17/数据挖掘之python/1-认识数据/output_49_1.png">
+<meta property="og:image" content="http://yoursite.com/2017/10/17/数据挖掘之python/1-认识数据/output_50_1.png">
+<meta property="og:image" content="http://yoursite.com/2017/10/17/数据挖掘之python/1-认识数据/output_51_0.png">
+<meta property="og:updated_time" content="2017-10-17T10:35:40.685Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="1.认识数据">
+<meta name="twitter:description" content="认识数据数据对象与数据属性数据是由数据对象组成，一个数据对象代表一个实体。每个数据对象都有不同特征，称为数据的属性(attribute)。 数据的属性包含：  标称属性(nominal)：值是符号或名称，主要用于分类 二元属性(binary)：标称属性的一种，只有两个类别 序数属性(ordinal)：值的顺序或秩（rank）有意义，相继值得差未知 数值属性(numeric)：可度量的值 区间标度(">
+<meta name="twitter:image" content="http://yoursite.com/2017/10/17/数据挖掘之python/1-认识数据/output_12_1.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.2',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/10/17/数据挖掘之python/1-认识数据/"/>
+
+
+
+
+
+  <title>1.认识数据 | 杰德的博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">杰德的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">随便写写</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/17/数据挖掘之python/1-认识数据/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="吴杰德">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://oeclakg19.bkt.clouddn.com/IMG_20160731_115131_1_1.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="杰德的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">1.认识数据</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-17T18:31:10+08:00">
+                2017-10-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数据挖掘之python/" itemprop="url" rel="index">
+                    <span itemprop="name">数据挖掘之python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="认识数据"><a href="#认识数据" class="headerlink" title="认识数据"></a>认识数据</h1><h2 id="数据对象与数据属性"><a href="#数据对象与数据属性" class="headerlink" title="数据对象与数据属性"></a>数据对象与数据属性</h2><p>数据是由数据对象组成，一个数据对象代表一个实体。每个数据对象都有不同特征，称为数据的属性(attribute)。</p>
+<p>数据的属性包含：</p>
+<ul>
+<li>标称属性(nominal)：值是符号或名称，主要用于分类</li>
+<li>二元属性(binary)：标称属性的一种，只有两个类别</li>
+<li>序数属性(ordinal)：值的顺序或秩（rank）有意义，相继值得差未知</li>
+<li>数值属性(numeric)：可度量的值<ul>
+<li>区间标度(interval-scaled)：用相同单位的尺度衡量，没有真正的零点（即数值0不代表没有，代表相对情况），倍数无意义。</li>
+<li>比率标度(retio-scaled)：具有固定零点的数值，倍数有意义。</li>
+</ul>
+</li>
+</ul>
+<h2 id="数据的基本统计描述"><a href="#数据的基本统计描述" class="headerlink" title="数据的基本统计描述"></a>数据的基本统计描述</h2><h3 id="中心趋势"><a href="#中心趋势" class="headerlink" title="中心趋势"></a>中心趋势</h3><p>描述数据的中心趋势的统计量主要由：均值、中位数和众数。</p>
+<h4 id="均值（mean）"><a href="#均值（mean）" class="headerlink" title="均值（mean）:"></a>均值（mean）:</h4><script type="math/tex; mode=display">\bar{x} = \frac{1}{N}\sum_{i=1}^{N} x_{i} \tag{1}</script><p>加权平均： <script type="math/tex">\bar{x} = \sum_{i=1}^{N} w_ix_{i} \tag{2}</script></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## 导入数据</span></div><div class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</div><div class="line">data = pd.read_excel(<span class="string">'./data/居民人均可支配收入.xlsx'</span>, index_col=<span class="number">0</span>)</div><div class="line">data.head()</div></pre></td></tr></table></figure>
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>居民人均可支配收入中位数（元）</th>
+      <th>居民人均可支配收入平均数(元)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2013年第1季度</th>
+      <td>4117.2</td>
+      <td>5006.1</td>
+    </tr>
+    <tr>
+      <th>2013年第2季度</th>
+      <td>3606.2</td>
+      <td>4043.0</td>
+    </tr>
+    <tr>
+      <th>2013年第3季度</th>
+      <td>3976.8</td>
+      <td>4507.4</td>
+    </tr>
+    <tr>
+      <th>2013年第4季度</th>
+      <td>3931.9</td>
+      <td>4754.3</td>
+    </tr>
+    <tr>
+      <th>2014年第1季度</th>
+      <td>4693.6</td>
+      <td>5562.2</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## 计算均值</span></div><div class="line">data.mean(axis=<span class="number">0</span>)</div></pre></td></tr></table></figure>
+<pre><code>居民人均可支配收入中位数（元）    4700.211111
+居民人均可支配收入平均数(元)    5399.833333
+dtype: float64
+</code></pre><h4 id="中位数-median"><a href="#中位数-median" class="headerlink" title="中位数(median)"></a>中位数(median)</h4><p>对于非对称数据，数据中心更好的度量是中位数，中位数是有序数值的中间值。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## 计算中位数</span></div><div class="line">data.median(axis=<span class="number">0</span>)</div></pre></td></tr></table></figure>
+<pre><code>居民人均可支配收入中位数（元）    4726.80
+居民人均可支配收入平均数(元)    5351.55
+dtype: float64
+</code></pre><h4 id="众数-mode"><a href="#众数-mode" class="headerlink" title="众数(mode)"></a>众数(mode)</h4><p>众数是集合中出现最频繁的值，根据最高频率对应不同的值的个数，可分为单峰(unimodal)、双峰(bimodal）等。在极端情况下，如果每个数据仅出现一次，则没有众数。</p>
+<p>对于适度倾斜的单峰数据，有如下经验关系：</p>
+<script type="math/tex; mode=display">mean - mode \approx 3 \times (mean - median)  \tag{3}</script><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">data.mode(axis=<span class="number">0</span>) <span class="comment">##所有数据都只出现了一次</span></div></pre></td></tr></table></figure>
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>居民人均可支配收入中位数（元）</th>
+      <th>居民人均可支配收入平均数(元)</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+</div>
+
+
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> scipy.stats <span class="keyword">as</span> stats</div><div class="line"><span class="keyword">from</span> scipy.stats <span class="keyword">import</span> skewnorm</div><div class="line">fig = plt.figure(figsize=(<span class="number">16</span>,<span class="number">4</span>))</div><div class="line"></div><div class="line">ax1 = plt.subplot(<span class="number">1</span>,<span class="number">3</span>,<span class="number">1</span>)</div><div class="line">a = <span class="number">4</span></div><div class="line">x1 = np.linspace(skewnorm.ppf(<span class="number">0.0001</span>, a), skewnorm.ppf(<span class="number">0.9999</span>, a), <span class="number">100</span>)</div><div class="line">rv = skewnorm(a)</div><div class="line">ax1.plot(x1, rv.pdf(x1),  label=<span class="string">'frozen pdf'</span>)</div><div class="line">plt.xlabel(<span class="string">u'a)正倾斜数据'</span>, fontsize=<span class="number">15</span>)</div><div class="line"></div><div class="line">ax2 = plt.subplot(<span class="number">1</span>,<span class="number">3</span>,<span class="number">2</span>)</div><div class="line">x2 = np.linspace( - <span class="number">3</span>,  <span class="number">3</span>, <span class="number">1000</span>)</div><div class="line">ax2.plot(x2, stats.norm.pdf(x2, <span class="number">0</span>, <span class="number">1</span>))</div><div class="line">plt.xlabel(<span class="string">u'b)对称数据'</span>, fontsize=<span class="number">15</span>)</div><div class="line"></div><div class="line">ax3 = plt.subplot(<span class="number">1</span>,<span class="number">3</span>,<span class="number">3</span>)</div><div class="line">a = <span class="number">-4</span></div><div class="line">x3 = np.linspace(skewnorm.ppf(<span class="number">0.0001</span>, a), skewnorm.ppf(<span class="number">0.9999</span>, a), <span class="number">100</span>)</div><div class="line">rv = skewnorm(a)</div><div class="line">ax3.plot(x3, rv.pdf(x3),  label=<span class="string">'frozen pdf'</span>)</div><div class="line">plt.xlabel(<span class="string">u'c)负倾斜数据'</span>,  fontsize=<span class="number">15</span>)</div></pre></td></tr></table></figure>
+<pre><code>&lt;matplotlib.text.Text at 0x23c391c3240&gt;
+</code></pre><p><img src="/2017/10/17/数据挖掘之python/1-认识数据/output_12_1.png" alt="png"></p>
+<h3 id="离散程度"><a href="#离散程度" class="headerlink" title="离散程度"></a>离散程度</h3><p>度量数据的离散程度的指标包括极差、分位数、四分位数、百分位数和四分位数极差。五数概括可以用箱线图（盒图）显示，它对于离群点的是识别是有用的。</p>
+<h4 id="极差、四分位数和四分位数极差"><a href="#极差、四分位数和四分位数极差" class="headerlink" title="极差、四分位数和四分位数极差"></a>极差、四分位数和四分位数极差</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## 极差(range)</span></div><div class="line">data.max() - data.min()</div></pre></td></tr></table></figure>
+<pre><code>居民人均可支配收入中位数（元）    2460.8
+居民人均可支配收入平均数(元)    3141.0
+dtype: float64
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## 第1个4分位数</span></div><div class="line">data.quantile(<span class="number">1</span>/<span class="number">4</span>)</div></pre></td></tr></table></figure>
+<pre><code>居民人均可支配收入中位数（元）    4172.95
+居民人均可支配收入平均数(元)    4873.00
+Name: 0.25, dtype: float64
+</code></pre><h5 id="四分位数极差（IQR）"><a href="#四分位数极差（IQR）" class="headerlink" title="四分位数极差（IQR）"></a>四分位数极差（IQR）</h5><script type="math/tex; mode=display">IQR = Q_3 - Q_1 \tag{4}</script><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## 四分位数极差</span></div><div class="line">data.quantile(<span class="number">3</span>/<span class="number">4</span>) - data.quantile(<span class="number">1</span>/<span class="number">4</span>)</div></pre></td></tr></table></figure>
+<pre><code>居民人均可支配收入中位数（元）    985.325
+居民人均可支配收入平均数(元)    951.025
+dtype: float64
+</code></pre><h4 id="箱线图和离群点"><a href="#箱线图和离群点" class="headerlink" title="箱线图和离群点"></a>箱线图和离群点</h4><p>离群点的识别规则为：挑选落在第3个四分位数之上或第1个四分位数之下至少$1.5 \times IQR$处的值</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## 箱线图</span></div><div class="line">data.boxplot()</div></pre></td></tr></table></figure>
+<pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x23c39168f28&gt;
+</code></pre><p><img src="/2017/10/17/数据挖掘之python/1-认识数据/output_20_1.png" alt="png"></p>
+<h4 id="方差和标准差"><a href="#方差和标准差" class="headerlink" title="方差和标准差"></a>方差和标准差</h4><p>方差(variance):</p>
+<script type="math/tex; mode=display">\sigma^2 = \frac{1}{N}\sum_{i=1}^{N}(x_i - \bar{x})^2 = \left ( \frac{1}{N}\sum_{i=1}^{N}x_i^2 \right )^2 - \bar{x}^2 \tag{5}</script><p>标准差(standard deviation) $\sigma$ 是方差 $\sigma^2$ 的平方根</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## 方差</span></div><div class="line">data.var()</div></pre></td></tr></table></figure>
+<pre><code>居民人均可支配收入中位数（元）    416851.712810
+居民人均可支配收入平均数(元)    626944.210588
+dtype: float64
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## 标准差</span></div><div class="line">data.std()</div></pre></td></tr></table></figure>
+<pre><code>居民人均可支配收入中位数（元）    645.640545
+居民人均可支配收入平均数(元)    791.798087
+dtype: float64
+</code></pre><h3 id="数据快速统计摘要"><a href="#数据快速统计摘要" class="headerlink" title="数据快速统计摘要"></a>数据快速统计摘要</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">data.describe()</div></pre></td></tr></table></figure>
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>居民人均可支配收入中位数（元）</th>
+      <th>居民人均可支配收入平均数(元)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>18.000000</td>
+      <td>18.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>4700.211111</td>
+      <td>5399.833333</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>645.640545</td>
+      <td>791.798087</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>3606.200000</td>
+      <td>4043.000000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>4172.950000</td>
+      <td>4873.000000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>4726.800000</td>
+      <td>5351.550000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>5158.275000</td>
+      <td>5824.025000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>6067.000000</td>
+      <td>7184.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+<h2 id="数据可视化"><a href="#数据可视化" class="headerlink" title="数据可视化"></a>数据可视化</h2><h3 id="数据的基本统计描述的图形显示"><a href="#数据的基本统计描述的图形显示" class="headerlink" title="数据的基本统计描述的图形显示"></a>数据的基本统计描述的图形显示</h3><h4 id="分位数图-quantile-plot"><a href="#分位数图-quantile-plot" class="headerlink" title="分位数图(quantile plot)"></a>分位数图(quantile plot)</h4><p>分位数图是一种观察单变量数据分布的简单有效方法,首先显示给定属性的所有数据，其次它绘出了分数数信息。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">fig = plt.figure(figsize=(<span class="number">12</span>,<span class="number">4</span>))</div><div class="line">ax = fig.add_subplot(<span class="number">121</span>)</div><div class="line">x = data.iloc[:,<span class="number">0</span>]</div><div class="line">stats.probplot(x, plot=ax)</div><div class="line">plt.ylabel(<span class="string">u'居民人均可支配收入中位数'</span>, fontsize=<span class="number">13</span>)</div><div class="line">plt.xlabel(<span class="string">u'f 值'</span>, fontsize=<span class="number">13</span>)</div><div class="line"></div><div class="line">ax = fig.add_subplot(<span class="number">122</span>)</div><div class="line">x = data.iloc[:,<span class="number">1</span>]</div><div class="line">stats.probplot(x, plot=ax)</div><div class="line">plt.ylabel(<span class="string">u'居民人均可支配收入平均数'</span>, fontsize=<span class="number">13</span>)</div><div class="line">plt.xlabel(<span class="string">u'f 值'</span>, fontsize=<span class="number">13</span>)</div><div class="line"></div><div class="line">plt.show()</div></pre></td></tr></table></figure>
+<p><img src="/2017/10/17/数据挖掘之python/1-认识数据/output_29_0.png" alt="png"></p>
+<h4 id="分位数-分位数图（Q-Q图）"><a href="#分位数-分位数图（Q-Q图）" class="headerlink" title="分位数-分位数图（Q-Q图）"></a>分位数-分位数图（Q-Q图）</h4><p>q-q图对着另一个对应的分位数，绘制一个单标量分布的分位数。它可使得用户可以观察从一个分布到另一个分布是否有漂移。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> statsmodels.api <span class="keyword">as</span> sm</div><div class="line">fig = plt.figure()</div><div class="line">ax = fig.add_subplot(<span class="number">111</span>)</div><div class="line">a = sm.qqplot_2samples(data.iloc[:,<span class="number">0</span>], data.iloc[:,<span class="number">1</span>], xlabel=<span class="string">u'居民人均可支配收入中位数'</span>, ylabel=<span class="string">u'居民人均可支配收入平均数'</span>, line=<span class="string">'r'</span> ,ax=ax)</div></pre></td></tr></table></figure>
+<p><img src="/2017/10/17/数据挖掘之python/1-认识数据/output_31_0.png" alt="png"></p>
+<h4 id="直方图-histogram"><a href="#直方图-histogram" class="headerlink" title="直方图(histogram)"></a>直方图(histogram)</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">data.hist(bins=<span class="number">10</span>,figsize=(<span class="number">12</span>,<span class="number">4</span>))</div></pre></td></tr></table></figure>
+<pre><code>array([[&lt;matplotlib.axes._subplots.AxesSubplot object at 0x0000023C3ACC5A58&gt;,
+        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x0000023C3AD61668&gt;]], dtype=object)
+</code></pre><p><img src="/2017/10/17/数据挖掘之python/1-认识数据/output_33_1.png" alt="png"></p>
+<h4 id="散点图-scatter"><a href="#散点图-scatter" class="headerlink" title="散点图(scatter)"></a>散点图(scatter)</h4><p>散点图是确定两个数值变量之间看上去是否存在联系、模式或趋势的最有效图形方法之一。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">data.plot.scatter(*data.columns)</div></pre></td></tr></table></figure>
+<pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x23c39342748&gt;
+</code></pre><p><img src="/2017/10/17/数据挖掘之python/1-认识数据/output_35_1.png" alt="png"></p>
+<h3 id="其他可视化基本图形"><a href="#其他可视化基本图形" class="headerlink" title="其他可视化基本图形"></a>其他可视化基本图形</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">data2 = pd.read_excel(<span class="string">'.\data\各省份收入数据.xlsx'</span>, index_col=<span class="number">0</span>)</div><div class="line">data2.head()</div></pre></td></tr></table></figure>
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>工资性收入</th>
+      <th>家庭性收入</th>
+      <th>财产性收入</th>
+      <th>转移性收入</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>北京</th>
+      <td>4524.25</td>
+      <td>1778.33</td>
+      <td>588.04</td>
+      <td>455.64</td>
+    </tr>
+    <tr>
+      <th>天津</th>
+      <td>2720.85</td>
+      <td>2626.46</td>
+      <td>152.88</td>
+      <td>79.64</td>
+    </tr>
+    <tr>
+      <th>河北</th>
+      <td>1293.50</td>
+      <td>1988.58</td>
+      <td>93.74</td>
+      <td>105.81</td>
+    </tr>
+    <tr>
+      <th>山西</th>
+      <td>1177.94</td>
+      <td>1563.52</td>
+      <td>62.70</td>
+      <td>86.49</td>
+    </tr>
+    <tr>
+      <th>内蒙古</th>
+      <td>504.46</td>
+      <td>2223.26</td>
+      <td>73.05</td>
+      <td>188.10</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+<h4 id="曲线图-plot"><a href="#曲线图-plot" class="headerlink" title="曲线图(plot)"></a>曲线图(plot)</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">data2.plot()</div></pre></td></tr></table></figure>
+<pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x23c3934b438&gt;
+</code></pre><p><img src="/2017/10/17/数据挖掘之python/1-认识数据/output_39_1.png" alt="png"></p>
+<h4 id="柱状图"><a href="#柱状图" class="headerlink" title="柱状图"></a>柱状图</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">data2.plot(kind=<span class="string">'bar'</span>, stacked=<span class="keyword">True</span>, color=[<span class="string">'blue'</span>,<span class="string">'gold'</span>, <span class="string">'green'</span>, <span class="string">'red'</span>], figsize=(<span class="number">10</span>,<span class="number">5</span>))</div></pre></td></tr></table></figure>
+<pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x23c3aea0d68&gt;
+</code></pre><p><img src="/2017/10/17/数据挖掘之python/1-认识数据/output_41_1.png" alt="png"></p>
+<h4 id="面积图"><a href="#面积图" class="headerlink" title="面积图"></a>面积图</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">data2.plot.area(stacked=<span class="keyword">True</span>)</div></pre></td></tr></table></figure>
+<pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x23c392ee860&gt;
+</code></pre><p><img src="/2017/10/17/数据挖掘之python/1-认识数据/output_43_1.png" alt="png"></p>
+<h4 id="饼图"><a href="#饼图" class="headerlink" title="饼图"></a>饼图</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">data2.plot.pie(y=data2.columns[<span class="number">0</span>], figsize=(<span class="number">10</span>,<span class="number">10</span>))</div></pre></td></tr></table></figure>
+<pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x23c3b2c60f0&gt;
+</code></pre><p><img src="/2017/10/17/数据挖掘之python/1-认识数据/output_45_1.png" alt="png"></p>
+<h3 id="其他可视化图"><a href="#其他可视化图" class="headerlink" title="其他可视化图"></a>其他可视化图</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> scipy <span class="keyword">import</span> stats, integrate</div><div class="line"><span class="keyword">import</span> seaborn <span class="keyword">as</span> sns</div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ax = sns.boxplot(data=data2)</div><div class="line">ax = sns.stripplot(data=data2, jitter=<span class="keyword">True</span>, edgecolor=<span class="string">"gray"</span>)</div></pre></td></tr></table></figure>
+<p><img src="/2017/10/17/数据挖掘之python/1-认识数据/output_48_0.png" alt="png"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sns.violinplot( data=data2, size=<span class="number">6</span>)</div></pre></td></tr></table></figure>
+<pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x23c3b864668&gt;
+</code></pre><p><img src="/2017/10/17/数据挖掘之python/1-认识数据/output_49_1.png" alt="png"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sns.jointplot(x=data2.columns[<span class="number">0</span>], y=data2.columns[<span class="number">1</span>], data=data2, size=<span class="number">5</span>)</div></pre></td></tr></table></figure>
+<pre><code>&lt;seaborn.axisgrid.JointGrid at 0x23c3b8825f8&gt;
+</code></pre><p><img src="/2017/10/17/数据挖掘之python/1-认识数据/output_50_1.png" alt="png"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">g = sns.PairGrid(data2, hue=data2.columns[<span class="number">2</span>])</div><div class="line">g.map(plt.scatter, s=<span class="number">50</span>, edgecolor=<span class="string">"white"</span>)</div><div class="line">g.map_offdiag(plt.scatter)</div><div class="line">g.add_legend();</div></pre></td></tr></table></figure>
+<p><img src="/2017/10/17/数据挖掘之python/1-认识数据/output_51_0.png" alt="png"></p>
+<h2 id="数据的相异性与相似性"><a href="#数据的相异性与相似性" class="headerlink" title="数据的相异性与相似性"></a>数据的相异性与相似性</h2><p>在诸如聚类、离群点分析和最邻近分类等数据挖掘应用中，我们需要评估对象之间相互比较的相似性与相异性。相似性和相异性都称为临近性（proximity），如果两个对象$i$和$j$不相似,则它们相似性度量值为0,如果完全相似则为1。因此，我们可以构造数据的想异性矩阵，用来表示$n$个对象两两之间的邻近度。</p>
+<script type="math/tex; mode=display">
+\begin{bmatrix}
+ 0&  &  & &\\
+ d(2,1)&  0&  & &\\
+ d(3,1)&  d(3,2)&  0& &\\
+ \vdots&  \vdots&  \vdots& &\\
+ d(n,1)&  d(n,2)&  \dots& \dots&0
+\end{bmatrix}
+\tag{6}</script><p>其中$d(i,j)$是对象之间的想异性，一般而言，$d(i,j)$是一个非负的数值，对象$i$和$j$越接近，其值越接近0；如果越不同，该值越大。</p>
+<h3 id="标称属性的临近性度量"><a href="#标称属性的临近性度量" class="headerlink" title="标称属性的临近性度量"></a>标称属性的临近性度量</h3><p>标称属性有多个状态，设其状态数目为$M$，这些状态用一组整数表示（整数只用书数据处理，不代表特定顺序）。两个对象$i$和$j$之间的相异性可以根据不匹配率来计算：</p>
+<script type="math/tex; mode=display">d(i,j) = \frac{p-m}{p} \tag{7}</script><p>其中，$m$是匹配的数目，即($i$和$j$取值相同状态的属性值），而$p$是刻画对象属性总数。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">data3 = pd.DataFrame(&#123;</div><div class="line">    <span class="string">'test-1'</span>: [<span class="string">'A'</span>, <span class="string">'B'</span>, <span class="string">'C'</span>, <span class="string">'A'</span>],</div><div class="line">    <span class="string">'test-2'</span>: [<span class="string">u'优秀'</span>,<span class="string">u'一般'</span>,<span class="string">u'好'</span>,<span class="string">u'优秀'</span>],</div><div class="line">    <span class="string">'test-3'</span>: [<span class="number">45</span>, <span class="number">22</span>, <span class="number">64</span>, <span class="number">28</span>]</div><div class="line">                     &#125;)</div><div class="line">data3</div></pre></td></tr></table></figure>
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>test-1</th>
+      <th>test-2</th>
+      <th>test-3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>A</td>
+      <td>优秀</td>
+      <td>45</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>B</td>
+      <td>一般</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>C</td>
+      <td>好</td>
+      <td>64</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>A</td>
+      <td>优秀</td>
+      <td>28</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## 计算test-1</span></div><div class="line">test1 = data3[<span class="string">'test-1'</span>].values</div><div class="line">dis_1 = np.zeros([len(test1), len(test1)])</div><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(len(test1)):</div><div class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> range(i, len(test1)):</div><div class="line">        <span class="keyword">if</span> test1[i] != test1[j]:</div><div class="line">            dis_1[j ,i] =<span class="number">1</span></div><div class="line">dis_1</div></pre></td></tr></table></figure>
+<pre><code>array([[ 0.,  0.,  0.,  0.],
+       [ 1.,  0.,  0.,  0.],
+       [ 1.,  1.,  0.,  0.],
+       [ 0.,  1.,  1.,  0.]])
+</code></pre><p>我们看到除了对象1和4（$d(4,1)=0$）之外，其他都不相似。</p>
+<p>相似性也可以用下式公式计算：</p>
+<script type="math/tex; mode=display">sim(i,j)=1-d(i,j)=\frac{m}{p} \tag{8}</script><h3 id="二元属性的邻近性度量"><a href="#二元属性的邻近性度量" class="headerlink" title="二元属性的邻近性度量"></a>二元属性的邻近性度量</h3><p>我们考虑对称和非对称二元属性刻画对象的想异性和相似性度量。</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th></th>
+<th>1</th>
+<th>0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>q</td>
+<td>r</td>
+</tr>
+<tr>
+<td>0</td>
+<td>s</td>
+<td>t</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>对于对对称的二元相异性，可以定义为：</p>
+<script type="math/tex; mode=display">d(i,j) = \frac{r+s}{q+r+s+t} \tag{9}</script><p>对于非对称的二元相异性，可以为t是不重要的，因此可以定义为：</p>
+<script type="math/tex; mode=display">d(i,j) = \frac{r+s}{q+r+s} \tag{10}</script><p>同样，我们也可以基于相似性来度两个个属性的差别，如对于非对称的二元相似性可以用下式计算：</p>
+<script type="math/tex; mode=display">sim(i,j)=\frac{q}{q+r+s}= 1-d(i,j) \tag{11}</script><p>（11）式中的系数$sim(i,j)$被称为Jaccard系数，它在文献中被广泛应用。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">data4 = pd.DataFrame([[<span class="string">'M'</span>, <span class="string">'Y'</span>, <span class="string">'N'</span>, <span class="string">'P'</span>, <span class="string">'N'</span>, <span class="string">'N'</span>, <span class="string">'N'</span>],[<span class="string">'M'</span>, <span class="string">'Y'</span>, <span class="string">'Y'</span>, <span class="string">'N'</span>, <span class="string">'N'</span>, <span class="string">'N'</span>,<span class="string">'N'</span>],[<span class="string">'F'</span>, <span class="string">'Y'</span>, <span class="string">'N'</span>, <span class="string">'P'</span>, <span class="string">'N'</span>, <span class="string">'P'</span>, <span class="string">'N'</span>]])</div><div class="line">data4.columns = [<span class="string">'gender'</span>, <span class="string">'fever'</span>, <span class="string">'cough'</span>, <span class="string">'test-1'</span>,<span class="string">'test-2'</span>,<span class="string">'test-3'</span>,<span class="string">'test-4'</span>]</div><div class="line">data4.index = [<span class="string">'Jace'</span>, <span class="string">'Jim'</span>, <span class="string">'Mary'</span>]</div><div class="line">data4</div></pre></td></tr></table></figure>
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>gender</th>
+      <th>fever</th>
+      <th>cough</th>
+      <th>test-1</th>
+      <th>test-2</th>
+      <th>test-3</th>
+      <th>test-4</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Jace</th>
+      <td>M</td>
+      <td>Y</td>
+      <td>N</td>
+      <td>P</td>
+      <td>N</td>
+      <td>N</td>
+      <td>N</td>
+    </tr>
+    <tr>
+      <th>Jim</th>
+      <td>M</td>
+      <td>Y</td>
+      <td>Y</td>
+      <td>N</td>
+      <td>N</td>
+      <td>N</td>
+      <td>N</td>
+    </tr>
+    <tr>
+      <th>Mary</th>
+      <td>F</td>
+      <td>Y</td>
+      <td>N</td>
+      <td>P</td>
+      <td>N</td>
+      <td>P</td>
+      <td>N</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## 转换成数值型</span></div><div class="line">label_map = &#123;<span class="string">'Y'</span>: <span class="number">1</span>, <span class="string">'N'</span>: <span class="number">0</span>, <span class="string">'P'</span>: <span class="number">1</span>&#125;</div><div class="line">data4_num = data4.copy()</div><div class="line"><span class="keyword">for</span> column <span class="keyword">in</span> data4.columns:</div><div class="line">    data4_num[column] = data4[column].map(label_map)</div><div class="line">data4_num.drop(<span class="string">'gender'</span>, axis=<span class="number">1</span>, inplace=<span class="keyword">True</span>)</div><div class="line">data4_num</div></pre></td></tr></table></figure>
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>fever</th>
+      <th>cough</th>
+      <th>test-1</th>
+      <th>test-2</th>
+      <th>test-3</th>
+      <th>test-4</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Jace</th>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>Jim</th>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>Mary</th>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## 调用scipy计算jaccard 相异性</span></div><div class="line"><span class="keyword">from</span> scipy.spatial.distance <span class="keyword">import</span> jaccard</div><div class="line">jaccard(data4_num.iloc[<span class="number">0</span>,:], data4_num.iloc[<span class="number">1</span>,:])</div></pre></td></tr></table></figure>
+<pre><code>0.66666666666666663
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## 或者使用sklearn 计算jaccard</span></div><div class="line"><span class="keyword">from</span> sklearn.metrics <span class="keyword">import</span> jaccard_similarity_score</div><div class="line">jaccard_similarity_score(data4_num.iloc[<span class="number">0</span>,:], data4_num.iloc[<span class="number">1</span>,:])</div></pre></td></tr></table></figure>
+<pre><code>0.66666666666666663
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## 或者调用pdist计算所有jaccard</span></div><div class="line"><span class="keyword">from</span> scipy.spatial.distance <span class="keyword">import</span> pdist</div><div class="line">pdist(data4_num, metric=<span class="string">'jaccard'</span>)</div></pre></td></tr></table></figure>
+<pre><code>array([ 0.66666667,  0.33333333,  0.75      ])
+</code></pre><h3 id="数值属性相异性"><a href="#数值属性相异性" class="headerlink" title="数值属性相异性"></a>数值属性相异性</h3><p>计算数值属性的相异性，一般我们常用的是距离。我们最常用的距离是欧几里得距离，其他被广泛应用的距离还有：曼哈顿距离、闵可夫斯基距离。</p>
+<p>距离公式都需要满足如下四个条件：</p>
+<ul>
+<li><strong>非负性</strong>： $d(i,j)\geqslant 0$：距离是一个非负的数值</li>
+<li><strong>同一性</strong>： $d(i,j)= 0$： 对象到自身的距离为0</li>
+<li><strong>对称性</strong>：  $d(i,j)= d(j,i) $：距离是一个对称的函数</li>
+<li><strong>三角不等式</strong>： $d(i,j) \leqslant d(i,k) + d(k,j)$：从对象$i$到对象$j$的直接距离不会大于途经任何其他对象$k$的距离。</li>
+</ul>
+<p>欧几里得距离(euclidean)：<script type="math/tex">d(i,j) = \sqrt{(x_{i1}-x_{j1})^2+(x_{i2}-x_{j2})^2+\dots+(x_{in}-x_{jn})^2} \tag{12}</script></p>
+<p>曼哈顿距离(Manhattan)： <script type="math/tex">d(i,j) = \left |x_{i1}-x_{j1} \right | + \left |x_{i2}-x_{j2} \right | + \dots + \left |x_{in}-x_{jn} \right | \tag{13}</script></p>
+<p>闵可夫斯基距离(Minkowski):<script type="math/tex">d(i,j) = \sqrt[h]{\left |x_{i1}-x_{j1} \right |^h + \left |x_{i2}-x_{j2} \right |^h + \dots + \left |x_{in}-x_{jn} \right |^h} \tag{14}</script></p>
+<p>切比雪夫距离（Chebyshev）或称上界距离（$L_{max}$）,是$L \to \infty$时闵可夫斯基距离的推广：</p>
+<script type="math/tex; mode=display">d(i,j) = \lim_{h\to\infty} \left( \sum_{f=1}^{n} x_{if} - x_{jf} \right)^{\frac{1}{h}} = \max_{f}^{n}\left| x_{if}-x_{jf} \right| \tag{15}</script><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> scipy.spatial <span class="keyword">import</span> distance</div><div class="line">x1 = np.arange(<span class="number">0</span>,<span class="number">5</span>)</div><div class="line">x2 = np.arange(<span class="number">5</span>,<span class="number">10</span>)</div><div class="line">print(<span class="string">'x1:'</span>,x1)</div><div class="line">print(<span class="string">'x2:'</span>,x2)</div></pre></td></tr></table></figure>
+<pre><code>x1: [0 1 2 3 4]
+x2: [5 6 7 8 9]
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## 欧几里德距离</span></div><div class="line">distance.euclidean(x1, x2)</div></pre></td></tr></table></figure>
+<pre><code>11.180339887498949
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## 闵可夫斯基距离</span></div><div class="line">distance.minkowski(x1, x2, p=<span class="number">3</span>) <span class="comment">## p=1时为曼哈顿距离 p=2时为欧几里得距离</span></div></pre></td></tr></table></figure>
+<pre><code>8.5498797333834844
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## 切比雪夫距离</span></div><div class="line">distance.chebyshev(x1, x2)</div></pre></td></tr></table></figure>
+<pre><code>5
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">##计算矩阵的距离</span></div><div class="line"></div><div class="line"><span class="comment">## 欧几里德距离</span></div><div class="line">pdist(data4_num, metric=<span class="string">'euclidean'</span>)</div><div class="line"></div><div class="line"><span class="comment">## 闵可夫斯基距离</span></div><div class="line">pdist(data4_num, metric=<span class="string">'minkowski'</span>, p=<span class="number">5</span>) <span class="comment">## p=1时为曼哈顿距离</span></div><div class="line"></div><div class="line"><span class="comment">## 切比雪夫距离</span></div><div class="line">pdist(data4_num, metric=<span class="string">'chebyshev'</span>)</div></pre></td></tr></table></figure>
+<pre><code>array([ 1.,  1.,  1.])
+</code></pre><h3 id="序数属性的邻近性度量"><a href="#序数属性的邻近性度量" class="headerlink" title="序数属性的邻近性度量"></a>序数属性的邻近性度量</h3><p>序数属性的值之间具有意义的序（rank），而相继值之间的值未知。序数属性的处理与数值属性非常相似。</p>
+<ol>
+<li>用数值排位$1, \dots, M<em>f$取代$x</em>{if}$</li>
+<li>再将数值映射到$[0,1]$区间，使得每个属性都有相同的权重:<script type="math/tex">z_{if} = \frac{r_{if} - 1}{M_f -1} \tag{16}</script></li>
+<li>当成数值属性计算邻近性</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">##处理data3的test-2</span></div><div class="line">data3</div></pre></td></tr></table></figure>
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>test-1</th>
+      <th>test-2</th>
+      <th>test-3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>A</td>
+      <td>优秀</td>
+      <td>45</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>B</td>
+      <td>一般</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>C</td>
+      <td>好</td>
+      <td>64</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>A</td>
+      <td>优秀</td>
+      <td>28</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## 转换成数值型</span></div><div class="line">test_2_map = &#123;<span class="string">u'优秀'</span>: <span class="number">3</span>,</div><div class="line">              <span class="string">u'好'</span>: <span class="number">2</span>,</div><div class="line">              <span class="string">u'一般'</span>:<span class="number">1</span></div><div class="line">             &#125;</div><div class="line">x = data3[<span class="string">'test-2'</span>].map(test_2_map)</div><div class="line">x</div></pre></td></tr></table></figure>
+<pre><code>0    3
+1    1
+2    2
+3    3
+Name: test-2, dtype: int64
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## 规范化</span></div><div class="line">x_scale = (x - <span class="number">1</span>) / (x.max() - <span class="number">1</span>)</div><div class="line">x_scale</div></pre></td></tr></table></figure>
+<pre><code>0    1.0
+1    0.0
+2    0.5
+3    1.0
+Name: test-2, dtype: float64
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## 计算欧几里得距离</span></div><div class="line">dis_2 = pdist(x_scale.values.reshape(<span class="number">-1</span>,<span class="number">1</span>))</div><div class="line">dis_2</div></pre></td></tr></table></figure>
+<pre><code>array([ 1. ,  0.5,  0. ,  0.5,  1. ,  0.5])
+</code></pre><h3 id="混合类型属性相异性"><a href="#混合类型属性相异性" class="headerlink" title="混合类型属性相异性"></a>混合类型属性相异性</h3><p>前面我么分别介绍了不同类型属性的处理方法，但是在实际中，我们数据处理的属性往往混合了不同类型的属性。我们可以分别计算每种类型属性的相异性，然后将值映射到$[0,1]$区间，再进行加权平均：</p>
+<script type="math/tex; mode=display">d(i,j) = \frac{\sum_{f=1}^n\delta_{ij}^{(f)}d_{ij}^{(f)}}{\sum_{f=1}^n\delta_{ij}^{(f)}} \tag{17}</script><p>其中，如果$x<em>{if}=0$或$x</em>{jf}=0$，指示符$\delta<em>{ij}^{(f)}=0$,并且$f$是非对称的二元属性；否则$\delta</em>{ij}^{(f)}=1$。</p>
+<ul>
+<li>$f$是数值的：$d<em>{ij}^{(f)} = \frac{\left|x</em>{if} - x<em>{jf}\right|}{\max_hx</em>{hf} - \min<em>hx</em>{hf}}$</li>
+<li>$f$是表称或二元的：如果$x<em>{if}=x</em>{jf}$,则$d<em>{ij}^{(f)}=0$；否则$d</em>{ij}^{(f)}=1$</li>
+<li>$f$是序数的：计算排位$r<em>{if}$和$ z</em>{if} = \frac{r<em>{if} - 1}{M_f -1} $，并将$ z</em>{if}$当成数值属性对待</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## 对data3进行处理</span></div><div class="line">data3</div></pre></td></tr></table></figure>
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>test-1</th>
+      <th>test-2</th>
+      <th>test-3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>A</td>
+      <td>优秀</td>
+      <td>45</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>B</td>
+      <td>一般</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>C</td>
+      <td>好</td>
+      <td>64</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>A</td>
+      <td>优秀</td>
+      <td>28</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">dis_1</div></pre></td></tr></table></figure>
+<pre><code>array([[ 0.,  0.,  0.,  0.],
+       [ 1.,  0.,  0.,  0.],
+       [ 1.,  1.,  0.,  0.],
+       [ 0.,  1.,  1.,  0.]])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">dis_2</div></pre></td></tr></table></figure>
+<pre><code>array([ 1. ,  0.5,  0. ,  0.5,  1. ,  0.5])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## 计算test-3</span></div><div class="line">dis_3 = pdist(data3[<span class="string">'test-3'</span>].values.reshape(<span class="number">-1</span>,<span class="number">1</span>),metric=<span class="string">'minkowski'</span>,p=<span class="number">1</span>) / (data3[<span class="string">'test-3'</span>].max() - data3[<span class="string">'test-3'</span>].min())</div><div class="line">dis_3</div></pre></td></tr></table></figure>
+<pre><code>array([ 0.54761905,  0.45238095,  0.4047619 ,  1.        ,  0.14285714,
+        0.85714286])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## 转换dis_1</span></div><div class="line">dis_1_ = np.array([<span class="number">1</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>])</div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">dis_all = np.sum((dis_1_, dis_2, dis_3), axis=<span class="number">0</span>)/ <span class="number">3</span></div><div class="line"><span class="comment">#dis_all = np.sum((dis_1_, dis_2, dis_3), axis=0)/ (2 + dis_1_)</span></div><div class="line">dis_all</div></pre></td></tr></table></figure>
+<pre><code>array([ 0.84920635,  0.65079365,  0.13492063,  0.83333333,  0.71428571,
+        0.78571429])
+</code></pre><h3 id="余弦相似性"><a href="#余弦相似性" class="headerlink" title="余弦相似性"></a>余弦相似性</h3><p>余弦相似性是一种度量，可以用于比较文档，或针对给定的查询词向量对文档排序。令$x$和$y$是两个待比较的向量，使用余弦相似函数，我们有：</p>
+<script type="math/tex; mode=display">sim(x,y) = \frac{x \cdot y}{\left\|x \right\| \left\|y\right\|}  \tag{18}</script><p>余弦值为0意味着两个向量没有匹配，余弦值越接近1，匹配程度越大。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">data5 = pd.DataFrame([[<span class="number">5</span>,<span class="number">0</span>,<span class="number">3</span>,<span class="number">0</span>,<span class="number">2</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">2</span>,<span class="number">0</span>,<span class="number">0</span>],[<span class="number">3</span>,<span class="number">0</span>,<span class="number">2</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">1</span>,],[<span class="number">0</span>,<span class="number">7</span>,<span class="number">0</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">3</span>,<span class="number">0</span>,<span class="number">0</span>,],[<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">2</span>,<span class="number">0</span>,<span class="number">3</span>,<span class="number">0</span>,]])</div><div class="line">data5.columns = [<span class="string">'team'</span>, <span class="string">'coach'</span>, <span class="string">'hocky'</span>, <span class="string">'baseball'</span>, <span class="string">'soccer'</span>, <span class="string">'penalty'</span>, <span class="string">'score'</span>, <span class="string">'win'</span>, <span class="string">'loss'</span>, <span class="string">'season'</span>]</div><div class="line">data5</div></pre></td></tr></table></figure>
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>team</th>
+      <th>coach</th>
+      <th>hocky</th>
+      <th>baseball</th>
+      <th>soccer</th>
+      <th>penalty</th>
+      <th>score</th>
+      <th>win</th>
+      <th>loss</th>
+      <th>season</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>5</td>
+      <td>0</td>
+      <td>3</td>
+      <td>0</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>3</td>
+      <td>0</td>
+      <td>2</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0</td>
+      <td>7</td>
+      <td>0</td>
+      <td>2</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>3</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>2</td>
+      <td>2</td>
+      <td>0</td>
+      <td>3</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## 计算单个余弦相似性</span></div><div class="line"><span class="number">1</span> - distance.cosine(data5.iloc[<span class="number">0</span>,:], data5.iloc[<span class="number">1</span>,:])</div></pre></td></tr></table></figure>
+<pre><code>0.93560148570639967
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## 计算所有余弦相似性</span></div><div class="line"><span class="number">1</span> - pdist(data5, metric=<span class="string">'cosine'</span>)</div></pre></td></tr></table></figure>
+<pre><code>array([ 0.93560149,  0.15552316,  0.07079923,  0.12222647,  0.16692447,
+        0.23122933])
+</code></pre><h5 id="课后习题2-6"><a href="#课后习题2-6" class="headerlink" title="课后习题2.6"></a>课后习题2.6</h5><p>求 $x=(22,1,42,10)$ 和 $y=(20,0,36,8)$ 各种距离：</p>
+<ul>
+<li>欧几里得距离</li>
+<li>曼哈顿距离</li>
+<li>闵可夫斯基距离（$q=3$）</li>
+<li>上确界距离</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> scipy.spatial <span class="keyword">import</span> distance</div><div class="line">x=np.array([<span class="number">22</span>,<span class="number">1</span>,<span class="number">42</span>,<span class="number">10</span>])</div><div class="line">y=np.array([<span class="number">20</span>,<span class="number">0</span>,<span class="number">36</span>,<span class="number">8</span>])</div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## 欧几里得距离</span></div><div class="line">distance.euclidean(x,y)</div></pre></td></tr></table></figure>
+<pre><code>6.7082039324993694
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## 曼哈顿距离</span></div><div class="line">distance.minkowski(x, y , p=<span class="number">1</span>)</div></pre></td></tr></table></figure>
+<pre><code>11.0
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## 闵可夫斯基距离(p=3)</span></div><div class="line">distance.minkowski(x, y, p=<span class="number">3</span>)</div></pre></td></tr></table></figure>
+<pre><code>6.1534494936636817
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## 切比雪夫上确界距离</span></div><div class="line">distance.chebyshev(x, y)</div></pre></td></tr></table></figure>
+<pre><code>6
+</code></pre>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/数据描述/" rel="tag"># 数据描述</a>
+          
+            <a href="/tags/数据可视化/" rel="tag"># 数据可视化</a>
+          
+            <a href="/tags/数据相似性/" rel="tag"># 数据相似性</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/10/17/数据挖掘之python/1-认识数据/1.认识数据/" rel="next" title="">
+                <i class="fa fa-chevron-left"></i> 
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+  <div class="bdsharebuttonbox">
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
+    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a class="bds_count" data-cmd="count"></a>
+  </div>
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "2",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "share": {
+        "bdSize": "16",
+        "bdStyle": "0"
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  <div onclick="showGitment()" id="gitment_title" class="gitment_title">显示 Gitment 评论</div>
+  <div id="container" style="display:none"></div>
+  <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+  <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+  <script>
+  const myTheme = {
+    render(state, instance) {
+      const container = document.createElement('div');
+      container.lang = "en-US";
+      container.className = 'gitment-container gitment-root-container';
+      container.appendChild(instance.renderHeader(state, instance));
+      container.appendChild(instance.renderEditor(state, instance));
+      container.appendChild(instance.renderComments(state, instance));
+      container.appendChild(instance.renderFooter(state, instance));
+      return container;
+    }
+  }
+  function showGitment() {
+    $("#gitment_title").attr("style", "display:none");
+    $("#container").attr("style", "").addClass("gitment_container");
+    var gitment = new Gitment({
+      id: window.location.pathname,
+      theme: myTheme,
+      owner: 'Jedan',
+      repo: 'xxxx',
+      oauth: {
+        client_id: 'ad70e4afe260d083b339',
+        client_secret: '0cc093f6f92b41446bb08b59b4b411cab22ce6f8'
+      }
+    });
+    gitment.render('container');
+  }
+  </script>
+
+
+  </div>
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://oeclakg19.bkt.clouddn.com/IMG_20160731_115131_1_1.jpg"
+               alt="吴杰德" />
+          <p class="site-author-name" itemprop="name">吴杰德</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">34</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/jedan010" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                    
+                      GitHub
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="547054738@qq.com" target="_blank" title="E-Mail">
+                  
+                    <i class="fa fa-fw fa-envelope"></i>
+                  
+                    
+                      E-Mail
+                    
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#认识数据"><span class="nav-number">1.</span> <span class="nav-text">认识数据</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#数据对象与数据属性"><span class="nav-number">1.1.</span> <span class="nav-text">数据对象与数据属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据的基本统计描述"><span class="nav-number">1.2.</span> <span class="nav-text">数据的基本统计描述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#中心趋势"><span class="nav-number">1.2.1.</span> <span class="nav-text">中心趋势</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#均值（mean）"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">均值（mean）:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#中位数-median"><span class="nav-number">1.2.1.2.</span> <span class="nav-text">中位数(median)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#众数-mode"><span class="nav-number">1.2.1.3.</span> <span class="nav-text">众数(mode)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#离散程度"><span class="nav-number">1.2.2.</span> <span class="nav-text">离散程度</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#极差、四分位数和四分位数极差"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">极差、四分位数和四分位数极差</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#四分位数极差（IQR）"><span class="nav-number">1.2.2.1.1.</span> <span class="nav-text">四分位数极差（IQR）</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#箱线图和离群点"><span class="nav-number">1.2.2.2.</span> <span class="nav-text">箱线图和离群点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#方差和标准差"><span class="nav-number">1.2.2.3.</span> <span class="nav-text">方差和标准差</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据快速统计摘要"><span class="nav-number">1.2.3.</span> <span class="nav-text">数据快速统计摘要</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据可视化"><span class="nav-number">1.3.</span> <span class="nav-text">数据可视化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数据的基本统计描述的图形显示"><span class="nav-number">1.3.1.</span> <span class="nav-text">数据的基本统计描述的图形显示</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#分位数图-quantile-plot"><span class="nav-number">1.3.1.1.</span> <span class="nav-text">分位数图(quantile plot)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分位数-分位数图（Q-Q图）"><span class="nav-number">1.3.1.2.</span> <span class="nav-text">分位数-分位数图（Q-Q图）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#直方图-histogram"><span class="nav-number">1.3.1.3.</span> <span class="nav-text">直方图(histogram)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#散点图-scatter"><span class="nav-number">1.3.1.4.</span> <span class="nav-text">散点图(scatter)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他可视化基本图形"><span class="nav-number">1.3.2.</span> <span class="nav-text">其他可视化基本图形</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#曲线图-plot"><span class="nav-number">1.3.2.1.</span> <span class="nav-text">曲线图(plot)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#柱状图"><span class="nav-number">1.3.2.2.</span> <span class="nav-text">柱状图</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#面积图"><span class="nav-number">1.3.2.3.</span> <span class="nav-text">面积图</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#饼图"><span class="nav-number">1.3.2.4.</span> <span class="nav-text">饼图</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他可视化图"><span class="nav-number">1.3.3.</span> <span class="nav-text">其他可视化图</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据的相异性与相似性"><span class="nav-number">1.4.</span> <span class="nav-text">数据的相异性与相似性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#标称属性的临近性度量"><span class="nav-number">1.4.1.</span> <span class="nav-text">标称属性的临近性度量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二元属性的邻近性度量"><span class="nav-number">1.4.2.</span> <span class="nav-text">二元属性的邻近性度量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数值属性相异性"><span class="nav-number">1.4.3.</span> <span class="nav-text">数值属性相异性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#序数属性的邻近性度量"><span class="nav-number">1.4.4.</span> <span class="nav-text">序数属性的邻近性度量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#混合类型属性相异性"><span class="nav-number">1.4.5.</span> <span class="nav-text">混合类型属性相异性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#余弦相似性"><span class="nav-number">1.4.6.</span> <span class="nav-text">余弦相似性</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#课后习题2-6"><span class="nav-number">1.4.6.0.1.</span> <span class="nav-text">课后习题2.6</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">吴杰德</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+  <span class="post-meta-divider">|</span>
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.2</div>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>
